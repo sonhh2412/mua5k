@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+  
+	
+	
+	<record id="view_order_tree_extra" model="ir.ui.view">
+	    <field name="name">view.order.tree.extra</field>
+	    <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="sale.view_order_tree" />
+	    <field name="arch" type="xml">
+	    	<field name="state" position="attributes">
+            	<attribute name="invisible">1</attribute>
+            </field>
+	    
+            <field name="state" position="after">
+            	<field name="invoiced" invisible="1"/>   
+            	<field name="state_order"/>        
+            </field>
+            <field name="user_id" position="attributes">
+            	<attribute name="invisible">1</attribute>
+            </field>
+	    </field>
+	</record>
+	
+	<record id="view_quotation_tree_inherit" model="ir.ui.view">
+	    <field name="name">sale.quotation_tree</field>
+	    <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="sale.view_quotation_tree"/>
+	    <field name="arch" type="xml">
+	    	<field name="state" position="attributes">
+            	<attribute name="invisible">1</attribute>
+            </field>
+            <field name="user_id" position="attributes">
+            	<attribute name="invisible">1</attribute>
+            </field>
+            <field name="state" position="after">
+            	<field name="invoiced" invisible="1"/>         
+            	<field name="state_order"/>   	
+            </field>           
+	    </field>
+	</record>
+		
+	<record id="view_order_form_queue_inherit" model="ir.ui.view">
+	    <field name="name">view.order.form.queue.inherit</field>
+	    <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="sale.view_order_form"/>
+	    <field name="arch" type="xml">
+            <field name="state" position="replace">
+            	<field name="state_order" widget="statusbar" statusbar_visible="draft,confirm,ordered,delivered,done" statusbar_colors='{"invoice_except":"red","ordered":"blue"}'/>
+            </field> 
+	        <field name="date_order" position="after">
+				<field name="state" invisible="1"/>
+			</field>
+			<field name="invoiced" position="after">
+	        	<field name="is_paid" invisible="1"/>
+	        </field>
+	    </field>
+	</record>
+</data>
+</openerp>

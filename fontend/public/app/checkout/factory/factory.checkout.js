@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .factory('Checkout', ['$resource', function($resource) {return {getCheckoutLimit : $resource('/api/checkount/getCheckoutLimit', null, {'getCheckoutLimit': { method:'PUT'}}) } }])

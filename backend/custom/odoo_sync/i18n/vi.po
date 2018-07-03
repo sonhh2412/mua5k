@@ -1,0 +1,1373 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* odoo_sync
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-16 02:55+0000\n"
+"PO-Revision-Date: 2016-12-16 02:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "1.Push Countries"
+msgstr "1.Push Countries"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "2.Push Countries State"
+msgstr "2.Push Countries State"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "3.Push Product Brands"
+msgstr "3.Push Product Brands"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "4.Push Product Categories"
+msgstr "4.Push Product Categories"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "5.Push Products"
+msgstr "5.Push Products"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "6.Push Hot Products"
+msgstr "6.Push Hot Products"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "7.Push Categories Convert"
+msgstr "7.Push Categories Convert"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "8.Push Product Sessions"
+msgstr "8.Push Product Sessions"
+
+#. module: odoo_sync
+#: field:res.partner,account:0
+msgid "Account on website"
+msgstr "Account on website"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "April"
+msgstr "Tháng Tư"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "August"
+msgstr "Tháng Tám"
+
+#. module: odoo_sync
+#: field:product.public.category,bg_color:0
+msgid "Background Color"
+msgstr "Màu nền"
+
+#. module: odoo_sync
+#: field:res.partner,birthday:0
+msgid "Birth Date"
+msgstr "Birth Date"
+
+#. module: odoo_sync
+#: view:res.partner:odoo_sync.view_partner_form_inherit
+msgid "Birthday"
+msgstr "Birthday"
+
+#. module: odoo_sync
+#: field:general.brand.queue,name:0
+msgid "Brand Ids"
+msgstr "Brand Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_brand_queue
+msgid "Brand Queue"
+msgstr "Brand Queue"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,brand_ids:0
+msgid "Brands"
+msgstr "Brands"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Brands & Categories"
+msgstr "Brands & Categories"
+
+#. module: odoo_sync
+#: field:general.brand.queue,list_ids:0
+msgid "Brands Waiting Sync"
+msgstr "Brands Waiting Sync"
+
+#. module: odoo_sync
+#: selection:sale.order,type_order:0
+msgid "COD"
+msgstr "COD"
+
+#. module: odoo_sync
+#: selection:sale.order,state_order:0
+msgid "Cancel Delivered"
+msgstr "Hủy giao hàng"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,category_ids:0
+msgid "Categories"
+msgstr "Danh mục"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,convert_ids:0
+msgid "Categories Convert"
+msgstr "Categories Convert"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_convert_queue
+msgid "Categories Convert Queue"
+msgstr "Categories Convert Queue"
+
+#. module: odoo_sync
+#: field:general.category.queue,list_ids:0
+msgid "Categories Waiting Sync"
+msgstr "Categories Waiting Sync"
+
+#. module: odoo_sync
+#: field:product.public.category.image,category_id:0
+msgid "Category"
+msgstr "Danh mục"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_category_convert
+msgid "Category Convert"
+msgstr "Danh mục quy đổi"
+
+#. module: odoo_sync
+#: field:general.convert.queue,name:0
+msgid "Category Convert Ids"
+msgstr "Category Convert Ids"
+
+#. module: odoo_sync
+#: field:general.convert.queue,list_ids:0
+msgid "Category Convert Sync"
+msgstr "Category Convert Sync"
+
+#. module: odoo_sync
+#: field:general.category.queue,name:0
+msgid "Category Ids"
+msgstr "Category Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_category_queue
+msgid "Category Queue"
+msgstr "Category Queue"
+
+#. module: odoo_sync
+#: selection:sale.order,state_order:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,country_ids:0
+msgid "Countries"
+msgstr "Quốc gia"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Countries & States"
+msgstr "Countries & States"
+
+#. module: odoo_sync
+#: field:general.country.queue,list_ids:0
+msgid "Countries Waiting Sync"
+msgstr "Countries Waiting Sync"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_country
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: odoo_sync
+#: field:general.country.queue,name:0
+msgid "Country Ids"
+msgstr "Country Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_country_queue
+msgid "Country Queue"
+msgstr "Country Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_country_state
+#: field:res.district,state_id:0
+msgid "Country state"
+msgstr "Country state"
+
+#. module: odoo_sync
+#: field:date.of.birth,create_uid:0
+#: field:general.brand.queue,create_uid:0
+#: field:general.category.queue,create_uid:0
+#: field:general.convert.queue,create_uid:0
+#: field:general.country.queue,create_uid:0
+#: field:general.give.k.queue,create_uid:0
+#: field:general.hot.product.queue,create_uid:0
+#: field:general.inventory.queue,create_uid:0
+#: field:general.knumber.queue,create_uid:0
+#: field:general.notify.content.queue,create_uid:0
+#: field:general.partner.history,create_uid:0
+#: field:general.partner.queue,create_uid:0
+#: field:general.price.queue,create_uid:0
+#: field:general.product.queue,create_uid:0
+#: field:general.rpc.customer,create_uid:0
+#: field:general.rpc.order,create_uid:0
+#: field:general.rpc.price,create_uid:0
+#: field:general.rpc.queue,create_uid:0
+#: field:general.rpc.resync,create_uid:0
+#: field:general.rpc.transaction,create_uid:0
+#: field:general.sale.queue,create_uid:0
+#: field:general.saledial.queue,create_uid:0
+#: field:general.send.notify.queue,create_uid:0
+#: field:general.session.add,create_uid:0
+#: field:general.session.close,create_uid:0
+#: field:general.session.dial,create_uid:0
+#: field:general.session.order,create_uid:0
+#: field:general.session.product.queue,create_uid:0
+#: field:general.state.queue,create_uid:0
+#: field:general.synchronization,create_uid:0
+#: field:general.template.queue,create_uid:0
+#: field:product.product.image,create_uid:0
+#: field:product.public.category.image,create_uid:0
+#: field:product.session.popup,create_uid:0
+#: field:res.district,create_uid:0
+#: field:res.ward,create_uid:0
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: odoo_sync
+#: field:date.of.birth,create_date:0
+#: field:general.brand.queue,create_date:0
+#: field:general.category.queue,create_date:0
+#: field:general.convert.queue,create_date:0
+#: field:general.country.queue,create_date:0
+#: field:general.give.k.queue,create_date:0
+#: field:general.hot.product.queue,create_date:0
+#: field:general.inventory.queue,create_date:0
+#: field:general.knumber.queue,create_date:0
+#: field:general.notify.content.queue,create_date:0
+#: field:general.partner.history,create_date:0
+#: field:general.partner.queue,create_date:0
+#: field:general.price.queue,create_date:0
+#: field:general.product.queue,create_date:0
+#: field:general.rpc.customer,create_date:0
+#: field:general.rpc.order,create_date:0
+#: field:general.rpc.price,create_date:0
+#: field:general.rpc.queue,create_date:0
+#: field:general.rpc.resync,create_date:0
+#: field:general.rpc.transaction,create_date:0
+#: field:general.sale.queue,create_date:0
+#: field:general.saledial.queue,create_date:0
+#: field:general.send.notify.queue,create_date:0
+#: field:general.session.add,create_date:0
+#: field:general.session.close,create_date:0
+#: field:general.session.dial,create_date:0
+#: field:general.session.order,create_date:0
+#: field:general.session.product.queue,create_date:0
+#: field:general.state.queue,create_date:0
+#: field:general.synchronization,create_date:0
+#: field:general.template.queue,create_date:0
+#: field:product.product.image,create_date:0
+#: field:product.public.category.image,create_date:0
+#: field:product.session.popup,create_date:0
+#: field:res.district,create_date:0
+#: field:res.ward,create_date:0
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: model:ir.model,name:odoo_sync.model_credit_card_member
+msgid "Credit Card"
+msgstr "Nạp tiền"
+
+#. module: odoo_sync
+#: help:product.product,qty_available:0
+msgid "Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr "Số lượng hiện tại của sản phẩm.\n"
+"Trong ngữ cảnh với một Địa điểm Kho, nó bao gồm hàng hóa được lưu trữ tại địa điểm này, hoặc bất kỳ địa điểm con nào của nó.\n"
+"Trong ngữ cảnh với một Nhà kho, nó bao gồm hàng hóa được lưu trữ trong Địa điểm Kho của Nhà kho này, hoặc bất kỳ địa điểm con nào của nó.\n"
+"được lưu trữ trong Địa điểm Kho của Nhà kho của Của hàng này, hoặc bất kỳ địa điểm con nào của nó.\n"
+"Nếu không, nó bao gồm hàng hóa được lưu trữ trong bất kỳ Địa điểm Kho nào có kiểu là 'Nội bộ'."
+
+#. module: odoo_sync
+#: field:general.partner.queue,name:0
+msgid "Customer Ids"
+msgstr "Customer Ids"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Customers"
+msgstr "Customers"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Customers & Orders"
+msgstr "Customers & Orders"
+
+#. module: odoo_sync
+#: field:general.partner.queue,list_ids:0
+msgid "Customers Waiting Sync"
+msgstr "Customers Waiting Sync"
+
+#. module: odoo_sync
+#: view:res.partner:odoo_sync.view_partner_form_inherit
+#: field:res.partner,day_of_birth:0
+msgid "Day"
+msgstr "Ngày"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "December"
+msgstr "Tháng Mười hai"
+
+#. module: odoo_sync
+#: field:general.brand.queue,is_delete:0
+#: field:general.category.queue,is_delete:0
+#: field:general.country.queue,is_delete:0
+#: field:general.partner.queue,is_delete:0
+#: field:general.product.queue,is_delete:0
+#: field:general.state.queue,is_delete:0
+#: field:general.template.queue,is_delete:0
+msgid "Del"
+msgstr "Del"
+
+#. module: odoo_sync
+#: selection:sale.order,state_order:0
+msgid "Delivered"
+msgstr "Đã giao hàng"
+
+#. module: odoo_sync
+#: view:notify.to.customers:odoo_sync.view_notify_customer_form
+msgid "Detail Send Notify"
+msgstr "Chi tiết gửi thông báo"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Dial Sale Order"
+msgstr "Dial Sale Order"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_district
+#: view:res.district:odoo_sync.view_district_form
+#: view:res.district:odoo_sync.view_district_tree
+#: field:res.partner,district_id:0
+#: field:res.ward,district_id:0
+msgid "District"
+msgstr "District"
+
+#. module: odoo_sync
+#: field:res.district,code:0
+msgid "District Code"
+msgstr "District Code"
+
+#. module: odoo_sync
+#: field:res.district,name:0
+msgid "District Name"
+msgstr "District Name"
+
+#. module: odoo_sync
+#: model:ir.actions.act_window,name:odoo_sync.action_district
+msgid "Districts"
+msgstr "Districts"
+
+#. module: odoo_sync
+#: selection:sale.order,state_order:0
+msgid "Done"
+msgstr "Hoàn tất"
+
+#. module: odoo_sync
+#: selection:sale.order,state_order:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: odoo_sync
+#: code:addons/odoo_sync/general/general.py:138
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "February"
+msgstr "Tháng Hai"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Give K"
+msgstr "Tặng K"
+
+#. module: odoo_sync
+#: field:general.synchronization,give_k_ids:0
+msgid "Give K Change"
+msgstr "Give K Change"
+
+#. module: odoo_sync
+#: field:general.give.k.queue,name:0
+msgid "Give K Ids"
+msgstr "Give K Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_give_k_queue
+msgid "Give K change Queue"
+msgstr "Give K change Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_partner_history_exchange
+msgid "History Exchange of Partner"
+msgstr "Lịch sử giao dịch của khách hàng"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_partner_history_login
+msgid "History Login of Partner"
+msgstr "Lịch sử đăng nhập của khách hàng"
+
+#. module: odoo_sync
+#: field:general.synchronization,name:0
+msgid "Host"
+msgstr "Host"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_hot_product_queue
+#: model:ir.model,name:odoo_sync.model_general_session_product_queue
+msgid "Hot Product Queue"
+msgstr "Hot Product Queue"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,hot_product_ids:0
+#: field:product.public.category,hot_products:0
+msgid "Hot Products"
+msgstr "Sản phẩm Hot"
+
+#. module: odoo_sync
+#: field:date.of.birth,id:0
+#: field:general.brand.queue,id:0
+#: field:general.category.queue,id:0
+#: field:general.convert.queue,id:0
+#: field:general.country.queue,id:0
+#: field:general.give.k.queue,id:0
+#: field:general.hot.product.queue,id:0
+#: field:general.inventory.queue,id:0
+#: field:general.knumber.queue,id:0
+#: field:general.notify.content.queue,id:0
+#: field:general.partner.history,id:0
+#: field:general.partner.queue,id:0
+#: field:general.price.queue,id:0
+#: field:general.product.queue,id:0
+#: field:general.rpc.customer,id:0
+#: field:general.rpc.order,id:0
+#: field:general.rpc.price,id:0
+#: field:general.rpc.queue,id:0
+#: field:general.rpc.resync,id:0
+#: field:general.rpc.transaction,id:0
+#: field:general.sale.queue,id:0
+#: field:general.saledial.queue,id:0
+#: field:general.send.notify.queue,id:0
+#: field:general.session.add,id:0
+#: field:general.session.close,id:0
+#: field:general.session.dial,id:0
+#: field:general.session.order,id:0
+#: field:general.session.product.queue,id:0
+#: field:general.state.queue,id:0
+#: field:general.synchronization,id:0
+#: field:general.template.queue,id:0
+#: field:product.product.image,id:0
+#: field:product.public.category.image,id:0
+#: field:product.session.popup,id:0
+#: field:res.district,id:0
+#: field:res.ward,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: odoo_sync
+#: field:product.public.category,icon:0
+msgid "Icon Link"
+msgstr "Icon Link"
+
+#. module: odoo_sync
+#: field:res.partner,website_id:0
+msgid "Id on Website"
+msgstr "Id trên Website"
+
+#. module: odoo_sync
+#: field:product.brand,src_image:0
+#: field:product.product,image_ids:0
+#: field:product.product.image,name:0
+#: field:product.public.category,image_ids:0
+#: field:product.public.category.image,name:0
+#: field:product.template,image_ids:0
+msgid "Image Link"
+msgstr "Image Link"
+
+#. module: odoo_sync
+#: field:product.product.image,is_main:0
+msgid "Image Main"
+msgstr "Image Main"
+
+#. module: odoo_sync
+#: field:product.product.image,link_href:0
+msgid "Image Zoom"
+msgstr "Image Zoom"
+
+#. module: odoo_sync
+#: view:product.template:odoo_sync.product_product_image_form_view
+msgid "Images"
+msgstr "Hình"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_inventory_queue
+msgid "Inventory Queue"
+msgstr "Inventory Queue"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "January"
+msgstr "Tháng Một"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "July"
+msgstr "Tháng Bảy"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "June"
+msgstr "Tháng Sáu"
+
+#. module: odoo_sync
+#: code:addons/odoo_sync/product/session_product.py:74
+#, python-format
+msgid "Không được xóa phiên số %s. Phiên sản phẩm đã bán mã., "
+msgstr "Không được xóa phiên số %s. Phiên sản phẩm đã bán mã., "
+
+#. module: odoo_sync
+#: field:general.synchronization,knumber_ids:0
+msgid "Knumber Change"
+msgstr "Knumber Change"
+
+#. module: odoo_sync
+#: view:product.template:odoo_sync.product_product_image_form_view
+msgid "Kích thước 400 x 400"
+msgstr "Kích thước 400 x 400"
+
+#. module: odoo_sync
+#: view:product.template:odoo_sync.product_product_image_form_view
+msgid "Kích thước 800 x 800"
+msgstr "Kích thước 800 x 800"
+
+#. module: odoo_sync
+#: field:date.of.birth,write_uid:0
+#: field:general.brand.queue,write_uid:0
+#: field:general.category.queue,write_uid:0
+#: field:general.convert.queue,write_uid:0
+#: field:general.country.queue,write_uid:0
+#: field:general.give.k.queue,write_uid:0
+#: field:general.hot.product.queue,write_uid:0
+#: field:general.inventory.queue,write_uid:0
+#: field:general.knumber.queue,write_uid:0
+#: field:general.notify.content.queue,write_uid:0
+#: field:general.partner.history,write_uid:0
+#: field:general.partner.queue,write_uid:0
+#: field:general.price.queue,write_uid:0
+#: field:general.product.queue,write_uid:0
+#: field:general.rpc.customer,write_uid:0
+#: field:general.rpc.order,write_uid:0
+#: field:general.rpc.price,write_uid:0
+#: field:general.rpc.queue,write_uid:0
+#: field:general.rpc.resync,write_uid:0
+#: field:general.rpc.transaction,write_uid:0
+#: field:general.sale.queue,write_uid:0
+#: field:general.saledial.queue,write_uid:0
+#: field:general.send.notify.queue,write_uid:0
+#: field:general.session.add,write_uid:0
+#: field:general.session.close,write_uid:0
+#: field:general.session.dial,write_uid:0
+#: field:general.session.order,write_uid:0
+#: field:general.session.product.queue,write_uid:0
+#: field:general.state.queue,write_uid:0
+#: field:general.synchronization,write_uid:0
+#: field:general.template.queue,write_uid:0
+#: field:product.product.image,write_uid:0
+#: field:product.public.category.image,write_uid:0
+#: field:product.session.popup,write_uid:0
+#: field:res.district,write_uid:0
+#: field:res.ward,write_uid:0
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: odoo_sync
+#: field:date.of.birth,write_date:0
+#: field:general.brand.queue,write_date:0
+#: field:general.category.queue,write_date:0
+#: field:general.convert.queue,write_date:0
+#: field:general.country.queue,write_date:0
+#: field:general.give.k.queue,write_date:0
+#: field:general.hot.product.queue,write_date:0
+#: field:general.inventory.queue,write_date:0
+#: field:general.knumber.queue,write_date:0
+#: field:general.notify.content.queue,write_date:0
+#: field:general.partner.history,write_date:0
+#: field:general.partner.queue,write_date:0
+#: field:general.price.queue,write_date:0
+#: field:general.product.queue,write_date:0
+#: field:general.rpc.customer,write_date:0
+#: field:general.rpc.order,write_date:0
+#: field:general.rpc.price,write_date:0
+#: field:general.rpc.queue,write_date:0
+#: field:general.rpc.resync,write_date:0
+#: field:general.rpc.transaction,write_date:0
+#: field:general.sale.queue,write_date:0
+#: field:general.saledial.queue,write_date:0
+#: field:general.send.notify.queue,write_date:0
+#: field:general.session.add,write_date:0
+#: field:general.session.close,write_date:0
+#: field:general.session.dial,write_date:0
+#: field:general.session.order,write_date:0
+#: field:general.session.product.queue,write_date:0
+#: field:general.state.queue,write_date:0
+#: field:general.synchronization,write_date:0
+#: field:general.template.queue,write_date:0
+#: field:product.product.image,write_date:0
+#: field:product.public.category.image,write_date:0
+#: field:product.session.popup,write_date:0
+#: field:res.district,write_date:0
+#: field:res.ward,write_date:0
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: odoo_sync
+#: field:res.partner,last_day_of_month:0
+msgid "Last day"
+msgstr "Last day"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "List data waiting add to queue"
+msgstr "List data waiting add to queue"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "March"
+msgstr "Tháng Ba"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "May"
+msgstr "Tháng Năm"
+
+#. module: odoo_sync
+#: field:general.send.notify.queue,message:0
+msgid "Message"
+msgstr "Message"
+
+#. module: odoo_sync
+#: view:res.partner:odoo_sync.view_partner_form_inherit
+#: field:res.partner,month_of_birth:0
+msgid "Month"
+msgstr "Tháng"
+
+#. module: odoo_sync
+#: field:date.of.birth,name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: odoo_sync
+#: field:general.brand.queue,no:0
+#: field:general.category.queue,no:0
+#: field:general.convert.queue,no:0
+#: field:general.country.queue,no:0
+#: field:general.give.k.queue,no:0
+#: field:general.hot.product.queue,no:0
+#: field:general.inventory.queue,no:0
+#: field:general.knumber.queue,no:0
+#: field:general.notify.content.queue,no:0
+#: field:general.partner.queue,no:0
+#: field:general.price.queue,no:0
+#: field:general.product.queue,no:0
+#: field:general.sale.queue,no:0
+#: field:general.saledial.queue,no:0
+#: field:general.send.notify.queue,no:0
+#: field:general.session.product.queue,no:0
+#: field:general.state.queue,no:0
+#: field:general.template.queue,no:0
+msgid "No."
+msgstr "STT"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,content_notify_ids:0
+msgid "Notify Content"
+msgstr "Notify Content"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_notify_content_queue
+msgid "Notify Content Queue"
+msgstr "Notify Content Queue"
+
+#. module: odoo_sync
+#: field:general.notify.content.queue,name:0
+#: field:general.send.notify.queue,name:0
+msgid "Notify Ids"
+msgstr "Notify Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_notify_to_customers
+msgid "Notify To Customers"
+msgstr "Notify To Customers"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_notify_to_customers_detail
+msgid "Notify To Customers Detail"
+msgstr "Notify To Customers Detail"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "November"
+msgstr "Tháng Mười một"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "October"
+msgstr "Tháng Mười"
+
+#. module: odoo_sync
+#: field:general.sale.queue,name:0
+#: field:general.saledial.queue,name:0
+msgid "Order Ids"
+msgstr "Order Ids"
+
+#. module: odoo_sync
+#: selection:sale.order,state_order:0
+msgid "Ordered"
+msgstr "Ordered"
+
+#. module: odoo_sync
+#: field:product.product,outgoing_qty:0
+#: field:product.template,outgoing_qty:0
+msgid "Outgoing"
+msgstr "Số lượng ra"
+
+#. module: odoo_sync
+#: field:sale.order,is_payonline:0
+msgid "Paid Online"
+msgstr "Paid Online"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_partner
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_partner_queue
+msgid "Partner Queue"
+msgstr "Partner Queue"
+
+#. module: odoo_sync
+#: field:general.synchronization,partner_ids:0
+msgid "Partners"
+msgstr "Partners"
+
+#. module: odoo_sync
+#: field:general.synchronization,password:0
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: odoo_sync
+#: selection:sale.order,type_order:0
+msgid "PayDiamond"
+msgstr "PayDiamond"
+
+#. module: odoo_sync
+#: selection:sale.order,state_payment:0
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: odoo_sync
+#: field:sale.order,type_order:0
+msgid "Payment Method"
+msgstr "Phương thức thanh toán"
+
+#. module: odoo_sync
+#: field:general.synchronization,port:0
+msgid "Port"
+msgstr "Port"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_procurement_order
+msgid "Procurement"
+msgstr "Thu mua"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_product
+#: field:product.product.image,product_id:0
+#: field:product.product.image,product_tmpl_id:0
+#: field:product.session.popup,product_id:0
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: odoo_sync
+#: field:general.hot.product.queue,name:0
+msgid "Product Category Ids"
+msgstr "Product Category Ids"
+
+#. module: odoo_sync
+#: field:general.inventory.queue,name:0
+#: field:general.price.queue,name:0
+#: field:general.product.queue,name:0
+msgid "Product Ids"
+msgstr "Product Ids"
+
+#. module: odoo_sync
+#: field:general.template.queue,name:0
+msgid "Product Parent Ids"
+msgstr "Product Parent Ids"
+
+#. module: odoo_sync
+#: field:general.template.queue,list_ids:0
+msgid "Product Parents Waiting Sync"
+msgstr "Product Parents Waiting Sync"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_price_queue
+msgid "Product Price Queue"
+msgstr "Product Price Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_product_queue
+msgid "Product Queue"
+msgstr "Product Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_saledial_queue
+msgid "Product Sale Dial Queue"
+msgstr "Product Sale Dial Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_sale_queue
+msgid "Product Sale Queue"
+msgstr "Product Sale Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_session
+msgid "Product Session"
+msgstr "Phiên sản phẩm"
+
+#. module: odoo_sync
+#: field:general.session.product.queue,name:0
+msgid "Product Session Ids"
+msgstr "Product Session Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_session_order
+msgid "Product Session Order"
+msgstr "Phiên bán hàng"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_session_popup
+msgid "Product Session Popup"
+msgstr "Product Session Popup"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_template_queue
+msgid "Product Template Queue"
+msgstr "Product Template Queue"
+
+#. module: odoo_sync
+#: field:general.product.queue,list_ids:0
+msgid "Product Waiting Sync"
+msgstr "Product Waiting Sync"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,product_ids:0
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: odoo_sync
+#: field:general.inventory.queue,list_ids:0
+#: field:general.price.queue,list_ids:0
+msgid "Products Sync"
+msgstr "Products Sync"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_public_category
+msgid "Public Category"
+msgstr "Public Category"
+
+#. module: odoo_sync
+#: field:sale.order,purchase_id:0
+msgid "Purchase"
+msgstr "Mua hàng"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn hàng"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Brands"
+msgstr "Push Brands"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Categories"
+msgstr "Push Categories"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Countries"
+msgstr "Push Countries"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Customers"
+msgstr "Push Customers"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Dial Orders"
+msgstr "Push Dial Orders"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Give K Change"
+msgstr "Push Give K Change"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Hot Products"
+msgstr "Push Hot Products"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Knumber Change"
+msgstr "Push Knumber Change"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Notify Content"
+msgstr "Push Notify Content"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Orders Status"
+msgstr "Push Orders Status"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Product"
+msgstr "Push Product"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Send Notify Content"
+msgstr "Push Send Notify Content"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push Session Products"
+msgstr "Push Session Products"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Push State"
+msgstr "Push State"
+
+#. module: odoo_sync
+#: field:general.synchronization,sale_dial_ids:0
+msgid "Sale Dial Orders"
+msgstr "Sale Dial Orders"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,sale_ids:0
+msgid "Sale Orders"
+msgstr "Đơn hàng"
+
+#. module: odoo_sync
+#: view:product.template:odoo_sync.product_product_image_form_view
+msgid "Sales"
+msgstr "Bán hàng"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn hàng"
+
+#. module: odoo_sync
+#: field:general.sale.queue,list_ids:0
+#: field:general.saledial.queue,list_ids:0
+msgid "Sales Sync"
+msgstr "Sales Sync"
+
+#. module: odoo_sync
+#: field:general.synchronization,notify_ids:0
+#: model:ir.actions.act_window,name:odoo_sync.action_notify_customer
+#: model:ir.ui.menu,name:base.send_notify_customer
+msgid "Send Notify"
+msgstr "Gửi thông báo"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Send Notify Content"
+msgstr "Send Notify Content"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_send_notify_queue
+msgid "Send Notify Customer Queue"
+msgstr "Send Notify Customer Queue"
+
+#. module: odoo_sync
+#: view:notify.to.customers:odoo_sync.view_notify_customer_form
+msgid "Send notify"
+msgstr "Gửi thông báo"
+
+#. module: odoo_sync
+#: selection:res.partner,month_of_birth:0
+msgid "September"
+msgstr "Tháng Chín"
+
+#. module: odoo_sync
+#: field:product.product.image,sequence:0
+#: field:product.public.category.image,sequence:0
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,session_product_ids:0
+msgid "Session Products"
+msgstr "Session Products"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_product_product_session
+#: field:product.product,session_ids:0
+#: field:product.template,session_ids:0
+msgid "Session Sale List"
+msgstr "Danh sách phiên bán hàng"
+
+#. module: odoo_sync
+#: field:general.state.queue,name:0
+msgid "State Ids"
+msgstr "State Ids"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_state_queue
+msgid "State Queue"
+msgstr "State Queue"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.synchronization,state_ids:0
+msgid "States"
+msgstr "Khu vực"
+
+#. module: odoo_sync
+#: field:general.state.queue,list_ids:0
+msgid "States Waiting Sync"
+msgstr "States Waiting Sync"
+
+#. module: odoo_sync
+#: field:sale.order,state_order:0
+msgid "Status Order"
+msgstr "Status Order"
+
+#. module: odoo_sync
+#: field:sale.order,is_paid:0
+#: field:sale.order,state_payment:0
+msgid "Status Payment"
+msgstr "Status Payment"
+
+#. module: odoo_sync
+#: code:addons/odoo_sync/general/general.py:238
+#: code:addons/odoo_sync/general/general.py:306
+#: code:addons/odoo_sync/general/general.py:374
+#: code:addons/odoo_sync/general/general.py:442
+#: code:addons/odoo_sync/general/general.py:510
+#: code:addons/odoo_sync/general/general.py:577
+#: code:addons/odoo_sync/general/general.py:646
+#: code:addons/odoo_sync/general/general.py:703
+#: code:addons/odoo_sync/general/general.py:760
+#: code:addons/odoo_sync/general/general.py:817
+#: code:addons/odoo_sync/general/general.py:873
+#: code:addons/odoo_sync/general/general.py:930
+#: code:addons/odoo_sync/general/general.py:988
+#: code:addons/odoo_sync/general/general.py:1046
+#: code:addons/odoo_sync/general/general.py:1103
+#: code:addons/odoo_sync/general/general.py:1159
+#: code:addons/odoo_sync/general/general.py:1215
+#: code:addons/odoo_sync/general/general.py:1272
+#: field:general.brand.queue,sync_id:0
+#: field:general.category.queue,sync_id:0
+#: field:general.convert.queue,sync_id:0
+#: field:general.country.queue,sync_id:0
+#: field:general.give.k.queue,sync_id:0
+#: field:general.hot.product.queue,sync_id:0
+#: field:general.inventory.queue,sync_id:0
+#: field:general.knumber.queue,sync_id:0
+#: field:general.notify.content.queue,sync_id:0
+#: field:general.partner.queue,sync_id:0
+#: field:general.price.queue,sync_id:0
+#: field:general.product.queue,sync_id:0
+#: field:general.sale.queue,sync_id:0
+#: field:general.saledial.queue,sync_id:0
+#: field:general.session.product.queue,sync_id:0
+#: field:general.state.queue,sync_id:0
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+#: field:general.template.queue,sync_id:0
+#, python-format
+msgid "Synchronization"
+msgstr "Synchronization"
+
+#. module: odoo_sync
+#: model:ir.actions.act_window,name:odoo_sync.action_general_synchronization
+#: model:ir.ui.menu,name:odoo_sync.menu_action_general_synchronization
+#: model:ir.ui.menu,name:odoo_sync.menu_action_general_synchronization_queue
+#: model:ir.ui.menu,name:odoo_sync.menu_general_synchronization_root
+msgid "Synchronizations"
+msgstr "Synchronizations"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_give_k
+msgid "Tang K"
+msgstr "Tang K"
+
+#. module: odoo_sync
+#: code:addons/odoo_sync/general/general.py:139
+#, python-format
+msgid "The host '%s' is not available! Please repair it again!"
+msgstr "The host '%s' is not available! Please repair it again!"
+
+#. module: odoo_sync
+#: sql_constraint:general.synchronization:0
+msgid "The host for queue must be unique per configuration!"
+msgstr "The host for queue must be unique per configuration!"
+
+#. module: odoo_sync
+#: code:addons/odoo_sync/product/session_product.py:74
+#, python-format
+msgid "Thông báo!"
+msgstr "Thông báo!"
+
+#. module: odoo_sync
+#: selection:sale.order,state_payment:0
+msgid "UnPayment"
+msgstr "UnPayment"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_form
+msgid "Update status Sale Order"
+msgstr "Update status Sale Order"
+
+#. module: odoo_sync
+#: field:general.synchronization,username:0
+msgid "User Name"
+msgstr "User Name"
+
+#. module: odoo_sync
+#: field:date.of.birth,value:0
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: odoo_sync
+#: field:general.synchronization,virtual_host:0
+msgid "Virtual Host"
+msgstr "Virtual Host"
+
+#. module: odoo_sync
+#: field:res.partner,ward_id:0
+msgid "Ward"
+msgstr "Ward"
+
+#. module: odoo_sync
+#: field:res.ward,code:0
+msgid "Ward Code"
+msgstr "Ward Code"
+
+#. module: odoo_sync
+#: field:res.ward,name:0
+msgid "Ward Name"
+msgstr "Ward Name"
+
+#. module: odoo_sync
+#: model:ir.actions.act_window,name:odoo_sync.action_ward
+msgid "Wards"
+msgstr "Wards"
+
+#. module: odoo_sync
+#: field:sale.order,website_id:0
+msgid "Website ID"
+msgstr "Website ID"
+
+#. module: odoo_sync
+#: field:sale.order,website_message_ids:0
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: odoo_sync
+#: help:sale.order,website_message_ids:0
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_partner_history
+msgid "XMLRPC for History Login Queue"
+msgstr "XMLRPC for History Login Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_rpc_customer
+#: model:ir.model,name:odoo_sync.model_general_rpc_queue
+msgid "XMLRPC for Queue"
+msgstr "XMLRPC for Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_rpc_order
+msgid "XMLRPC for RPC Order"
+msgstr "XMLRPC for RPC Order"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_rpc_price
+msgid "XMLRPC for RPC Price"
+msgstr "XMLRPC for RPC Price"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_rpc_resync
+msgid "XMLRPC for RPC resync"
+msgstr "XMLRPC for RPC resync"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_rpc_transaction
+#: model:ir.model,name:odoo_sync.model_general_session_close
+#: model:ir.model,name:odoo_sync.model_general_session_dial
+#: model:ir.model,name:odoo_sync.model_general_session_order
+msgid "XMLRPC for Session Close"
+msgstr "XMLRPC for Session Close"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_session_add
+msgid "XMLRPC for Session Create"
+msgstr "XMLRPC for Session Create"
+
+#. module: odoo_sync
+#: view:res.partner:odoo_sync.view_partner_form_inherit
+#: field:res.partner,year_of_birth:0
+msgid "Year"
+msgstr "Năm"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_knumber_queue
+msgid "knumber change Queue"
+msgstr "knumber change Queue"
+
+#. module: odoo_sync
+#: view:general.synchronization:odoo_sync.view_general_synchronization_tree
+msgid "synchronization"
+msgstr "synchronization"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_general_synchronization
+msgid "synchronization to Queue"
+msgstr "synchronization to Queue"
+
+#. module: odoo_sync
+#: model:ir.model,name:odoo_sync.model_res_ward
+#: view:res.ward:odoo_sync.view_ward_form
+#: view:res.ward:odoo_sync.view_ward_tree
+msgid "ward"
+msgstr "ward"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,type:0
+msgid "Send to one customer"
+msgstr "Gửi đến một khách hàng"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,type:0
+msgid "Send to all customers"
+msgstr "Gửi đến tất cả khách hàng"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,type:0
+msgid "Send to many customers"
+msgstr "Gửi đến nhiều khách hàng"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,state:0
+msgid "New"
+msgstr "Mới"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,state:0
+msgid "Waiting"
+msgstr "Đang chờ"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,state:0
+msgid "Pushing"
+msgstr "Đang gửi"
+
+#. module: odoo_sync
+#: selection:notify.to.customers,state:0
+msgid "Done"
+msgstr "Hoàn tất"
+
+#. module: odoo_sync
+#: field:notify.to.customers,type:0
+msgid "Type notify"
+msgstr "Loại thông báo"
+
+#. module: odoo_sync
+#: field:notify.to.customers,name:0
+msgid "Name"
+msgstr "Tên thông báo"
+
+#. module: odoo_sync
+#: field:notify.to.customers,state:0
+msgid "Name"
+msgstr "Trạng thái"
+
+#. module: odoo_sync
+#: field:notify.to.customers,partner_id:0
+msgid "Customer receive notify"
+msgstr "Khách hàng nhận thông báo"
+
+#. module: odoo_sync
+#: field:notify.to.customers.detail,partner_id:0
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: odoo_sync
+#: field:notify.to.customers,partner_ids:0
+msgid "Customers receive notify"
+msgstr "Các khách hàng nhận thông báo"

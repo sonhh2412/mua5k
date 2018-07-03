@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+            <record model="ir.ui.view" id="res_partner_history_login_tree_view">
+                <field name="name">res.partner.history.login.tree</field>
+                <field name="model">res.partner.history.login</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="History Login of Members">
+                        <field name="partner_id"/>
+                        <field name="date"/>
+                        <field name="ip"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="res_partner_history_login_form_view">
+                <field name="name">res.partner.history.login.form</field>
+                <field name="model">res.partner.history.login</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="History Login of Members">
+                        <field name="partner_id"/>
+                        <field name="date"/>
+                        <field name="ip"/>
+                    </form>
+                </field>
+            </record>
+            
+            <record id="res_partner_history_login_search_view" model="ir.ui.view">
+            <field name="name">res.partner.history.login.search</field>
+            <field name="model">res.partner.history.login</field>
+            <field name="arch" type="xml">
+                <search string="Search History Login of Members">
+                	<field name="partner_id" string="Members" filter_domain="['|',('partner_id.name','ilike',self),('partner_id.login','ilike',self)]"/>
+                	<field name="ip" string="IP Address" filter_domain="[('ip','ilike',self)]"/>
+                <separator/>                
+                <group expand="0" string="Group By...">
+             		<filter string="Members" name="group_member" domain="[]" context="{'group_by':'partner_id'}"/>
+             		<filter string="Month Login" name="group_month_login" domain="[]" context="{'group_by':'date:month'}"/>
+             		<filter string="IP Address" name="group_ip" domain="[]" context="{'group_by':'ip'}"/>
+                </group>
+ 				</search>
+            </field>
+        </record>
+
+            <record model="ir.actions.act_window" id="action_res_partner_history_login_tree_view">
+                <field name="name">History Login of Members</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">res.partner.history.login</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree</field>
+                <field name="view_id" ref="res_partner_history_login_tree_view"/>
+                <field name="search_view_id" ref="res_partner_history_login_search_view"/>
+                <field name="context">{'search_default_group_member':1}</field>
+            </record>
+
+
+        <record id="customer_general_search_view" model="ir.ui.view">
+            <field name="name">Search Partner General</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+				<field name="user_id" position="after">
+					 <field name="identity" />
+                     <field name="login" />
+				</field>
+				<field name="name" position="attributes">
+					<attribute name="filter_domain">['|','|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('identity','ilike',self),('login','ilike',self)]</attribute>
+				</field>
+				<filter string="Country" position="after">
+                   <separator/>
+                   <filter string="Income/Monthly" context="{'group_by': 'income_monthly'}" invisible="1"/>
+                   <filter string="Register Date" context="{'group_by': 'register_date'}"/>
+				</filter>
+            </field>
+        </record>
+	
+        <record id="view_partner_inherit_customer_general_tree" model="ir.ui.view">
+            <field name="name">res.partner.general.inherit.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                 <field name="email" position="after">
+                     <field name="login" />
+                     <field name="total_amount" />
+                     <field name="income_monthly" />
+                     <field name="register_date" />
+                 </field>
+                 <field name="display_name" position="after">
+                 	<field name="identity" />
+                 </field>
+             </field>
+         </record>
+         
+        <record model="ir.ui.view" id="partner_view_buttons_session">
+            <field name="name">partner.view.buttons_session</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='buttons']" position="inside">
+                    <button type="action" 
+                        class="oe_stat_button"
+                        id="session_order_button"
+                        icon="fa-list-ol"
+                        name="%(odoo_general.action_product_session_order_tree_view)d"
+                        attrs="{'invisible': [('customer', '=', False)]}" 
+                        context="{'search_default_partner_id': active_id,'default_partner_id': active_id}">
+                        <div><strong><field name="total_session_order"/></strong><br/>Orders</div>
+                    </button>
+                </xpath>
+                <xpath expr="//page[@string='Contacts']" position="attributes">
+                	<attribute name="attrs">{}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='child_ids']/form/sheet/group/label[@for='street']" position="attributes">
+                	<attribute name="attrs">{}</attribute>
+                </xpath>
+                <xpath expr="//div[@name='div_address']" position="attributes">
+                	<attribute name="attrs">{}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                	<attribute name="attrs">{'readonly':[('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('use_parent_address','=',True),'&amp;',('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='street2']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('use_parent_address','=',True),'&amp;',('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('use_parent_address','=',True),'&amp;',('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('use_parent_address','=',True),'&amp;',('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='zip']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('use_parent_address','=',True),'&amp;',('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('use_parent_address','=',True),'&amp;',('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="attrs">{'required': [('user_ids','!=', [])], 'readonly':[('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('customer','=',True),('create_date','!=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='title']" position="after">
+                	<field name="create_date" invisible="0"/>
+                </xpath>
+                <xpath expr="//form/sheet/group" position="after">
+                	<group name="info_member">
+            			<group>
+            				<field name="login" attrs="{'required':[('customer','=',True)],'invisible':[('customer','=',False)], 'readonly':[('customer','=',True),('create_date','!=',False)]}"/>
+		            		<field name="password" password="True" attrs="{'invisible':['|',('show_pass','=',True),('customer','=',False)],'required':[('customer','=',True)], 'readonly':[('customer','=',True),('create_date','!=',False)]}" on_change="onchange_password(password,password_temp,show_pass)"/>
+		            		<field name="password_temp" attrs="{'invisible':[('show_pass','!=',True)], 'readonly':[('customer','=',True),('create_date','!=',False)]}" on_change="onchange_password(password,password_temp,show_pass)"/>
+		            		<field name="show_pass" attrs="{'invisible':[('customer','=',False)]}"/>
+		            		<field name="identity" readonly="1"/>
+		            		<field name="avantar_link"  attrs="{'readonly':[('customer','=',True),('create_date','!=',False)]}"/>
+            			</group>
+            			<group attrs="{'invisible':[('customer','=',False)]}">
+            				<field name="gender" attrs="{'readonly':[('customer','=',True),('create_date','!=',False)]}"/>
+            				<field name="income_monthly" attrs="{'readonly':[('customer','=',True),('create_date','!=',False)]}"/>
+            				<field name="signature" attrs="{'readonly':[('customer','=',True),('create_date','!=',False)]}"/>
+            				<field name="total_amount" attrs="{'readonly':[('customer','=',True),('create_date','!=',False)]}"/>
+		            		<field name="register_date" readonly="1"/>
+            			</group>
+            		</group>
+                </xpath>
+                <page name="sales_purchases" position="after">
+                	<page string="History Exchange" name="history_exchange">
+            			<group>
+            				<field name="history_exchange_ids" widget="one2many_list" nolabel="1">
+            					<tree editable="bottom" edit="false" delete="false">
+            						<field name="date_exchange"/>
+            						<field name="millisecond"/>
+            						<field name="type_exchange"/>
+            						<field name="product_id"/>
+            						<field name="amount_exchange"/>
+            						<field name="balance"/>
+            					</tree>
+            				</field>
+            			</group>
+            		</page>
+            		<page string="History Login" name="history_login">
+            			<group>
+            				<field name="login_history" widget="one2many_list" nolabel="1">
+            					<tree editable="bottom" edit="false" delete="false" create="false">
+            						<field name="date"/>
+            						<field name="ip"/>
+            					</tree>
+            				</field>
+            			</group>
+            		</page>
+                </page>
+            </field>
+        </record>
+		<!-- Inherit action and menu -->
+		
+		 <record id="account.action_invoice_tree1" model="ir.actions.act_window">
+            <field name="name">Member Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','=','out_invoice')]</field>
+            <field name="context">{'default_type':'out_invoice', 'type':'out_invoice', 'journal_type': 'sale'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a member invoice.
+              </p><p>
+                Odoo's electronic invoicing allows to ease and fasten the
+                collection of member payments. Your member receives the
+                invoice by email and he can pay online and/or import it
+                in his own system.
+              </p><p>
+                The discussions with your customer are automatically displayed at
+                the bottom of each invoice.
+              </p>
+            </field>
+        </record>
+        
+        <record id="account.action_invoice_tree3" model="ir.actions.act_window">
+            <field name="name">Member Refunds</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','=','out_refund')]</field>
+            <field name="context">{'default_type':'out_refund', 'type':'out_refund', 'journal_type': 'sale_refund'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a member refund.
+              </p><p>
+                A refund is a document that credits an invoice completely or
+                partially.
+              </p><p>
+                Instead of manually creating a member refund, you
+                can generate it directly from the related member invoice.
+              </p>
+            </field>
+        </record>
+        
+        <record id="account_voucher.action_vendor_receipt" model="ir.actions.act_window">
+            <field name="name">Member Payments</field>
+            <field name="res_model">account.voucher</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('journal_id.type', 'in', ['bank', 'cash']), ('type','=','receipt')]</field>
+            <field name="context">{'type':'receipt'}</field>
+            <field name="search_view_id" ref="account_voucher.view_voucher_filter_customer_pay"/>
+            <field name="view_id" eval="False"/>
+            <field name="target">current</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to register a new payment. 
+              </p><p>
+                Enter the member and the payment method and then, either
+                create manually a payment record or Odoo will propose to you
+                automatically the reconciliation of this payment with the open
+                invoices or sales receipts.
+              </p>
+            </field>
+        </record>
+        
+        <record id="base.action_partner_form" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_customer":1}</field>
+            <field name="search_view_id" ref="base.view_res_partner_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a contact in your address book.
+              </p><p>
+                Odoo helps you easily track all activities related to
+                a member; discussions, history of business opportunities,
+                documents, etc.
+              </p>
+            </field>
+        </record>
+        
+        <record id="base.action_partner_customer_form" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'default_customer':1, 'search_default_customer':1}</field>
+            <field name="filter" eval="True"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a contact in your address book.
+              </p><p>
+                Odoo helps you easily track all activities related to
+                a customer: discussions, history of business opportunities,
+                documents, etc.
+              </p>
+            </field>
+        </record>
+        
+        <record id="action_partner_for_sale_form" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{"search_default_customer":1}</field>
+            <field name="search_view_id" ref="base.view_res_partner_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a contact in your address book.
+              </p><p>
+                Odoo helps you easily track all activities related to
+                a customer; discussions, history of business opportunities,
+                documents, etc.
+              </p>
+            </field>
+        </record>
+        
+        
+        <menuitem id="account.menu_account_customer" name="Members"
+            parent="account.menu_finance_receivables"
+            action="base.action_partner_customer_form" sequence="100" groups="account.group_account_manager"/>
+
+		<menuitem id="account.menu_finance_receivables" name="Members" parent="account.menu_finance" sequence="2"/>
+		
+		<menuitem id="base.menu_partner_form" parent="base.menu_sales" action="action_partner_for_sale_form" sequence="2" name="Members"/>
+		
+		<menuitem action="account.action_invoice_tree1" id="account.menu_action_invoice_tree1" parent="account.menu_finance_receivables" name="Member Invoices"/>
+		
+		<menuitem action="account.action_invoice_tree3" id="account.menu_action_invoice_tree3" parent="account.menu_finance_receivables" name="Member Refunds"/>
+		
+		<menuitem action="account_voucher.action_vendor_receipt" icon="STOCK_JUSTIFY_FILL" sequence="12"
+            id="account_voucher.menu_action_vendor_receipt"  parent="account.menu_finance_receivables" name="Member Payments"/>
+		
+		
+        <menuitem id="base.system_history_logs_menu" name="System History Logs" parent="base.menu_base_config" sequence="100"/>
+		<menuitem id="res_partner_history_login_menu" name="History Login of Members" parent="base.system_history_logs_menu" action="action_res_partner_history_login_tree_view"/>
+
+	</data>
+</openerp>

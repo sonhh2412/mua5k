@@ -1,0 +1,72 @@
+<div ng-controller="headerController">
+    <div id="top" class="p-t-5">
+        <div class="container p-0">
+            <div class="row header" ng-if="isnotMobile">
+                <div class="possition-header col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="pull-right"><a ng-if="isAdmin" class="manage" href="/quan-ly-he-thong.html">Quản lý hệ thống</a><span class="account pull-right" ng-if="isLoggedIn"><img class="m-r-5 top-avatar" src="{{getCurrentUser.avatar}}"><span class="m-r-5 top-user">User: </span><hash-user user=getCurrentUser._id></hash-user><span style="margin-right: 7px; color: #333;">| <b  style="font-weight: 500;font-size: 13px;"><a style="color:#f60;" href="/vi-cua-toi.html">Số K: {{getCurrentUser.k_number | priceVND}}</a></b></span> 
+                        
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="menu-top-header pull-right">
+                        <li ng-if="!isLoggedIn"><a href="/dang-nhap.html">Đăng nhập</a></li>
+                        <li ng-if="!isLoggedIn"><a href="/dang-ky-tai-khoan.html">Đăng ký</a></li>
+                        <li ng-if="isLoggedIn" class="top-profile"><a href="/trang-ca-nhan.html" class="profile-customer">Trang cá nhân <i class="count-notify-customer">{{countProfile}}</i></a></li>
+                        <li><a href="#">App</a></li>
+                        <li><a href="/dang-ky-mua-k.html">Nạp tiền</a></li>
+                        <li><a href="/tro-giup/gioi-thieu-mua5k.html">Trợ giúp</a></li>
+                        <li><a onclick="triggerChatBox();" href="#">Gửi tin nhắn</a></li>
+                        <li ng-if="isLoggedIn"><a href="#" class="pull-right" ng-click="logout()">[Đăng xuất]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row m-b-15 logo-top-content">
+                <div class="col-md-3 text-left logo-container"><a href="/"><img src="/assets/images/themes/10K MARKET3-09.png" /></a></div>
+                <header-top-count ng-if="isnotMobile" />
+                <div class="col-md-4 possition-search-top" ng-if="isnotMobile">
+                    <form class="pull-left">
+                        <div class="form-group m-b-0"><input type="text" autocomplete="off" name="seach" ng-model="search" class="form-control" placeholder="Tìm kiếm" /><button class="btn btn-default btn-search" ng-click="fnSearch(search)">Search</button></div>
+                    </form>
+                    <div class="pull-right solid">
+                        <p class="m-0">Liên kết +</p><a href="https://www.facebook.com/Mua5kcom-1976195329290650/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://plus.google.com/104400963903945051514" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="top-menu" ng-if="isnotMobile">
+            <div class="container">
+                <div class="row">
+                    <div class="nav-category">
+                        <div class="nav-category-left">
+                            <div class="categories-header" ng-click="gotoCategg()">
+                                <h2><span>Danh mục sản phẩm</span>
+                                    <md-button class="md-icon-button md-primary" ng-href="/danh-muc/chua-du-nguoi-mua.html" aria-label="Category"></md-button>
+                                </h2>
+                            </div>
+                            <home-category class="home-page"></home-category>
+                        </div>
+                        <div class="nav-cate-right">
+                            <div class="nav-center">
+                                <nav>
+                                    <ul class="nav nav-justified">
+                                        <li ng-class="{'active' : parmas.home}"><a href="/">Trang chủ</a></li>
+                                        <li class="nav-waiting-result" ng-class="{'active' : parmas.waiting_result}"><a href="/danh-muc-cong-bo.html" ng-click=" isLoggedIn ? resetNotify() : return"><i class="count-waiting">{{countWaiting}}</i>Chờ công bố</a></li>
+                                        <li ng-class="{'active' : parmas.restricted_area}"><a href="/khu-vuc-hang-che.html">Khu vực hạn chế</a></li>
+                                        <li ng-class="{'active' : parmas.customer_share}"><a href="/khach-hang-chia-se.html">Khách hàng chia sẻ</a></li>
+                                        <li ng-class="{'active' : parmas.forum}"><a href="/dien-dan.html">Diễn đàn</a></li>
+                                        <li ng-class="{'active' : parmas.help}"><a href="/tro-giup/huong-dan-choi.html">Hướng dẫn</a></li>
+                                    </ul><a href="/gio-hang.html"><span class="nav-cart"><i class="cart">{{sizeCart}}</i>Giỏ hàng </span></a></nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript'>
+        function triggerChatBox () {
+            $('#sbzon_frame').contents().find("#subiz_wrapper .button_chat_online").click();
+            $('#sbzoff_frame').contents().find("#subiz_wrapper .button_chat_offline").click();
+        }
+    </script>
+</div>

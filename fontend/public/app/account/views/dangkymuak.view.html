@@ -1,0 +1,477 @@
+<div class="profile-page bg-while m-t-15">
+    <div class="title-app" ng-if="isMobile">
+        <div class="nav-header" ng-click="doTheBack()"> Back </div>
+        <h2>MUA K</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="profile-left col-md-2 p-l-0" ng-if="isnotMobile">
+                <account-menu-left></account-menu-left>
+            </div>
+            <div class="profile-content col-md-7 p-0 content content-page-napk">
+                <h3 class="title">PHƯƠNG THỨC THANH TOÁN</h3>
+                
+            	<div ng-cloak>
+				  <md-content>
+				    <md-tabs md-dynamic-height md-border-bottom>
+				      <md-tab >
+				      	<md-tab-label>
+					      	<div class="tab-label-form" ng-click="select('NL')">
+					      		<img src="/assets/images/img-vi.png" />	
+					      		<p >Ví Ngân Lượng</p>
+				      		</div>			      
+					    </md-tab-label>
+					    <md-tab-body>
+					      <md-content class="">
+					          <div class="profile-content-3 border">
+			                    		                    
+		                    	<div class='col-md-7 floating-box'>
+				                    <form class="frm-buyk" novalidate name="frmBuyK" rc-submit="submit()" dw-loading="lazy-submit" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+				                        <div class="form-group groups-k" ng-class="{'has-error' : rc.frmBuyK.needsAttention(frmBuyK.price) }">
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="50000" required /> 50K &nbsp; </label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="100000" required /> 100K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="200000" required /> 200K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="300000" required /> 300K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="500000" required /> 500K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="other" required /> Khác
+				                                <input type="text" ng-model="session.Otherprice" ng-disabled="session.price != 'other'" class="input-other" name="price_Other" /> &nbsp; &nbsp; K </label>
+				                        </div>
+				                        <p class="thong-bao-err"><span class="red" ng-show="rc.frmBuyK.needsAttention(frmBuyK.price)">Vui lòng chọn số K muốn mua</span>
+				                        </p>
+				                        <ul class="list-content" >
+				                            <li>                            
+				                               <!--  <input type="hidden" value="NL" ng-model="session.option_payment" name="option_payment"  ng-init="session.option_payment='NL'" />  -->
+				                                <div class="boxContent" >
+				                                    <p> Thanh toán trực tuyến AN TOÀN và ĐƯỢC BẢO VỆ, sử dụng thẻ ngân hàng trong và ngoài nước hoặc nhiều hình thức tiện lợi khác. Được bảo hộ & cấp phép bởi NGÂN HÀNG NHÀ NƯỚC, ví điện tử duy nhất được cộng đồng ƯA THÍCH NHẤT 2 năm liên tiếp, Bộ Thông tin Truyền thông trao giải thưởng Sao Khuê </p>
+				                                </div>
+				                            </li>				                            
+				                        </ul>
+				                       
+				                        <div class="form-group btn-buy-k">
+				                            <md-button type="submit" class="btn p-0 m-0 btn-submit"> Thanh toán </md-button>
+				                        </div>
+				                    </form>
+				                </div>
+				                <div class="col-md-5 floating-box">
+		                    		<div class="table-responsive" id="tbl-price" style="margin-top:10px;"><table class="table table-bordered table-striped text-center mg-t-25"><thead><tr><th class="text-center">VNĐ</th><th class="text-center">Số K</th></tr></thead><tbody><tr><td>10.000</td><td>10</td></tr><tr><td>20.000</td><td>20</td></tr><tr><td>50.000</td><td>50</td></tr><tr><td>100.000</td><td>100</td></tr><tr><td>200.000</td><td>200</td></tr><tr><td>500.000</td><td>500</td></tr></tbody></table></div>
+		                    	</div>
+			                  </div>
+					        </md-content>
+					    </md-tab-body>
+				      </md-tab>
+				      <md-tab >
+				      	<md-tab-label>
+				      		<div class="tab-label-form" ng-click="select('ATM_ONLINE')">
+					      		<img src="/assets/images/img-atm.png"  />	
+					      		<p >Online bằng thẻ ATM</p>
+				      		</div>				      
+					    </md-tab-label>
+					    <md-tab-body>
+					      <md-content class="">
+					          <div class="profile-content-3 border">
+			                    		                    
+		                    	<div class='col-md-7 floating-box'>
+				                    <form class="frm-buyk" novalidate name="frmBuyK2" rc-submit="submit()" dw-loading="lazy-submit" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+				                        <div class="form-group groups-k" ng-class="{'has-error' : rc.frmBuyK2.needsAttention(frmBuyK2.price) }">
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="50000" required /> 50K &nbsp;</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="100000" required /> 100K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="200000" required /> 200K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="300000" required /> 300K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="500000" required /> 500K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="other" required /> Khác
+				                                <input type="text" ng-model="session.Otherprice" ng-disabled="session.price != 'other'" class="input-other" name="price_Other" /> &nbsp; &nbsp; K </label>
+				                        </div>
+				                        <p class="thong-bao-err"><span class="red" ng-show="rc.frmBuyK2.needsAttention(frmBuyK2.price)">Vui lòng chọn số K muốn mua</span>
+				                        </p>
+				                        <ul class="list-content" >
+				                            <li>
+				                            	<!-- <input type="hidden" value="ATM_ONLINE" ng-model="session.option_payment" name="option_payment"  ng-init="session.option_payment='ATM_ONLINE'" />  -->
+				                                <div class="boxContent" >
+				                                    <p><i><span style="color:#ff5a00;font-weight:bold;text-decoration:underline;">Lưu ý</span>: Bạn cần đăng ký Internet-Banking hoặc dịch vụ thanh toán trực tuyến tại ngân hàng trước khi thực hiện.</i>
+				                                    </p>
+				                                    <ul class="cardList clearfix">
+				                                        <li class="bank-online-methods ">
+				                                            <label for="vcb_ck_on"><i class="BIDV" title="Ngân hàng TMCP Đầu tư &amp; Phát triển Việt Nam"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="BIDV" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="vcb_ck_on"><i class="VCB" title="Ngân hàng TMCP Ngoại Thương Việt Nam"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="VCB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="vnbc_ck_on"><i class="DAB" title="Ngân hàng Đông Á"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="DAB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="tcb_ck_on"><i class="TCB" title="Ngân hàng Kỹ Thương"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="TCB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_mb_ck_on"><i class="MB" title="Ngân hàng Quân Đội"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="MB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_vib_ck_on"><i class="VIB" title="Ngân hàng Quốc tế"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="VIB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_vtb_ck_on"><i class="ICB" title="Ngân hàng Công Thương Việt Nam"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="ICB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_exb_ck_on"><i class="EXB" title="Ngân hàng Xuất Nhập Khẩu"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="EXB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_acb_ck_on"><i class="ACB" title="Ngân hàng Á Châu"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="ACB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_hdb_ck_on"><i class="HDB" title="Ngân hàng Phát triển Nhà TPHCM"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="HDB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_msb_ck_on"><i class="MSB" title="Ngân hàng Hàng Hải"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="MSB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_nvb_ck_on"><i class="NVB" title="Ngân hàng Nam Việt"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="NVB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_vab_ck_on"><i class="VAB" title="Ngân hàng Việt Á"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="VAB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_vpb_ck_on"><i class="VPB" title="Ngân Hàng Việt Nam Thịnh Vượng"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="VPB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_scb_ck_on"><i class="SCB" title="Ngân hàng Sài Gòn Thương tín"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="SCB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="bnt_atm_pgb_ck_on"><i class="PGB" title="Ngân hàng Xăng dầu Petrolimex"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="PGB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="bnt_atm_gpb_ck_on"><i class="GPB" title="Ngân hàng TMCP Dầu khí Toàn Cầu"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="GPB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="bnt_atm_agb_ck_on"><i class="AGB" title="Ngân hàng Nông nghiệp &amp; Phát triển nông thôn"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="AGB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="bnt_atm_sgb_ck_on"><i class="SGB" title="Ngân hàng Sài Gòn Công Thương"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="SGB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_bab_ck_on"><i class="BAB" title="Ngân hàng Bắc Á"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="BAB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_bab_ck_on"><i class="TPB" title="Tền phong bank"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="TPB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_bab_ck_on"><i class="NAB" title="Ngân hàng Nam Á"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="NAB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_bab_ck_on"><i class="SHB" title="Ngân hàng TMCP Sài Gòn - Hà Nội (SHB)"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="SHB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="sml_atm_bab_ck_on"><i class="OJB" title="Ngân hàng TMCP Đại Dương (OceanBank)"></i>
+				                                                <input type="radio" ng-model="session.bankcode" value="OJB" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                    </ul>
+				                                </div>
+				                            </li>
+				                        </ul>
+				                        <p class="thong-bao-err"><span class="red" ng-show="showalert">Vui lòng chọn ngân hàng.</span>
+				                        </p>
+				                        <div class="form-group btn-buy-k">
+				                            <md-button type="submit" class="btn p-0 m-0 btn-submit"> Thanh toán </md-button>
+				                        </div>
+				                    </form>
+				                </div>
+				                <div class="col-md-5 floating-box">
+		                    		<div class="table-responsive" id="tbl-price" style="margin-top:10px;"><table class="table table-bordered table-striped text-center mg-t-25"><thead><tr><th class="text-center">VNĐ</th><th class="text-center">Số K</th></tr></thead><tbody><tr><td>10.000</td><td>10</td></tr><tr><td>20.000</td><td>20</td></tr><tr><td>50.000</td><td>50</td></tr><tr><td>100.000</td><td>100</td></tr><tr><td>200.000</td><td>200</td></tr><tr><td>500.000</td><td>500</td></tr></tbody></table></div>
+		                    	</div>
+			                  </div>
+					        </md-content>
+					    </md-tab-body>
+				      </md-tab>
+				      <md-tab >
+				      	<md-tab-label>
+				      		<div class="tab-label-form" ng-click="select('IB_ONLINE')">
+					      		<img src="/assets/images/img-ib.png"  />	
+					      		<p >Internet Banking</p>
+				      		</div>		      
+					    </md-tab-label>
+					    <md-tab-body>
+					      <md-content class="">
+					          <div class="profile-content-3 border">                  
+		                    	<div class='col-md-7 floating-box'>
+				                    <form class="frm-buyk" novalidate name="frmBuyK3" rc-submit="submit()" dw-loading="lazy-submit" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+				                        <div class="form-group groups-k" ng-class="{'has-error' : rc.frmBuyK3.needsAttention(frmBuyK3.price) }">
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="50000" required /> 50K &nbsp;</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="100000" required /> 100K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="200000" required /> 200K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="300000" required /> 300K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="500000" required /> 500K</label>
+				                            <label>
+				                                <input type="radio" ng-model="session.price" name="price" value="other" required /> Khác
+				                                <input type="text" ng-model="session.Otherprice" ng-disabled="session.price != 'other'" class="input-other" name="price_Other" /> &nbsp; &nbsp; K </label>
+				                        </div>
+				                        <p class="thong-bao-err"><span class="red" ng-show="rc.frmBuyK3.needsAttention(frmBuyK3.price)">Vui lòng chọn số K muốn mua</span>
+				                        </p>
+				                        <ul class="list-content" >				                           
+				                            <li>
+				                            	<!-- <input type="hidden" value="IB_ONLINE" ng-model="session.option_payment" name="option_payment"  ng-init="session.option_payment='IB_ONLINE'" />  -->				                                
+				                                <div class="boxContent">
+				                                    <p><i><span style="color:#ff5a00;font-weight:bold;text-decoration:underline;">Lưu ý</span>: Bạn cần đăng ký Internet-Banking hoặc dịch vụ thanh toán trực tuyến tại ngân hàng trước khi thực hiện.</i>
+				                                    </p>
+				                                    <ul class="cardList clearfix" style="height: auto;">
+				                                        <li class="bank-online-methods ">
+				                                            <label for="vcb_ck_on"><i class="BIDV" title="Ngân hàng TMCP Đầu tư &amp; Phát triển Việt Nam"></i>
+				                                                <input type="radio" value="BIDV" ng-model="session.bankcode" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="vcb_ck_on"><i class="VCB" title="Ngân hàng TMCP Ngoại Thương Việt Nam"></i>
+				                                                <input type="radio" value="VCB" ng-model="session.bankcode" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="vnbc_ck_on"><i class="DAB" title="Ngân hàng Đông Á"></i>
+				                                                <input type="radio" value="DAB" ng-model="session.bankcode" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                        <li class="bank-online-methods ">
+				                                            <label for="tcb_ck_on"><i class="TCB" title="Ngân hàng Kỹ Thương"></i>
+				                                                <input type="radio" value="TCB" ng-model="session.bankcode" name="bankcode">
+				                                            </label>
+				                                        </li>
+				                                    </ul>
+				                                </div>
+				                            </li>
+				                        </ul>
+				                        <p class="thong-bao-err"><span class="red" ng-show="showalert">Vui lòng chọn ngân hàng.</span>
+				                        </p>
+				                        <div class="form-group btn-buy-k">
+				                            <md-button type="submit" class="btn p-0 m-0 btn-submit"> Thanh toán </md-button>
+				                        </div>
+				                    </form>
+				                </div>
+				                <div class="col-md-5 floating-box">
+		                    		<div class="table-responsive" id="tbl-price" style="margin-top:10px;"><table class="table table-bordered table-striped text-center mg-t-25"><thead><tr><th class="text-center">VNĐ</th><th class="text-center">Số K</th></tr></thead><tbody><tr><td>10.000</td><td>10</td></tr><tr><td>20.000</td><td>20</td></tr><tr><td>50.000</td><td>50</td></tr><tr><td>100.000</td><td>100</td></tr><tr><td>200.000</td><td>200</td></tr><tr><td>500.000</td><td>500</td></tr></tbody></table></div>
+		                    	</div>
+			                  </div>
+					        </md-content>
+					    </md-tab-body>
+				      </md-tab>
+
+				      <md-tab>
+				      	<md-tab-label>
+				      		<div class="tab-label-form">
+					      		<img src="/assets/images/img-cart.png" />
+					      		<p>Thẻ cào</p>
+				      		</div>			      
+					    </md-tab-label>
+					    <md-tab-body>
+					    	<md-content class="">
+					       		<div class="profile-content-3 border">
+				                   <!--  <div class="head-title">
+				                        <h3 class="title"><b>Nạp K thông qua thẻ cào</b></h3>
+				                    </div> -->
+
+			                    	<div class="col-md-7 floating-box">
+			                    		<form class="frm-buyk" novalidate name="frmBuyKTC" rc-submit="submitTC()" dw-loading="lazy-submit" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}" style="padding-left:20px">
+					                        <table align="left">
+					                            <tbody>
+					                                <tr>
+					                                    <td colspan="3">
+					                                        <table>
+					                                            <tbody>
+					                                                <tr>
+					                                                    <td style="padding-left:0px;padding-top:5px" align="right">
+					                                                        <label for="92"><img src="/assets/images/mobifone.jpg" />
+					                                                        </label>
+					                                                    </td>
+					                                                    <td style="padding-left:10px;padding-top:5px">
+					                                                        <label for="93"><img src="/assets/images/vinaphone.jpg" />
+					                                                        </label>
+					                                                    </td>
+					                                                    <td style="padding-top:5px;padding-left:5px" align="left">
+					                                                        <label for="107"><img src="/assets/images/viettel.jpg" width="110" height="35" />
+					                                                        </label>
+					                                                    </td>
+					                                                </tr>
+					                                                <tr>
+					                                                    <td align="center" style="padding-bottom:0px;">
+					                                                        <input ng-model="session_card.cardCode" required type="radio" name="select_method" value="VMS" id="92" />
+					                                                    </td>
+					                                                    <td align="center" style="padding-bottom:0px;padding-left:5px">
+					                                                        <input ng-model="session_card.cardCode" required type="radio" name="select_method" value="VNP" id="93">
+					                                                    </td>
+					                                                    <td align="center" style="padding-bottom:0px;padding-right:0px">
+					                                                        <input ng-model="session_card.cardCode" required type="radio" name="select_method" value="VIETTEL" id="107" />
+					                                                    </td>
+					                                                </tr>
+					                                            </tbody>
+					                                        </table>
+					                                    </td>
+					                                </tr>
+					                                <tr>
+					                                    <td align="left" style="width: 55px;"><b style="width:55px; display:block">Mã Thẻ :</b>
+					                                    </td>
+					                                    <td colspan="2">
+					                                        <div class="form-group m-b-0" style="margin: 10px 20px; width:200px" ng-class="{'has-error' : rc.frmBuyKTC.needsAttention(frmBuyKTC.tc_code) }">
+					                                            <input required type="text" pattern="[0-9]*" class="form-control" id="tc_code" name="tc_code" ng-model="session_card.tc_code"><span class="note-input">*</span><span ng-show="rc.frmBuyKTC.needsAttention(frmBuyKTC.tc_code)" class="m-t-5 floating-box m-b-5 red"> Vui lòng nhập số mã thẻ cào.</span>
+					                                        </div>
+					                                    </td>
+					                                </tr>
+					                                <tr style="margin-bottom:20px;">
+					                                    <td align="left" style="width: 55px;"><b style="width:55px; display:block">Số Seri :</b>
+					                                    </td>
+					                                    <td colspan="2" style="vertical-align: middle;">
+					                                        <div class="form-group m-b-0" style="margin: 10px 20px; width:200px" ng-class="{'has-error' : rc.frmBuyKTC.needsAttention(frmBuyKTC.seri) }">
+					                                            <input required type="text" pattern="[0-9]*" class="form-control" id="seri" name="seri" ng-model="session_card.seri"><span class="note-input">*</span><span ng-show="rc.frmBuyKTC.needsAttention(frmBuyKTC.seri)" class="m-t-5 floating-box m-b-5 red"> Vui lòng nhập số seri.</span>
+					                                        </div>
+					                                    </td>
+					                                </tr>
+					                                <tr>
+					                                    <td colspan="3" align="left" style="padding-bottom:10px;padding-right:10px">
+					                                        <div class="form-group btn-buy-k">
+					                                            <md-button type="submit" class="btn p-0 m-0 btn-submit" style="margin:0px; margin-top:10px"> Nạp Thẻ </md-button>
+					                                        </div>
+					                                        <br/>
+					                                        <p><span class="red m-b-5">(*)</span><span> Là các yêu cầu bắt buột nhập</span>
+					                                        </p>
+					                                    </td>
+					                                </tr>
+					                            </tbody>
+					                        </table>
+					                    </form>
+			                    	</div>
+			                    	<div class="col-md-5 floating-box">
+			                    		<div class="table-responsive" id="tbl-price" style="margin-top:10px;"><table class="table table-bordered table-striped text-center mg-t-25"><thead><tr><th class="text-center">VNĐ</th><th class="text-center">Số K</th></tr></thead><tbody><tr><td>10.000</td><td>8</td></tr><tr><td>20.000</td><td>16</td></tr><tr><td>50.000</td><td>40</td></tr><tr><td>100.000</td><td>80</td></tr><tr><td>200.000</td><td>160</td></tr><tr><td>500.000</td><td>400</td></tr></tbody></table></div>
+			                    	</div>
+				                    
+				                </div>      
+					        </md-content>
+					    </md-tab-body>				        
+				      </md-tab>
+				      <md-tab label="Nhắn tin">
+				      	<md-tab-label>
+				      		<div class="tab-label-form">
+					      		<img src="/assets/images/img-sms.png" />	
+					      		<p>Nhắn tin</p>
+				      		</div>		      
+					    </md-tab-label>
+					    <md-tab-body>
+					        <md-content class="">
+					          <div class="profile-content-3 border">
+			                    <!-- <div class="head-title">
+			                        <h3 class="title"><b>Nạp K bằng cách nhắn tin</b></h3>
+			                    </div> -->
+			                    <div class="col-md-7 floating-box">
+			                    	<div class="content-padding floating-box" style="padding:10px 0;margin-bottom:10px;">
+				                    	<div class="nap-sms-view" ng-if="isMobile && runApp">
+				                            <a class="nap-view-item" href="sms:9029&body=NAP10&account={{session.email}}">NAP 5K</a>
+				                            <a class="nap-view-item" href="sms:9029&body=NAP20&account={{session.email}}">NAP 10K</a>
+				                            <a class="nap-view-item" href="sms:9029&body=NAP30&account={{session.email}}">NAP 15K</a>
+				                            <a class="nap-view-item" href="sms:9029&body=NAP40&account={{session.email}}">NAP 20K</a>
+				                            <a class="nap-view-item" href="sms:9029&body=NAP50&account={{session.email}}">NAP 25K</a>
+				                            <a class="nap-view-item" href="sms:9029&body=NAP100&account={{session.email}}">NAP 50K</a>
+				                        </div>
+				                        <p class="m-0 m-t-10"> Để nạp tiền, Quý khách Soạn tin theo cú pháp:
+				                            <br/> <b>Mobifone, Vinaphone, Viettel:</b><b class="red"> VMG DC NAP[10-100] TAIKHOAN</b> gửi <b class="red">9029 </b>
+				                            <!-- <br/> <b>Viettel:</b><b class="red"> VMG NAP[10-100] DC TAIKHOAN</b> gửi <b class="red">9029 </b> -->
+				                            <br/>
+				                        </p>
+				                        <p class="m-0 m-t-10">Trong đó:</p>
+				                        <p class="m-0 m-t-10"><b class="red">NAP[10-100]</b >: Gồm có các mã NAP10 (10,000đ), NAP20 (20,000đ) , NAP30 (30,000đ), NAP40 (40,000đ), NAP50 (50,000đ), NAP100(100,000đ)</span></p>
+				                        <p class="m-0 m-t-10"><b class="red">TAIKHOAN</b>: Số điện thoại hoặc email đăng nhập. </p>
+				                        <p class="m-0 m-t-10">Ví dụ:</p>
+				                        <p class="m-0 m-t-10">Nạp 20.000đ cho tài khoản Viettel 098xxxxxxx: <b class="red">VMG DC NAP20 098xxxxxxx</b> gửi <b class="red">9029 </b>
+				                        <p class="m-0 m-t-10">Nạp 20.000đ cho email binhtran@gmail.com: <b class="red">VMG DC NAP20 binhtran@gmail.com</b> gửi <b class="red">9029 </b>
+				                        </p>
+				                    </div>
+			                    </div>
+			                    <div class="col-md-5 floating-box">
+		                    		<div class="table-responsive" id="tbl-price" style="margin-top:10px;"><table class="table table-bordered table-striped text-center mg-t-25"><thead><tr><th class="text-center">VNĐ</th><th class="text-center">Số K</th></tr></thead><tbody><tr><td>10.000</td><td>5</td></tr><tr><td>20.000</td><td>10</td></tr><tr><td>50.000</td><td>25</td></tr><tr><td>100.000</td><td>50</td></tr><tr><td>200.000</td><td>100</td></tr><tr><td>500.000</td><td>250</td></tr></tbody></table></div>
+		                    	</div>
+			                    
+			                   </div>
+					        </md-content>
+				        </md-tab-body>
+				      </md-tab>
+				    </md-tabs>
+				  </md-content>
+				</div>
+
+                
+            </div>
+            <div class="col-md-3 profile-right">
+                <div class="border">
+                    <h4>Giỏ hàng</h4>
+                    <p> Giỏ hàng của bạn vẫn còn đang trống! </p>
+                    <p><a href="/danh-muc/sap-cong-bo.html" class="color-green"> Chuẩn bị mua sắm ngày bây giờ >></a>
+                    </p>
+                </div>
+                <div class="border">
+                    <h4>HỖ TRỢ 24/7</h4>
+					<p>
+						<span class="color-orange">Email: </span>mua5k.com@gmail.com
+					</p>
+                    <a href="#" class="btn-view2">Dịch vụ trực tuyến</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="seq_type_product_session_create" model="ir.sequence.type">
+            <field name="name">Product Session Create</field>
+            <field name="code">product.session.create</field>
+        </record>
+
+        <record id="seq_product_session_create" model="ir.sequence">
+            <field name="name">Product Session Create</field>
+            <field name="code">product.session.create</field>
+            <field name="prefix">PSC</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_type_id_for_partner" model="ir.sequence.type">
+            <field name="name">ID for Partner</field>
+            <field name="code">id.res.partner</field>
+        </record>
+
+        <record id="seq_id_for_partner" model="ir.sequence">
+            <field name="name">ID for Partner</field>
+            <field name="code">id.res.partner</field>
+            <field name="prefix"></field>
+            <field name="padding">8</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_type_product_session_order" model="ir.sequence.type">
+            <field name="name">Product Session Order</field>
+            <field name="code">product.session.order</field>
+        </record>
+
+        <record id="seq_product_session_order" model="ir.sequence">
+            <field name="name">Product Session Order</field>
+            <field name="code">product.session.order</field>
+            <field name="prefix">%(year)s/%(month)s/%(day)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="seq_name_credit_card" model="ir.sequence.type">
+        	<field name="name">Name Credit Card</field>
+        	<field name="code">name.credit.card</field>
+        </record>
+        
+        <record id="seq_type_name_credit_card" model="ir.sequence">
+        	<field name="name">Name Credit Card</field>
+        	<field name="code">name.credit.card</field>
+        	<field name="prefix"></field>
+        	<field name="padding">6</field>
+        	<field name="company_id" eval="False"/>
+        </record>
+        
+    </data>
+</openerp>

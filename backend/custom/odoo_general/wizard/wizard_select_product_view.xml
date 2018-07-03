@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+		<record id="view_wizard_select_products_form" model="ir.ui.view">
+			<field name="name">view.select.products.form</field>
+			<field name="model">wizard.select.products</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<field name="product_ids" nolabel="1" on_change="onchange_product_ids(product_ids)">
+							<tree create="false">
+								<field name="default_code"/>
+								<field name="name"/>
+								<field name="product_brand_id"/>
+			                    <field name="lst_price"/>
+			                    <field name="price"/>
+			                    <field name="uom_id"/>
+                    			<field name="ean13"/>
+							</tree>
+						</field>
+					</group>
+					<footer>
+                        <button name="act_select" string="Select" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+				</form>
+			</field>
+		</record>
+		
+		<record id="act_wizard_select_products_view" model="ir.actions.act_window">
+			<field name="name">Selection Products</field>
+			<field name="res_model">wizard.select.products</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		
+	</data>
+</openerp>

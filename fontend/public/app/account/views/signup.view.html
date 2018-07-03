@@ -1,0 +1,83 @@
+<div class="singup-page" dw-loading="lazy-submit" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+	<div class="visible-xs title-app">
+		<a class="nav-header" href="/dang-nhap.html">Back</a>
+		<h2>ĐĂNG KÝ</h2>
+	</div>
+	<div class="header p-b-10">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="login-logo pull-left">
+						<a href="/">
+							<img src="/assets/images/themes/10K MARKET3-09.png" />
+						</a>
+					</div>
+					<div class="login-href pull-right"> Bạn đã có tài khoản? 
+						
+						<a href="/dang-nhap.html">Đăng nhập tại đây </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content ">
+		<div class="container">
+			<div class="container-border">
+				<div class="row frm-singup-header">
+					<div class="col-md-12">
+						<h3 class="text-center">ĐĂNG KÝ TÀI KHOẢN</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 bg-while">
+						<form class="frm-signup" novalidate name="frmSignup" rc-submit="submit()">
+							<p>
+								<span class="red m-b-5">(*)</span>
+								<span> Là các yêu cầu bắt buộc nhập</span>
+							</p>
+							<div class="form-group" ng-class="{'has-error' : rc.frmSignup.needsAttention(frmSignup.email) || err_sever.token_email }">
+								<input type="text" class="form-control" placeholder="Nhập sđt hoặc email của bạn *" name="email" ng-model="session.email" required autocomplete="off" tabindex="1" />
+								<span class="note-input">*</span>
+								<span ng-show="rc.frmSignup.needsAttention(frmSignup.email) && !err_sever.token_email" class="m-t-5 floating-box m-b-5 red p-l-10"> Vui lòng không bỏ trống sđt hoặc email </span>
+								<span ng-if="checkMess != ''" class="m-t-5 floating-box m-b-5 red p-l-10"> {{checkMess}} </span>
+							</div>
+							<div class="form-group" ng-class="{'has-error' : rc.frmSignup.needsAttention(frmSignup.password) || frmSignup.password.$error.minlength }">
+								<input type="password" class="form-control" placeholder="Nhập mật khẩu *" name="password" ng-model="session.password" required ng-minlength="5" tabindex="3" />
+								<span class="note-input">*</span>
+								<span ng-show="rc.frmSignup.needsAttention(frmSignup.password)" class="m-t-10 floating-box m-b-10 red p-l-10">Mật khẩu phải có ít nhất 5 ký tự</span>
+							</div>
+							<div class="form-group" ng-class="{'has-error' : rc.frmSignup.needsAttention(frmSignup.rePassword) }">
+								<input type="password" class="form-control" placeholder="Nhập lại mật khẩu *" name="rePassword" ng-model="session.rePassword" compare-to="session.password" tabindex="4" />
+								<span class="note-input">*</span>
+								<span ng-show="rc.frmSignup.needsAttention(frmSignup.rePassword)" class="m-t-5 floating-box m-b-5 red p-l-10">Mật khẩu không trùng khớp</span>
+							</div>
+							<!-- <div class="form-group capcha-code m-0 floating-box" style="min-height:93px;" vc-recaptcha key="model.key" on-create="setWidgetId(widgetId)" on-success="setResponse(response)" on-expire="cbExpiration()" lang='vi'></div>
+							<span ng-show="err_sever_capcha" class="m-t-5 floating-box m-b-5 red p-l-10">Capcha không trùng khớp hoặc đã hết hạng</span>
+							<span ng-show="err_client_capcha" class="m-t-5 floating-box m-b-5 red p-l-10">Vui lòng check kiểm tra bạn không phải là người máy</span> -->
+							<div class="form-group">
+								<md-button type="submit"  class="btn btn-danger p-0 m-0 btn-teamplate"> ĐĂNG KÝ </md-button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div ng-if="show_social" class="row frm-signup-footer p-t-10">
+					<span class="pull-right">Sử dụng tài khoản Facebook, Google</span>
+				</div>
+				<div ng-if="show_social" class="row frm-signup-sloid">
+					<ul class="list-inline pull-right m-t-5">
+						<li>
+							<a href="#dang-nhap-facebook" fb-login>
+								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#dang-nhap-google" g-login>
+								<i class="fa fa-google-plus-square" aria-hidden=true></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

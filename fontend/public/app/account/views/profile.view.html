@@ -1,0 +1,137 @@
+<div class="profile-page bg-while m-t-15" ng-if="isnotMobile">
+	<div class="container">
+		<div class="row">
+			<div class="profile-left col-md-2 p-l-0">
+				<account-menu-left></account-menu-left>
+			</div>
+			<div class="profile-content col-md-7 p-0 content">
+				<div class="profile-content-1 border">
+					<div class="col-md-5 info-user p-0">
+						<div class="avatar">
+							<img src="{{session.avatar}}" />
+						</div>
+						<span class="user_id m-t-10">
+							<hash-user user=session._id></hash-user>
+						</span>
+					</div>
+					<div class="col-md-4 point-user p-r-0">
+						<div class="icon-top-user">
+							<span class="user-news">
+								<a href="/danh-sach-tin-tuc.html">Tin tức</a>
+							</span>
+							<span class="user-message">
+								<a href="#">Tin nhắn</a>
+							</span>
+							<span class="user-app">
+								<a href="/ung-dung.html">App</a>
+							</span>
+						</div>
+						<div class="account-balance">Số dư tài khoản: 
+							<span>{{ValueK | priceVND}} K</span>
+						</div>
+						<total-k iduser="session._id" collection="ValueK"></total-k>
+					</div>
+					<div class="col-md-3 bottom-show">
+						<a href="/dang-ky-mua-k.html" class="buy-k">Mua k</a>
+					</div>
+				</div>
+				<div class="profile-content-3 border">
+					<div class="head-title">
+						<h3 class="title">HỖ SƠ MUA BÁN</h3>
+						<span>
+							<a href="/ho-so-mua-ban.html">Xem tất cả >></a>
+						</span>
+					</div>
+					<div class="profile-content-3-content">
+						<p style="text-align: center;">
+							<img src="/assets/images/themes/user-profile1-05.png" />
+						</p>
+						<a href="/" class="btn-xm">Tham gia ngay</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 profile-right">
+				<div class="border">
+					<h4>Giỏ hàng</h4>
+					<div ng-if="allcart.length === 0">
+						<p>Giỏ hàng của bạn vẫn còn đang trống!</p>
+						<p>
+							<a href="/danh-muc/sap-cong-bo.html" class="color-green"> Mua sắm ngay bây giờ >></a>
+						</p>
+					</div>
+					<div class="listcartitems" ng-if="allcart.length > 0">
+						<div class="cartitem" ng-repeat=" cartitem in allcart"> {{cartitem.name}} 
+							<span class="item-qlt"> x{{cartitem.quantity}} </span>
+						</div>
+						<p>
+							<a href="/gio-hang.html" class="color-green"> Xem giỏ hàng >></a>
+						</p>
+					</div>
+				</div>
+				<div class="border">
+					<h4>HỖ TRỢ 24/7</h4>
+					<p>
+						<span class="color-orange">Email: </span>mua5k.com@gmail.com
+					</p>
+					<a href="#" class="btn-view2">Dịch vụ trực tuyến</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="profile-page-app bg-while" ng-if="isMobile">
+	<div class="title-app">
+		<div class="nav-header" ng-click="doTheBack()">Back</div>
+		<h2>TÀI KHOẢN CỦA TÔI</h2>
+	</div>
+	<div class="profile-content content">
+		<div class="profile-content-1 border">
+			<div class="info-user p-0">
+				<div class="avatar">
+					<img src="{{session.avatar}}" />
+				</div>
+				<span class="user_id">{{session.fullname != null ? session.fullname : session._id}}</span>
+			</div>
+			<div class="point-user">
+				<div class="account-balance">Số dư tài khoản: 
+					<span>{{ValueK | priceVND}} K</span>
+				</div>
+				<total-k iduser="session._id" collection="ValueK"></total-k>
+				<div class="account-action-k">
+					<a href="/dang-ky-mua-k.html" class="buy-k">Mua K</a>
+					<!-- <a href="/chuyen-k.html" class="buy-k">Chuyển K</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="profile-bottom">
+		<div class="menu-list">
+			<ul class="">
+				<li>
+					<a href="/ho-so-mua-ban.html">Hồ sơ mua bán</a>
+				</li>
+				<li>
+					<a href="/thong-bao-moi.html">Thông báo mới</a>
+				</li>
+				<li>
+					<a href="/san-pham-trung-thuong.html">Sản phẩm đã mua</a>
+				</li>
+				<li>
+					<a href="/don-hang-trung-thuong.html">Đơn hàng trúng thưởng</a>
+				</li>
+				<li>
+					<a href="/ho-so-cua-ban.html">Quản lý chung</a>
+				</li>
+				<li>
+					<a href="/chi-tiet-tai-khoan.html">Chi tiết tài khoản</a>
+				</li>
+				<li>
+					<a href="/thay-doi-mat-khau.html">Cài đặt bảo mật</a>
+				</li>
+				<li>
+					<a href="#" ng-click="logout()">Đăng xuất</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

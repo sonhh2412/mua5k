@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .config(function ($stateProvider) {$stateProvider .state('index', {title: 'Chuyên Trang Thương Mại Điện Tử', url: '/', templateUrl: 'app/homepage/views/homepage.html', controller: 'homepageCtrl'}) });

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_sale_report_custom_form" model="ir.ui.view">
+			<field name="name">view.sale.report.custom.form</field>
+			<field name="model">sale.report.custom</field>
+			<field name="arch" type="xml">
+				<form string="Sale Report">
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="from_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date,to_date)"/>
+								<field name="partner_ids" widget="many2many_tags" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+							<group>
+								<field name="to_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date,to_date)"/>
+								<field name="user_id"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readonly="1">
+								<tree editable="bottom" create="false">
+									<field name="no"/>
+									<field name="partner_id"/>
+									<field name="total_k_recharge"/>
+									<field name="total_k_purchase"/>
+									<field name="total_k_balance"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_sale_report_custom_tree" model="ir.ui.view">
+			<field name="name">sale.report.custom.tree</field>
+			<field name="model">sale.report.custom</field>
+			<field name="arch" type="xml">
+				<tree string="List of Winners">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="user_id"/>
+					<field name="partner_ids" widget="many2many_tags"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_sale_report_custom_search" model="ir.ui.view">
+			<field name="name">sale.report.custom.search</field>
+			<field name="model">sale.report.custom</field>
+			<field name="arch" type="xml">
+				<search string="Sale Report">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="user_id"/>
+					<field name="partner_ids" widget="many2many_tags"/>
+					<group expand="0" string="Group By">
+						<filter string="From Date" domain="[]" context="{'group_by':'from_date'}"/>
+						<filter string="To Date" domain="[]" context="{'group_by':'to_date'}"/>
+						<filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_sale_report_custom" model="ir.actions.act_window">
+	        <field name="name">Sale Report</field>
+	        <field name="res_model">sale.report.custom</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_sale_report_custom_search"/>
+	    </record>
+    
+		<menuitem action="action_sale_report_custom" id="menu_sale_report_custom" parent="base.next_id_64" sequence="12"/>
+		
+	</data>
+</openerp>

@@ -1,0 +1,49 @@
+<!-- <div class="profile-page bg-while m-t-15">
+    <div class="container">
+        <div class="row">
+            <div class="profile-left mywallet-left col-md-2 p-l-0">
+                <account-menu-left></account-menu-left>
+            </div>
+            <div class="mywallet-content col-md-10 p-0">
+                <div class="mywallet-content-1 border">
+                    <div class="head-title">
+                        <h3 class="title">Nạp tiền trực tiếp TopUp</h3>
+                    </div>
+                    <div class="md-tab-list mywallet-list-tab">
+                        <div class="profile-content-3 border col-md-12 floating-box p-t-30" style="padding-top: 20px; padding-bottom: 20px;">
+                            <form class="frm-updateprofile p-15" novalidate name="topupForm" id="topup" rc-submit="submitTopUp()">
+                                <div class="form-group" ng-class="{'has-error' : rc.topupForm.needsAttention(topUpInfo.provider) }">
+                                    <label>Nhà cung cấp</label>
+                                    <select class="form-control" name="provider" class="input_text" ng-model="topUpInfo.provider" required autocomplete="off">
+                                    <option value="0">Chọn nhà cung cấp</option>
+                                    <option value="VTT">Vietel</option>
+                                    <option value="VNP">Vinaphone</option>
+                                    <option value="VMS">Mobifone</option>
+                                </select>
+                                    <span class="note-input-float">*</span> <span class="red" ng-show="rc.topupForm.needsAttention(topUpInfo.provider)">Vui lòng chọn nhà cung cấp</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : rc.topupForm.needsAttention(topUpInfo.target) }">
+                                    <label>Số điện thoại cần nạp:</label>
+                                    <input class="form-control" type="text" class="input_text" name="target" ng-model="topUpInfo.target" required autocomplete="off" placeholder="097xxxxxxx" />
+                                    <span class="note-input-float">*</span> <span class="red" ng-show="rc.topupForm.needsAttention(topUpInfo.target)">Vui lòng nhập số điện thoại cần nạp</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : rc.topupForm.needsAttention(topUpInfo.amount) }">
+                                    <label>Lượng tiền cần nạp:</label>
+                                    <input class="form-control" type="text" class="input_text" name="amount" ng-model="topUpInfo.amount" required autocomplete="off" />
+                                    <span class="note-input-float">*</span> <span class="red" ng-show="rc.topupForm.needsAttention(topUpInfo.amount)">Vui lòng nhập lượng tiền cần nạp</span>
+                                </div>
+                                <div class="form-group">
+                                    <md-button ng-disabled="is_requesting" type="submit" class="btn p-0 m-0 btn-submit">Thanh toán</md-button>
+                                    <span ng-show="is_requesting" ><img src="/assets/images/ajax-loader_2.gif"/> Hệ thống đang xử lý, vui lòng chờ.</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-5 floating-box">
+                            <div class="table-responsive" id="tbl-price" style="margin-top:10px;"><table class="table table-bordered table-striped text-center mg-t-25"><thead><tr><th class="text-center">Số tiền nạp (VNĐ)</th><th class="text-center">Số K trừ</th></tr></thead><tbody><tr><td>10.000</td><td>10</td></tr><tr><td>20.000</td><td>20</td></tr><tr><td>30.000</td><td>30</td></tr><tr><td>50.000</td><td>50</td></tr><tr><td>100.000</td><td>100</td></tr><tr><td>200.000</td><td>200</td></tr><tr><td>300.000</td><td>300</td></tr><tr><td>500.000</td><td>500</td></tr><tr ng-show="topUpInfo.provider == 'VTT'"><td>1.000.000</td><td>1.000</td></tr></tbody></table></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,84 @@
+<div class="profile-page bg-while m-t-15" ng-if="isnotMobile">
+	<div class="container">
+		<div class="row">
+			<div class="profile-left col-md-2 p-l-0">
+				<account-menu-left ></account-menu-left>
+			</div>
+			<div class="profile-content col-md-7 p-0 content">
+				<div class="profile-content-3 border">
+					<div class="head-title">
+						<h3 class="title">CHUYỂN K</h3>
+					</div>
+					<form class="frm-chuyenk" novalidate name="frmChuyenK" rc-submit="submit()">
+						<div class="form-group" ng-class="{'has-error' : rc.frmChuyenK.needsAttention(frmChuyenK.email) }">
+							<label>Tài khoản nhận k</label>
+							<input type="text" class="form-control" placeholder="Tài khoản nhận k"name="email"ng-model="session.email"required autocomplete="off"/>
+							<span class="red" ng-show="rc.frmChuyenK.needsAttention(frmChuyenK.email)">Vui lòng nhập Tài khoản nhận k</span>
+							<span class="red" ng-if="MsgNotaccount">Tài khoản nhận không tồn tại trong hệ thống</span>
+						</div>
+						<div class="form-group" ng-class="{'has-error' : rc.frmChuyenK.needsAttention(frmChuyenK.numberk) }" >
+							<label>Số k chuyển</label>
+							<input type="number" class="form-control" placeholder="Số k chuyển"name="numberk"ng-model="session.numberk"ng-min="1"required autocomplete="off"/>
+							<span class="red" ng-show="rc.frmChuyenK.needsAttention(frmChuyenK.numberk)">Vui lòng nhập số k chuyển hoặc Số K phải lớn hơn 0</span>
+							<span class="red" ng-if="MsgEnoughK">Số dư K của bạn không đủ để chuyển. 
+								<a href="/dang-ky-mua-k.html" style="color: #53ae47">Nạp k</a>
+							</span>
+						</div>
+						<div class="form-group" >
+							<label>Nội dung chuyển k</label>
+							<textarea name="contenttransferk" placeholder="Nội dung chuyển k" ng-model="session.contenttransferk" rows="3" ></textarea>
+						</div>
+						<div class="form-group btn-buy-k btn-chuyen-k">
+							<md-button type="submit" class="btn p-0 m-0 btn-submit"> CHUYỂN </md-button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-3 profile-right">
+				<div class="border">
+					<h4>Giỏ hàng</h4>
+					<p>Giỏ hàng của bạn vẫn còn đang trống!</p>
+					<p>
+						<a href="#" class="color-green"> Chuẩn bị mua sắm ngày bây giờ >></a>
+					</p>
+				</div>
+				<div class="border">
+					<h4>HỖ TRỢ 24/7</h4>
+					<p>
+						<span class="color-orange">Email: </span>mua5k.com@gmail.com
+					</p>
+					<a href="#" class="btn-view2">Dịch vụ trực tuyến</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="profile-page-app bg-while" ng-if="isMobile">
+	<div class="title-app" >
+		<div class="nav-header" ng-click="doTheBack()">Back</div>
+		<h2>CHUYỂN K</h2>
+	</div>
+	<form class="frm-chuyenk" novalidate name="frmChuyenK" rc-submit="submit()">
+		<div class="form-group" ng-class="{'has-error' : rc.frmChuyenK.needsAttention(frmChuyenK.email) }">
+			<label>Tài khoản nhận k</label>
+			<input type="text" class="form-control" placeholder="Tài khoản nhận k"name="email"ng-model="session.email"required autocomplete="off"/>
+			<span class="red" ng-show="rc.frmChuyenK.needsAttention(frmChuyenK.email)">Vui lòng nhập Tài khoản nhận k</span>
+			<span class="red" ng-if="MsgNotaccount">Tài khoản nhận không tồn tại trong hệ thống</span>
+		</div>
+		<div class="form-group" ng-class="{'has-error' : rc.frmChuyenK.needsAttention(frmChuyenK.numberk) }" >
+			<label>Số k chuyển</label>
+			<input type="number" class="form-control" placeholder="Số k chuyển"name="numberk"ng-model="session.numberk"ng-min="1"required autocomplete="off"/>
+			<span class="red" ng-show="rc.frmChuyenK.needsAttention(frmChuyenK.numberk)">Vui lòng nhập số k chuyển hoặc Số K phải lớn hơn 0</span>
+			<span class="red" ng-if="MsgEnoughK">Số dư K của bạn không đủ để chuyển. 
+				<a href="/dang-ky-mua-k.html" style="color: #53ae47">Nạp k</a>
+			</span>
+		</div>
+		<div class="form-group" >
+			<label>Nội dung chuyển k</label>
+			<textarea name="contenttransferk" placeholder="Nội dung chuyển k" ng-model="session.contenttransferk" rows="3" ></textarea>
+		</div>
+		<div class="form-group btn-buy-k btn-chuyen-k">
+			<md-button type="submit" class="btn p-0 m-0 btn-submit"> CHUYỂN </md-button>
+		</div>
+	</form>
+</div>

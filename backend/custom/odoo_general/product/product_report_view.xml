@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+        <record id="view_product_report_graph" model="ir.ui.view">
+            <field name="name">product.report.graph</field>
+            <field name="model">product.report</field>
+            <field name="arch" type="xml">
+                <graph string="Products" type="pie">
+                    <field name="name_template" type="row"/>
+                    <field name="type_with_session" type="col"/>
+                    <field name="total_session" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <record id="view_product_report_search" model="ir.ui.view">
+            <field name="name">product.report.search</field>
+            <field name="model">product.report</field>
+            <field name="arch" type="xml">
+                <search string="Products">
+                    <field name="name_template"/>
+                    <group expand="0" string="Extended Filters...">
+                        <field name="type_with_session"/>
+                        <field name="category_id"/>
+                        
+                    </group>
+                    <group expand="1" string="Group By">
+                        <filter string="Type" name="group_type_with_session" context="{'group_by':'type_with_session'}"/>
+                        <separator/>
+                        <filter string="Category" name="group_category_convert" context="{'group_by':'category_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_product_report_all" model="ir.actions.act_window">
+            <field name="name">Products Analysis</field>
+            <field name="res_model">product.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="context">{'group_by_no_leaf':1,'group_by':[]}</field>
+        </record>
+		
+		<menuitem id="menu_product_reporting" parent="base.menu_reporting" name="Products" sequence="40" />
+		
+        <menuitem action="action_product_report_all"  id="menu_product_report_all"
+            parent="menu_product_reporting"  sequence="1"/>
+		
+</data>
+</openerp>

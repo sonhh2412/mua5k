@@ -1,0 +1,144 @@
+<div class="manage-page bg-while">
+    <div class="container m-t-15">
+        <div class="row">
+            <manage-left></manage-left>
+            <div class="col-md-10 p-0">
+                <div class="manage-right floating-box">
+                    <div class="col-md-12">
+                        <h3 class="title-page">Quản lý banner</h3> </div>
+                    <hr/>
+                    <div class="manage-form col-md-12">
+                        <div class="addnew-bottom">
+                            <md-button class="btn-addnew btn" ng-click="ViewFormOpen()">Thêm banner mới</md-button>
+                        </div>
+                        <form class="frm-updateprofile p-15" ng-show="isAddBanner" novalidate name="frmAddBanner" rc-submit="submit()">
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddBanner.needsAttention(frmAddBanner.name) }">
+                                <label>Tên banner</label>
+                                <input type="text" placeholder="Tên chuyên mục" class="form-control" name="name" ng-model="banner.name" required autocomplete="off" /><span class="note-input-float">*</span> <span class="red" ng-show="rc.frmAddBanner.needsAttention(frmAddBanner.name)">Vui lòng nhập tên banner</span> </div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddBanner.needsAttention(frmAddBanner.image) }">
+                                <label>CDN Image</label>
+                                <input type="text" class="form-control" ng-attr-placeholder="{{(banner.type=='slice') ? 'Kích thước 709 x 300' : (banner.type=='right') ? 'Kích thước 240 x 120' : (banner.type=='item') ? 'Kích thước 37 x 38' : 'Nhập hình ảnh'}}" name="image" ng-model="banner.image" required autocomplete="off" /><span class="note-input-float">*</span> <span class="red" ng-show="rc.frmAddBanner.needsAttention(frmAddBanner.image)">Vui lòng nhập hình ảnh</span> </div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddBanner.needsAttention(frmAddBanner.link_href) }">
+                                <label>Link href</label>
+                                <input type="text" class="form-control" placeholder="Nhập link" name="link_href" ng-model="banner.link_href" required autocomplete="off" /><span class="note-input-float">*</span> <span class="red" ng-show="rc.frmAddBanner.needsAttention(frmAddBanner.link_href)">Vui lòng nhập link</span> </div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddBanner.needsAttention(frmAddBanner.sequence) }">
+                                <label>Thứ tự banner</label>
+                                <input type="text" placeholder="Thứ tự banner" class="form-control" name="sequence" ng-model="banner.sequence" required autocomplete="off" /><span class="note-input-float">*</span> <span class="red" ng-show="rc.frmAddBanner.needsAttention(frmAddBanner.sequence)">Vui lòng nhập thứ tự banner</span> </div>
+                            <div class="form-group">
+                                <label>Loại</label>
+                                <md-radio-group ng-model="banner.type" class="type-radio">
+                                    <md-radio-button class="none-float" value="slice">Homepage - Slice Banner</md-radio-button>
+                                    <md-radio-button class="none-float" value="right">Homepage - Banner Right</md-radio-button>
+                                    <md-radio-button class="none-float" value="item">Homepage - Banner Item</md-radio-button>
+                                    <md-radio-button class="none-float" value="limited">Limited Area - Banner</md-radio-button>
+                                    <md-radio-button class="none-float" value="guide">Guide</md-radio-button>
+                                    <md-radio-button class="none-float" value="guidemobile">Guide Mobile</md-radio-button>
+                                </md-radio-group>
+                            </div>
+                            <div class="form-group">
+                                <label>Trạng thái</label>
+                                <md-radio-group ng-model="banner.state" class="type-radio">
+                                    <md-radio-button value="1">Công bố</md-radio-button>
+                                    <md-radio-button value="0">Chưa công bố</md-radio-button>
+                                </md-radio-group>
+                            </div>
+                            <div class="form-group">
+                                <md-button type="submit" class="btn p-0 m-0 btn-submit">Thêm banner mới</md-button> <a ng-click="CloseFormOpen()" class="btn-close btn">Hủy</a> </div>
+                        </form>
+                    </div>
+                    <hr/>
+                    <div class="col-md-12 md-tab-list">
+                        <md-content class="p-0 floating-box">
+                            <md-tabs md-dynamic-height md-border-bottom>
+                                <md-tab label="Homepage - Slice Banner">
+                                    <md-content>
+                                        <div class="content-list-post floating-box" ng-repeat="banneritem in list_banner_slice.results">
+                                            <div class="col-md-11">
+                                                <a href="/quan-ly-banner/{{banneritem.slug}}-{{banneritem._id}}.html">
+                                                    <h4 class="p-0 m-0">{{banneritem.sequence}} - {{banneritem.name}} <span class="p-0 m-0" ng-if="banneritem.state == 1"> - Đang công bố</span></h4> </a>
+                                            </div> <a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveBanner(banneritem._id);">Xóa</a> </div>
+                                        <div class="row m-0 row-pagination">
+                                            <div class="col-md-12 p-0">
+                                                <bgf-pagination collection="list_banner_slice" current="page" total="total_page" gotopage="goto" url="urlBannerSlice" auto-presets="false" link-group-size="1" reload-page="reloadSlice"></bgf-pagination>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Homepage - Banner Right">
+                                    <md-content>
+                                        <div class="content-list-post floating-box" ng-repeat="banneritem in list_banner_right.results">
+                                            <div class="col-md-11">
+                                                <a href="/quan-ly-banner/{{banneritem.slug}}-{{banneritem._id}}.html">
+                                                    <h4 class="p-0 m-0">{{banneritem.sequence}} - {{banneritem.name}} <span class="p-0 m-0" ng-if="banneritem.state == 1"> - Đang công bố</span></h4> </a>
+                                            </div> <a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveBanner(banneritem._id);">Xóa</a> </div>
+                                        <div class="row m-0 row-pagination">
+                                            <div class="col-md-12 p-0">
+                                                <bgf-pagination collection="list_banner_right" current="page" total="total_page" gotopage="goto" url="urlBannerRight" auto-presets="false" link-group-size="1" reload-page="reloadRight"></bgf-pagination>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Homepage - Banner Item">
+                                    <md-content>
+                                        <div class="content-list-post floating-box" ng-repeat="banneritem in list_banner_item.results">
+                                            <div class="col-md-11">
+                                                <a href="/quan-ly-banner/{{banneritem.slug}}-{{banneritem._id}}.html">
+                                                    <h4 class="p-0 m-0">{{banneritem.sequence}} - {{banneritem.name}} <span class="p-0 m-0" ng-if="banneritem.state == 1"> - Đang công bố</span></h4> </a>
+                                            </div> <a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveBanner(banneritem._id);">Xóa</a> </div>
+                                        <div class="row m-0 row-pagination">
+                                            <div class="col-md-12 p-0">
+                                                <bgf-pagination collection="list_banner_item" current="page" total="total_page" gotopage="goto" url="urlBannerItem" auto-presets="false" link-group-size="1" reload-page="reloadItem"></bgf-pagination>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Limited Area - Banner">
+                                    <md-content>
+                                        <div class="content-list-post floating-box" ng-repeat="banneritem in list_banner_limited.results">
+                                            <div class="col-md-11">
+                                                <a href="/quan-ly-banner/{{banneritem.slug}}-{{banneritem._id}}.html">
+                                                    <h4 class="p-0 m-0">{{banneritem.sequence}} - {{banneritem.name}} <span class="p-0 m-0" ng-if="banneritem.state == 1"> - Đang công bố</span></h4> </a>
+                                            </div> <a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveBanner(banneritem._id);">Xóa</a> </div>
+                                        <div class="row m-0 row-pagination">
+                                            <div class="col-md-12 p-0">
+                                                <bgf-pagination collection="list_banner_limited" current="page" total="total_page" gotopage="goto" url="urlBannerLimited" auto-presets="false" link-group-size="1" reload-page="reloadLimited"></bgf-pagination>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Guide">
+                                    <md-content>
+                                        <div class="content-list-post floating-box" ng-repeat="banneritem in list_banner_guide.results">
+                                            <div class="col-md-11">
+                                                <a href="/quan-ly-banner/{{banneritem.slug}}-{{banneritem._id}}.html">
+                                                    <h4 class="p-0 m-0">{{banneritem.sequence}} - {{banneritem.name}} <span class="p-0 m-0" ng-if="banneritem.state == 1"> - Đang công bố</span></h4> </a>
+                                            </div> <a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveBanner(banneritem._id);">Xóa</a> </div>
+                                        <div class="row m-0 row-pagination">
+                                            <div class="col-md-12 p-0">
+                                                <bgf-pagination collection="list_banner_guide" current="page" total="total_page" gotopage="goto" url="urlBannerGuide" auto-presets="false" link-group-size="1" reload-page="reloadGuide"></bgf-pagination>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Guide Mobile">
+                                    <md-content>
+                                        <div class="content-list-post floating-box" ng-repeat="banneritem in list_banner_guidemobile.results">
+                                            <div class="col-md-11">
+                                                <a href="/quan-ly-banner/{{banneritem.slug}}-{{banneritem._id}}.html">
+                                                    <h4 class="p-0 m-0">{{banneritem.sequence}} - {{banneritem.name}} <span class="p-0 m-0" ng-if="banneritem.state == 1"> - Đang công bố</span></h4> </a>
+                                            </div> <a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveBanner(banneritem._id);">Xóa</a> </div>
+                                        <div class="row m-0 row-pagination">
+                                            <div class="col-md-12 p-0">
+                                                <bgf-pagination collection="list_banner_guidemobile" current="page" total="total_page" gotopage="goto" url="urlBannerGuideMobile" auto-presets="false" link-group-size="1" reload-page="reloadGuideMobile"></bgf-pagination>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                            </md-tabs>
+                        </md-content>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

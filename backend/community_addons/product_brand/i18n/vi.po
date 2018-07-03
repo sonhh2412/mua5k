@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-20 09:15+0000\n"
+"PO-Revision-Date: 2016-12-20 09:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_brand
+#: model:ir.actions.act_window,name:product_brand.action_product_brand
+#: view:product.product:product_brand.product_search_form_view
+#: view:product.template:product_brand.product_template_form_brand_add
+#: view:product.template:product_brand.view_product_template_search_brand
+#: field:product.template,product_brand_id:0
+msgid "Brand"
+msgstr "Thương hiệu"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_form
+#: field:product.brand,name:0
+msgid "Brand Name"
+msgstr "Tên thương hiệu"
+
+#. module: product_brand
+#: model:ir.actions.act_window,name:product_brand.action_open_brand_products
+#: field:product.brand,product_ids:0
+msgid "Brand Products"
+msgstr "Thương hiệu sản phẩm"
+
+#. module: product_brand
+#: field:product.brand,create_uid:0
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: product_brand
+#: field:product.brand,create_date:0
+msgid "Created on"
+msgstr "Được tạo lúc"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_form
+#: field:product.brand,description:0
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: product_brand
+#: view:product.product:product_brand.product_search_form_view
+#: view:product.template:product_brand.view_product_template_search_brand
+msgid "Group by..."
+msgstr "Nhóm theo..."
+
+#. module: product_brand
+#: field:product.brand,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: product_brand
+#: field:product.brand,write_uid:0
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: product_brand
+#: field:product.brand,write_date:0
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: product_brand
+#: field:product.brand,logo:0
+msgid "Logo File"
+msgstr "Logo File"
+
+#. module: product_brand
+#: field:product.brand,partner_id:0
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: product_brand
+#: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
+#: view:product.brand:product_brand.product_brand_search_form_view
+#: view:product.brand:product_brand.view_product_brand_form
+msgid "Product Brand"
+msgstr "Thương hiệu sản phẩm"
+
+#. module: product_brand
+#: model:ir.ui.menu,name:product_brand.menu_product_brand
+msgid "Product Brands"
+msgstr "Thương hiệu sản phẩm"
+
+#. module: product_brand
+#: model:ir.model,name:product_brand.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_form
+#: view:product.brand:product_brand.view_product_brand_kanban
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: product_brand
+#: help:product.template,product_brand_id:0
+msgid "Select a brand for this product"
+msgstr "Chọn một thương hiệu cho sản phẩm này"
+
+#. module: product_brand
+#: help:product.brand,partner_id:0
+msgid "Select a partner for this brand if it exists"
+msgstr "Chọn một nhà cung cấp cho thưởng hiệu nếu nó tồn tại"
+
+#. module: product_brand
+#: view:product.brand:product_brand.view_product_brand_tree
+msgid "product.brand"
+msgstr "product.brand"
+

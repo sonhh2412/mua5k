@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .config(function($stateProvider) {$stateProvider .state('order', {title: 'Đơn hàng trúng thưởng', url: '/don-hang-trung-thuong.html', templateUrl: 'app/order/views/orderwinner.view.html', controller: 'OrderWinnerCtrl'}) });

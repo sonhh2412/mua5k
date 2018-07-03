@@ -1,0 +1,100 @@
+<div class="home-page bg-while">
+    <div class="container">
+        <div class="row top-container-home-page">
+            <div ng-if="isnotMobile">
+                <div style="min-width: 238px;float: left;min-height: 451px;" class="home-category">
+                    <home-category/> </div>
+            </div>
+            <div class="col-md-6 p-0 slick-banner">
+                <div class="possition-banner">
+                    <div class="banner-slider">
+                        <home-slick style="min-height:302px; min-width:710px;width: 100%;float: left;border-right:1px solid #ECECEC;border-bottom:1px solid #ECECEC" /> </div>
+                    <header-top-product /> </div>
+            </div>
+            <div class="col-md-3 banner-blog p-0">
+                <div class="news-top-right">
+                    <div style="height:120px;">
+                        <div class="about-us" ng-repeat="bannerright in list_banner_right"> <a ng-href="{{bannerright.link_href}}"> <img src="{{bannerright.image}}" /> </a> </div>
+                    </div>
+                    <div class="possition-honesty"> <span ng-repeat="banneritem in list_banner_item" ng-style="{'background-image':'url({{banneritem.image}})', 'background-repeat': 'no-repeat', 'background-position':'top center'}"> <a href="{{banneritem.link_href}}"> <i></i>{{banneritem.name}} </a> </span> </div>
+                    <div class="possition-news" ng-if="isnotMobile">
+                        <home-news></home-news>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row app-menu-icon">
+            <div class="col-xs-3 ">
+                <a href="/danh-muc/chua-du-nguoi-mua.html" class="btn btn-navbar  ">
+                    <div class="sp">&nbsp</div><span>SẢN PHẨM </span></a>
+            </div>
+            <div class="col-xs-3 ">
+                <a href="/khach-hang-chia-se.html" class="btn btn-navbar ">
+                    <div class="cs">&nbsp</div><span>CHIA SẺ</span></a>
+            </div>
+            <div class="col-xs-3 ">
+                <a href="/dien-dan/thong-bao.html" class="btn btn-navbar ">
+                    <div class="tb">&nbsp</div><span>THÔNG BÁO</span></a>
+            </div>
+            <div class="col-xs-3 ">
+                <a href="/dang-ky-mua-k.html" class="btn btn-navbar ">
+                    <div class="nt">&nbsp</div><span>NẠP TIỀN</span></a>
+            </div>
+            <div class="col-xs-3 ">
+                <a href="/huong-dan.html" class="btn btn-navbar ">
+                    <div class="hd">&nbsp</div><span>HƯỚNG DẪN</span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="area-title floating-box">
+                    <h2 class="pull-left m-0 p-0"> CHỜ CÔNG BỐ </h2>
+                    <p class="pull-right text-right m-0 link-result"> <a href="/cho-cong-bo-ket-qua.html"> <b>Công bố tổng cộng <span>{{result_number.number | priceVND}}</span> phiên sản phẩm</b> </a> </p>
+                </div>
+            </div>
+        </div>
+        <div class="row watting-result">
+            <div class="move-result">
+                <div class="col-md-3 col-xs-6 p-0 live-product" ng-repeat="product in products">
+                    <md-button ng-href="/ket-thuc-phien-san-pham/{{product.product.slug}}/{{product.product.session_id}}.html" class="m-0 p-0"> <span ng-if="product.second_product != 0" class="hot-event">ĐANG QUAY SỐ</span>
+                        <div class="product-img">
+                            <div afkl-lazy-image="{{domain_image_product + product.product.images[0].image}}" height='177' afkl-lazy-image-options='{"offset":400}' class="loaded" /> </div> <span class="convert" ng-if="product.product.convert && product.product.convert.length > 0"> {{product.product.convert[0].name}} </span>
+                        <div class="product-name"> {{product.product.name.toLowerCase()}} </div>
+                        <div class="product-price"> {{product.product.price | priceVND}} đ </div>
+                        <home-new-lottery product=product /> </md-button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="area-title floating-box">
+                    <h2 class="pull-left m-0 p-0"> SẢN PHẨM HOT </h2>
+                    <md-button ng-href="/danh-muc/san-pham-hot.html" class="pull-right text-right m-0 view-more" href="#">Xem thêm <i>+</i> </md-button>
+                </div>
+            </div>
+        </div>
+        <div class="row product-hots">
+            <home-product-hot />
+            <hook-list-order-new /> </div>
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="area-title floating-box">
+                    <h2 class="pull-left m-0 p-0"> MUA NGAY KẺO LỠ </h2>
+                    <home-buy-fast></home-buy-fast>
+                </div>
+            </div>
+        </div>
+        <div class="row product-template">
+            <product-buy-fast> </product-buy-fast>
+        </div>
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="area-title floating-box">
+                    <h2 class="pull-left m-0 p-0"> SẢN PHẨM MỚI </h2>
+                    <md-button ng-href="/danh-muc/san-pham-moi-nhat.html" class="pull-right text-right m-0 view-more" href="#">Xem thêm <i>+</i> </md-button>
+                </div>
+            </div>
+        </div>
+        <home-product-new></home-product-new>
+    </div>
+</div>

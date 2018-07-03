@@ -1,0 +1,106 @@
+<openerp>
+    <data>
+    
+    <record id="view_sales_order_filter_inherit" model="ir.ui.view">
+		<field name="name">sale.order.list.select.inherit</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_sales_order_filter"/>
+		<field name="arch" type="xml">
+            <!-- <field name="state_order"/> -->
+            <filter string="New Mail" position="after">
+            	<filter string="Dial Sale Order" name="filter_is_dial" domain="[('is_dial','=',True)]"/>
+            </filter>
+			<group expand="0" string="Group By" position="before">
+				<group expand="0" string="Filter By State Order">
+					<filter string="Draft" name="filter_state_draft" domain="[('state_order','=','draft')]"/>
+					<filter string="Confirm" name="filter_state_confirm" domain="[('state_order','=','confirm')]"/>
+					<filter string="Ordered" name="filter_state_ordered" domain="[('state_order','=','ordered')]"/>
+					<filter string="Delivered" name="filter_state_delivered" domain="[('state_order','=','delivered')]"/>
+					<filter string="Done" name="filter_state_done" domain="[('state_order','=','done')]"/>
+					<filter string="Cancel Delivered" name="filter_state_cancel" domain="[('state_order','=','cancel')]"/>
+				</group>
+			</group>
+			<group expand="0" string="Group By" position="inside">
+				<filter string="State Order" domain="[]" context="{'group_by':'state_order'}"/>
+				<filter string="Session" domain="[]" context="{'group_by':'product_session_id'}"/>
+			</group>
+		</field>
+  	</record>
+    
+    <record id="view_quotation_tree_inherit_2" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+        	<field name="partner_id" position="after">
+        		<field name="number_win" string="Code Win"/>
+        	</field>
+        </field>
+    </record>
+    
+	<record id="view_order_form_general_inherit" model="ir.ui.view">
+	    <field name="name">view.order.form.general.inherit</field>
+	    <field name="model">sale.order</field>
+	    <field name="inherit_id" ref="sale.view_order_form" />
+	    <field name="arch" type="xml">
+	     	<xpath expr="//field[@name='order_line']/tree" position="attributes">
+                <attribute name="editable"/>
+            </xpath>
+            <field name="partner_shipping_id" position="after">
+            	<field name="product_session_id"  readonly="1"/>
+            	<field name="is_dial"  readonly="1"/>
+            </field>
+            <field name="currency_id" position="after">
+	         	<field name="number_win" readonly="1"/>
+	        </field>
+             <field name="partner_invoice_id" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </field>
+             <field name="section_id" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </field>
+             <field name="payment_term" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </field>
+             <field name="payment_term" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </field>
+              <field name="fiscal_position" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </field>
+             
+             <button name="action_quotation_send" string="Send by Email" type="object" states="draft" class="oe_highlight" groups="base.group_user" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </button>
+             <button name="action_quotation_send" string="Send by Email" type="object" states="sent,progress,manual" groups="base.group_user" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </button>
+             <button name="print_quotation" string="Print" type="object" states="draft" class="oe_highlight" groups="base.group_user" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </button>
+             <button name="print_quotation" string="Print" type="object" states="sent,progress,manual" groups="base.group_user" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </button>
+             <button string="Create Invoice" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </button>
+             <button name="action_cancel" position="after">
+             	<button name="act_done" type="object" string="Done" attrs="{'invisible': [('state_order','!=','delivered')]}"/>
+             </button>
+	    </field>
+	</record>
+	
+    <record id="view_order_form_invisible_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.invisible</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_stock.view_order_form_inherit"/>
+        <field name="arch" type="xml">
+        	<field name="warehouse_id" position="attributes">
+             	<attribute name="invisible">1</attribute>
+             </field>
+             <group name="logistics" position="replace"/>
+        </field>
+    </record>
+    
+    </data>
+</openerp>

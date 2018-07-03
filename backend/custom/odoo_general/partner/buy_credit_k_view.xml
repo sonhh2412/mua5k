@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_buy_credit_k_form" model="ir.ui.view">
+			<field name="name">view.buy.credit.k.form</field>
+			<field name="model">buy.credit.k</field>
+			<field name="arch" type="xml">
+				<form string="Buy Credit K">
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="from_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="date"/>
+							</group>
+							<group>
+								<field name="to_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="user_id"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readonly="1">
+								<tree editable="bottom" create="false">
+									<field name="total_k"/>
+									<field name="number_user"/>
+									<field name="avg_k_user"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_buy_credit_k_tree" model="ir.ui.view">
+			<field name="name">buy.credit.k.tree</field>
+			<field name="model">buy.credit.k</field>
+			<field name="arch" type="xml">
+				<tree string="Buy Credit K">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_buy_credit_k_search" model="ir.ui.view">
+			<field name="name">buy.credit.k.search</field>
+			<field name="model">buy.credit.k</field>
+			<field name="arch" type="xml">
+				<search string="Buy Credit K">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+					<group expand="0" string="Group By">
+						<filter string="Create Date" domain="[]" context="{'group_by':'date'}"/>
+						<filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_buy_credit_k" model="ir.actions.act_window">
+	        <field name="name">Buy Credit K</field>
+	        <field name="res_model">buy.credit.k</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_buy_credit_k_search"/>
+	    </record>
+    	
+		<menuitem action="action_buy_credit_k" id="menu_buy_credit_k" parent="menu_number_k" sequence="2"/>
+		
+	</data>
+</openerp>

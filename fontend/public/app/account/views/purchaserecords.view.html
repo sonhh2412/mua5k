@@ -1,0 +1,176 @@
+<div class="profile-page bg-while m-t-15" ng-if="isnotMobile">
+    <div class="container">
+        <div class="row">
+            <div class="profile-left mywallet-left col-md-2 p-l-0">
+                <account-menu-left></account-menu-left>
+            </div>
+            <div class="mywallet-content col-md-10 p-0">
+                <div class="mywallet-content-1 border">
+                    <div class="head-title">
+                        <h3 class="title">HỒ SƠ MUA BÁN</h3> </div>
+                    <div class="md-tab-list mywallet-list-tab">
+                        <md-content class="p-0 floating-box">
+                            <div class="my-account-tab">
+                                <md-content class="p-0 floating-box">
+                                    <md-tabs md-dynamic-height md-border-bottom>
+                                        <md-tab label="HỒ SƠ NẠP TIỀN">
+                                            <md-content>
+                                                <table class="list-all">
+                                                    <tr>
+                                                        <th>Thời gian</th>
+                                                        <th>Loại hình</th>
+                                                        <th>Số tiền</th>
+                                                        <th>Ghi chú</th>
+                                                        <th>Trạng thái</th>
+                                                    </tr>
+                                                    <tr ng-repeat="hisitem in session.history_oder">
+                                                        <td class="list-time">{{hisitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                                        <td class="list-type">{{hisitem.payment_method}}</td>
+                                                        <td class="list-numprice">{{hisitem.total_amount | priceVND}} vnđ</td>
+                                                        <td class="list-note">{{hisitem.order_description}}</td>
+                                                        <td class="list-state {{hisitem.state == true ? 'success' : 'notsuccess'}}">{{hisitem.state == true ? 'Đã thanh toán' : 'Chưa thanh toán'}}</td>
+                                                    </tr>
+                                                </table>
+                                                <div ng-if="session.history_oder.length < 0">
+                                                    <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                                                    </p>
+                                                </div>
+                                            </md-content>
+                                        </md-tab>
+                                        <md-tab label="LỊCH SỬ MUA HÀNG">
+                                            <md-content class="list-history-selled-user">
+                                                <ul class="list-history-selled list-history-selled-customer">
+                                                    <li class="history-selled-item" ng-repeat="hisitem in listhistorysell">
+                                                        <div class="floating-box">
+                                                            <progress-bar-product hisitem=hisitem /> </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="row m-0 row-pagination">
+                                                    <div class="col-md-12 p-0">
+                                                        <bgf-pagination collection="listhistorysell" current="page" total="total_page" gotopage="goto" url="urlHistoryPage" auto-presets="false" link-group-size="1"></bgf-pagination>
+                                                    </div>
+                                                </div>
+                                                <div ng-if="MsgNull">
+                                                    <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                                                    </p>
+                                                </div>
+                                            </md-content>
+                                        </md-tab>
+                                        <md-tab label="CHUYỂN HỒ SƠ">
+                                            <md-content>
+                                                <table class="list-all">
+                                                    <tr>
+                                                        <th>Thời gian</th>
+                                                        <th>Tài khoản nhận/cho</th>
+                                                        <th>Số K</th>
+                                                        <th>Ghi chú</th>
+                                                        <th>Loại chuyển</th>
+                                                    </tr>
+                                                    <tr ng-repeat="histitem in session.history_transfer">
+                                                        <td class="list-time">{{histitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                                        <td class="list-type">
+                                                            <hash-user-email user=histitem.email></hash-user-email>
+                                                        </td>
+                                                        <td class="list-numprice">{{histitem.total_k}}</td>
+                                                        <td class="list-note">{{histitem.transfer_description}}</td>
+                                                        <td class="list-state {{histitem.transfer_type == 'receive' ? 'success' : 'notsuccess'}}">{{histitem.transfer_type == 'receive' ? 'Nhận K' : 'Cho K'}}</td>
+                                                    </tr>
+                                                </table>
+                                                <div ng-if="session.history_transfer.length <= 0">
+                                                    <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                                                    </p>
+                                                </div>
+                                            </md-content>
+                                        </md-tab>
+                                        <md-tab label="TopUp">
+                                            <md-content>
+                                                <table class="list-all">
+                                                    <tr>
+                                                        <th>Thời gian</th>
+                                                        <th>Loại hình</th>
+                                                        <th>Số tiền</th>
+                                                        <th>Ghi chú</th>
+                                                        <th>Trạng thái</th>
+                                                    </tr>
+                                                    <tr ng-repeat="hisitem in session.history_topup">
+                                                        <td class="list-time">{{hisitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                                        <td class="list-type">{{hisitem.payment_method}}</td>
+                                                        <td class="list-numprice">{{hisitem.total_amount | priceVND}} vnđ</td>
+                                                        <td class="list-note">{{hisitem.order_description}}</td>
+                                                        <td class="list-state {{hisitem.state == true ? 'success' : 'notsuccess'}}">{{hisitem.state == true ? 'Đã thanh toán' : 'Chưa thanh toán'}}</td>
+                                                    </tr>
+                                                </table>
+                                                <div ng-if="session.history_oder.length < 0">
+                                                    <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                                                    </p>
+                                                </div>
+                                            </md-content>
+                                        </md-tab>
+                                    </md-tabs>
+                                </md-content>
+                            </div>
+                        </md-content>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="profile-page-app bg-while" ng-if="isMobile">
+    <div class="title-app">
+        <div class="nav-header" ng-click="doTheBack()">Back</div>
+        <h2>HỒ SƠ MUA BÁN</h2> </div>
+    <div class="profile-content content">
+        <div class="detail-bottom-mobile history-selled-mobile">
+            <div ng-init="">
+                <h3 class="accordion" ng-class="{active:accordion1}"> <a href ng-click="accordion1 = !accordion1">HỒ SƠ NẠP TIỀN</a> </h3>
+                <div class="accordion-content" ng-show="accordion1">
+                    <div class="list-history-all">
+                        <div class="history-item" ng-repeat="hisitem in session.history_oder"> <span class="list-time"><strong>Thời gian:</strong> {{hisitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</span> <span class="list-type"><strong>Loại hình:</strong> {{hisitem.payment_method}}</span> <span class="list-numprice"><strong>Số tiền:</strong> {{hisitem.total_amount | priceVND}} vnđ</span> <span class="list-note"><strong>Ghi chú:</strong> {{hisitem.order_description}}</span> <span class="list-state {{hisitem.state == true ? 'success' : 'notsuccess'}}"><strong>Trạng thái: </strong>{{hisitem.state == true ? 'Đã thanh toán' : 'Chưa thanh toán'}}</span> </div>
+                    </div>
+                    <div ng-if="session.history_oder.length < 0">
+                        <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                        </p>
+                    </div>
+                </div>
+                <h3 class="accordion" ng-class="{active:accordion2}"> <a href ng-click="accordion2 = !accordion2">LỊCH SỬ MUA HÀNG</a> </h3>
+                <div class="accordion-content" ng-show="accordion2">
+                    <div class="list-history-selled-user">
+                        <ul class="list-history-selled-customers">
+                            <li class="history-selled-item" ng-repeat="hisitem in listhistorysell"> <span class="history-item-time">{{hisitem.time}}</span> <span class="history-item-product"><a href="/san-pham/{{hisitem.product_slug}}.html">{{hisitem.product_name}}</a></span> <span class="history-item-numcode">{{hisitem.code}} Mã</span> </li>
+                        </ul>
+                        <div class="row m-0 row-pagination">
+                            <div class="col-md-12 p-0">
+                                <bgf-pagination collection="listhistorysell" current="page" total="total_page" gotopage="goto" url="urlHistoryPage" auto-presets="false" link-group-size="1"></bgf-pagination>
+                            </div>
+                        </div>
+                        <div ng-if="listhistorysell.length == 0">
+                            <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="accordion last" ng-class="{active:accordion3}"> <a href ng-click="accordion3 = !accordion3">CHUYỂN HỒ SƠ</a> </h3>
+                <div class="accordion-content" ng-show="accordion3">
+                    <div class="list-history-all">
+                        <div class="history-item" ng-repeat="histitem in session.history_transfer"> <span class="list-time"><strong>Thời gian:</strong> {{histitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</span> <span class="list-type"><strong>Tài khoản nhận/cho:</strong> <hash-user-email user=histitem.email></hash-user-email></span> <span class="list-numprice"><strong>Số K:</strong> {{histitem.total_k}} vnđ</span> <span class="list-note"><strong>Ghi chú:</strong> {{histitem.transfer_description}}</span> <span class="list-state {{histitem.transfer_type == 'receive' ? 'success' : 'notsuccess'}}"><strong>Loại chuyển: </strong>{{histitem.transfer_type == 'receive' ? 'Nhận K' : 'Cho K'}}</span> </div>
+                    </div>
+                    <div ng-if="session.history_transfer.length < 0">
+                        <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                        </p>
+                    </div>
+                </div>
+                <h3 class="accordion last" ng-class="{active:accordion4}"> <a href ng-click="accordion4 = !accordion4">TopUp</a> </h3>
+                <div class="accordion-content" ng-show="accordion4">
+                    <div class="list-history-all">
+                        <div class="history-item" ng-repeat="hisitem in session.history_oder"> <span class="list-time"><strong>Thời gian:</strong> {{hisitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</span> <span class="list-type"><strong>Loại hình:</strong> {{hisitem.payment_method}}</span> <span class="list-numprice"><strong>Số tiền:</strong> {{hisitem.total_amount | priceVND}} vnđ</span> <span class="list-note"><strong>Ghi chú:</strong> {{hisitem.order_description}}</span> <span class="list-state {{hisitem.state == true ? 'success' : 'notsuccess'}}"><strong>Trạng thái: </strong>{{hisitem.state == true ? 'Đã thanh toán' : 'Chưa thanh toán'}}</span> </div>
+                    </div>
+                    <div ng-if="session.history_transfer.length < 0">
+                        <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .config(function($stateProvider) {$stateProvider .state('cart', {title: 'Giỏ hàng', url: '/gio-hang.html', templateUrl: 'app/cart/views/cart.view.html', controller: 'CartCtrl', data: {css: 'assets/theme/other/style.app.css'}, }) });

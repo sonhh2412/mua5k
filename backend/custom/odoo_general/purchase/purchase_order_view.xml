@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+		<record id="purchase_order_form_custom" model="ir.ui.view">
+            <field name="name">purchase.order.form.custom</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+            	<button name="action_cancel" states="draft,confirmed,sent,bid,approved,except_picking,except_invoice" string="Cancel" type="object" position="attributes">
+            		<attribute name="groups">purchase.group_cancel_po</attribute>
+            	</button>
+            	<button name="purchase_confirm" states="draft" string="Confirm Order" id="draft_confirm" position="attributes">
+            		<attribute name="confirm">Are you sure your supplier will sell for you ? If yes please confim. If not please discard.</attribute>
+            	</button>
+                <button name="purchase_confirm" states="bid" string="Confirm Order" class="oe_highlight" id="bid_confirm" position="attributes">
+                	<attribute name="confirm">Are you sure your supplier will sell for you ? If yes please confim. If not please discard.</attribute>
+                </button>
+                <xpath expr="//sheet/group" position="after">
+	                <group>
+	                	<p colspan="2" style="max-width: 750px;">
+	                		Note: Because each PO wil reseved for each customer so if supplier cannot provide product after confirm please contact to manager to cancel this PO and set draft it to order from another supplier on this PO
+	                	</p>
+	                </group>
+	            </xpath>
+	            <button name="bid_received" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="wkf_send_rfq" states="draft" string="Send RFQ by Email" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="wkf_send_rfq" states="sent" string="Re-Send RFQ by Email" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="print_quotation" string="Print RFQ" type="object" states="draft" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="print_quotation" string="Re-Print RFQ" type="object" states="sent" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="purchase_confirm" states="draft" string="Confirm Order" id="draft_confirm" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="purchase_confirm" states="bid" string="Confirm Order" class="oe_highlight" id="bid_confirm" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="picking_ok" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="invoice_ok" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="wkf_send_rfq" states="approved" string="Send PO by Email" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="view_picking" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="view_invoice" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="action_cancel_draft" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="action_cancel" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <field name="partner_ref" position="after">
+	            	<field name="is_purchaser" invisible="1"/>
+	            </field>
+	            <field name="partner_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}</attribute>
+	            </field>
+	            <field name="partner_ref" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}</attribute>
+	            </field>
+	            <field name="currency_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}</attribute>
+	            </field>
+	            <field name="pricelist_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}</attribute>
+	            </field>
+	            <field name="date_order" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','approved'))]}</attribute>
+	            </field>
+	            <field name="origin" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False)],'invisible': [('origin','=',False)]}</attribute>
+	            </field>
+	            <field name="company_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','approved'))]}</attribute>
+	            </field>
+	            <field name="picking_type_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}</attribute>
+	            </field>
+	            <field name="dest_address_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))],'invisible':[('related_usage','!=','customer')],'required': [('related_usage','=', 'customer')]}</attribute>
+	            </field>
+	            <field name="order_line" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('done','approved'))]}</attribute>
+	            </field>
+	            <field name="incoterm_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': [('is_purchaser','=',False)]}</attribute>
+	            </field>
+	            <field name="bid_validity" position="attributes">
+	            	<attribute name="attrs">{'readonly': [('is_purchaser','=',False)]}</attribute>
+	            </field>
+	            <field name="minimum_planned_date" position="attributes">
+	            	<attribute name="attrs">{'readonly': [('is_purchaser','=',False)]}</attribute>
+	            </field>
+	            <field name="payment_term_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': [('is_purchaser','=',False)]}</attribute>
+	            </field>
+	            <field name="fiscal_position" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('invoiced','=', True)]}</attribute>
+	            </field>
+	            <field name="location_id" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}</attribute>
+	            </field>
+	            <field name="invoice_method" position="attributes">
+	            	<attribute name="attrs">{'readonly': ['|',('is_purchaser','=',False),('state','not in',('draft','sent'))]}</attribute>
+	            </field>
+	            <field name="notes" position="attributes">
+	            	<attribute name="attrs">{'readonly': [('is_purchaser','=',False)]}</attribute>
+	            </field>
+            </field>
+       	</record>
+       	
+       	<record id="purchase_order_2_stock_picking_inherit" model="ir.ui.view">
+            <field name="name">Purchase Picking Inherited 2</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_2_stock_picking"/>
+            <field name="arch" type="xml">
+            	<button name="view_picking" class="oe_stat_button" icon="fa-truck" attrs="{'invisible': [('shipment_count', '=', 0)]}" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+	            <button name="invoice_open" position="attributes">
+	            	<attribute name="groups">purchase.group_purchase_user</attribute>
+	            </button>
+            </field>
+    	</record>
+       	
+	</data>
+</openerp>

@@ -1,0 +1,78 @@
+<div class="waiting-result-page bg-while">
+    <div class="title-app" ng-if="isMobile"> <a class="nav-header" href="/danh-muc/sap-cong-bo.html">Back</a>
+        <h2>CHỜ CÔNG BỐ</h2>
+    </div>
+    <div class="container p-0">
+        <div class="tabs-header m-t-10" ng-if="isnotMobile">
+            <div class="tabs-header-1"> <span class="sp-ccb-kq">Sản phẩm chờ công bố kết quả</span>
+                <!-- <span class="khmgb"><a href="#">Xem những khách hàng đã mua được giống bạn</a></span> --><span class="num-dacb">Đã công bố <i>{{countLottery.number | priceVND}}</i> kết quả</span> </div>
+            <ul class="category-result">
+                <li ng-class="{'active' : !hasCateg}"> <a href="/danh-muc-cong-bo.html">Tất Cả</a> </li>
+                <!-- class="active" -->
+                <li ng-class="{'active' : stateParams.slug === categ.slug && hasCateg}" ng-repeat="categ in categories"> <a href="/danh-muc-cong-bo/{{categ.slug}}.html">{{categ.name.toLowerCase()}}</a> </li>
+            </ul>
+        </div>
+        <div class="content-product" ng-if="products && isnotMobile">
+            <!-- Sản phẩm công bố -->
+            <div class="products-ccb-item col-md-4" ng-repeat="product in products">
+                <div ng-show="product.second_product == 0">
+                    <div class="products-ccb-image col-xs-4">
+                        <a href="/ket-thuc-phien-san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">
+                            <div afkl-lazy-image="{{domain_image_product + product.product.images[0].image}}" afkl-lazy-image-options='{"offset":250}' class="loaded" /> </a>
+                    </div>
+                    <div class="products-ccb-info col-xs-8">
+                        <info-user-winner product=product />
+                        <h3><a href="/ket-thuc-phien-san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">{{product.product.name.toLowerCase()}}</a></h3> <span class="price">Giá: {{product.product.price | priceVND}} <span>đ</span></span> <span class="alert-full alert-full-time">Thời gian công bố: {{product.product.user_win[0].time_result}}</span>
+                        <md-button ng-href="/ket-thuc-phien-san-pham/{{product.product.slug}}/{{product.product.session_id}}.html" class="btn p-0 m-0 btn-teamplate readmore"> Xem chi tiết </md-button>
+                    </div>
+                </div>
+                <div ng-show="product.second_product != 0 "> <span class="hot-event">ĐANG QUAY SỐ</span>
+                    <div class="products-ccb-image col-xs-4">
+                        <a href="/san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">
+                            <div afkl-lazy-image="{{domain_image_product + product.product.images[0].image}}" afkl-lazy-image-options='{"offset":250}' class="loaded" /> </a>
+                    </div>
+                    <div class="products-ccb-info col-xs-8">
+                        <h3><a href="/san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">{{product.product.name.toLowerCase()}}</a></h3> <span class="price">Giá: {{product.product.price | priceVND}} đ</span> <span class="alert-full">Đã đủ người tham gia</span>
+                        <div class="times-down"> <span>Công bố kết quả sau</span>
+                            <result-timer-count product=product/> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End san phẩm công bố -->
+        </div>
+        <div class="content-product" ng-if="products && isMobile">
+            <!-- Sản phẩm công bố -->
+            <div class="waiting-result-page-apps">
+                <div class="products-ccb-item col-md-4" ng-repeat="product in products">
+                    <div ng-show="product.second_product == 0">
+                        <div class="products-ccb-image col-xs-4">
+                            <a href="/ket-thuc-phien-san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">
+                                <div afkl-lazy-image="{{domain_image_product + product.product.images[0].image}}" afkl-lazy-image-options='{"offset":250}' class="loaded" /> </a>
+                        </div>
+                        <div class="products-ccb-info col-xs-8">
+                            <h3><a href="/ket-thuc-phien-san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">{{product.product.name.toLowerCase()}}</a></h3> <span class="price">Giá: {{product.product.price | priceVND}} <span>đ</span></span>
+                            <info-user-winner product=product /> <span class="alert-full alert-full-time">Thời gian công bố: {{product.product.user_win[0].time_result}}</span> </div>
+                    </div>
+                    <div ng-show="product.second_product != 0 "> <span class="hot-event">ĐANG QUAY SỐ</span>
+                        <div class="products-ccb-image col-xs-4">
+                            <a href="/san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">
+                                <div afkl-lazy-image="{{domain_image_product + product.product.images[0].image}}" afkl-lazy-image-options='{"offset":250}' class="loaded" /> </a>
+                        </div>
+                        <div class="products-ccb-info col-xs-8">
+                            <h3><a href="/san-pham/{{product.product.slug}}/{{product.product.session_id}}.html">{{product.product.name.toLowerCase()}}</a></h3> <span class="price">Giá: {{product.product.price | priceVND}} đ</span> <span class="alert-full">Đã đủ người tham gia</span>
+                            <div class="times-down"> <span>Công bố kết quả sau</span>
+                                <result-timer-count product=product/> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End san phẩm công bố -->
+        </div>
+        <div class="row m-0 row-pagination">
+            <div class="col-md-12 p-0" ng-init="page_current = page">
+                <bgf-pagination collection="products" current="page" total="total_page" gotopage="goto" url="url_result" auto-presets="false" link-group-size="1"></bgf-pagination>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

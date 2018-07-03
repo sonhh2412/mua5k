@@ -1,0 +1,165 @@
+written by oanhle@icsc.vn
+
+A. Guider create shell script run odoo_push_price
+
+1. su root
+
+2. nano /home/user/workspace/10k/backend/custom/odoo_queue_process/pushprice.sh
+
+3. paste this content (change folder path depend on your server
+
+#!/bin/sh
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_push_price.py"`
+
+4. chown user owner
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: pushprice.sh
+sudo chmod +x pushprice.sh
+
+5. open crontab
+
+crontab -e -u user
+
+then: go to the end of file and paste
+
+1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/pushprice.sh
+
+that mean: 1 times a hours
+
+
+C. Hướng dẫn tạo sh chạy cron tab tạo dữ liệu khách hàng
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooCustomerPull.sh
+sudo chmod +x odooCustomerPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_customer.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_customer.py"`
+`echo "ok" >> /home/user/text.txt`
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooCustomerPull.sh
+
+C. Hướng dẫn tạo sh chạy cron tab tạo dữ phien san pham
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooSessionPull.sh
+sudo chmod +x odooSessionPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_session_add.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_session_add.py"`
+`echo "sok" >> /home/user/text.txt`
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooSessionPull.sh
+
+E. Hướng dẫn tạo sh chạy cron tab ĐÓNG  phien san pham
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooSessionClosePull.sh
+sudo chmod +x odooSessionClosePull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_session_close.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_session_close.py"`
+`echo "cok" >> /home/user/text.txt`
+
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooSessionClosePull.sh
+
+E. Hướng dẫn tạo sh chạy cron tab lay don hang mua diem ve odoo
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooOrderPointPull.sh
+sudo chmod +x odooOrderPointPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_order_point.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_order_point.py"`
+`echo "point" >> /home/user/text.txt`
+
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooOrderPointPull.sh
+
+
+
+F. Hướng dẫn tạo sh chạy cron tab lay don hang TMDT ve odoo
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooOrderTMDTPull.sh
+sudo chmod +x odooOrderTMDTPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_order.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_order.py"`
+`echo "TMDT" >> /home/user/text.txt`
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooOrderTMDTPull.sh
+
+G. Hướng dẫn tạo sh chạy cron tab lay ket qua xo so ve odoo
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooDialResultPull.sh
+sudo chmod +x odooDialResultPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_dial_result.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_dial_result.py"`
+`echo "dial" >> /home/user/text.txt`
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooDialResultPull.sh
+
+H. Hướng dẫn tạo sh chạy cron tab lay GIAO DICH MUA BAN KIM CUONG ve odoo
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooTransactionKPull.sh
+sudo chmod +x odooTransactionKPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_transactionK.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_transactionK.py"`
+`echo "dial" >> /home/user/text.txt`
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooTransactionKPull.sh
+
+I. Hướng dẫn tạo sh chạy cron tab lay lich su login website ve odoo
+
+cd /home/user/workspace/10k/backend/custom/odoo_queue_process
+sudo chown -R user: odooHistoryLoginPull.sh
+sudo chmod +x odooHistoryLoginPull.sh
+
+#!/bin/sh
+`sh -c "pkill -9 -f /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_history.py"`
+`sh -c "python /home/user/workspace/10k/backend/custom/odoo_queue_process/odoo_recieve_history.py"`
+`echo "login" >> /home/user/text.txt`
+
+
+cron tab:
+crontab -e -u user
+*/1 * * * * /home/user/workspace/10k/backend/custom/odoo_queue_process/odooHistoryLoginPull.sh
+
+
+
+ 

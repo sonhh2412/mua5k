@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="date_of_birth_1_default" model="date.of.birth">
+            <field name="name">01</field>
+            <field name="value">1</field>
+        </record>
+        <record id="date_of_birth_2_default" model="date.of.birth">
+            <field name="name">02</field>
+            <field name="value">2</field>
+        </record>
+        <record id="date_of_birth_3_default" model="date.of.birth">
+            <field name="name">03</field>
+            <field name="value">3</field>
+        </record>
+        <record id="date_of_birth_4_default" model="date.of.birth">
+            <field name="name">04</field>
+            <field name="value">4</field>
+        </record>
+        <record id="date_of_birth_5_default" model="date.of.birth">
+            <field name="name">05</field>
+            <field name="value">5</field>
+        </record>
+        <record id="date_of_birth_6_default" model="date.of.birth">
+            <field name="name">06</field>
+            <field name="value">6</field>
+        </record>
+        <record id="date_of_birth_7_default" model="date.of.birth">
+            <field name="name">07</field>
+            <field name="value">7</field>
+        </record>
+        <record id="date_of_birth_8_default" model="date.of.birth">
+            <field name="name">08</field>
+            <field name="value">8</field>
+        </record>
+        <record id="date_of_birth_9_default" model="date.of.birth">
+            <field name="name">09</field>
+            <field name="value">9</field>
+        </record>
+        <record id="date_of_birth_10_default" model="date.of.birth">
+            <field name="name">10</field>
+            <field name="value">10</field>
+        </record>
+        <record id="date_of_birth_11_default" model="date.of.birth">
+            <field name="name">11</field>
+            <field name="value">11</field>
+        </record>
+        <record id="date_of_birth_12_default" model="date.of.birth">
+            <field name="name">12</field>
+            <field name="value">12</field>
+        </record>
+        <record id="date_of_birth_13_default" model="date.of.birth">
+            <field name="name">13</field>
+            <field name="value">13</field>
+        </record>
+        <record id="date_of_birth_14_default" model="date.of.birth">
+            <field name="name">14</field>
+            <field name="value">14</field>
+        </record>
+        <record id="date_of_birth_15_default" model="date.of.birth">
+            <field name="name">15</field>
+            <field name="value">15</field>
+        </record>
+        <record id="date_of_birth_16_default" model="date.of.birth">
+            <field name="name">16</field>
+            <field name="value">16</field>
+        </record>
+        <record id="date_of_birth_17_default" model="date.of.birth">
+            <field name="name">17</field>
+            <field name="value">17</field>
+        </record>
+        <record id="date_of_birth_18_default" model="date.of.birth">
+            <field name="name">18</field>
+            <field name="value">18</field>
+        </record>
+        <record id="date_of_birth_19_default" model="date.of.birth">
+            <field name="name">19</field>
+            <field name="value">19</field>
+        </record>
+        <record id="date_of_birth_20_default" model="date.of.birth">
+            <field name="name">20</field>
+            <field name="value">20</field>
+        </record>
+        <record id="date_of_birth_21_default" model="date.of.birth">
+            <field name="name">21</field>
+            <field name="value">21</field>
+        </record>
+        <record id="date_of_birth_22_default" model="date.of.birth">
+            <field name="name">22</field>
+            <field name="value">22</field>
+        </record>
+        <record id="date_of_birth_23_default" model="date.of.birth">
+            <field name="name">23</field>
+            <field name="value">23</field>
+        </record>
+        <record id="date_of_birth_24_default" model="date.of.birth">
+            <field name="name">24</field>
+            <field name="value">24</field>
+        </record>
+        <record id="date_of_birth_25_default" model="date.of.birth">
+            <field name="name">25</field>
+            <field name="value">25</field>
+        </record>
+        <record id="date_of_birth_26_default" model="date.of.birth">
+            <field name="name">26</field>
+            <field name="value">26</field>
+        </record>
+        <record id="date_of_birth_27_default" model="date.of.birth">
+            <field name="name">27</field>
+            <field name="value">27</field>
+        </record>
+        <record id="date_of_birth_28_default" model="date.of.birth">
+            <field name="name">28</field>
+            <field name="value">28</field>
+        </record>
+        <record id="date_of_birth_29_default" model="date.of.birth">
+            <field name="name">29</field>
+            <field name="value">29</field>
+        </record>
+        <record id="date_of_birth_30_default" model="date.of.birth">
+            <field name="name">30</field>
+            <field name="value">30</field>
+        </record>
+        <record id="date_of_birth_31_default" model="date.of.birth">
+            <field name="name">31</field>
+            <field name="value">31</field>
+        </record>
+        
+        
+	</data>
+    <data>
+    
+       <record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">            	
+            	 <field name="website" position="after">
+            	 	<!-- <field name="birthday"  attrs="{'invisible':[('customer','=',False)]}"/>      -->
+            	 	<label for="year_of_birth" string="Birthday"/>
+                    <div attrs="{'invisible':[('customer','=',False)]}" class="address_format">
+                        <field name="year_of_birth" placeholder="Year" style="width: 35%%" on_change="onchange_month_year(month_of_birth,year_of_birth)"
+                            attrs="{'readonly':[('customer','=',True)]}"/>
+                        <field name="month_of_birth" placeholder="Month" style="width: 35%%" on_change="onchange_month_year(month_of_birth,year_of_birth)"
+                            attrs="{'readonly':[('customer','=',True)]}"/>
+                        <field name="day_of_birth" placeholder="Day" style="width: 30%%" widget="selection"  domain="[('value','&lt;=',last_day_of_month)]"
+                            attrs="{'readonly':[('customer','=',True)]}"/>
+                    </div>	 
+                    <field name="last_day_of_month" invisible="1"/>
+            	 	<field name="active"  attrs="{'invisible':[('customer','=',False)]}"/>
+            	 	<field name="website_id" readonly="1"  attrs="{'invisible':[('customer','=',False)]}"/>  
+            	 </field>            	
+            </field>
+        </record>
+       
+        <record id="customer_sync_search_view" model="ir.ui.view">
+            <field name="name">Search Partner Sync</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+				<field name="user_id" position="after">
+                     <field name="website_id" />
+				</field>
+            </field>
+        </record>
+	
+        <record id="view_partner_inherit_customer_sync_tree" model="ir.ui.view">
+            <field name="name">res.partner.sync.inherit.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                 <field name="email" position="after">
+                     <field name="website_id" />
+                 </field>
+             </field>
+         </record>
+	   
+    </data>
+</openerp>

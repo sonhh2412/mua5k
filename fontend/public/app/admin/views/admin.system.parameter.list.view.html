@@ -1,0 +1,61 @@
+<div class="manage-page bg-while"><div class="container m-t-15"><div class="row"><manage-left></manage-left><div class="col-md-10 p-0"><div class="manage-right floating-box"><div class="col-md-12"><h3 class="title-page">
+                            Thông số hệ thống
+                        </h3></div><hr/><div class="manage-form col-md-12"><div class="addnew-bottom"><md-button class="btn-addnew btn" ng-click="ViewFormOpen()" ng-show="is_showAddButton">Thêm thông số mới</md-button></div><form class="frm-updateprofile p-15" ng-show="isAddFormOpen" novalidate name="frmAddParameter" rc-submit="submit()"><div class="form-group" ng-class="{'has-error' : rc.frmAddParameter.needsAttention(frmAddParameter.name) }"><label>Tên thông số</label><input type="text" placeholder="Tên chuyên mục" class="form-control" name="name" ng-model="systemparameter.name" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddParameter.needsAttention(frmAddParameter.name)">Vui lòng nhập tên thông số</span></div><div class="form-group" ng-class="{'has-error' : rc.frmAddParameter.needsAttention(frmAddParameter.key) }"><label>Key</label><input type="text" class="form-control" placeholder="Nhập key" name="key" ng-model="systemparameter.key" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddParameter.needsAttention(frmAddParameter.key)">Vui lòng nhập Key</span></div><div class="form-group" ng-class="{'has-error' : rc.frmAddParameter.needsAttention(frmAddParameter.value) }"><label>Value</label><input type="text" placeholder="Nhập value" class="form-control" name="value" ng-model="systemparameter.value" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddParameter.needsAttention(frmAddParameter.value)">Vui lòng nhập Value</span></div><div class="form-group"><md-button type="submit" class="btn p-0 m-0 btn-submit">Lưu thông số mới</md-button><a ng-click="CloseFormOpen()" class="btn-close btn">Hủy</a></div></form></div><hr/><div class="floating-box m-t-30"><div
+                            class="col-md-12 m-b-10"
+                            ng-repeat="(index_param, contentitem) in listparams.results"><div class="content-menu p-0 help-border-box"><md-button
+                                    ng-href="#"
+                                    class="text-left p-0 m-10 btn-href-link"
+                                    ng-click="showSystemParameter(index_param)">
+                                    {{contentitem.name}}
+                                </md-button><div class="pull-right"><md-button class="btn-href-link p-0 m-10" ng-click="editSystemParameter(index_param)">Chỉnh sửa</md-button><md-button class="btn-href-link p-0 m-10" ng-click="removeSystemParameter(contentitem._id,index_param)">Xóa</md-button></div></div><form
+                                class="frm-updateprofile help-addnewcontent help-border-box"
+                                ng-show='this["active_"+index_param]'
+                                novalidate="novalidate"
+                                name="frmInformation_{{index_param}}"
+                                rc-submit="submit_save(index_param)"><input type="hidden" name="_id" ng-model='this["post_"+index_param]._id'><div
+                                    class="form-group"
+                                    ng-class="{'has-error' : rc.frmInformation_{{index_param}}.needsAttention(frmInformation_{{index_param}}.name_{{index_param}}) }"><label>Tên thông số</label><input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Mô tả"
+                                        name="title_{{index_param}}"
+                                        ng-model='this["post_"+index_param].name'
+                                        required="required"
+                                        autocomplete="off"
+                                        ng-readonly='!this["edit_"+index_param]'/><span class="note-input-float">*</span><span
+                                        class="red"
+                                        ng-show="rc.frmInformation_{{index_param}}.needsAttention(frmInformation_{{index_param}}.name_{{index_param}})">Vui lòng nhập tên thông số</span></div><div class="form-group"><label>Key</label><input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Key"
+                                        name="title_{{index_param}}"
+                                        ng-model='this["post_"+index_param].key'
+                                        required="required"
+                                        autocomplete="off"
+                                        ng-readonly='!this["edit_"+index_param]'/><span class="note-input-float">*</span><span
+                                        class="red"
+                                        ng-show="rc.frmInformation_{{index_param}}.needsAttention(frmInformation_{{index_param}}.key_{{index_param}})">Vui lòng nhập Key</span></div><div class="form-group"><label>Value</label><input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Value"
+                                        name="title_{{index_param}}"
+                                        ng-model='this["post_"+index_param].value'
+                                        required="required"
+                                        autocomplete="off"
+                                        ng-readonly='!this["edit_"+index_param]'/><span class="note-input-float">*</span><span
+                                        class="red"
+                                        ng-show="rc.frmInformation_{{index_param}}.needsAttention(frmInformation_{{index_param}}.value_{{index_param}})">Vui lòng nhập Value</span></div><div class="form-group" ng-show='this["edit_"+index_param]'><md-button
+                                        type="submit"
+                                        class="btn p-0 m-0 btn-submit"
+                                        ng-disabled='!this["edit_"+index_param]'>Lưu thông số</md-button><a
+                                        ng-click="CloseFormOpen(index_param)"
+                                        class="btn-close btn"
+                                        ng-disabled='!this["edit_"+index_param]'>Hủy</a></div></form></div><div class="row m-0 row-pagination"><div class="col-md-12 p-0"><bgf-pagination
+                                    collection="listparams"
+                                    current="page"
+                                    total="total_page"
+                                    gotopage="goto"
+                                    url="urlListParams"
+                                    auto-presets="true"
+                                    link-group-size="1"
+                                    reload-page="reloadPage"></bgf-pagination></div></div></div></div></div></div></div></div>

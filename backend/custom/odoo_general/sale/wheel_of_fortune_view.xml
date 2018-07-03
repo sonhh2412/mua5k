@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+   
+            <record model="ir.ui.view" id="wheel_of_fortune_tree_view">
+                <field name="name">wheel.of.fortune.tree</field>
+                <field name="model">wheel.of.fortune</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Wheel of Fortune">
+                        <field name="product_id"/>
+                        <field name="amount_total"/>
+                        <field name="number_of_participants"/>
+                        <field name="number_winning"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="wheel_of_fortune_form_view">
+                <field name="name">wheel.of.fortune.form</field>
+                <field name="model">wheel.of.fortune</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Wheel of Fortune">
+                    	<header>
+	                        <button name="get_session" string="Get Session" states='draft' type="object" class="oe_highlight" groups="base.group_user"/>
+	                        <button name="act_dial" string="Dial Number" states='progress' type="object" class="oe_highlight" groups="base.group_user"/>
+	                        <field name="state" widget="statusbar" statusbar_visible="draft,progress,done"/>
+	                        
+                    	</header>
+		                <sheet>
+		                    <h1><field name="name" class="oe_inline" readonly="1"/></h1>
+							<group>
+								<group>
+									<field name="lottery_results" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								</group>
+								<group>
+								</group>
+							</group>
+<!-- 						    <table class="table">
+							    <tbody>
+							        <tr class="success">
+							        	<td class="text-center" style="width: 20%;"><button name="act_calculation" string="Calculation" type="object" groups="base.group_user"/></td>
+								        <td class="text-center" style="width: 12%;font-weight:bold;"><span>=</span></td>
+								        <td class="text-center" style="width: 12%;"><field name="amount_total"/></td>
+								        <td class="text-center" style="width: 12%;font-weight:bold;"><span>/</span></td>
+								        <td class="text-center" style="width: 12%;"><field name="number_of_participants"/></td>
+								        <td class="text-center" style="width: 12%;font-weight:bold;"><span>+</span></td>
+								        <td class="text-center" style="width: 20%;"><span>1.000.000</span></td>
+							        </tr>
+							    </tbody>
+						    </table> -->
+							<notebook>
+                        	<page string="Session to Dial">
+	                            <field name="session_ids"/>
+                        	</page>
+                        	</notebook>
+		                </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_wheel_of_fortune_tree_view">
+                <field name="name">Wheel of Fortune</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">wheel.of.fortune</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="wheel_of_fortune_tree_view"/>
+            </record>
+
+			<menuitem id="wheel_of_fortune_menu" name="Wheel of Fortune" parent="base.menu_sales" action="action_wheel_of_fortune_tree_view"/>
+
+    
+    </data>
+</openerp>

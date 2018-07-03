@@ -1,0 +1,1 @@
+<div ng-if="listnews.length > 0"> <span><a href="/danh-sach-tin-tuc.html">Tin tức</a></span> </div> <ul class="last-news" autoscroll="true"> <li ng-repeat="(key, news) in listnews" ng-attr-id="{{'news-' + key}} "> <a ng-href="/xem-tin-tuc/{{news.slug}}-{{news._id}}.html">{{news.title | limitTo:50}}{{news.title.length > 50 ? '...' : ''}}</a> </li> </ul>

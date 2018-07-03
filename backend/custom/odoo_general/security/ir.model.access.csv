@@ -1,0 +1,46 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_category_convert_user,category_convert.user,model_category_convert,base.group_user,1,1,1,1
+access_product_session_user,product_session.user,model_product_session,base.group_user,1,1,1,1
+access_product_session_code_user,product_session_code.user,model_product_session_code,base.group_user,1,1,1,1
+access_res_partner_history_exchange_user,res_partner_history_exchange.user,model_res_partner_history_exchange,base.group_user,1,1,1,1
+access_product_session_popup,product_session_popup user,model_product_session_popup,base.group_user,1,1,1,1
+access_product_session_order,product_session_order user,model_product_session_order,base.group_user,1,1,1,1
+access_list_of_winner_report,list_of_winner_report user,model_list_of_winner_report,base.group_user,1,1,1,1
+access_list_of_winner_report_detail,list_of_winner_report_detail user,model_list_of_winner_report_detail,base.group_user,1,1,1,1
+access_list_of_transaction_user,list_of_transaction.user,model_list_of_transaction,base.group_user,1,1,1,1
+access_list_of_transaction_detail_user,list_of_transaction_detail.user,model_list_of_transaction_detail,base.group_user,1,1,1,1
+access_sale_report_custom_user,sale_report_custom.user,model_sale_report_custom,base.group_user,1,1,1,1
+access_sale_report_custom_detail_user,sale_report_custom_detail.user,model_sale_report_custom_detail,base.group_user,1,1,1,1
+access_sale_report_k_user,sale_report_k.user,model_sale_report_k,base.group_user,1,1,1,1
+access_sale_report_k_detail_user,sale_report_k_detail.user,model_sale_report_k_detail,base.group_user,1,1,1,1
+access_sale_report_quantity_user,sale_report_quantity.user,model_sale_report_quantity,base.group_user,1,1,1,1
+access_sale_report_quantity_detail_user,sale_report_quantity_detail.user,model_sale_report_quantity_detail,base.group_user,1,1,1,1
+access_number_k_report_user,number_k_report.user,model_number_k_report,base.group_user,1,1,1,1
+access_report_members_user,report_members.user,model_report_members,base.group_user,1,1,1,1
+access_report_members_detail_user,report_members_detail.user,model_report_members_detail,base.group_user,1,1,1,1
+access_buy_credit_k_user,buy_credit_k.user,model_buy_credit_k,base.group_user,1,1,1,1
+access_buy_credit_k_detail_user,buy_credit_k_detail.user,model_buy_credit_k_detail,base.group_user,1,1,1,1
+access_import_data_user,import_data.user,model_import_data,base.group_user,1,1,1,1
+access_import_data_status_user,import_data_status.user,model_import_data_status,base.group_user,1,1,1,1
+access_report_member_asscess_user,report_member_asscess.user,model_report_member_asscess,base.group_user,1,1,1,1
+access_report_member_asscess_user,report_member_asscess.user,model_report_member_asscess,base.group_user,1,1,1,1
+access_report_transaction_average_user,report_transaction_average.user,model_report_transaction_average,base.group_user,1,1,1,1
+access_report_transaction_average_detail_user,report_transaction_average_detail.user,model_report_transaction_average_detail,base.group_user,1,1,1,1
+access_dialed_session_user,dialed_session.user,model_dialed_session,base.group_user,1,1,1,1
+access_dialed_session_detail_user,dialed_session_detail.user,model_dialed_session_detail,base.group_user,1,1,1,1
+access_credit_card_member_user,credit_card_member.user,model_credit_card_member,base.group_user,1,1,1,1
+access_credit_card_member_detail_user,credit_card_member_detail.user,model_credit_card_member_detail,base.group_user,1,1,1,1
+access_product_session_create_user,product_session_create.user,model_product_session_create,base.group_user,1,1,1,1
+access_res_partner_history_login_user,res_partner_history_login.user,model_res_partner_history_login,base.group_user,1,1,1,1
+access_report_purchase_order_wh_manager,purchase.report wh_manager,purchase.model_purchase_report,stock.group_stock_manager,1,0,0,0
+access_purchase_order_account_manager,purchase.order account,purchase.model_purchase_order,account.group_account_user,1,1,0,0
+access_purchase_order_line_account_manager,purchase.order.line account,purchase.model_purchase_order_line,account.group_account_user,1,1,0,0
+access_purchase_order_sale,purchase.order sale,purchase.model_purchase_order,base.group_sale_salesman,1,1,1,0
+access_purchase_order_line_sale,purchase.order.line sale,purchase.model_purchase_order_line,base.group_sale_salesman,1,1,1,0
+sale_stock.access_stock_picking_salesman,stock_picking salesman,stock.model_stock_picking,base.group_sale_salesman,1,0,0,0
+sale_stock.access_stock_move_salesman,stock_move salesman,stock.model_stock_move,base.group_sale_salesman,1,0,0,0
+sale_stock.access_stock_move_manager,stock_move manager,stock.model_stock_move,base.group_sale_manager,1,0,0,0
+sale_stock.access_stock_picking_sales,stock.picking.sales,stock.model_stock_picking,base.group_sale_manager,1,0,0,0
+access_credit_card_reason_user,credit_card_reason.user,model_credit_card_reason,base.group_user,1,1,1,1 
+access_give_k_user,give_k.user,model_give_k,base.group_user,1,1,1,1
+access_give_k_history_user,give_k_history.user,model_give_k_history,base.group_user,1,1,1,1

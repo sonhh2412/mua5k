@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_report_member_asscess_form" model="ir.ui.view">
+			<field name="name">report.member.asscess.form</field>
+			<field name="model">report.member.asscess</field>
+			<field name="arch" type="xml">
+				<form string="Total Asscess">
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline" attrs="{'readonly': [('state','=','done')]}"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="from_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="date"/>
+								<field name="type" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+							<group>
+								<field name="to_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="user_id"/>
+								<field name="partner_ids" widget="many2many_tags" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readonly="1">
+								<tree editable="bottom" create="false">
+									<field name="date_asscess"/>
+									<field name="partner_id"/>
+									<field name="number_asscess" sum="Total"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_report_member_asscess_tree" model="ir.ui.view">
+			<field name="name">report.member.asscess.tree</field>
+			<field name="model">report.member.asscess</field>
+			<field name="arch" type="xml">
+				<tree string="Total Asscess">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+					<field name="type"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_report_member_asscess_search" model="ir.ui.view">
+			<field name="name">report.member.asscess.search</field>
+			<field name="model">report.member.asscess</field>
+			<field name="arch" type="xml">
+				<search string="Total Asscess">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+					<field name="type"/>
+					<group expand="0" string="Group By">
+						<filter string="Type" domain="[]" context="{'group_by':'type'}"/>
+						<filter string="Create Date" domain="[]" context="{'group_by':'date'}"/>
+						<filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_report_member_asscess" model="ir.actions.act_window">
+	        <field name="name">Total Asscess</field>
+	        <field name="res_model">report.member.asscess</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_report_member_asscess_search"/>
+	    </record>
+    	
+		<menuitem action="action_report_member_asscess" id="menu_report_member_asscess" parent="menu_report_purchase_members" sequence="2"/>
+		
+	</data>
+</openerp>

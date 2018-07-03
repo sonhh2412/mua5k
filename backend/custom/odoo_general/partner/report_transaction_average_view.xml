@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_report_transaction_average_form" model="ir.ui.view">
+			<field name="name">report.transaction.average.form</field>
+			<field name="model">report.transaction.average</field>
+			<field name="arch" type="xml">
+				<form string="Transaction Average">
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline" attrs="{'readonly': [('state','=','done')]}"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="from_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="date"/>
+								<field name="partner_ids" attrs="{'readonly': [('state','=','done')]}" widget="many2many_tags" domain="[('customer','=',True)]"/>
+							</group>
+							<group>
+								<field name="to_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="user_id"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readonly="1">
+								<tree editable="bottom" create="false">
+									<field name="partner_id"/>
+									<field name="number_subt"/>
+									<field name="amount_k_subt"/>
+									<field name="number_add"/>
+									<field name="amount_k_add"/>
+									<field name="total_trans"/>
+									<field name="total_amount_k"/>
+									<field name="avg_trans"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_report_transaction_average_tree" model="ir.ui.view">
+			<field name="name">report.transaction.average.tree</field>
+			<field name="model">report.transaction.average</field>
+			<field name="arch" type="xml">
+				<tree string="Transaction Average">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_report_transaction_average_search" model="ir.ui.view">
+			<field name="name">report.transaction.average.search</field>
+			<field name="model">report.transaction.average</field>
+			<field name="arch" type="xml">
+				<search string="Transaction Average">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+					<group expand="0" string="Group By">
+						<filter string="Create Date" domain="[]" context="{'group_by':'date'}"/>
+						<filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_report_transaction_average" model="ir.actions.act_window">
+	        <field name="name">Transaction Average</field>
+	        <field name="res_model">report.transaction.average</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_report_transaction_average_search"/>
+	    </record>
+    	
+		<menuitem action="action_report_transaction_average" id="menu_report_transaction_average" parent="menu_report_purchase_members" sequence="3"/>
+		
+	</data>
+</openerp>

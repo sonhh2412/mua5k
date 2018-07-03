@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="sync_queue assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+<!--                 <script type="text/javascript" src="/lama_sync_notification/static/src/js/queue.js"></script> -->
+            </xpath>
+        </template>
+    </data>
+</openerp>

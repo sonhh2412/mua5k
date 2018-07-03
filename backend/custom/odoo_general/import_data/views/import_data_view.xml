@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	        
+	    <!-- Import Data Status View -->
+	    
+	    <record id="view_import_data_status_tree" model="ir.ui.view">
+	    	<field name="name">import.data.status.tree</field>
+	    	<field name="model">import.data.status</field>
+	    	<field name="arch" type="xml">
+	    		<tree create="false" edit="false" delete="false" colors="red:status=='fail';">
+	    			<field name="row_number"/>
+	    			<field name="message"/>
+	    			<field name="status"/>
+	    		</tree>
+	    	</field>	    	
+	    </record>
+	    
+	    <record id="view_import_data_status_search" model="ir.ui.view">
+	    	<field name="name">import.data.status.search</field>
+	    	<field name="model">import.data.status</field>
+	    	<field name="arch" type="xml">
+	    		<search string="Status of Import">
+	    			<group string="Status">
+		    			<filter domain="[('status','=','success')]" string="Success"/>
+		    			<filter domain="[('status','=','fail')]" string="Fail"/>
+	    			</group>
+	    		</search>
+	    	</field>	    	
+	    </record>
+	    
+        <record id="action_import_data_status" model="ir.actions.act_window">
+            <field name="name">Result of Import Data</field>
+            <field name="res_model">import.data.status</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('import_id','=',active_id)]</field>
+       	</record>
+		
+		<!-- Import Data View -->
+		
+		<record id="view_import_data_tree" model="ir.ui.view">
+			<field name="name">view.import.data.tree</field>
+			<field name="model">import.data</field>
+			<field name="arch" type="xml">
+				<tree colors="blue:state=='done'; green:state=='processing'; red:state=='error'">
+					<field name="create_date"/>
+					<field name="create_uid"/>
+					<field name="name"/>
+					<field name="file_name"/>
+					<field name="write_date"/>	
+					<field name="total_row"/>
+					<field name="current_row"/>
+					<field name="success_row"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="view_import_data_form" model="ir.ui.view">
+			<field name="name">import.data.form</field>
+			<field name="model">import.data</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Result of Import Data">
+					<header>
+						<button name="act_call_read_excel_thread" type="object" string="Load Data" states="new"/>
+						<field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<div class="oe_right oe_button_box" name="button_box">
+							<button name="%(action_import_data_status)d" class="oe_stat_button" icon="fa-pencil-square-o" type="action">
+	                            <field name="read_count" widget="statinfo" string="Status of Import"/>
+	                        </button> 
+						</div>
+						<group>
+							<group>
+								<field name="name"/>
+								<field name="create_date" readonly="1"/>
+							</group>
+							<group>
+								<field name="model_id" options="{'no_create':True}" string="Object import"/>
+								<field name="create_uid" readonly="1"/>
+							</group>
+						</group>
+						<group>
+							<group>								
+								<field name="current_row" readonly="1"/>
+							</group>
+							<group>
+								<field name="total_row" readonly="1"/>
+								<field name="success_row" readonly="1"/>
+							</group>
+						</group>
+						<group>
+					 		<group string="Select file">
+					 			<field name="file_name" invisible="1"/>
+			               		<label for="file_import"/>             		 		
+								<field name="file_import" nolabel="1" placeholder="/home/excel.xls" filename="file_name" attrs="{'readonly':[('state','!=','new')]}"/>
+					 		</group>
+					 		<!-- <group attrs="{'invisible':[('file_import','!=',False)]}">
+								<div>
+									<a href="/icsc_master_data/static/template/Master data Template Nhap Tay - Chuan - Phong Ban.xlsx" style="color:blue;">Download Template Import Department</a>
+								</div>
+							</group> -->
+					 	</group>
+						<notebook>
+							<page string="Status Import">
+								<field name="status_ids" widget="one2many_list" readonly="1">
+									<tree colors="red:status=='fail';" editable="bottom">
+						    			<field name="row_number"/>
+						    			<field name="message"/>
+						    			<field name="status"/>
+						    		</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_import_data_filter" model="ir.ui.view">
+			<field name="name">import.data.search</field>
+			<field name="model">import.data</field>
+			<field name="arch" type="xml">
+				<search string="Import Data">
+					<group expand="0" string="Group By">
+						<filter name="group_by_create_date" string="Date Import" context="{'group_by':'create_date'}" />
+						<filter name="group_by_create_uid" string="User Import" context="{'group_by':'create_uid'}" />
+						<filter name="group_by_state" string="State" context="{'group_by':'state'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+<!-- 		<record id="action_import_data" model="ir.actions.act_window">
+            <field name="name">Import Data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">import.data</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+       	</record>
+
+		<record id="action_import_data_form_view" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_import_data_form"/>
+            <field name="act_window_id" ref="action_import_data"/>
+        </record>
+        
+        <record id="action_import_data_tree_view" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_import_data_tree"/>
+            <field name="act_window_id" ref="action_import_data"/>
+        </record> -->
+
+	</data>
+</openerp>

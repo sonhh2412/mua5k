@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="product_product_image_form_view" model="ir.ui.view">
+            <field name="name">product.template.form.image</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//div[@name='options']/div" position="before">
+            		<field name="limited"/>
+            		<label for="limited"/>
+            	</xpath>
+            	<div name="options" position="inside">
+            	 	<div>
+            	 		<field name="dial_immediately"/>
+                     	<label for="dial_immediately"/>
+            	 	</div>
+            	</div>
+            	<div name="options" position="after">
+            		<group name="options2">
+            			<field name="created_date"/>
+            		</group>
+            	</div>
+            	<page string="Accounting" position="after">
+            		<page string="Session Sale List">
+            			<group>
+	            			<group>
+	            				<field name="code_number"/>
+	            			</group>
+            			</group>
+            			<button name="%(action_product_session_popup)d" string="Create Session" type="action" class="oe_highlight"/>
+            			<button name="%(action_product_session_delete_popup)d" string="Delete Session" type="action" class="oe_highlight"/>
+            			<field name="session_ids" nolabel="1" readonly="1">
+            				<tree>
+            					<field name="name"/>
+            					<field name="partner_id"/>
+            					<field name="number_win"/>
+            					<field name="date_start"/>
+            					<field name="date_stop"/>
+            				</tree>
+            			</field>
+            		</page>
+            	</page>
+            	<field name="list_price" position="after">
+            		<field name="point_price" readonly="1"/>
+            	</field>
+	           	 <field name="description"  position="before">
+	           	 	<group>
+	                     <group>
+	                         <field name="total_session"/>
+	                         <field name="total_session_sale"/>
+	                         <field name="total_session_dial"/>
+	                     </group>
+	                     <group>
+	                         <field name="type_with_session"/>
+	                     </group>
+	           	 	</group>
+	           	 </field>
+            </field>
+        </record>
+		<record id="product.product_normal_action_sell" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_type">form</field>
+            <field name="context">{"search_default_filter_to_sell":1}</field>
+            <field name="view_id" ref="product.product_product_tree_view"/>
+            <field name="search_view_id" ref="product.product_search_form_view"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to define a new product.
+              </p><p>
+                You must define a product for everything you sell, whether it's
+                a physical product, a consumable or a service you offer to
+                customers.
+              </p><p>
+                The product form contains information to simplify the sale
+                process: price, notes in the quotation, accounting data,
+                procurement methods, etc.
+              </p>
+            </field>
+        </record>
+        
+		<menuitem id="product.menu_product_template_action" name="Products" parent="base.menu_product" sequence="1" groups="base.group_hidden_menu"/>
+		
+		<menuitem id="product.menu_products" action="product.product_normal_action_sell" parent="base.menu_product" groups="base.group_no_one,base.group_sale_salesman_all_leads" sequence="10"/>
+		
+		<record id="product_normal_form_view_10k_inherit" model="ir.ui.view">
+			<field name="name">product.normal.form.view.10k.inherit</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id" ref="product.product_normal_form_view"/>
+			<field name="arch" type="xml">
+				<field name="product_tmpl_id" class="oe_inline" readonly="1" attrs="{'invisible': [('id', '=', False)], 'required': [('id', '!=', False)]}" position="attributes">
+					<attribute name="attrs">{'invisible': [('id', '=', False)], 'required': [('id', '!=', False)]}</attribute>
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="name" position="after">
+					<field name="name_template" attrs="{'invisible': [('id', '=', False)], 'required': [('id', '!=', False)]}"/>
+				</field>
+			</field>
+		</record>
+		
+		<record id="product_search_form_view_10k_inherit" model="ir.ui.view">
+            <field name="name">product.search.form.view.10k.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view"/>
+            <field name="arch" type="xml">
+                <field name="categ_id" position="after">
+                	<field name="public_categ_ids"/>
+                    <field name="product_brand_id"/>
+                </field>
+                <group string='Group by...' position="inside">
+                    <filter string="Session Type" name="groupby_session" domain="[]"
+                            context="{'group_by' : 'type_with_session'}"/>
+                    <filter string="Available in the website" name="groupby_published" domain="[]"
+                            context="{'group_by' : 'website_published'}"/>
+                </group>
+            </field>
+        </record>
+        
+        <record id="product_product_tree_view_10k_inherit" model="ir.ui.view">
+        	<field name="name">product.product.tree.view.10k.inherit</field>
+        	<field name="model">product.product</field>
+        	<field name="inherit_id" ref="product.product_product_tree_view"/>
+        	<field name="arch" type="xml">
+        		<field name="ean13" position="after">
+        			<field name="public_categ_ids" widget="many2many_tags"/>
+        			<field name="website_published" widget="website_button"/>
+        		</field>
+        	</field>
+        </record>
+		
+	</data>
+</openerp>

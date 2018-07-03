@@ -1,0 +1,154 @@
+<div class="content-sharing floating-box" ng-if="isnotMobile">
+    <div class="container m-t-15">
+        <div class="row m-b-10" id="divMain">
+            <div class="col-md-2 m-detail-left p-t-15">
+                <div class="winner-info">
+                    <div class="win-head"><a href="#" targer="_blank"><img ng-src="{{postUser.avatar}}"/></a></div>
+                    <sharing-user-post user="sharing.user[0]._id" collection="postUser"></sharing-user-post>
+                    <div class="win-name">
+                        <a href="/ho-so/{{postUser._id}}.html">
+                            <hash-user class="hash-custom" user=sharing.user[0]._id></hash-user>
+                        </a>
+                    </div>
+                    <div class="win-info p-t-10 row">
+                        <div><span>Số mã mua : </span><span class="p-l-5 win-info-detail"><em>{{sharing.user[0].number_code}}</em> mã</span></div>
+                        <div><span>Mã trúng thưởng : </span><span class="p-l-5 win-info-detail"><em>{{sharing.user[0].winner_code}}</em></span></div>
+                        <div><span>Ngày công bố : </span><span class="p-l-5 win-info-detail">{{sharing.user[0].time_result}}</span></div>
+                    </div>
+                </div>
+                <div class="next-period m-t-30 p-5">
+                    <div><a class="product-img" href="/san-pham/{{productItem.slug}}.html"><img ng-src="{{domain_image_product + productItem.images[0].image}}"/></a>
+                        <p class="product-name m-t-10"><a href="/san-pham/{{productItem.slug}}.html" target="_blank">{{productItem.name}}</a></p>
+                        <p class="product-price">Giá : {{productItem.price | priceVND}} đ</p><a class="btn-button-detail" href="/san-pham/{{productItem.slug}}.html">Xem chi tiết</a></div>
+                    <product-sharing product="sharing.product[0].id" collection="productItem"></product-sharing>
+                </div>
+                <div class="other-single p-t-15" ng-if="isOtherSharing">
+                    <div id="other-single-title"> Các chia sẻ khác </div>
+                    <hr/>
+                    <div class="other-single-item" ng-repeat="item in other_sharing">
+                        <div><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html">{{item.name | limitTo:23}}{{item.name.length > 23 ? '...' : ''}}</a></div>
+                        <div class="talk-wrap"><a class="xianmu" ng-click="UpLikeListSharing(item._id, session._id)" ng-if="item.like.indexOf(session._id) == -1"><i></i><em>{{item.like.length}}</em></a><span class="xianmu-past" ng-if="item.like.indexOf(session._id) != -1"><i></i><em>{{item.like.length}}</em></span><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" class="pinglun"><i></i><em>{{item.comment.length}}</em></a></div>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 m-detail-middle">
+                <div class="single-info">
+                    <div class="col-md-12 p-0">
+                        <h3 class="title-page col-md-9 p-0 p-t-15">{{sharing.name}}</h3>
+                    </div>
+                </div>
+                <hr/>
+                <div class="single-fufen"><span>Đăng lúc {{sharing.publish | date:'dd-MM-yyyy HH:mm:ss'}}</span><span>{{sharing.view}} Lượt xem</span><span>{{sharing.comment.length}} Bình luận</span></div>
+                <div class="single-content">
+                    <div ta-bind ng-model="sharing.content"></div>
+                    <div class="single-images"><img src="{{image}}" ng-repeat="image in sharing.images track by $index" /></div>
+                </div>
+                <div class="post-comment"><span class="all-post-comment pull-left">Tất cả có {{sharing.comment.length > 0 ? sharing.comment.length : 0}} bình luận </span>
+                    <div class="btn-post-comment xianmu pull-right"><a ng-click="UpLikeSharing(sharing._id, session._id)" ng-if="sharing.like.indexOf(session._id) == -1"><i></i><em>Yêu thích</em></a><span class="pinglun" ng-if="sharing.like.indexOf(session._id) != -1"><i></i><em>Được yêu thích</em></span><span class="like-sharing"><cite>{{sharing.like.length}}</cite><b><s></s></b></span></div>
+                    <div class="comment-content-form" id='foo'><span class="alert-message" ng-show="alertMsg">{{alertMsg}}</span>
+                        <div class="postdiv-not-login" ng-if="isMessNotLogin">
+                            <div class="img-avata-default p-0"><img src="/assets/images/themes/10K MARKET3-27.png" /></div><span> Bạn có thể <a href="/dang-nhap.html">Đăng nhập</a> hoặc <a href="/dang-ky-tai-khoan.html">Đăng ký</a> để trả lời bình luận</span></div>
+                        <form class="frm-updateprofile form-addnewcomment" ng-if="isAddCommentOpen" novalidate name="frmAddcomment" rc-submit="submit()">
+                            <div class="form-group">
+                                <div class="img-author p-0"><img src="{{UserComment.avatar}}" /></div>
+                                <sharing-comment-user user="session._id" collection="UserComment"></sharing-comment-user>
+                                <div class="form-group-field"><textarea name="comment_content" placeholder="Trả lời" ng-model="session.comment_content" rows="5" required></textarea>
+                                    <md-button type="submit" class="btn p-0 m-0 btn-submit"> Gửi </md-button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list-comment">
+                        <div class="comment-item" ng-repeat=" (key, commentitem) in list_comment.results">
+                            <div class="img-author p-0"><img src="{{postUserItem ? postUserItem.avatar : '/assets/images/themes/10K MARKET3-27.png'}}" /></div>
+                            <div class="comment-item-content">
+                                <p>{{commentitem.comment.comment_content}}</p>
+                                <sharing-comment-user user="commentitem.comment.user_id" collection="postUserItem"></sharing-comment-user><span class="comment-auth"><span class="title-comment-auth">Người đăng :</span>
+                                <hash-user class="hash-custom" user=commentitem.comment.user_id></hash-user>
+                                </span>
+                            </div><span class="comment-time">Đăng lúc: {{commentitem.comment.comment_date | date:'dd-MM-yyyy HH:mm:ss'}}</span></div>
+                    </div>
+                    <div class="row m-0 row-pagination">
+                        <div class="col-md-12 p-0">
+                            <bgf-pagination collection="list_comment" current="page" total="total_page" gotopage="goto" url="urlListComment" auto-presets="false" link-group-size="1" reload-page="reloadPage"></bgf-pagination>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 m-detail-right">
+                <div class="other-winner">
+                    <div class="col-md-12 p-0 p-0 p-t-10"><span class="title-page col-md-9">Người đoạt giải khác</span><span class="winner-pagina"><a class="other-left" ng-if="pagewinner > 0" href ng-click="gotoWinner(pagewinner - 1)"></a><a class="other-left-none" ng-if="pagewinner <= 0" href></a><a class="other-right" href ng-click="gotoWinner(pagewinner + 1)" ng-if="pagewinner < total_pagewinner - 1"></a><a class="other-right-none" ng-if="pagewinner >= total_pagewinner - 1" href></a></span></div>
+                    <hr/>
+                    <div class="list-other-winner">
+                        <div class="other-item" ng-repeat="item in list_winner_sharing.results">
+                            <sharing-comment-user user="item.user[0]._id" collection="UserItem"></sharing-comment-user><a class="avatar-user" href="/ho-so/{{UserItem._id}}.html"><img ng-src="{{UserItem.avatar}}"/></a><span class="item-title"><a href="/ho-so/{{UserItem._id}}.html"><hash-user class="hash-custom" user=item.user[0]._id></hash-user></a> đã trúng thưởng phiên số {{item.session[0].session_number}} </span><a class="btn-button-detail" href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html">Xem chi tiết</a></div>
+                        <div class="row m-0 row-pagination list-winner-pagination">
+                            <div class="col-md-12 p-0">
+                                <bgf-pagination collection="list_winner_sharing" current="pagewinner" total="total_pagewinner" gotopage="gotoWinner" url="urlListWinner" auto-presets="false" link-group-size="1" reload-page="reloadWinner"></bgf-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-single">
+                    <div class="col-md-12 p-0">
+                        <h4 class="title-page col-md-10 p-t-10">Các bài chia sẻ gần đây</h4>
+                    </div>
+                    <hr/>
+                    <div class="list-new-single">
+                        <div class="new-item" ng-repeat="item in new_sharings">
+                            <div class="item-title"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html">{{item.name | limitTo:30}}{{item.name.length > 30 ? '...' : ''}}</a></div>
+                            <div class="item-description">
+                                <p class="item-content">{{item.content | htmlToPlaintext | limitTo:90}}{{item.content.length > 90 ? '...' : ''}}</p>
+                            </div>
+                            <div class="pic-list-wrap">
+                                <div class="my-list">
+                                    <ul class="pic-list clearfix" id="ul_0">
+                                        <li indexj="0" indexi="0" id="0_0"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html"><img ng-src="{{item.images[0]}}"/></a></li>
+                                        <li ndexj="1" indexi="0" id="0_1"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html"><img src="{{item.images[1]}}"/></a></li>
+                                        <li indexj="2" indexi="0" id="0_2"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html"><img src="{{item.images[2]}}"/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-sharing floating-box" ng-if="isMobile">
+    <div class="title-app">
+        <div class="nav-header" ng-click="doTheBack()">Back</div>
+        <h2>CHIA SẺ CỦA KHÁCH HÀNG</h2>
+    </div>
+    <div id="divMain" class="content-sharing-apps">
+        <div class="m-detail-left m-detail-left-apps">
+            <div class="winner-info">
+                <div class="win-head"><a href="#" targer="_blank"><img ng-src="{{postUser.avatar}}"/></a></div>
+                <sharing-user-post user="sharing.user[0]._id" collection="postUser"></sharing-user-post>
+                <div class="win-name">
+                    <a href="/ho-so/{{postUser._id}}.html">
+                        <hash-user class="hash-custom" user=sharing.user[0]._id></hash-user>
+                    </a>
+                    <div class="win-info"><span class="win-info-detail">Ngày công bố : {{sharing.user[0].time_result | date:'dd-MM-yyyy HH:mm'}}</span><span class="win-info-detail">Mã trúng thưởng : {{sharing.user[0].winner_code}}</span><span class="win-info-detail">Số mã mua : {{sharing.user[0].number_code}} mã</span></div>
+                </div>
+            </div>
+            <div class="next-period ">
+                <div class="img-product-share"><a class="product-img" href="/san-pham/{{productItem.slug}}.html"><img ng-src="{{domain_image_product + productItem.images[0].image}}"/></a></div>
+                <div class="info-product-share">
+                    <p class="product-name"><a href="/san-pham/{{productItem.slug}}.html" target="_blank">{{productItem.name}}</a></p>
+                    <p class="product-price">Giá : {{productItem.price | priceVND}} đ</p><a class="btn-button-detail" href="/san-pham/{{productItem.slug}}.html">Sản phẩm đang bán ...</a></div>
+                <product-sharing product="sharing.product[0].id" collection="productItem"></product-sharing>
+            </div>
+        </div>
+        <div class="m-detail-middle m-detail-middle-apps">
+            <h3 class="title-page ">{{sharing.name}}</h3>
+            <div class="single-content">
+                <div class="sharing-content">{{sharing.content | htmlToPlaintext}}</div>
+                <div class="single-images"><img src="{{image}}" ng-repeat="image in sharing.images track by $index" /></div>
+            </div>
+        </div>
+    </div>
+</div>

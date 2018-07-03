@@ -1,0 +1,2026 @@
+@media (min-width: 992px) {
+    .prodcut-wiget:hover {
+       -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 102, 0, 1);
+        -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 102, 0, 1);
+        box-shadow: inset 0px 0px 0px 1px rgba(255, 102, 0, 1);
+        -webkit-animation-name: thum;
+        -webkit-animation-duration: 100ms;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation-iteration-count: 1
+    }
+    @-webkit-keyframes thum {
+        0% {
+            -webkit-transform: scale(1)
+        }
+        50% {
+            -webkit-transform: scale(0.98)
+        }
+        100% {
+            -webkit-transform: scale(1)
+        }
+    }
+    .restricted-area-page .prodcut-wiget:hover {
+        -webkit-box-shadow: inset 0px 0px 21px 0px rgba(59, 132, 63, 0.3);
+        -moz-box-shadow: inset 0px 0px 21px 0px rgba(59, 132, 63, 0.3);
+        box-shadow: inset 0px 0px 21px 0px rgba(59, 132, 63, 0.3)
+    }
+    .container {
+        width: 1190px;
+        max-width: 100%
+    }
+    #top .account {
+        margin-right: -55px
+    }
+    #top .possition-header {
+        position: relative;
+        z-index: 2
+    }
+    #top .possition-header + div {
+        position: relative;
+        z-index: 1
+    }
+    #top .counter-participate-left {
+        width: 506px;
+        padding-right: 0px;
+        padding-left: 0px
+    }
+    #top .possition-search-top {
+        width: 409px;
+        padding-left: 9px
+    }
+    #top .possition-search-top form {
+        width: 287px;
+        display: inline-block
+    }
+    .home-page .slick-banner {
+        width: 711px
+    }
+    .home-page .banner-blog {
+        width: 241px
+    }
+    .live-product {
+        width: 238px
+    }
+    .product-hots .col-md-10 {
+        width: 952px;
+        float: left;
+        height: 820px
+    }
+    .product-hots .col-md-2 {
+        width: 236px;
+        float: left
+    }
+    .forum-page .forum-left {
+        width: 105%
+    }
+    .forum-page .forum-right {
+        width: 95%;
+        float: right
+    }
+    .forum-page .forum-right {
+        padding-left: 10px
+    }
+    .home-page .categories-list {
+        height: 451px;
+        overflow: hidden
+    }
+}
+@media (min-width: 1190px) {
+    .cart-page .select-slm div input {
+        width: 150px
+    }
+}
+@media (max-width: 1199px) {
+    .login-page .login-header p {
+        font-size: 79%
+    }
+    .foorder-default .block-middle .info {
+        font-size: 12px
+    }
+    .foorder-default .block-middle:nth-child(5) b {
+        font-size: 16px
+    }
+    .foorder-default .block-middle .info p b {
+        font-size: 9px
+    }
+}
+@media (max-width: 1280px) {
+    .menu-left-fixed {
+        display: none
+    }
+}
+@media (max-width: 1024px) {
+    .product-hots .col-md-10 {
+        width: 100%;
+        float: left
+    }
+    .home-page .product-hots,
+    .home-page .product-template {
+        min-height: auto
+    }
+    .home-page .banner-blog,
+    .home-page .categories-list,
+    .home-page .slick-banner,
+    .home-page .hook-order,
+    .area-title a,
+    .home-page .tab-category,
+    .area-title p,
+    .home-page .customer-share,
+    .customer-share-title,
+    .nav-category,
+    #top .nav-center .nav-cart,
+    .restricted-area-page .banner {
+        display: none
+    }
+    .home-page .product-hots {
+        border-right: 0px
+    }
+    div.login-page div.content {
+        background-color: transparent;
+        padding: 0
+    }
+    .home-page .watting-result {
+        border: 0px;
+        border-top: 1px solid #ececec;
+        border-left: 1px solid #ececec
+    }
+    .home-page .live-product {
+        border-bottom: 1px solid #ececec;
+        border-right: 1px solid #ececec
+    }
+}
+@media (max-width: 1024px) {
+    .cart-confrim .row {
+        padding: 0px;
+        margin: 0px
+    }
+    #no-more-tables table,
+    #no-more-tables tbody,
+    #no-more-tables td,
+    #no-more-tables th,
+    #no-more-tables thead,
+    #no-more-tables tr {
+        display: block
+    }
+    #no-more-tables .cart-lists tfoot {
+        width: 100%;
+        float: left
+    }
+    #no-more-tables .td-images {
+        text-align: left !important
+    }
+    #no-more-tables table {
+        padding: 0px 5px
+    }
+    #no-more-tables tr {
+        margin-bottom: 10px;
+        border: 1px solid #ececec;
+        border-bottom: 0px;
+        width: 100%;
+        float: left
+    }
+    #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px
+    }
+    #no-more-tables td {
+        border: none;
+        border-bottom: 1px solid #ececec;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: left;
+        width: 100%;
+        float: left
+    }
+    #no-more-tables td a {
+        display: block;
+        width: 100%;
+        float: left
+    }
+    #no-more-tables td {
+        padding: 0px;
+        padding-left: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+    #no-more-tables td.active-checkout {
+        padding-left: 0px
+    }
+    #no-more-tables td.active-checkout a {
+        display: block;
+        width: 80%;
+        float: none;
+        margin: auto;
+        margin-bottom: 15px
+    }
+    #no-more-tables td:before {
+        position: absolute;
+        top: 10px;
+        left: 9px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: normal;
+        text-align: left;
+        font-weight: 700;
+        content: attr(data-title);
+        height: 100%;
+        float: left;
+        color: #333;
+        font-weight: 500
+    }
+    .cart-lists #no-more-tables td {
+        padding: 0px
+    }
+    .container {
+        width: 100%
+    }
+    div.singup-page form {
+        width: 100%
+    }
+    div.singup-page .content .container .container-border {
+        padding-top: 0;
+        border: none;
+        padding-bottom: 0
+    }
+    div.singup-page .bg-while {
+        padding: 40px 45px 25px
+    }
+    div.singup-page div.capcha-code input {
+        width: 40%
+    }
+    div.singup-page .login-href {
+        display: none
+    }
+    div.singup-page .container-border h3 {
+        margin-top: 0
+    }
+    div.singup-page .login-logo,
+    div.login-page .login-logo {
+        text-align: center;
+        width: 100%
+    }
+    div.singup-page .login-logo img,
+    div.login-page .login-logo img {
+        max-width: 60%
+    }
+    .navbar-apps a.btn-navbar {
+        max-width: 20%;
+        width: 20%;
+        padding-left: 0;
+        padding-right: 0
+    }
+    .navbar-apps a.btn-navbar.active {
+        color: #f60;
+        box-shadow: none
+    }
+    div.login-page .login-page-left,
+    div.login-page div.header,
+    div.singup-page div.header,
+    div.forgot-page div.header {
+        display: none
+    }
+    div.login-page .bg-while,
+    div.singup-page .bg-while {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+    div.login-page .bg-while .frm-login-header .pull-left,
+    div.singup-page div.frm-singup-header {
+        display: none
+    }
+    div.login-page .bg-while .pull-right > p {
+        width: auto;
+        float: left
+    }
+    div.login-page .bg-while .frm-login-header .pull-right {
+        width: 100%
+    }
+    div.login-page .bg-while .pull-right .text-right {
+        margin-left: 10px
+    }
+    .title-app {
+        position: relative;
+        padding-bottom: 10px;
+    }
+    .visible-xs {
+    	display: block !important;
+    }
+    .title-app h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+        margin: 0;
+        padding: 13px 0;
+        font-weight: 500;
+        margin-bottom: 5px;
+        padding-bottom: 0px
+    }
+    .title-app .nav-header {
+        position: absolute;
+        left: 0;
+        background: url(../images/themes/icon-back-app.png) no-repeat center;
+        width: 36px;
+        height: 36px;
+        text-indent: -999px;
+        overflow: hidden;
+        margin-left: 5px;
+        margin-left: -3px
+    }
+    .profile-page .profile-right {
+        display: none
+    }
+    .category-page .col-left-app {
+        width: 30%;
+        float: left
+    }
+    .category-page .col-right-app {
+        width: 70%;
+        float: left
+    }
+    .category-page .col-left-app .category-menu h4 {
+        width: 100%;
+        margin: 0;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #f60;
+        border-bottom: 1px solid #f60
+    }
+    .category-page .col-left-app .category-menu {
+        padding: 0;
+        border: none
+    }
+    .category-page .col-left-app .category-menu .category-link {
+        padding: 0px;
+        border-bottom: 1px solid #ececec;
+        width: 100%
+    }
+    .category-menu > div.col-md-12 {
+        padding-right: 0
+    }
+    .category-page .col-left-app .category-menu .category-link a {
+        font-size: 11px;
+        width: 100%;
+        float: left;
+        padding: 11px 5px;
+        border-radius: 0
+    }
+    .category-menu .list-cate-app {
+        width: 100%;
+        float: left;
+        border-right: 1px solid #ececec
+    }
+    .col-right-app .col-md-8.nav-menu-link {
+        margin: 0;
+        line-height: normal;
+        padding: 0;
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #ececec
+    }
+    .col-right-app .col-md-4.nav-menu-link {
+        display: none
+    }
+    .category-page .col-right-app .nav-menu-link a {
+        min-width: auto;
+        min-height: auto;
+        height: auto;
+        line-height: 25px;
+        font-size: 11px;
+        padding: 0 4px;
+        border: none;
+        border-bottom: 1px solid #ececec;
+        border-radius: 0;
+        display: block;
+        width: auto;
+        float: left;
+        width: 50%;
+        float: left;
+        margin-bottom: -1px
+    }
+    .btn:active,
+    .btn.active {
+        box-shadow: none;
+        outline: none
+    }
+    .category-page .col-right-app .nav-menu-link a.active {
+        background: none !important;
+        color: #f60 !important
+    }
+    .category-content-app .product-item {
+        width: 100%;
+        float: left;
+        padding-left: 10px
+    }
+    .category-page .category-content-app div.product-img {
+        width: 25%;
+        float: left;
+        min-height: 60px
+    }
+    .category-page .category-content-app .loaded {
+        height: auto;
+        line-height: normal
+    }
+    .category-content-app .prodcut-wiget .product-shop .col-xs-8 {
+        display: none
+    }
+    .category-content-app .product-item .prodcut-wiget {
+        min-height: 103px;
+        border: none;
+        border-bottom: 1px solid #ececec
+    }
+    .category-content-app .prodcut-wiget a .proudct-name {
+        padding-top: 0;
+        padding-left: 10px;
+        width: 75%;
+        text-align: left
+    }
+    .category-content-app .prodcut-wiget .product-price {
+        padding-left: 10px;
+        width: 75%;
+        float: right;
+        white-space: normal
+    }
+    .category-page .col-left-app .custom-loading {
+        display: none
+    }
+    .category-page.container {
+        width: 100%
+    }
+    .category-content-app .convert {
+        right: inherit;
+        left: 0px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 11px
+    }
+    .category-content-app .prodcut-wiget .product-bar {
+        width: 55%;
+        float: left;
+        padding-left: 10px
+    }
+    .category-content-app .prodcut-wiget .product-bar .text-left,
+    .category-content-app .prodcut-wiget .product-bar .text-center,
+    .category-content-app .prodcut-wiget .product-bar .text-right {
+        display: none
+    }
+    .category-content-app product-wiget .button-fly {
+        width: 33px;
+        position: absolute;
+        right: 5px;
+        bottom: 12px
+    }
+    .category-content-app .prodcut-wiget .product-shop .button-fly button {
+        width: 30px;
+        height: 30px;
+        min-height: inherit;
+        min-width: inherit;
+        background-size: 27px
+    }
+    .category-page .col-right-app .nav-menu-link a.hidden-xs {
+        display: block !important
+    }
+    .category-content-app .prodcut-wiget {
+        height: 103px;
+        overflow: hidden
+    }
+    .category-content-app .prodcut-wiget .product-shop {
+        padding-bottom: 0
+    }
+    #top .logo-top-content {
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 0;
+        height: 50px
+    }
+    #top .logo-top-content .logo-container {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        width: 100%
+    }
+    .category-page .category-content.category-content-app {
+        min-height: inherit
+    }
+    .category-page .category-content.category-content-app .row {
+        border-left: none;
+        border-top: none
+    }
+    .navbar-apps a.btn-navbar span {
+        width: 100%;
+        float: left;
+        margin-top: 4px
+    }
+    .navbar-apps {
+        padding: 0
+    }
+    .col-right-app > .row {
+        padding: 0;
+        margin: 0
+    }
+    .product-detail .ng-goods-img,
+    .product-detail .img-product-mobile {
+        width: 40%;
+        float: left;
+        position: relative
+    }
+    .product-detail .ng-goods-detail,
+    .product-detail .info-product-mobile {
+        width: 60% !important;
+        float: left
+    }
+    .product-detail .info-product-mobile {
+        padding-right: 0px
+    }
+    .product-detail .bottom-product-line-time {
+        width: 100%;
+        float: left;
+        margin-top: 10px
+    }
+    #divMain {
+        margin: 0;
+        border: none
+    }
+    .info-product-mobile h2 {
+        font-size: 12px;
+        margin-top: 0;
+        line-height: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        text-transform: capitalize
+    }
+    .detail-bottom-mobile h3.accordion:focus {
+        outline: none
+    }
+    .info-product-mobile .price {
+        font-size: 12px;
+        margin-bottom: 0
+    }
+    .zoomContainer {
+        display: none !important
+    }
+    #divMainInfo {
+        border: none
+    }
+    .product-detail .detail-product-mobile {
+        margin-top: 10px
+    }
+    .bottom-product-line-time .u-progress .pgbar {
+        background: linear-gradient(#ff934b, #ff6601);
+        height: 10px
+    }
+    .bottom-product-line-time .line-time .line-wrapper {
+        height: 10px
+    }
+    .bottom-product-line-time .line-time .text-wrapper {
+        font-size: 11px
+    }
+    .detail-bottom-mobile h3.accordion {
+        margin: 0;
+        font-size: 12px;
+        width: 100%;
+        padding: 10px;
+        text-transform: uppercase;
+        background: url(../images/themes/icon-right.png) no-repeat right center;
+        background-size: 21px;
+        float: left;
+        border-bottom: 1px solid #ececec
+    }
+    .detail-bottom-mobile h3.accordion.active {
+        background: url(../images/themes/icon-down.png) no-repeat right center;
+        background-size: 21px
+    }
+    .detail-bottom-mobile h3.accordion.last {
+        border-bottom: 1px solid #ececec
+    }
+    .detail-bottom-mobile h3.accordion a {
+        color: #666;
+        width: 100%;
+        float: left;
+    }
+    .detail-bottom-mobile .avatar {
+        width: 20%;
+        float: left
+    }
+    .detail-bottom-mobile .user-name {
+        width: 50%;
+        float: left
+    }
+    .detail-bottom-mobile .user-name .time-buy {
+        font-size: 10px;
+        width: 100%;
+        float: left
+    }
+    .detail-bottom-mobile .user-name a {
+        font-size: 11px;
+        line-height: 18px;
+        color: #666;
+        width: 100%;
+        float: left
+    }
+    .detail-bottom-mobile .ng-all-record .record-list .people {
+        width: 30%;
+        float: left;
+        font-size: 11px
+    }
+    .detail-bottom-mobile .ng-all-record .record-list li {
+        height: auto;
+        width: 100%;
+        float: left;
+        line-height: 18px;
+        padding: 10px 0px
+    }
+    .detail-bottom-mobile .ng-all-record .record-list li:first-child {
+        padding-top: 0px;
+        border-top: 0px
+    }
+    .detail-bottom-mobile .ng-all-record .record-list li:last-child {
+        padding-bottom: 0px
+    }
+    .product-detail .detail-bottom-mobile .people-buy-code a {
+        display: block
+    }
+    .detail-bottom-mobile .accordion-content {
+        width: 100%;
+        float: left;
+        padding: 10px
+    }
+    .detail-bottom-mobile .pagination > li > a {
+        width: 20px;
+        height: 20px;
+        line-height: 20px
+    }
+    .detail-bottom-mobile .fixed-buy-bobile {
+        position: fixed;
+        bottom: 0;
+        z-index: 9999;
+        background: #fff;
+        padding: 10px;
+        width: 100%;
+        box-shadow: 0px 0px 1px 1px #ccc
+    }
+    .detail-bottom-mobile .btn-10kmua a.md-button {
+        background: #EF3F41;
+        margin: 0px;
+        width: 100%;
+        float: left;
+        display: block;
+        color: #fff
+    }
+    .detail-bottom-mobile .btn-addcart a.add-to-card {
+        background-color: #f60;
+        background-image: url("../images/themes/10K MARKET3-21.png") !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        text-indent: -999px;
+        overflow: hidden;
+        width: 100%;
+        min-width: inherit
+    }
+    .number-selling {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #f60;
+        font-size: 12px
+    }
+    .detail-bottom-mobile {
+        margin-top: 10px;
+        width: 100%;
+        float: left;
+        padding-bottom: 65px
+    }
+    .home-page .view-all-product {
+        width: 100%;
+        float: left
+    }
+    .ng-share-detail-mobile .avatar-user {
+        width: 50px;
+        float: left;
+        border-radius: 25px;
+        overflow: hidden
+    }
+    .ng-share-detail-mobile .name-line {
+        padding-left: 60px
+    }
+    .ng-share-detail-mobile .name-line a.u-name {
+        color: #444;
+        font-size: 12px
+    }
+    .ng-share-detail-mobile .name-line .u-time {
+        font-size: 11px;
+        line-height: 20px;
+        float: right
+    }
+    .ng-share-detail-mobile .name-line .u-show a {
+        color: #444;
+        font-size: 13px
+    }
+    .ng-share-detail-mobile .ng-share-content {
+        font-size: 11px;
+        width: 100%;
+        float: left;
+        padding: 5px 0;
+        border-bottom: 1px solid #ccc
+    }
+    .ng-share-detail-mobile .ng-share-picture {
+        width: 100%;
+        float: left;
+        padding: 5px 0;
+        border-bottom: 1px solid #ccc
+    }
+    .pic-list-wrap ul.pic-list {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+    .pic-list-wrap ul.pic-list li {
+        width: 31%;
+        float: left;
+        margin-right: 2%
+    }
+    .ng-share-detail-mobile .talk-wrap {
+        width: 100%;
+        float: left;
+        padding: 5px 0;
+        font-size: 12px
+    }
+    .ng-share-detail-mobile .talk-wrap a {
+        color: #bababa;
+        float: left;
+        color: #999;
+        padding-left: 16px;
+        position: relative
+    }
+    .ng-share-detail-mobile .talk-wrap i {
+        background-image: url(../images/single.png);
+        background-repeat: no-repeat;
+        overflow: hidden;
+        float: left;
+        height: 12px;
+        cursor: pointer;
+        margin-right: 3px;
+        display: inline;
+        position: relative;
+        top: 2px
+    }
+    .ng-share-detail-mobile .talk-wrap span.xianmu-past {
+        float: left;
+        color: #f60;
+        padding-left: 16px;
+        position: relative
+    }
+    .ng-share-detail-mobile .talk-wrap span.xianmu-past i {
+        width: 15px;
+        background-position: 0 -30px
+    }
+    .ng-share-detail-mobile .talk-wrap .xianmu i {
+        width: 16px;
+        background-position: 1px 0
+    }
+    .ng-share-detail-mobile .talk-wrap .pinglun i {
+        width: 15px;
+        background-position: 1px -60px
+    }
+    .ng-share-detail-mobile {
+        margin-bottom: 10px
+    }
+    .login-page.popup {
+        width: 100%;
+        padding-top: 50px
+    }
+    div.forgot-page form {
+        max-width: 100%
+    }
+    .forgot-page .forgot-logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px
+    }
+    .forgot-page .forgot-logo img {
+        max-width: 60%
+    }
+    .detail-bottom-mobile .product-con * {
+        max-width: 100%
+    }
+    .product-detail .detail-bottom-mobile img{max-width:100% !important; max-height: inherit !important;}
+    .profile-page-app .info-user {
+        width: 100%;
+        float: left;
+        border: none
+    }
+    .profile-page-app .info-user .avatar {
+        width: 80px;
+        float: left
+    }
+    .profile-page-app .info-user .avatar img {
+        max-width: 100%;
+        max-height: inherit;
+        min-height: inherit
+    }
+    .profile-page-app .info-user .user_id {
+        width: auto;
+        float: left;
+        padding-left: 10px
+    }
+    .profile-page-app .profile-content-1 .account-balance {
+        margin-top: 10px;
+        width: 40%;
+        float: left;
+        text-align: center
+    }
+    .profile-page-app .point-user a.buy-k {
+        width: auto;
+        float: right;
+        margin-top: 10px;
+        padding: 5px 20px;
+        background: #EF3F41;
+        border-radius: 4px;
+        color: #fff;
+        margin-left: 20px
+    }
+    .profile-page-app .profile-bottom {
+        width: 100%;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        padding: 10px
+    }
+    .profile-page-app .profile-bottom ul {
+        list-style: none;
+        padding: 0;
+        margin: 0
+    }
+    .profile-page-app .profile-bottom ul li {
+        margin: 0;
+        font-size: 12px;
+        width: 100%;
+        padding: 0px;
+        border-top: 1px solid #ececec;
+        text-transform: uppercase;
+        background: url(../images/themes/icon-right.png) no-repeat right center;
+        background-size: 21px;
+        float: left
+    }
+    .profile-page-app .profile-bottom ul li a {
+        color: #666;
+        width: 100%;
+        float: left;
+        padding: 10px
+    }
+    .profile-page-app .profile-bottom .menu-list {
+        border: 1px solid #ececec
+    }
+    .profile-page-app .frm-updatepassword label {
+        width: 100%
+    }
+    .profile-page-app .frm-updateprofile label {
+        width: 100%
+    }
+    .profile-page-app .content-form-right {
+        width: 100%;
+        float: left;
+        padding: 10px 20px 75px 10px
+    }
+    .profile-page-app .list-history-all .history-item {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ececec;
+        font-size: 12px
+    }
+    .profile-page-app .notify-detail {
+        padding: 10px;
+        margin-bottom: 50px;
+        overflow: auto
+    }
+    .profile-page-app .notify-detail .notify-title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700
+    }
+    .profile-page-app .notify-detail .detail-content {
+        min-height: 200px
+    }
+    .profile-page-app .list-orders .bg-unread {
+        background-color: #dbeccf;
+        border-bottom: 1px solid #83d179
+    }
+    .list-history-all .history-item span {
+        width: 100%;
+        float: left;
+        margin-bottom: 5px
+    }
+    .list-history-all .history-item span.notsuccess {
+        color: #F13E42
+    }
+    .list-history-all .history-item span.list-state strong {
+        color: #333
+    }
+    .history-selled-mobile .list-history-selled-customers,
+    .customer-user-bottom .list-history-selled-customers {
+        list-style: none;
+        padding: 0;
+        margin: 0
+    }
+    .history-selled-mobile {
+        width: 100%;
+        float: left;
+        padding-bottom: 75px
+    }
+    .list-history-selled-user .pagination li {
+        display: none
+    }
+    .history-selled-mobile .list-history-selled-user .pagination li.page-review,
+    .history-selled-mobile .list-history-selled-user .pagination li.page-next {
+        display: block
+    }
+    .history-selled-mobile .list-history-selled-user .pagination li.page-review a,
+    .history-selled-mobile .list-history-selled-user .pagination li.page-next a {
+        width: auto;
+        line-height: 18px;
+        font-size: 12px
+    }
+    .list-history-selled-customers li {
+        width: 100%;
+        float: left;
+        padding: 10px 0;
+        border-bottom: 1px solid #ececec;
+        font-size: 12px
+    }
+    .history-selled-item .history-item-time {
+        width: 30%;
+        float: left
+    }
+    .history-selled-item .history-item-product {
+        width: 50%;
+        float: left
+    }
+    .history-selled-item .history-item-numcode {
+        width: 20%;
+        float: left
+    }
+    .customer-user-top {
+        padding-top: 0
+    }
+    .profile-page.profile-customer-user {
+        margin-top: 0
+    }
+    .info-customer-user .avatar {
+        width: 100%;
+        border: none;
+        border-radius: inherit
+    }
+    .profile-customer-user {
+        text-align: center
+    }
+    .info-customer-user .info-customer {
+        width: 100%;
+        padding-left: 0
+    }
+    .profile-content-1 .info-customer-user .avatar img {
+        border-radius: 50px
+    }
+    .profile-customer-user .mywallet-list-tab .md-tab {
+        padding: 5px;
+        font-size: 10px;
+        line-height: 14px;
+        white-space: normal;
+        width: 33.333%;
+        color: #f60;
+        border-left: 2px solid #f60
+    }
+    .profile-customer-user .mywallet-list-tab md-pagination-wrapper {
+        border: 2px solid #f60;
+        border-radius: 4px;
+        height: auto
+    }
+    .profile-customer-user .mywallet-list-tab md-tabs .md-tab.md-active {
+        color: #fff;
+        background: #f60;
+        border-left: none
+    }
+    .profile-customer-user .mywallet-list-tab md-tabs md-ink-bar {
+        display: none
+    }
+    .profile-customer-user .pagination li {
+        display: none
+    }
+    .profile-customer-user .pagination li.page-review,
+    .profile-customer-user .pagination li.page-next {
+        display: block
+    }
+    .profile-customer-user .customer-user-bottom {
+        padding-bottom: 65px
+    }
+    .model-buy-now {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    .model-buy-now .clostDailog {
+        right: 0
+    }
+    .model-buy-now .not-bottom-buynow {
+        float: left
+    }
+    .cart-page ul.cart-lists {
+        list-style: none;
+        padding: 0px
+    }
+    .cart-page ul.cart-lists li {
+        border-top: 1px solid #ececec;
+        width: 100%;
+        float: left;
+        padding: 10px 5px;
+        position: relative;
+        margin-top: 10px
+    }
+    .cart-page ul.cart-lists li:last-child {
+        border-bottom: 1px solid #ececec
+    }
+    .cart-page ul.cart-lists .img-product {
+        width: 30%;
+        float: left;
+        text-align: center
+    }
+    .cart-page ul.cart-lists .info-product {
+        width: 70%;
+        float: left;
+        font-size: 12px;
+        padding-left: 10px
+    }
+    .cart-page ul.cart-lists .info-product p {
+        margin-bottom: 0;
+        padding: 3px 0px
+    }
+    .cart-page ul.cart-lists .info-product p.cart-item-name {
+        font-weight: 700
+    }
+    .cart-page ul.cart-lists li.cart-item input {
+        max-width: 70%
+    }
+    .cart-page ul.cart-lists li.cart-item a.removeItem {
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 0, 0, 0) url(../images/themes/icon-remove.png) no-repeat scroll center center / 20px auto;
+        text-indent: -999px;
+        overflow: hidden;
+        display: block;
+        margin: auto;
+        position: absolute;
+        right: 10px;
+        bottom: 12px;
+        border: 1px solid #ececec
+    }
+    ul.cart-lists li.cart-item .img-product .loaded {
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        float: none;
+        margin: 0 auto
+    }
+    .cart-page .cart-bottom-checkout {
+        width: 100%;
+        float: left;
+        margin-top: 10px;
+        padding: 0px 10px
+    }
+    .cart-bottom-checkout .bottom-checkout-left {
+        width: 50%;
+        float: left;
+        font-size: 13px
+    }
+    .cart-bottom-checkout .bottom-checkout-left p {
+        margin-bottom: 0
+    }
+    .cart-bottom-checkout .bottom-checkout-right {
+        width: auto;
+        float: right
+    }
+    .cart-page .cart-bottom-checkout .bottom-checkout-right .checkout {
+        min-width: inherit;
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px
+    }
+    .paginate-anything .pagination li {
+        display: none
+    }
+    .paginate-anything .pagination li.page-review,
+    .paginate-anything .pagination li.page-next {
+        display: block
+    }
+    .paginate-anything .pagination li a {
+        height: 26px;
+        line-height: 26px
+    }
+    .list-content li .boxContent {
+        max-width: 100%;
+        float: left
+    }
+    .home-page .slick-banner home-slick {
+        max-width: 100%;
+        min-width: inherit !important;
+        min-height: inherit !important
+    }
+    .home-page .top-container-home-page {
+        min-height: inherit;
+        height: auto
+    }
+    .fixed-buy-bobile a.md-button:not([disabled]):hover {
+        background-color: #f60 !important;
+        background-image: url("../images/themes/10K MARKET3-21.png") !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important
+    }
+    .home-page,
+    .cart-page {
+        width: 100%;
+        float: left;
+        padding-bottom: 70px
+    }
+    .search-top-app {
+        width: 100%;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px
+    }
+    .search-top-app input.form-control {
+        height: 30px
+    }
+    .search-top-app .btn-search {
+        width: 40px;
+        height: 30px;
+        float: left;
+        border: 1px solid #f60;
+        border-radius: 0 5px 5px 0;
+        background: #f60 url(../images/themes/icon-search.png) no-repeat center;
+        overflow: hidden;
+        text-indent: -999px;
+        position: absolute;
+        right: 10px;
+        top: 0
+    }
+    .category-page {
+        padding-bottom: 30px
+    }
+    .icon-app-search {
+        position: absolute;
+        right: 10px;
+        background: url(../images/themes/apps/apps_search.png) no-repeat center;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        text-indent: -999px;
+        top: 3px
+    }
+    .navbar-fixed-bottom > div.btn-group {
+        width: 100%
+    }
+    .profile-page-app .list-orders {
+        margin-bottom: 60px
+    }
+    .profile-page-app .list-winning-product .winning-product-item .history-time {
+        position: inherit
+    }
+    .profile-page-app ul.list-history-selled-customer {
+        width: 100%;
+        float: left;
+        border-left: none;
+        padding-left: 0;
+        margin-bottom: 60px
+    }
+    .profile-page-app ul.list-history-selled-customer.list-history-selled li {
+        background: none;
+        padding: 8px 10px;
+        margin-top: 0;
+        border-left: : none;
+        border-radius: inherit;
+        border-right: none;
+        border-top: none
+    }
+    .winning-product-item .images-product {
+        max-width: 80px;
+        width: 25%;
+        max-height: 80px;
+        overflow: hidden
+    }
+    .winning-product-item .info-product {
+        width: 75%;
+        font-size: 12px;
+        padding-left: 10px
+    }
+    .profile-page-app ul.list-history-selled-customer .history-time {
+        background: none;
+        width: 100%;
+        font-size: 11px;
+        margin-top: 0
+    }
+    .winning-product-item .history-price,
+    .winning-product-item .history-code-win {
+        font-size: 11px
+    }
+    .img-finish-mobile .img-finish {
+        width: 100%;
+        text-align: center;
+        float: left;
+        margin-bottom: 10px
+    }
+    .product-detail-finish .info-finish-mobile {
+        width: 100%;
+        float: left
+    }
+    .product-detailh2.o-title {
+        margin-top: 0;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize
+    }
+    .info-finish-mobile .price {
+        margin-bottom: 0;
+        font-size: 12px
+    }
+    .bottom-product-user-win .result-left,
+    .bottom-product-user-win .result-main-right {
+        width: 100%;
+        float: left
+    }
+    .bottom-product-user-win .result-con-info .result-head-pic {
+        width: 25%;
+        float: left
+    }
+    .bottom-product-user-win .result-con-info .result-body-info {
+        width: 75%;
+        float: left;
+        padding-left: 5px
+    }
+    .bottom-product-user-win .result-main {
+        margin: 0
+    }
+    .ng-result-head {
+        display: none
+    }
+    .result-head-pic .rh-wrap {
+        width: 100%;
+        height: inherit;
+        top: 0
+    }
+    .result-con-info .result-body-info p {
+        font-size: 10px;
+        margin-bottom: 0
+    }
+    .result-con-info .result-body-info p b {
+        font-weight: normal
+    }
+    .result-con-info .result-body-info p.r-name {
+        font-size: 13px;
+        font-weight: bold
+    }
+    #a_luckynum {
+        display: none
+    }
+    .result-main-right .code-name {
+        width: auto;
+        float: left;
+        font-size: 12px;
+        margin-bottom: 0;
+        line-height: 20px
+    }
+    .result-main-right .code-num {
+        padding-left: 5px;
+        font-size: 12px
+    }
+    .result-main-right {
+        border-top: 1px solid #ececec
+    }
+    .bottom-product-user-win {
+        width: 100%;
+        float: left;
+        padding: 4px;
+        border: 1px solid #f60;
+        border-radius: 5px;
+        margin-top: 5px
+    }
+    .ng-data-inner .ng-data-detail {
+        margin-left: 0;
+        margin-right: 0
+    }
+    .ng-data-inner .ng-data-step {
+        height: auto
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-r1 {
+        width: 50px;
+        line-height: 20px;
+        margin-left: 0
+    }
+    .ng-data-inner .ng-data-step .step-inner li {
+        height: auto;
+        border-radius: 10px;
+        font-size: 12px;
+        margin-right: 5px;
+        line-height: 20px
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-t {
+        font-size: 15px;
+        height: 40px;
+        line-height: 40px
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-r2 {
+        width: auto;
+        line-height: 40px;
+        height: 40px
+    }
+    .logo-container a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        float: 0
+    }
+    .data-step-recipe {
+        width: 100%;
+        float: left;
+        font-size: 12px;
+        padding: 5px
+    }
+    .ng-data-inner .ng-table-wrapper {
+        float: left
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-r3,
+    .ng-data-inner .ng-data-step .step-inner .s-r4 {
+        width: auto;
+        height: 40px;
+        padding: 0 3px
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-r3 span,
+    .ng-data-inner .ng-data-step .step-inner .s-r4 span {
+        font-size: 9px
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-r3 p,
+    .ng-data-inner .ng-data-step .step-inner .s-r4 p {
+        line-height: 16px;
+        margin-bottom: 0
+    }
+    .ng-data-inner .ng-data-step .step {
+        height: auto;
+        background: #dbeccf;
+        padding: 5px 0
+    }
+    .ng-data-inner .ng-data-step .title {
+        line-height: 18px;
+        width: 100%;
+        float: left;
+        font-size: 12px;
+        margin-top: 10px;
+        height: auto;
+        margin-bottom: 0
+    }
+    .data-step-recipe .s-t-equal {
+        color: #55ab46;
+        width: 100%;
+        text-align: center;
+        float: left;
+        height: 20px;
+        line-height: 20px
+    }
+    .data-step-recipe .s-r5-result {
+        height: 40px;
+        border: 1px solid #55ab46;
+        border-radius: 5px;
+        width: 100%;
+        float: left;
+        background: #fff;
+        color: #55ab46
+    }
+    .data-step-recipe .s-r5-result p {
+        line-height: 18px;
+        margin-bottom: 0
+    }
+    .data-step-recipe .s-r5-result span {
+        width: 100%;
+        float: left;
+        line-height: 18px
+    }
+    .product-detail-finish .detail-bottom-mobile .ng-data-inner .ng-table-ul .time {
+        font-size: 10px;
+        width: 30%;
+        float: left;
+        line-height: 16px;
+        padding-left: 5px;
+        color: #666
+    }
+    .product-detail-finish .detail-bottom-mobile .ng-data-inner .ng-table-ul .code {
+        font-size: 10px;
+        width: 30%;
+        float: left;
+        line-height: 18px;
+        color: #666
+    }
+    .product-detail-finish .detail-bottom-mobile .ng-data-inner .ng-table-ul .name {
+        font-size: 10px;
+        width: 40%;
+        float: left;
+        line-height: 18px
+    }
+    .detail-bottom-mobile .ng-data-inner .ng-table-ul li {
+        height: auto
+    }
+    .time-view ul.for-begin {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        width: 150px;
+        float: right
+    }
+    .time-view .full-tips {
+        width: auto;
+        float: left;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 700;
+        color: #48A1D9;
+        height: 34px;
+        line-height: 38px;
+        background: url("../images/themes/icon-hour.png") no-repeat left center;
+        padding-left: 40px
+    }
+    .time-view ul.for-begin li {
+        width: auto;
+        float: left;
+        padding: 7px 0px;
+        background: #fff;
+        margin: 0 3px;
+        color: #48A1D9;
+        border-radius: 5px;
+        font-size: 25px;
+        line-height: 18px;
+        font-weight: 700
+    }
+    .time-view ul.for-begin li.cur {
+        background: #48A1D9;
+        color: #fff;
+        padding: 7px;
+        font-size: 18px
+    }
+    .time-view ul.for-begin li.cur em {
+        font-weight: 700
+    }
+    .time-model {
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #ececec;
+        padding: 10px 0;
+        margin-bottom: 10px
+    }
+    .home-category {
+        display: none
+    }
+    .home-page .watting-result,
+    .home-page .watting-result .move-result {
+        width: auto;
+        display: block
+    }
+    .home-page .watting-result {
+        height: auto;
+        overflow: inherit
+    }
+    .home-page .watting-result .move-result .live-product {
+        width: 50%;
+        float: left;
+        height: 111px;
+        overflow: hidden;
+        box-shadow: none
+    }
+    .home-page .watting-result .move-result .live-product a {
+        padding: 5px
+    }
+    .home-page .watting-result .move-result .live-product .product-price,
+    .move-result .live-product .convert {
+        display: none
+    }
+    .watting-result .live-product .product-img {
+        text-align: center;
+        width: 40%;
+        float: right;
+        padding-left: 5px
+    }
+    .live-product .product-img .loaded[height='177'] {
+        height: 100px;
+        line-height: 100px
+    }
+    .watting-result .live-product .product-name {
+        max-width: 60%;
+        white-space: normal;
+        height: 36px;
+        margin: 0px;
+        padding: 0px;
+        display: -webkit-box;
+        font-size: 13px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 12px
+    }
+    .live-product .product-timer.has-result {
+        border-radius: 3px
+    }
+    .watting-result .live-product home-new-lottery {
+        width: 60%;
+        float: left;
+        min-height: inherit
+    }
+    .live-product .product-timer.has-result p {
+        white-space: normal;
+        font-size: 12px;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin: 0px;
+        display: block;
+        height: 100%;
+        line-height: 24px;
+        width: 100%;
+        padding: 0px 4px
+    }
+    .live-product .product-timer {
+        margin-top: 5px;
+        background-image: none;
+        padding-left: 0
+    }
+    .live-product .product-timer span.count-down-title,
+    .live-product .product-timer.has-result span.count-down {
+        display: none
+    }
+    .live-product .product-timer span.count-down {
+        display: block;
+        font-size: 14px;
+        padding-top: 5px
+    }
+    .customer-share-page-apps .ng-share-wrapper {
+        padding: 10px 10px 50px
+    }
+    .m-detail-left-apps .win-head {
+        width: 20%;
+        float: left
+    }
+    .m-detail-left-apps .win-name {
+        width: 80%;
+        float: left;
+        text-align: left;
+        padding-left: 5px
+    }
+    .m-detail-left-apps .win-name a {
+        color: #333;
+        font-weight: bold
+    }
+    .m-detail-left-apps .win-name .win-info .win-info-detail {
+        width: 100%
+    }
+    .m-detail-left-apps .winner-info,
+    .m-detail-left-apps .next-period {
+        width: 100%;
+        float: left
+    }
+    .m-detail-left-apps .winner-info {
+        height: auto;
+        padding: 10px 0
+    }
+    .content-sharing .m-detail-middle-apps {
+        width: 100%;
+        float: left;
+        border: none
+    }
+    .m-detail-left-apps .next-period .img-product-share {
+        width: 20%;
+        float: left
+    }
+    .content-sharing-apps {
+        width: 100%;
+        float: left;
+        padding: 0 10px 70px 10px
+    }
+    .next-period .product-img img {}.m-detail-left-apps .next-period .info-product-share {
+        width: 75%;
+        float: left;
+        padding-left: 10px
+    }
+    .m-detail-left-apps .next-period {
+        border: none;
+        background: #f1f1f1;
+        border-radius: 5px;
+        padding: 5px 10px
+    }
+    .next-period .info-product-share .product-price {
+        text-align: left
+    }
+    .next-period .info-product-share p {
+        margin-bottom: 0
+    }
+    .next-period .info-product-share p.product-name a {
+        color: #333;
+        font-weight: bold
+    }
+    .m-detail-middle-apps h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700
+    }
+    .m-detail-middle-apps .single-content {
+        margin-top: 0;
+        width: 100%;
+        float: left;
+        font-size: 13px
+    }
+    .ng-share-content .share-info {
+        width: 100%;
+        float: left;
+        text-align: left
+    }
+    .ng-share-detail-mobile .name-line-apps {
+        width: 100%;
+        float: left;
+        text-align: left
+    }
+    .ng-share-detail-mobile .name-line-apps a {
+        color: #666;
+        width: 100%;
+        float: left;
+        font-size: 13px
+    }
+    .ng-share-detail-mobile .name-line-apps span {
+        width: 100%;
+        float: left;
+        font-size: 12px
+    }
+    .list-history-selled-customers .history-selled-item .info-product {
+        text-align: left
+    }
+    .list-history-selled-customers .history-numcode-salled,
+    .list-history-selled-customers .history-link-selled,
+    .info-product-selled .history-time,
+    .info-product-selled .product-price {
+        display: none
+    }
+    .info-product-selled .product-bar .p-0 > span {
+        font-size: 11px
+    }
+    .info-product-selled .product-bar .p-0 > span + span {
+        font-size: 10px
+    }
+    .history-selled-item .info-product.info-product-selled a.product-name {
+        color: #333
+    }
+    .info-product-selled .w3-progress-container {
+        height: 5px
+    }
+    .info-product-selled .w3-progress-container .w3-green {
+        height: 5px
+    }
+    .detail-profile-bottom {
+        width: 100%;
+        float: left;
+        border-top: 1px solid #ececec;
+        margin-top: 10px
+    }
+    .detail-profile-bottom ul {
+        list-style: none;
+        padding: 0;
+        margin: 0
+    }
+    .detail-profile-bottom ul li {
+        width: 100%;
+        float: left;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ececec;
+        text-transform: uppercase;
+        font-size: 13px
+    }
+    .detail-profile-content {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding: 10px 0
+    }
+    .detail-profile-content .avatar {
+        margin-bottom: 10px
+    }
+    .detail-profile-content .avatar img {
+        width: 66px;
+        height: 66px;
+        border-radius: 35px
+    }
+    .detail-profile-content span.user_name {
+        width: 100%;
+        float: left;
+        text-align: center;
+        font-weight: 700
+    }
+    .detail-profile-content span.user_id {
+        width: 100%;
+        float: left;
+        text-align: center;
+        font-size: 11px;
+        color: #666
+    }
+    .waiting-result-page-apps .user-winner .info-winner {
+        padding-left: 0;
+        padding-right: 50px;
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0
+    }
+    .waiting-result-page-apps .user-winner .avatar-user {
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+    .waiting-result-page-apps .user-winner .address {
+        display: none
+    }
+    .waiting-result-page-apps .products-ccb-item .products-ccb-info {
+        position: relative
+    }
+    .waiting-result-page-apps .products-ccb-item h3 {
+        padding-right: 50px;
+        padding-top: 0
+    }
+    .waiting-result-page-apps .products-ccb-info .price {
+        margin: 0;
+        font-size: 12px
+    }
+    .waiting-result-page-apps .products-ccb-info .alert-full.alert-full-time {
+        font-size: 11px
+    }
+    .content-product .waiting-result-page-apps .products-ccb-item {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        float: left
+    }
+    .waiting-result-page-apps .products-ccb-image .loaded {
+        height: 116px;
+        line-height: 116px;
+        text-align: center
+    }
+    .waiting-result-page-apps .products-ccb-info .alert-full {
+        display: none
+    }
+    .waiting-result-page-apps .products-ccb-info .times-down {
+        margin-top: 0;
+        min-height: inherit;
+        padding-bottom: 10px;
+        background: #f60
+    }
+    .waiting-result-page-apps .times-down .time-run > span {
+        font-size: 15px;
+        margin-bottom: -10px
+    }
+    .waiting-result-page-apps .times-down .time-run > span.num {
+        width: 25px;
+        height: 25px;
+        line-height: 27px;
+        color: #f60
+    }
+    .waiting-result-page-apps .hot-event {
+        display: none
+    }
+    .waiting-result-page-apps .times-down > span {
+        font-size: 11px
+    }
+    .waiting-result-page {
+        padding-bottom: 35px
+    }
+    header-top-product {
+        min-height: inherit
+    }
+    .navbar-fixed-bottom .cart {
+        position: absolute;
+        top: 0;
+        font-style: normal;
+        color: #EF3F41;
+        font-weight: 500
+    }
+    .forum-page-container .forum-page-row {
+        margin: 0
+    }
+    .forum-page-row .forum-page-left {
+        padding: 0px
+    }
+    .forum-page-left .forum-left {
+        border: none
+    }
+    .forum-page .content-list-post h4 {
+        width: 100%;
+        margin-right: 0;
+        font-size: 13px;
+        font-weight: 700
+    }
+    .forum-page .content-list-post span {
+        width: 100%;
+        float: left;
+        font-size: 12px
+    }
+    .forum-page .content-list-post {
+        margin-top: 0
+    }
+    .prodcut-wiget {
+        min-height: 300px
+    }
+    .prodcut-wiget a.box-product {
+        padding: 5px
+    }
+    .prodcut-wiget a:hover .proudct-name,
+    .prodcut-wiget a .proudct-name {
+        padding-top: 0px;
+        color: #333;
+        overflow: hidden;
+        width: 100%;
+        white-space: normal;
+        height: 36px;
+        padding: 0px;
+        display: -webkit-box;
+        font-size: 13px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        margin-top: 5px
+    }
+    .prodcut-wiget .product-img {
+        min-height: 187px
+    }
+    .product-template-news .prodcut-wiget {
+        min-height: 265px
+    }
+    .area-title {
+        padding-top: 10px
+    }
+    .area-title h2 {
+        border-left: 2px solid #f60;
+        padding-left: 8px !important;
+        font-weight: 500
+    }
+    .area-title p,
+    .area-title a,
+    .area-title h2 {
+        font-size: 12px
+    }
+    .prodcut-wiget .product-shop {
+        padding-left: 5px;
+        padding-right: 5px
+    }
+    .home-page .slick-banner home-slick {
+        border-bottom: 0px !important;
+        border-right: 0px !important
+    }
+    .home-page .banner-slider {
+        width: 100%;
+        float: left;
+        min-height: 150px
+    }
+    .slick-dots {
+        margin: 0px
+    }
+    .ng-data-inner .ng-data-step .step-inner .s-r4 {
+        width: 100px
+    }
+    .cart-page dir-pagination-controls {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding: 0px 10px
+    }
+    .cart-page dir-pagination-controls ul {
+        display: inline-block;
+        float: none;
+        margin: auto;
+        margin-top: 10px
+    }
+    .cart-page .container {
+        padding: 0px
+    }
+    .category-page .category-content.category-content-app .row.text-center {
+        border: 0px !important
+    }
+    .category-page .category-content.category-content-app .row.text-center p {
+        padding: 0px 5px
+    }
+    .row.frm-signup-footer, .row.frm-signup-sloid {
+        width: auto;
+    }
+    .content-page-napk md-tabs-canvas{
+        height: 100px;
+    }
+    .content-page-napk md-tabs[md-border-bottom] md-tabs-wrapper{
+        height: 100px;
+    }
+    .content-page-napk md-pagination-wrapper{
+        height: 100px;
+    }
+    .content-page-napk md-tab-content{
+        padding-top: 10px;
+    }
+    .content-page-napk  md-tabs .md-tab p{
+        width: 100%;
+        overflow: hidden;
+        background-position: center 5px;
+        text-indent: -999px;
+    }
+    .content-page-napk  md-tabs .md-tab.md-active p{
+        background-position: center 5px;
+    }
+    .content-page-napk md-tab-item .tab-label-form{
+        padding: 0 5px;
+    }
+    .content-page-napk md-tabs-canvas.md-paginated{
+        margin: 0 10px;
+    }
+    .content-page-napk md-prev-button,.content-page-napk md-next-button{
+        display: none;
+    }
+    .lightbox-nav .btn-next{
+        width: 122px;
+        height: 28px;
+        background-size: 122px;
+    }
+    .modal-content .lightbox-nav{
+        bottom: 38px;
+    }
+    .modal-dialog .modal-content .close{
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        right: 0;
+        top: 0;
+        z-index: 999;
+    }
+    .lightbox-modal .modal-body{
+       /* padding: 0;*/
+    }
+    .lightbox-modal .modal-content{
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+    .popup-download-apps{
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        background: #f2f2f2;
+    }
+    .popup-download-links{
+        width: 100%;
+    }
+    .close-popup-down{
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 100%;
+        line-height: 80px;
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+    }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+    .product-hots .col-md-10 {
+        height: 710px
+    }
+    .home-page .sp,
+    .home-page .cs,
+    .home-page .tb,
+    .home-page .nt {
+        background: url(../images/themes/apps/apps_sanpham.png) no-repeat center;
+        height: 100px;
+        width: 100px
+    }
+    .home-page .watting-result .move-result .live-product {
+        width: 33.33333333%;
+        float: left;
+        height: 160px;
+        overflow: hidden;
+        box-shadow: none;
+        padding-top: 25px
+    }
+    .category-page .category-menu .col-md-1 {
+        width: 100%
+    }
+    .category-content-app .prodcut-wiget {
+        height: 143px;
+        min-height: 143px !important
+    }
+    .category-page .category-content-app .loaded {
+        height: 120px;
+        line-height: 120px
+    }
+}

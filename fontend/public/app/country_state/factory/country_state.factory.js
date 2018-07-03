@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .factory('Country_state', ['$resource', function($resource) {return {getCountrystate : $resource('/api/address/getCountrystate', null, {'getCountrystate': { method:'PUT'}}), getStateChild : $resource('/api/address/getStateChild/:id', null, {'getStateChild': { method:'PUT'}}) } }])

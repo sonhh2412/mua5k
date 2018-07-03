@@ -1,0 +1,28 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_general_synchronization","general_synchronization user","model_general_synchronization","base.group_user",1,0,0,0
+"access_general_synchronization_manager","general_synchronization manager","model_general_synchronization","base.group_synchronization",1,1,1,1
+"access_general_country_queue","general_country_queue user","model_general_country_queue","base.group_user",1,1,1,1
+"access_general_state_queue","general_state_queue user","model_general_state_queue","base.group_user",1,1,1,1
+"access_general_partner_queue","general_partner_queue user","model_general_partner_queue","base.group_user",1,1,1,1
+"access_general_brand_queue","general_brand_queue user","model_general_brand_queue","base.group_user",1,1,1,1
+"access_general_category_queue","general_category_queue user","model_general_category_queue","base.group_user",1,1,1,1
+"access_general_template_queue","general_template_queue user","model_general_template_queue","base.group_user",1,1,1,1
+"access_general_product_queue","general_product_queue user","model_general_product_queue","base.group_user",1,1,1,1
+"access_general_inventory_queue","general_inventory_queue user","model_general_inventory_queue","base.group_user",1,1,1,1
+"access_general_rpc_queue","general_rpc_queue user","model_general_rpc_queue","base.group_user",1,1,1,1
+"access_general_price_queue","general_price_queue user","model_general_price_queue","base.group_user",1,1,1,1
+"access_general_rpc_price","general_rpc_price user","model_general_rpc_price","base.group_user",1,1,1,1
+"access_general_rpc_resync","general_rpc_resync user","model_general_rpc_resync","base.group_user",1,1,1,1
+"access_general_sale_queue","general_sale_queue user","model_general_sale_queue","base.group_user",1,1,1,1
+"access_general_hot_product_queue","general_general_hot_product_queue","model_general_hot_product_queue","base.group_user",1,1,1,1
+"access_general_session_product_queue","general_session_product_queue user","model_general_session_product_queue","base.group_user",1,1,1,1
+"access_general_saledial_queue","general_saledial_queue user","model_general_saledial_queue","base.group_user",1,1,1,1
+"access_product_product_image","product_product_image user","model_product_product_image","base.group_user",1,1,1,1
+"access_general_knumber_queue","general_knumber_queue user","model_general_knumber_queue","base.group_user",1,1,1,1
+"access_general_convert_queue","general_convert_queue user","model_general_convert_queue","base.group_user",1,1,1,1
+"access_date_of_birth","date_of_birth user","model_date_of_birth","base.group_user",1,1,1,1
+"general_give_k_queue","general_give_k_queue user","model_general_give_k_queue","base.group_user",1,1,1,1
+"access_general_notify_content_queue","general_notify_content_queue user","model_general_notify_content_queue","base.group_user",1,1,1,1
+"access_general_send_notify_queue","general_send_notify_queue user","model_general_send_notify_queue","base.group_user",1,1,1,1
+"access_notify_to_customers","notify_to_customers user","model_notify_to_customers","base.group_user",1,1,1,1
+"access_notify_to_customers_detail","notify_to_customers_detail user","model_notify_to_customers_detail","base.group_user",1,1,1,1

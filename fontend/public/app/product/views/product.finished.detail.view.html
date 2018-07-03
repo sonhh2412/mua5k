@@ -1,0 +1,381 @@
+<div class="container bg-while product-detail product-detail-finish" ng-show="isnotMobile">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <ul class="list-inline list-bk">
+                <li><a href="/">Trang chủ</a></li> &gt;
+                <li><a href="/danh-muc/sap-cong-bo.html">Danh Mục Sản Phẩm</a></li> &gt;
+                <li><a href="#">{{product.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="divMain" class="row">
+        <div class="col-xs-12 p-0">
+            <div id="divSession" class="row m-0">
+                <div class="col-xs-2 ng-result" ng-if="!noSessionSelling"><a href="/san-pham/{{stateParams.slug}}.html">Phiên {{session_selling.number}} đang bán <span class="dotting"></span></a>
+                    <div class="result-line">
+                        <div class="on-line" style="width:{{session_selling.selled / session_selling.total * 100}}%"></div>
+                    </div>
+                </div>
+                <div class="col-xs-2 current" ng-if="noSessionSelling"><a href="/san-pham/{{stateParams.slug}}.html">Sản phẩm đã hết phiên</a></div>
+                <product-session-selled product="product"></product-session-selled>
+            </div>
+            <div id="div_ngresult" style="overflow: hidden;" row="class" ng-if="isnotMobile">
+                <div class="col-xs-3 ng-result-img" style="width: 20%; padding: 0 2px 0 0; min-height: 489px;" dw-loading="lazy-product" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+                    <div ng-if="product">
+                        <div class="result-img-wrapper">
+                            <a href="/san-pham/{{product.slug}}.html">
+                                <div afkl-lazy-image="{{domain_image_product + product.images[0].image}}" afkl-lazy-image-options='{"offset":400}' class="loaded" />
+                            </a>
+                        </div><a href="/san-pham/{{product.slug}}.html" class="result-more">Xem chi tiết</a></div>
+                </div>
+                <div class="col-xs-7 ng-result-detail" style="width: 58%; min-height: 489px;" dw-loading="lazy-product" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+                    <div ng-if="product">
+                        <h2 class="title text-center">(phiên {{lottery_session[0].number}}) {{product.name}}</h2>
+                        <p class="price">Giá: {{product.price | priceVND}} đ</p>
+                        <user-winner product=product session="lottery_session"></user-winner>
+                        <div class="result-how">
+                            <h6>Cách xác định người được mua</h6>
+                            <p>1. Xác định 50 giao dịch cuối cùng của hệ thống tính đến thời điểm phiên của sản phẩm hoàn thành.</p>
+                            <p>2. Xác định và tính tổng thời điểm của 50 giao dịch đó, tính tới đơn vị mili giây.</p>
+                            <p>3. Lấy tổng tính được chia cho số lượng mã của sản phẩm lấy phần dư cộng với 100000001.</p>
+                            <p>4. Cách chia lấy phần dư là cách chia như ví dụ sau : 7÷3 = 2 ......1， 1 là phần dư.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 ng-goods-buy p-0 buy-by-user " style="width: 22%; min-height: 489px;" dw-loading="lazy-product" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+                    <md-content ng-if="timer && product">
+                        <div ng-if="isLoggedIn">
+                            <div class="finish-product-list-buyer"> Mã của bạn </div>
+                            <div id="div_buynav" ng-if="product.code.length > 0">
+                                <div id="div_goodsrecord" class="list-wrap" ng-if="product">
+                                    <div class="my-list my-list-me">
+                                        <ul id="UserBuyNewListMy" class="list" style="margin-top: 0px;">
+                                            <li ng-repeat="code in product.code | filter : filterUser | limitTo : limitMe"><span href="http://u.1yyg.com/1014782029" target="_blank" class="buy-name"> {{code.time}}</span><span class="buy-num red">{{code.code.length}}</span> Mã </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="!isLoggedIn">
+                            <div class="login-to-view-records" ng-click="kMua($event, product, product.convert[0].amount)">
+                                <div class="gth-icon transparent-png"></div><span>Đăng nhập để xem lịch sủ của bạn</span></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container product-detail-finish" ng-if="isnotMobile">
+    <div class="ng-main clearfix row">
+        <div class="ng-data-wrapper">
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom md-selected="tabIndexFN">
+                    <md-tab label="Chi tiết sản phẩm">
+                        <md-content class="md-padding">
+                            <div ng-if="product.description" class="product-con" ng-bind-html="product.description | renderHTML"></div>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Phương pháp tính">
+                        <md-content class="md-padding">
+                            <div id="div_evaldata" class="ng-data-inner ng-scope" style="min-height:200px;" dw-loading="lazy-product" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+                                <div ng-show="product">
+                                    <div class="ng-data-info">
+                                        <div class="ng-data-head">
+                                            <div class="time col-xs-2" style="width: 23%">STT &nbsp;&nbsp;&nbsp;&nbsp;THỜI GIAN</div>
+                                            <div class="data col-xs-2" style="width: 12%">SỐ QUY ĐỔI</div>
+                                            <div class="user col-xs-2" style="width: 15%">THÀNH VIÊN</div>
+                                            <div class="num col-xs-2" style="width: 10%">SỐ LƯỢNG</div>
+                                            <div class="product col-xs-2" style="width: 40%">SẢN PHẨM</div>
+                                        </div>
+                                    </div>
+                                    <div class="ng-data-detail">
+                                        <div class="ng-data-step">
+                                            <p class="title">Tại thời điểm <b>[ {{product.user_win[0].time_buy}} ]</b> giao dịch mua mã cuối cùng trong phiên này của sản phẩm này.</p>
+                                            <div class="step" ng-if="product.user_win">
+                                                <ul class="step-inner clearfix">
+                                                    <li class="s-r1">
+                                                        <p>Kết quả</p>
+                                                    </li>
+                                                    <li class="s-t">=</li>
+                                                    <li class="s-t">(</li>
+                                                    <li class="s-r2">
+                                                        <p>{{product.user_win[0].sum_time}}</p>
+                                                    </li>
+                                                    <li id="li_mod" class="s-t mod"><i>%</i></li>
+                                                    <li class="s-r3">
+                                                        <p>{{product.total}}</p><span>Tổng số mã</span></li>
+                                                    <li class="s-t">)</li>
+                                                    <li class="s-t">+</li>
+                                                    <li class="s-r4">
+                                                        <p>100000001</p><span>Giá trị cố đinh</span></li>
+                                                    <li class="s-t">=</li>
+                                                    <li class="s-r5">
+                                                        <p style="font-weight: normal;">{{product.user_win[0].winner_code}}</p><span>Mã số mua hàng may mắn</span></li>
+                                                </ul>
+                                                <div class="ng-result-bg equals transparent-png"></div>
+                                            </div>
+                                            <div id="div_whatmod" class="ng-mod-wrapper" style="display: block;"><i class="s"><i class="s"></i></i>
+                                            </div>
+                                        </div>
+                                        <div class="ng-table-wrapper">
+                                            <div id="div_nginner" class="ng-table-inner" style="height: auto;">
+                                                <ul class="ng-table-ul clearfix">
+                                                    <li ng-class="{'first' : $index == 0}" ng-repeat="code in product.array_byer">
+                                                        <div class="index col-xs-2" style="width: 5%">{{$index+1}}</div>
+                                                        <div class="time  col-xs-2" style="width: 18%"><b>{{code.time}}</b></div>
+                                                        <div class="code col-xs-2" style="width: 12%">{{code.time | timeSum}}</div>
+                                                        <div class="name col-xs-2" style="width: 15%">
+                                                            <a style="text-transform: capitalize;" href="/ho-so/{{code.user_id}}.html" target="_blank">
+                                                                <hash-user class="hash-custom" user=code.user_id>
+                                                            </a>
+                                                        </div>
+                                                        <div class="num col-xs-2" style="width: 10%">{{code.code}} Mã</div>
+                                                        <div class="pro col-xs-2" style="width: 40%"><a href="/san-pham/{{code.product_slug}}/{{code.session_id}}.html">( phiên <span class="red">{{code.session_number}}</span> ) {{code.product_name.toLowerCase()}}</a></div>
+                                                    </li>
+                                                </ul>
+                                                <div class="ng-table-bg01 transparent-png"></div>
+                                                <div class="ng-table-bg02 transparent-png"></div>
+                                                <div class="ng-table-bg03 ng-result-bg transparent-png"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Tham gia quay số">
+                        <md-content class="md-padding">
+                            <div id="div_allrecord" class="ng-all-record" ng-if="product.code.length > 0">
+                                <div class="record">
+                                    <div id="divRnoShow" class="yungou-code-wrapper" style="">
+                                        <div class="yungou-code-inner">
+                                            <div class="yt"><span class="w"><a target="_blank" href="/ho-so/{{popUserDetail._id}}.html"><b class="head-s-img"><img src="{{popUserDetail.avatar}}" width="22" height="22"/></b class="user-pop"><hash-user user=popUserDetail._id></hash-user></a></span>Đã Tham Gia<span>{{popCodeList.length}}</span>Mã </div>
+                                            <div class="code-info">
+                                                <div class="code-ul-wrapper">
+                                                    <div class="jspContainer">
+                                                        <div class="jspPane" style="overflow-y:scroll">
+                                                            <ul class="code-ul">
+                                                                <li ng-repeat="code in popCodeList">{{code}}</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><a href="#" class="close-btn ng-result-bg transparent-png" ng-click="close_show_code()"></a><i class="j j-custom"><b class="j"></b></i></div>
+                                    </div>
+                                    <ul class="record-list">
+                                        <li class="record-menu">
+                                            <div class="time col-xs-4"> Thời gian </div>
+                                            <div class="name col-xs-4"> Thành viên </div>
+                                            <div class="people col-xs-4"> Số lượng </div>
+                                            <!-- <div class="ip col-xs-4"> IP </div> -->
+                                        </li>
+                                        <li class="" dir-paginate="code in product.code | itemsPerPage : 9">
+                                            <div class="time col-xs-4"> {{code.time}} </div>
+                                            <div class="name col-xs-4"><span class="w"><a href="/ho-so/{{code.user._id}}.html"><i class="head-s-img"><img src="{{code.user.avatar}}"/></i><hash-user class="hash-custom" user=code.user._id></hash-user></a></span></div>
+                                            <div class="people people-buy-code col-xs-4"> {{code.code.length}} <a href="#" ng-click="show_code($event, code.code, code.user, $index)"> Xem mã mua</a></div>
+                                            <!-- <div class="ip col-xs-4"> {{code.user.region != 'undefined' ? code.user.region : ''}} IP: {{code.user.ip}} </div> -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <dir-pagination-controls></dir-pagination-controls>
+                            </div>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Chia sẽ">
+                        <md-content class="md-padding">
+                            <div class="list-sharing floating-box" ng-if="isnotMobile">
+                                <div id="div_postlist" class="ng-share-goods ng-scope">
+                                    <div class="ng-share-wrapper">
+                                        <div class="ng-share-detail clearfix" ng-repeat="(index,item) in list_sharing.results">
+                                            <div class="ng-share-pic"><b><a href="#" target="_blank" type="showCard" uweb="{{item.user._id}}"><img ng-src="{{postUserItem.avatar}}" width="85" height="85"/></a></b>
+                                                <sharing-user-post user="item.user[0]._id" collection="postUserItem"></sharing-user-post>
+                                                <div class="name-line clearfix">
+                                                    <a href="/ho-so/{{postUserItem._id}}.html" class="u-name" target="_blank">
+                                                        <hash-user class="hash-custom" user=postUserItem._id></hash-user>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ng-share-con">
+                                                <div class="u-data">
+                                                    <div class="u-show"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" target="_blank">{{item.name}}</a></div><span class="u-time">Đăng lúc {{item.publish | date:'dd-MM-yyyy HH:mm:ss'}}</span></div>
+                                                <div class="share-info">
+                                                    <p><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" target="_blank">{{item.content | htmlToPlaintext | limitTo:300}}{{item.content.length > 300 ? '...' : ''}}</a></p>
+                                                </div>
+                                                <div class="pic-list-wrap">
+                                                    <div class="my-list">
+                                                        <ul class="pic-list clearfix" id="ul_0">
+                                                            <li indexj="0" indexi="0" id="0_0"><span><img ng-src="{{domain_image_product + item.images[0]}}"/></span>
+                                                                <div class="pic-hover" style="display: none;" id="div0"></div>
+                                                            </li>
+                                                            <li ndexj="1" indexi="0" id="0_1"><span><img src="{{domain_image_product + item.images[1]}}"/></span>
+                                                                <div class="pic-hover" style="display: none;" id="div1"></div>
+                                                            </li>
+                                                            <li indexj="2" indexi="0" id="0_2"><span><img src="{{domain_image_product + item.images[2]}}"/></span>
+                                                                <div class="pic-hover" style="display: none;" id="div2"></div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="talk-wrap"><a class="xianmu" ng-click="UpLikeSharing(item._id)" ng-if="item.like.indexOf(currentUser._id) == -1"><i></i><span>Like(<em>{{item.like.length}}</em>)</span></a><span class="xianmu-past" ng-if="item.like.indexOf(currentUser._id) != -1"><i></i>Liked(<em>{{item.like.length}}</em>) </span><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" class="pinglun"><i></i>Comment(<em>{{item.comment.length}}</em>) </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="row m-0 row-pagination">
+                                        <div class="col-md-12 p-0">
+                                            <bgf-pagination collection="list_sharing" current="pageSharing" total="total_pageSharing" gotopage="gotoSharing" url="urlSharingList" auto-presets="false" link-group-size="1" reload-page="reloadPageSharing"></bgf-pagination>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+        </div>
+    </div>
+</div>
+</div>
+<div class="bg-while product-detail product-detail-finish" ng-show="isMobile">
+    <div class="title-app"><a class="nav-header" href="/danh-muc/sap-cong-bo.html">Back</a>
+        <h2>CHI TIẾT SẢN PHẨM</h2><span class="number-selling">Lượt {{lottery_session[0].number}}</span></div>
+    <div class="container detail-product-mobile">
+        <div id="divMain" class="row">
+            <div class="col-xs-12 p-0">
+                <div id="divMainInfo">
+                    <div class="img-finish-mobile targetarea p-0">
+                        <div ng-if="product.images.length > 0" class="img-finish">
+                            <div afkl-lazy-image="{{domain_image_product + product.images[0].image}}" afkl-lazy-image-options='{"offset":400}' class="loaded" /></div>
+                    </div>
+                    <div class="info-finish-mobile">
+                        <h2 class="o-title">(phiên {{lottery_session[0].number}}) {{product.name}}</h2>
+                        <p class="price"> Giá: {{product.price | priceVND}} vnđ </p>
+                    </div>
+                    <div class="bottom-product-user-win">
+                        <user-winner product=product session="lottery_session"></user-winner>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-bottom-mobile">
+        <div ng-init="accordion=1">
+            <h3 ng-click="accordion = 1" class="accordion" ng-class="{active:accordion==1}"><a href>Phương pháp tính</a></h3>
+            <div class="accordion-content" ng-show="accordion==1">
+                <div id="div_evaldata" class="ng-data-inner ng-scope" dw-loading="lazy-product" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}">
+                    <div ng-show="product">
+                        <div class="ng-data-detail">
+                            <div class="ng-data-step">
+                                <div class="step" ng-if="product.user_win">
+                                    <div class="data-step-recipe">
+                                        <div class="step" ng-if="product.user_win">
+                                            <ul class="step-inner clearfix">
+                                                <li class="s-t">(</li>
+                                                <li class="s-r2">
+                                                    <p>{{product.user_win[0].sum_time}}</p>
+                                                </li>
+                                                <li id="li_mod" class="s-t mod"><i>%</i></li>
+                                                <li class="s-r3">
+                                                    <p>{{product.total}}</p><span>Tổng số mã</span></li>
+                                                <li class="s-t">)</li>
+                                                <li class="s-t">+</li>
+                                                <li class="s-r4">
+                                                    <p>100000001</p><span>Giá trị cố đinh</span></li>
+                                            </ul>
+                                            <div class="s-t s-t-equal">||</div>
+                                            <div class="s-r5-result">
+                                                <p style="font-weight: normal;">{{product.user_win[0].winner_code}}</p><span>Mã số mua hàng may mắn</span></div>
+                                        </div>
+                                    </div>
+                                    <p class="title">Tại thời điểm <b>[ {{product.user_win[0].time_buy}} ]</b> giao dịch mua mã cuối cùng trong phiên này của sản phẩm này.</p>
+                                </div>
+                            </div>
+                            <div class="ng-table-wrapper">
+                                <div id="div_nginner" class="ng-table-inner" style="height: auto;">
+                                    <ul class="ng-table-ul clearfix">
+                                        <li ng-class="{'first' : $index == 0}" ng-repeat="code in product.code">
+                                            <div class="time ">{{code.time}}</div>
+                                            <div class="code">{{code.time | timeSum}}</div>
+                                            <div class="name">
+                                                <a style="text-transform: capitalize;" href="/ho-so/{{code.user._id}}.html">
+                                                    <hash-user class="hash-custom" user=code.user._id></hash-user>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 ng-click="accordion = 2" class="accordion" ng-class="{active:accordion==2}"><a href>Chi tiết sản phẩm</a></h3>
+            <div class="accordion-content" ng-show="accordion==2">
+                <div ng-if="product.description" class="product-con" ng-bind-html="product.description | renderHTML"></div>
+            </div>
+            <h3 ng-click="accordion = 3" class="accordion" ng-class="{active:accordion==3}"><a href>Tham gia quay số</a></h3>
+            <div class="accordion-content" ng-show="accordion==3">
+                <div id="div_allrecord" class="ng-all-record" ng-if="product.code.length > 0">
+                    <div class="record">
+                        <ul class="record-list">
+                            <li class="" dir-paginate="code in product.code | itemsPerPage : 9">
+                                <div class="avatar "><i class="head-s-img"><img src="{{code.user.avatar}}"/></i></div>
+                                <div class="user-name col-xs-3"><span class="w"><a href="/ho-so/{{code.user._id}}.html"><hash-user class="hash-custom" user=code.user._id></hash-user></a></span><span class="time-buy">{{code.time}}</span></div>
+                                <div class="people people-buy-code col-xs-2"> {{code.code.length}} Mã </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <dir-pagination-controls></dir-pagination-controls>
+                </div>
+            </div>
+            <h3 ng-click="accordion = 4" class="accordion last" ng-class="{active:accordion==4}"><a href>ĐÁNH GIÁ</a></h3>
+            <div class="accordion-content" ng-show="accordion==4">
+                <div id="div_postlist" class="ng-share-goods ng-scope" ng-if="isMobile">
+                    <div class="ng-share-wrapper">
+                        <div class="ng-share-detail-mobile clearfix" ng-repeat="(index,item) in list_sharing.results">
+                            <div class="ng-share-picture">
+                                <sharing-user-post user="item.user[0]._id" collection="postUserItem"></sharing-user-post>
+                                <div class="avatar-user"><img ng-src="{{postUserItem.avatar}}" /></div>
+                                <div class="name-line clearfix">
+                                    <a href="/ho-so/{{postUserItem._id}}.html" class="u-name">
+                                        <hash-user class="hash-custom" user=code.postUserItem._id></hash-user>
+                                    </a><span class="u-time">{{item.publish | date:'dd-MM-yyyy HH:mm:ss'}}</span>
+                                    <div class="u-show"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" target="_blank">{{item.name}}</a></div>
+                                </div>
+                            </div>
+                            <div class="ng-share-content">
+                                <div class="share-info"> {{item.content | htmlToPlaintext | limitTo:90}}{{item.content.length > 90 ? '...' : ''}} </div>
+                                <div class="pic-list-wrap">
+                                    <div class="my-list">
+                                        <ul class="pic-list clearfix" id="ul_0">
+                                            <li><span><img ng-src="{{domain_image_product + item.images[0]}}"/></span></li>
+                                            <li><span><img src="{{domain_image_product + item.images[1]}}"/></span></li>
+                                            <li><span><img src="{{domain_image_product + item.images[2]}}"/></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="talk-wrap"><a class="xianmu" ng-click="UpLikeSharing(item._id)" ng-if="item.like.indexOf(currentUser._id) == -1"><i></i><span>Like(<em>{{item.like.length}}</em>)</span></a><span class="xianmu-past" ng-if="item.like.indexOf(currentUser._id) != -1"><i></i>Liked(<em>{{item.like.length}}</em>) </span><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" class="pinglun"><i></i>Comment(<em>{{item.comment.length}}</em>)</a></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="row m-0 row-pagination">
+                            <div class="col-md-12 p-0">
+                                <bgf-pagination collection="list_sharing" current="pageSharing" total="total_pageSharing" gotopage="gotoSharing" url="urlSharingList" auto-presets="false" link-group-size="1" reload-page="reloadPageSharing"></bgf-pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="product">
+            <div id="divBuy" class="consume-wrapper fixed-buy-bobile" ng-if="!noSessionSelling">
+                <div class="col-xs-8 btn-10kmua">
+                    <md-button aria-label="10K Mua" ng-href="/san-pham/{{stateParams.slug}}.html" class="consume-now"> Phiên {{session_selling.number}} đang bán </md-button>
+                </div>
+                <div class="col-xs-4 btn-addcart"></div>
+            </div>
+        </div>
+    </div>
+</div>

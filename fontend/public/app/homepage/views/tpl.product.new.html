@@ -1,0 +1,12 @@
+<div class="row product-template product-template-news" dw-loading="lazy-product-new" dw-loading-options="{className: 'custom-loading', text : 'Đang xử lý yêu cầu...', spinnerOptions: {className: 'custom-spinner'}}" style="{{products.length == 0 ? 'border-right:1px solid #ECECEC; border-bottom:1px solid #ECECEC'  : ''}}">
+    <div class="col-md-3 col-sm-6 col-xs-6 p-0" ng-repeat="product in products">
+        <div class="prodcut-wiget"> <span class="convert" ng-if="product.convert && product.convert.length > 0"> {{product.convert[0].name}} </span>
+            <md-button ng-href="/san-pham/{{product.slug}}.html" class="floating-box box-product m-0">
+                <div class="product-img">
+                    <div afkl-lazy-image="{{product.images.length > 0 ? domain_image_product + product.images[0].image : '/assets/images/themes/10K.png'}}" afkl-lazy-image-options='{"offset":400}' class="loaded" /> </div>
+                <div class="proudct-name"> {{product.name}} </div>
+                <div class="product-price"> Giá {{product.price | priceVND}} đ </div>
+            </md-button>
+        </div>
+    </div>
+</div>

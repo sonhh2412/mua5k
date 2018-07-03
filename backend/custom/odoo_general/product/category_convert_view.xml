@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       
+            <record model="ir.ui.view" id="category_convert_tree_view">
+                <field name="name">category.convert.tree</field>
+                <field name="model">category.convert</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Category Convert">
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="amount"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="category_convert_form_view">
+                <field name="name">category.convert.form</field>
+                <field name="model">category.convert</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Category Convert">
+                    	<header>
+                    		<button name="%(act_wizard_select_products_view)d" type="action" string="Selection Products"/>
+                    	</header>
+	                    <sheet>
+		                    <group>
+		                        <field name="name"/>
+		                        <field name="code"/>
+		                    </group>
+		                    <group>
+		                        <field name="amount" attrs="{'readonly':[('create_date','!=',False)]}"/>
+		                        <field name="create_date" invisible="1"/>
+		                    </group>
+	                    	<separator string="Products"/>
+	                    	<group>
+	                    		<field name="product_ids" nolabel="1" widget="one2many_list">
+	                    			<tree string="Product" delete="false" create="false" edit="false">
+	                    				 <field name="default_code"/>
+					                    <field name="name"/>
+					                    <field name="product_brand_id"/>
+					                    <field name="attribute_value_ids" widget="many2many_tags"/>
+					                    <field name="lst_price"/>
+					                    <field name="qty_available"/>
+                    					<field name="virtual_available"/>
+					                    <field name="price" invisible="not context.get('pricelist',False)"/>
+					                    <field name="uom_id"/>
+					                    <field name="ean13"/>
+					                    <field name="state" invisible="1"/>
+					                    <field name="product_tmpl_id" invisible="1"/>
+	                    			</tree>
+	                    		</field>
+	                    	</group>
+	                    </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_category_convert_tree_view">
+                <field name="name">Category Convert</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">category.convert</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="category_convert_tree_view"/>
+            </record>
+
+			<menuitem id="category_convert_menu" name="Category Convert" parent="base.menu_product" action="action_category_convert_tree_view" sequence="50"/>
+    
+    </data>
+</openerp>

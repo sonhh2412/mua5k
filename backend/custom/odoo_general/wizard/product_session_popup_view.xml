@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+            <record id="product_session_popup_form_view" model="ir.ui.view">
+                <field name="name">product.session.popup.form</field>
+                <field name="model">product.session.popup</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Product Session Popup">
+                    	<group>
+		                    <group>
+		                        <field name="product_id" readonly="1"/>
+		                        <field name="next_code" readonly="1"/>
+		                    </group>
+		                    <group>
+		                        <field name="number_session" required="1"/>
+		                    </group>
+                    	</group>
+                    	<footer>
+	                        <button name="act_approval" string="Approval" type="object" class="oe_highlight"/>
+	                        or
+	                        <button string="Cancel" class="oe_link" special="cancel"/>
+	                    </footer>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_product_session_popup">
+                <field name="name">Product Session Popup</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">product.session.popup</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="product_session_popup_form_view"/>
+                <field name="target">new</field>
+            </record>
+            
+            <record id="product_session_delete_popup_form_view" model="ir.ui.view">
+                <field name="name">product.session.delete.popup.form</field>
+                <field name="model">product.session.popup</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Product Session Popup">
+                    	<group>
+		                    <group>
+		                        <field name="number_session" string="Phiên" required="1"/>
+		                    </group>
+                    	</group>
+                    	<footer>
+	                        <button name="act_approval_delete" string="Approval" type="object" class="oe_highlight"/>
+	                        or
+	                        <button string="Cancel" class="oe_link" special="cancel"/>
+	                    </footer>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_product_session_delete_popup">
+                <field name="name">Delete Product Session Popup</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">product.session.popup</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="product_session_delete_popup_form_view"/>
+                <field name="target">new</field>
+            </record>
+
+    </data>
+</openerp>

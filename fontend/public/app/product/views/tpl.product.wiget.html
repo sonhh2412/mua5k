@@ -1,0 +1,25 @@
+<div class="prodcut-wiget">
+    <md-button ng-href="/san-pham/{{product.slug}}.html" class="floating-box box-product m-0">
+        <div class="product-img">
+            <div height={{height}} afkl-lazy-image="{{product.image}}" afkl-lazy-image-options='{"offset":400}' class="loaded" ng-if="!loadingImage" /> </div> <span class="convert" ng-if="product.convert && product.convert.length > 0"> {{product.convert[0].name}} </span>
+        <div class="proudct-name"> {{product.name}} </div>
+        <div class="product-price"> Giá {{product.price | priceVND}} đ </div>
+        <div class="product-bar">
+            <div class="w3-progress-container m-b-5">
+                <div class="w3-progressbar w3-green" style="width:{{lineTime}}%"></div>
+            </div>
+            <div class="col-xs-4 p-0 text-left">
+                <!-- 				 <span class="floating-box" count-to="{{total_code[1]}}" count-from="0" duration="0.5"></span> --><span class="floating-box">{{total_code[1]}}</span> <span class="floating-box">Đã mua</span> </div>
+            <div class="col-xs-4 p-0 text-center"> <span class="floating-box">{{total_code[0]}}</span> <span class="floating-box">Tổng điểm</span> </div>
+            <div class="col-xs-4 p-0 text-right"> <span class="floating-box">{{total_code[0] - total_code[1]}}</span> <span class="floating-box">Còn lại</span> </div>
+        </div>
+    </md-button>
+    <div class="product-shop floating-box" ng-if="!loadingImage">
+        <div class="col-xs-8" ng-if="product.published">
+            <md-button ng-click="kMua($event, product, product.convert[0].amount)" aria-label="{{product.convert[0].name}} Mua" ng-href="#" class="btn btn-danger"> {{product.convert[0].name}} Mua </md-button>
+        </div>
+        <div class="col-xs-4 p-0  button-fly" ng-if="product.published" ng-init="count = total_code[0] - total_code[1]">
+            <md-button class="add-to-card" ng-click="addToCart($event, product, total_code , product.convert[0].amount)">card</md-button>
+        </div>
+    </div>
+</div>

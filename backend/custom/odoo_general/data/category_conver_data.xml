@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+    
+        <record id="category_convert_10k_default" model="category.convert">
+            <field name="name">10k</field>
+            <field name="code">10k</field>
+            <field name="amount">10000</field>
+            <field name="icsc_unique" eval="True"/>
+        </record>
+        
+        <record id="category_convert_5k_default" model="category.convert">
+            <field name="name">5k</field>
+            <field name="code">5k</field>
+            <field name="amount">5000</field>
+            <field name="icsc_unique" eval="True"/>
+        </record>
+        
+        <record id="category_convert_3k_default" model="category.convert">
+            <field name="name">3k</field>
+            <field name="code">3k</field>
+            <field name="amount">3000</field>
+            <field name="icsc_unique" eval="True"/>
+        </record>
+        
+    </data>
+</openerp>

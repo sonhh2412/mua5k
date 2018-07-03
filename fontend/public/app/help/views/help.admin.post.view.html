@@ -1,0 +1,33 @@
+<div class="help-page bg-while m-t-15">
+	<div class="title-app" ng-if="isMobile">
+	    <div class="nav-header" ng-click="doTheBack()">Back</div>
+	    <h2>{{postitem.title}}</h2>
+	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 p-l-0" ng-if="isnotMobile">
+                <div class="border floating-box box-list">
+                    <div class="menu p-l-r-15">
+                        <h3 class="m-t-10 p-0"><i class="fa fa-question-circle" aria-hidden="true"></i> Trợ giúp</h3>
+                    </div>
+                    <div class="menu-list" ng-repeat="parent in listmenu">
+                        <h3 class="m-0 p-0">{{parent.title}}</h3>
+                        <ul class="m-0 p-0">
+                            <li ng-repeat="child in parent.listchild" ng-class="{'active': child.id==activemenu}"><a ng-href="{{child.link}}" ng-click="activemenu=child.id">{{child.title}}</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-list"><b>Nếu bạn không thể tìm thấy câu trả lời trong nội dung giúp đỡ, hoặc nếu bạn có đề nghị khác, bạn có thể liên hệ đường dây nóng của chúng tôi:</b>
+                        <md-button ng-href="#" class="p-0 m-0 btn-href-link"> Dịch vụ trực tuyến </md-button>
+                        <div class="hot-line"></div>
+                        <div class="email-contact"> Email: mua5k.com@gmail.com </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 border content">
+            	
+                <h3 class="content-title" ng-if="isnotMobile"> {{postitem.title}} </h3>
+                <div ta-bind ng-model="postitem.content" class="p-15 content-show"></div>
+            </div>
+        </div>
+    </div>
+</div>

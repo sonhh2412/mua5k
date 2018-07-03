@@ -1,0 +1,229 @@
+<!doctype html>
+<html class="no-js" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="vi" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="/" />
+    <title></title>
+    <meta name="description" content="5K chuyên trang thương mại điện tử" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta http-equiv="Pragma-Control" content="no-cache" />
+    <meta http-equiv="Cache-directive" content="no-cache" />
+    <meta http-equiv="Pragma-directive" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma-directive: no-cache" />
+    <meta http-equiv="Cache-directive: no-cache" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="assets/theme/theme.css" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/spin.js/spin.js"></script>
+    <script src="bower_components/angular-loading/angular-loading.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-socket-io/socket.min.js"></script>
+    <script src="bower_components/angular-tablesort/js/angular-tablesort.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="bower_components/checklist-model/checklist-model.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.min.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+    <script src="bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="bower_components/ui-select/dist/select.min.js"></script>
+    <script src="bower_components/ng-directive-lazy-image/release/lazy-image.min.js"></script>
+    <script src="bower_components/ng-scrollbars/src/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="bower_components/ng-scrollbars/dist/scrollbars.min.js"></script>
+    <script src="bower_components/angular-paginate-anything/dist/paginate-anything-tpls.js"></script>
+    <script src="bower_components/angular-md5/angular-md5.min.js"></script>
+    <script src="bower_components/angular-loading/angular-loading.min.js"></script>
+    <script src="bower_components/alertify.js/dist/js/ngAlertify.js"></script>
+    <script src="bower_components/angular-elevate-zoom/src/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/angular-read-more/dist/readmore.min.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+    <script src="bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
+    <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+    <script src='/bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+    <script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
+    <script src="/bower_components/textAngular/dist/mobile-detect.min.js"></script>
+    <script src="/bower_components/ng-material-datetimepicker/dist/angular-material-datetimepicker.min.js"></script>
+    <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    <script type="text/javascript" src="bower_components/angular-count-to/angular.count-to.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+    <link rel='stylesheet' href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css" />
+    <script type="text/javascript" src="bower_components/angular-cache/dist/angular-cache.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="socket.io-client/socket.io.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="bower_components/angular-slick/dist/slick.min.js"></script>
+    <script src="bower_components/angular-socialshare/angular-socialshare.min.js"></script>
+    <script src="bower_components/angular-recaptcha/release/angular-recaptcha.min.js"></script>
+    <link rel='stylesheet' href="bower_components/angular-socialshare/angular-socialshare.min.css" />
+    <script src="app/app.js"></script>
+    <script src="app/app_page/app_page.js"></script>
+    <script src="app/app_page/controller/app.page.controller.js"></script>
+    <script src="app/account/account.js"></script>
+    <script src="app/account/controller/login.controller.js"></script>
+    <script src="app/account/controller/signup.controller.js"></script>
+    <script src="app/account/controller/forgot.password.controller.js"></script>
+    <script src="app/account/controller/active.controller.js"></script>
+    <script src="app/account/directive/directive.account.js"></script>
+    <script src="app/account/directive/progress.bar.product.js"></script>
+    <script src="app/account/controller/profile.controller.js"></script>
+    <script src="app/account/controller/mywallet.controller.js"></script>
+    <script src="app/account/controller/new.notify.controller.js"></script>
+    <script src="app/account/controller/topup.controller.js"></script>
+    <script src="components/auth/auth.service.js"></script>
+    <script src="components/auth/user.service.js"></script>
+    <script src="app/account/controller/yourprofile.controller.js"></script>
+    <script src="app/account/controller/updateavatar.controller.js"></script>
+    <script src="app/account/controller/changepassword.controller.js"></script>
+    <script src="app/account/controller/shippingaddress.controller.js"></script>
+    <script src="app/homepage/controller/homepage.controller.js"></script>
+    <script src="app/homepage/directive/homepage.directive.js"></script>
+    <script src="app/homepage/directive/hook.list.order.new.js"></script>
+    <script src="app/homepage/directive/home.count.timer.js"></script>
+    <script src="app/homepage/homepage.js"></script>
+    <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+    <script src="components/master/controller/master.controller.js"></script>
+    <script src="components/master/directive/top.count.directive.js"></script>
+    <script src="components/master/controller/right.controller.js"></script>
+    <script src="components/master/factory/factory.count.take.part.in.js"></script>
+    <script src="components/socket/socket.service.js"></script>
+    <script src="app/cart/cart.js"></script>
+    <script src="app/cart/controller/cart.controller.js"></script>
+    <script src="app/cart/factory/cart.factory.js"></script>
+    <script src="app/cart/model/cart.model.js"></script>
+    <script src="app/cart/directive/directive.count.code.js"></script>
+    <script src="app/checkout/checkout.js"></script>
+    <script src="app/checkout/controller/checkout.controller.js"></script>
+    <script src="app/checkout/factory/factory.checkout.js"></script>
+    <script src="app/order/order.js"></script>
+    <script src="app/order/factory/order.factory.js"></script>
+    <script src="app/order/controller/order.controller.js"></script>
+    <script src="app/order/directive/directive.order.js"></script>
+    <script src="app/product/product.js"></script>
+    <script src="app/product/controller/product.controller.detail.js"></script>
+    <script src="app/product/controller/product.controller.lottery.js"></script>
+    <script src="app/product/controller/product.controller.finish.js"></script>
+    <script src="app/product/controller/product.controller.find.js"></script>
+    <script src="app/product/directive/product.wiget.directive.js"></script>
+    <script src="app/product/factory/product.factory.js"></script>
+    <script src="app/product/controller/product.controller.historyselled.js"></script>
+    <script src="app/product/directive/product.session.selled.directive.js"></script>
+    <script src="components/filter/filter.service.js"></script>
+    <script src="app/restricted_area/restricted.area.js"></script>
+    <script src="app/restricted_area/controller/restricted.area.controller.js"></script>
+    <script src="app/waiting_result/waiting.result.js"></script>
+    <script src="app/waiting_result/controller/waiting.result.controller.js"></script>
+    <script src="app/waiting_result/directive/watting.result.user.js"></script>
+    <script src="app/customer_share/customer.share.js"></script>
+    <script src="app/customer_share/factory/sharing.factory.js"></script>
+    <script src="app/customer_share/directive/directive.sharing.js"></script>
+    <script src="app/customer_share/controller/admin.sharing.controller.js"></script>
+    <script src="app/customer_share/controller/customer.share.controller.js"></script>
+    <script src="app/forum/forum.js"></script>
+    <script src="app/forum/controller/forum.controller.js"></script>
+    <script src="app/forum/factory/forum.factory.js"></script>
+    <script src="app/forum/directive/directive.forum.js"></script>
+    <script src="app/category/category.js"></script>
+    <script src="app/category/controller/category.controller.js"></script>
+    <script src="app/category/directive/category.type.directive.js"></script>
+    <script src="app/category/factory/category.factory.js"></script>
+    <script src="app/help/help.js"></script>
+    <script src="app/help/factory/help.factory.js"></script>
+    <script src="app/help/controller/help.controller.js"></script>
+    <script src="app/admin/admin.js"></script>
+    <script src="app/admin/factory/admin.factory.js"></script>
+    <script src="app/admin/factory/news.factory.js"></script>
+    <script src="app/admin/factory/system.parameters.factory.js"></script>
+    <script src="app/admin/factory/system.parameter.factory.js"></script>
+    <script src="app/admin/directive/directive.admin.js"></script>
+    <script src="app/admin/controller/admin.manage.controller.js"></script>
+    <script src="app/admin/controller/admin.banner.controller.js"></script>
+    <script src="app/admin/controller/admin.news.controller.js"></script>
+    <script src="app/admin/controller/admin.system.parameter.controller.js"></script>
+    <script src="components/directive/count.down.js"></script>
+    <script src="components/directive/form.directive.js"></script>
+    <script src="components/countdown/countdouwn.js"></script>
+    <script src="app/country_state/factory/country_state.factory.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-100217479-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '349685198718668');
+        fbq('track', 'PageView');
+    </script><noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=349685198718668&ev=PageView&noscript=1"
+	/></noscript></head>
+
+<body ng-app="shopnxApp" ui-router-styles="ui-router-styles">
+    <div ng-include="'components/master/views/header.html'"></div>
+    <div ui-view="" class="bg-while"></div>
+    <div ng-include="'components/master/views/nav_right.html'"></div>
+    <div ng-include="'components/master/views/footer.html'"></div>
+    <script>
+        window.___gcfg = {
+            lang: 'vi-VN',
+            parsetags: 'onload'
+        };
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async="async" defer="defer"></script>
+    <div id="fb-root"></div>
+    <script>
+        (function() {
+            var e = document.createElement('script');
+            e.async = true;
+            e.src = document.location.protocol + '//connect.facebook.net/vi_VN/all.js';
+            document.getElementById('fb-root').appendChild(e)
+        }());
+    </script>
+    <script type="text/javascript">window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",71166]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
+</body>
+
+</html>

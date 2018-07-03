@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .config(function($stateProvider) {$stateProvider .state('checkount', {title: 'Xác nhận thanh toán', url: '/xac-nhan-thanh-toan-don-hang.html', templateUrl: 'app/checkout/views/checkout.view.html', controller: 'CheckoutCtrl', data: {css: 'assets/theme/other/style.app.css'}, }) });

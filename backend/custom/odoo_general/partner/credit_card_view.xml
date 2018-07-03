@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+		<record id="view_credit_card_member_tree" model="ir.ui.view">
+			<field name="name">credit.card.member.tree</field>
+			<field name="model">credit.card.member</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="user_id"/>
+					<field name="create_date"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_credit_card_member_form" model="ir.ui.view">
+			<field name="name">credit.card.member.form</field>
+			<field name="model">credit.card.member</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="%(act_wizard_select_partner_view)d" type="action" string="Select customers" states="draft,update"/>
+						<button name="act_update_credit" type="object" string="Update"  attrs="{'invisible':['|',('state','=','done'),('detail_ids','=',[])]}"/>
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" readonly="1" class="oe_inline" attrs="{'readonly':[('state','=','done')]}"/>
+		                    </h1>
+		            	</div>
+		            	<group>
+		            		<field name="create_date" readonly="1"/>
+		            		<field name="user_id"/>
+		            	</group>
+		            	<notebook>
+		            		<page string="Details">
+		            			<field name="detail_ids" attrs="{'readonly':[('state','=','done')]}">
+		            				<tree editable="bottom">
+		            					<field name="partner_id" required="1"/>
+		            					<field name="type" required="1"/>
+		            					<field name="amount" required="1"/>
+		            					<field name="reason" required="1"/>
+		            				</tree>
+		            			</field>
+		            		</page>
+		            	</notebook>
+					</sheet>
+					<div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+				</form>
+			</field>
+		</record>
+		
+		<record id="act_credit_card_member" model="ir.actions.act_window">
+			<field name="name">Credit Card</field>
+			<field name="res_model">credit.card.member</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="menu_credit_card_member" parent="base.menu_sales" action="act_credit_card_member" string="Credit Card" sequence="3" groups="base.group_sale_manager"/>
+		
+		<record id="view_credit_card_reason_tree" model="ir.ui.view">
+			<field name="name">credit.card.reason.tree</field>
+			<field name="model">credit.card.reason</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_credit_card_reason_form" model="ir.ui.view">
+			<field name="name">credit.card.reason.form</field>
+			<field name="model">credit.card.reason</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" class="oe_inline" required="1"/>
+		                    </h1>
+		            	</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="act_credit_card_reason" model="ir.actions.act_window">
+			<field name="name">Reason</field>
+			<field name="res_model">credit.card.reason</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="menu_credit_card_reason" parent="base.menu_base_config" action="act_credit_card_reason" string="Credit Card" sequence="3" groups="base.group_user"/>
+		
+	</data>
+</openerp>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+	
+    <!-- inherit tree -->
+    <record id="product_public_category_tree_view_sync" model="ir.ui.view">
+        <field name="name">product.public.category.tree.sync</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>
+        <field name="arch" type="xml">
+        	<field name="complete_name" position="after">
+             	 <field name="icon"/>
+
+            </field>            
+        </field>
+    </record>
+    
+	   
+	<!-- inherit form -->
+    <record id="product_public_category_form_view_sync" model="ir.ui.view">
+        <field name="name">product.public.category.form.sync</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+             <field name="parent_id" position="after">
+             	 <field name="icon" />
+                 <field name="bg_color"/>
+             </field>
+             <div class="oe_left" position="after">
+             <notebook>
+             	<page string="Images">
+             		 <field name="image_ids" >
+             		 	<tree editable="bottom">
+             		 		  <field name="sequence"/>
+                           	  <field name="name"/>
+                              <field name="link_href"/>
+             		 	</tree>
+             		 </field>
+             	</page>
+             	<page string="Hot Products">
+	            	<field name="hot_products" widget="many2many_kanban" />
+	            </page>
+             </notebook>
+             </div>
+        </field>
+    </record>
+    
+        <record id="product_public_category_general_tree_view" model="ir.ui.view">
+            <field name="name">product.public.category.general.tree</field>
+            <field name="model">product.public.category</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree toolbar="True" string="Public Product Categories">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+		<record id="product_public_category_custom_action" model="ir.actions.act_window">
+	        <field name="name">Public Product Categories</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">product.public.category</field>
+	        <field name="domain">[('parent_id','=',False)]</field>
+	        <field name="view_type">tree</field>
+	        <field name="view_id" eval="product_public_category_general_tree_view"/>
+	        <field name="help" type="html">
+	          <p class="oe_view_nocontent_create">
+	            Click to define a new category.
+	          </p><p>
+	            Categories are used to browse your products through the
+	            touchscreen interface.
+	          </p><p>
+	            If you put a photo on the category, the layout of the
+	            touchscreen interface will automatically. We suggest not to put
+	            a photo on categories for small (1024x768) screens.
+	          </p>
+	        </field>
+	    </record>
+		<menuitem action="product_public_category_custom_action" id="menu_product_public_category_general" parent="base.menu_base_config" sequence="27"/>
+		
+	    <record model="ir.actions.act_window" id="action_product_public_category_custom">
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">product.public.category</field>
+	        <field name="name">Public Product Categories</field>
+	        <field name="view_type">form</field>
+	        <field name="domain">[('parent_id','child_of',active_id)]</field>
+	        <field name="context">{'parent_id':active_id}</field>
+	    </record>
+	
+	    <record model="ir.values" id="ir_action_product_public_category_custom">
+	        <field name="key2" eval="'tree_but_open'"/>
+	        <field name="model" eval="'product.public.category'"/>
+	        <field name="name">Public Product Categories</field>
+	        <field name="value" eval="'ir.actions.act_window,%d'%action_product_public_category_custom"/>
+	    </record>
+
+	    <record id="website_sale.product_public_category_action" model="ir.actions.act_window">
+	        <field name="name">Public Product Categories</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">product.public.category</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="domain">[]</field>
+	        <field name="view_id" eval="False"/>
+	        <field name="help" type="html">
+	          <p class="oe_view_nocontent_create">
+	            Click to define a new category.
+	          </p><p>
+	            Categories are used to browse your products through the
+	            touchscreen interface.
+	          </p><p>
+	            If you put a photo on the category, the layout of the
+	            touchscreen interface will automatically. We suggest not to put
+	            a photo on categories for small (1024x768) screens.
+	          </p>
+	        </field>
+	    </record>
+    
+	    <menuitem action="website_sale.product_public_category_action" id="website_sale.menu_product_public_category" parent="product.prod_config_main" sequence="30"/>
+	        
+	 </data>
+
+</openerp>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_report_members_form" model="ir.ui.view">
+			<field name="name">view.report.members.form</field>
+			<field name="model">report.members</field>
+			<field name="arch" type="xml">
+				<form string="Report Members">
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="date"/>
+								<field name="month" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+							<group>
+								<field name="user_id"/>
+								<field name="year" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readonly="1">
+								<tree editable="bottom" create="false">
+									<field name="total_member"/>
+									<field name="member_register"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_report_members_tree" model="ir.ui.view">
+			<field name="name">report.members.tree</field>
+			<field name="model">report.members</field>
+			<field name="arch" type="xml">
+				<tree string="Report Members">
+					<field name="date"/>
+					<field name="user_id"/>
+					<field name="month"/>
+					<field name="year"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_report_members_search" model="ir.ui.view">
+			<field name="name">report.members.search</field>
+			<field name="model">report.members</field>
+			<field name="arch" type="xml">
+				<search string="Report Members">
+					<field name="date"/>
+					<field name="user_id"/>
+					<field name="month"/>
+					<field name="year"/>
+					<group expand="0" string="Group By">
+						<filter string="Create Date" domain="[]" context="{'group_by':'date'}"/>
+						<filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_report_members" model="ir.actions.act_window">
+	        <field name="name">Report Members</field>
+	        <field name="res_model">report.members</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_report_members_search"/>
+	    </record>
+    	
+    	<menuitem name="Members" id="menu_report_purchase_members" parent="base.menu_reporting" sequence="10" groups="base.group_sale_manager"/>
+		<menuitem action="action_report_members" id="menu_report_members" parent="menu_report_purchase_members" sequence="1"/>
+		
+	</data>
+</openerp>

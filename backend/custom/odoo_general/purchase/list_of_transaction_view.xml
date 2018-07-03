@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+		<record id="view_list_of_transaction_tree" model="ir.ui.view">
+			<field name="name">list.of.transaction.tree</field>
+			<field name="model">list.of.transaction</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="member_ids" widget="many2many_tags"/>
+					<field name="product_ids" widget="many2many_tags"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_list_of_transaction_search" model="ir.ui.view">
+			<field name="name">view.list.of.transaction.search</field>
+			<field name="model">list.of.transaction</field>
+			<field name="arch" type="xml">
+				<search string="List of Transactions">
+					<field name="user_id"/>
+					<group expand="0" string="Group By">
+                        <filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="view_list_of_transaction_form" model="ir.ui.view">
+			<field name="name">list.of.transaction.form</field>
+			<field name="model">list.of.transaction</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="from_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date,to_date)"/>
+							</group>
+							<group>
+								<field name="to_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date,to_date)"/>
+							</group>
+						</group>
+						<group>
+							<field name="user_id" readonly="1"/>
+						</group>
+						<group>
+							<group>
+								<field name="member_ids" widget="many2many_tags" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+							<group>
+								<field name="product_ids" widget="many2many_tags" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Detail">
+								<field name="detail_ids" readonly="1">
+									<tree editable="bottom">
+										<field name="member_id"/>
+										<field name="member_nickname"/>
+										<field name="product_id"/>
+										<field name="codes"/>
+										<field name="amount_exchange"/>
+										<field name="date_transaction"/>
+										<field name="milisecond"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="act_list_of_transaction" model="ir.actions.act_window">
+			<field name="name">List of Transaction</field>
+			<field name="res_model">list.of.transaction</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="action_list_of_transaction" action="act_list_of_transaction" parent="base.next_id_73" sequence="4"/>
+		
+	</data>
+</openerp>

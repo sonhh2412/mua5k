@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data noupdate="1">
+        <record id="general_synchronization_default" model="general.synchronization">
+            <field name="name">localhost</field>
+            <field name="port">5672</field>
+            <field name="virtual_host">/</field>
+            <field name="username">10k</field>
+            <field name="password">admin123!</field>
+        </record>
+	</data>
+    <data>
+        <!-- sync -->
+       
+        <record id="view_general_synchronization_tree" model="ir.ui.view">
+            <field name="name">general.synchronization.tree</field>
+            <field name="model">general.synchronization</field>
+            <field name="arch" type="xml">
+                <tree string="synchronization">
+                    <field name="name"/>
+                    <field name="username"/>
+                    <field name="password" password="True"/>
+                    <field name="port"/>
+                    <field name="virtual_host"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_general_synchronization_form" model="ir.ui.view">
+            <field name="name">general.synchronization.form</field>
+            <field name="model">general.synchronization</field>
+            <field name="arch" type="xml">
+                <form string="Synchronization" create="0" delete="0">
+                    <sheet>
+                    	<group>
+                    		<group>
+                    			<field name="name"/>
+                    			<field name="username"/>
+                    			<field name="password" password="True"/>
+                    		</group>
+                    		<group>
+                    			<field name="port"/>
+                    			<field name="virtual_host"/>
+                    		</group>
+                    	</group>
+                    	<div>
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_country" string="1.Push Countries" type="object"/>                                     
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_country_state" string="2.Push Countries State" type="object"/>                                     
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_product_brand"  string="3.Push Product Brands" type="object"/>                                     
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_product_public_category"  string="4.Push Product Categories" type="object"/>                                     
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_product_child" string="5.Push Products" type="object"/>  
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_product_hots" string="6.Push Hot Products" type="object"/> 
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_convert_category"  string="7.Push Categories Convert" type="object"/> 
+							<button icon="gtk-go-up" class="oe_highlight" name="action_sync_product_sessions" string="8.Push Product Sessions" type="object"/>  
+							                                       
+	                    </div>
+	                 <separator string="List data waiting add to queue" />
+	                 <notebook>
+	                 	<page string="Countries &amp; States">
+	                 		<separator string="Countries" />
+	                 		<field name="country_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />
+	                 				<field name="is_delete" />		
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Countries"
+	                                         type="object"/>                    				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Countries" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>
+	                 		<separator string="States" />
+	                 		<field name="state_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />
+	                 				<field name="is_delete" />		
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push State"
+	                                         type="object"/>       	                 				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Countries" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>
+	                 	</page>
+	                 	<page string="Customers &amp; Orders">
+	                 		<separator string="Customers" />
+	                 		<field name="partner_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />	
+	                 				<field name="is_delete" />		 
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Customers"
+	                                         type="object"/>       				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Customers" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>	
+	                 		<separator string="Update status Sale Order" />
+	                 		<field name="sale_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Orders Status"
+	                                         type="object"/>       				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Sale Orders" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>	
+		                 		
+		                 	<separator string="Dial Sale Order" />
+		                 		<field name="sale_dial_ids" >
+		                 			<tree>
+		                 				<field name="no" />	 
+		                 				<field name="name" />
+		                 				<button icon="gtk-no"
+		                                         class="oe_highlight"
+		                                         name="action_createRabbitMQ"
+		                                         string="Push Dial Orders"
+		                                         type="object"/>       				
+		                 			</tree>
+		                 			<form>
+		                 				<sheet>
+		                 					<group>
+		                 						<field name="name" />	       
+		                 					</group>
+		                 					<separator string="Sale Orders" />
+		                 					<field name="list_ids" widget="many2many_tags"/>
+		                 				</sheet>
+		                 			</form>
+		                 		</field>   
+		                 		<separator string="Credit Card" />
+		                 		<field name="knumber_ids" >
+		                 			<tree create="0" delete="0" edit="0">
+		                 				<field name="no" />	 
+		                 				<field name="name" />	
+		                 				<button icon="gtk-no"
+		                                         class="oe_highlight"
+		                                         name="action_createRabbitMQ"
+		                                         string="Push Knumber Change"
+		                                         type="object"/>                  				
+		                 			</tree>
+		                 		</field>
+		                 		<separator string="Give K" />
+		                 		<field name="give_k_ids" >
+		                 			<tree create="0" delete="0" edit="0">
+		                 				<field name="no" />	 
+		                 				<field name="name" />	
+		                 				<button icon="gtk-no"
+		                                         class="oe_highlight"
+		                                         name="action_createRabbitMQ"
+		                                         string="Push Give K Change"
+		                                         type="object"/>                  				
+		                 			</tree>
+		                 		</field>
+		                 		<separator string="Notify Content" />
+		                 		<field name="content_notify_ids" >
+		                 			<tree create="0" delete="0" edit="0">
+		                 				<field name="no" />	 
+		                 				<field name="name" />	
+		                 				<button icon="gtk-no"
+		                                         class="oe_highlight"
+		                                         name="action_createRabbitMQ"
+		                                         string="Push Notify Content"
+		                                         type="object"/>                  				
+		                 			</tree>
+		                 		</field>
+		                 		<separator string="Send Notify Content" />
+		                 		<field name="notify_ids" >
+		                 			<tree create="0" delete="0" edit="0">
+		                 				<field name="no" />	 
+		                 				<field name="name" />	
+		                 				<button icon="gtk-no"
+		                                         class="oe_highlight"
+		                                         name="action_createRabbitMQ"
+		                                         string="Push Send Notify Content"
+		                                         type="object"/>                  				
+		                 			</tree>
+		                 		</field>
+	                 	</page>
+	                 	<page string="Brands &amp; Categories">
+	                 		<separator string="Brands" />
+	                 		<field name="brand_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />	
+	                 				<field name="is_delete" />		
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Brands"
+	                                         type="object"/>                     				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Brands" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>
+	                 		<separator string="Categories" />
+	                 		<field name="category_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />	 
+	                 				<field name="is_delete" />		
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Categories"
+	                                         type="object"/>                    				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Categories" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>
+	                 		
+	                 		<separator string="Categories Convert" />
+	                 		<field name="convert_ids" create="0" delete="0" edit="0" >
+	                 			<tree >
+	                 				<field name="no" />	 
+	                 				<field name="name" />	 
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Categories"
+	                                         type="object"/>                    				
+	                 			</tree>
+	                 		</field>
+	                 	</page>
+	                 	<page string="Products">
+	                 		<separator string="Products" />
+	                 		<field name="product_ids" >
+	                 			<tree>
+	                 				<field name="no" />	 
+	                 				<field name="name" />	
+	                 				<field name="is_delete" />		
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Product"
+	                                         type="object"/>                  				
+	                 			</tree>
+	                 			<form>
+	                 				<sheet>
+	                 					<group>
+	                 						<field name="name" />	       
+	                 					</group>
+	                 					<separator string="Products" />
+	                 					<field name="list_ids" widget="many2many_tags"/>
+	                 				</sheet>
+	                 			</form>
+	                 		</field>
+	                 		<separator string="Hot Products" />
+	                 		<field name="hot_product_ids" >
+	                 			<tree create="0" delete="0" edit="0">
+	                 				<field name="no" />	 
+	                 				<field name="name" />	
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Hot Products"
+	                                         type="object"/>                  				
+	                 			</tree>
+	                 		</field>
+	                 		<separator string="Session Products" />
+	                 		<field name="session_product_ids" >
+	                 			<tree create="0" delete="0" edit="0">
+	                 				<field name="no" />	 
+	                 				<field name="name" />	
+	                 				<button icon="gtk-no"
+	                                         class="oe_highlight"
+	                                         name="action_createRabbitMQ"
+	                                         string="Push Session Products"
+	                                         type="object"/>                  				
+	                 			</tree>
+	                 		</field>
+	                 		
+	                 	</page>
+	                 	
+	                 </notebook>
+	                  
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+
+        <record id="action_general_synchronization" model="ir.actions.act_window">
+            <field name="name">Synchronizations</field>
+            <field name="res_model">general.synchronization</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_general_synchronization_form"/>
+            <field name="res_id">1</field>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="menu_general_synchronization_root" name="Synchronizations" sequence="499" groups="base.group_master"/>
+        <menuitem id="menu_action_general_synchronization" name="Synchronizations" parent="menu_general_synchronization_root" sequence="0"/>
+		<menuitem action="action_general_synchronization" id="menu_action_general_synchronization_queue" name="Synchronizations" parent="menu_action_general_synchronization" sequence="0"/>
+		
+
+    </data>
+</openerp>

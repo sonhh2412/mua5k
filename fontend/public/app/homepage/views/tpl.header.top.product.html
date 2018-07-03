@@ -1,0 +1,10 @@
+<div class="col-md-6 p-0 product-featured-item-new featured-item" ng-repeat="pro in product">
+    <div class="product-featured-item ">
+        <div class="featured-item-info"> <a href="/san-pham/{{pro.slug}}.html"> <span class="title">{{pro.name.toLowerCase()}}</span> </a> <span class="num-thamgia m-t-10">Có <span class="red" style="font-weight:700">{{selled[$index]}}</span> đã mua</span>
+        </div>
+    </div>
+    <div class="featured-image">
+        <a href="/san-pham/{{pro.slug}}.html">
+            <div afkl-lazy-image="{{domain_image_product + pro.images[0].image}}" height="100" afkl-lazy-image-options='{"offset":400}' class="loaded" /> </a>
+    </div>
+</div>

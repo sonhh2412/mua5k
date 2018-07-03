@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- List of Winners -->
+		<record id="fin_list_of_winner_report" model="ir.actions.report.xml">
+	        <field name="name">fin_list_of_winner_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">list.of.winner.report</field>
+	        <field name="report_name">fin_list_of_winner_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/list_of_winner.py</field>
+	        <field name="report_rml">odoo_general/report/list_of_winner.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_list_of_winner_report" 
+			model="list.of.winner.report" 
+			name="fin_list_of_winner_report" 
+			string="List of Winners" 
+			rml="odoo_general/report/list_of_winner.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['list.of.winner.report']" name="models"/>
+	        <field name="name">Print list winner</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_list_of_winner_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- List of Transactions -->
+	    <record id="fin_list_of_transaction_report" model="ir.actions.report.xml">
+	        <field name="name">fin_list_of_transaction_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">list.of.transaction</field>
+	        <field name="report_name">fin_list_of_transaction_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/list_of_transaction.py</field>
+	        <field name="report_rml">odoo_general/report/list_of_transaction.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_list_of_transaction_report" 
+			model="list.of.transaction" 
+			name="fin_list_of_transaction_report" 
+			string="List of Transactions" 
+			rml="odoo_general/report/list_of_transaction.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['list.of.transaction']" name="models"/>
+	        <field name="name">Print List Transactions</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_list_of_transaction_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Sale Report -->
+	    <record id="fin_sale_report_custom" model="ir.actions.report.xml">
+	        <field name="name">fin_sale_report_custom</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">sale.report.custom</field>
+	        <field name="report_name">fin_sale_report_custom</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/report_sale.py</field>
+	        <field name="report_rml">odoo_general/report/report_sale.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_sale_report_custom" 
+			model="sale.report.custom" 
+			name="fin_sale_report_custom" 
+			string="Sale Report" 
+			rml="odoo_general/report/report_sale.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['sale.report.custom']" name="models"/>
+	        <field name="name">Print Sale Report</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_sale_report_custom)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Sale Report K-->
+	    <record id="fin_sale_k_report" model="ir.actions.report.xml">
+	        <field name="name">fin_sale_k_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">sale.report.k</field>
+	        <field name="report_name">fin_sale_k_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/sale_report_k.py</field>
+	        <field name="report_rml">odoo_general/report/sale_report_k.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_sale_k_report" 
+			model="sale.report.k" 
+			name="fin_sale_k_report" 
+			string="Sale Report (K)" 
+			rml="odoo_general/report/sale_report_k.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['sale.report.k']" name="models"/>
+	        <field name="name">Print Sale Report (K)</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_sale_k_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Sale Report Quantity-->
+	    <record id="fin_sale_quantity_report" model="ir.actions.report.xml">
+	        <field name="name">fin_sale_quantity_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">sale.report.quantity</field>
+	        <field name="report_name">fin_sale_quantity_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/sale_report_quantity.py</field>
+	        <field name="report_rml">odoo_general/report/sale_report_quantity.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_sale_quantity_report" 
+			model="sale.report.quantity" 
+			name="fin_sale_quantity_report" 
+			string="Sale Report (Quantity)" 
+			rml="odoo_general/report/sale_report_quantity.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['sale.report.quantity']" name="models"/>
+	        <field name="name">Print Sale Report (Quantity)</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_sale_quantity_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Report Members-->
+	    <record id="fin_report_members_report" model="ir.actions.report.xml">
+	        <field name="name">fin_report_members_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">report.members</field>
+	        <field name="report_name">fin_report_members_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/report_members.py</field>
+	        <field name="report_rml">odoo_general/report/report_members.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_report_members_report" 
+			model="report.members" 
+			name="fin_report_members_report" 
+			string="Report Members" 
+			rml="odoo_general/report/report_members.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['report.members']" name="models"/>
+	        <field name="name">Print Report Members</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_report_members_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Buy Credit K-->
+	    <record id="fin_buy_credit_k_report" model="ir.actions.report.xml">
+	        <field name="name">fin_buy_credit_k_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">buy.credit.k</field>
+	        <field name="report_name">fin_buy_credit_k_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/report_buy_credit_k.py</field>
+	        <field name="report_rml">odoo_general/report/report_buy_credit_k.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_buy_credit_k_report" 
+			model="buy.credit.k" 
+			name="fin_buy_credit_k_report" 
+			string="Print Buy Credit K" 
+			rml="odoo_general/report/report_buy_credit_k.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['buy.credit.k']" name="models"/>
+	        <field name="name">Print Buy Credit K</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_buy_credit_k_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Total Asscess-->
+	    <record id="fin_report_member_asscess_report" model="ir.actions.report.xml">
+	        <field name="name">fin_report_member_asscess_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">report.member.asscess</field>
+	        <field name="report_name">fin_report_member_asscess_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/member_asscess.py</field>
+	        <field name="report_rml">odoo_general/report/member_asscess.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_report_member_asscess_report" 
+			model="report.member.asscess" 
+			name="fin_report_member_asscess_report" 
+			string="Print Total Asscess" 
+			rml="odoo_general/report/member_asscess.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['report.member.asscess']" name="models"/>
+	        <field name="name">Print Total Asscess</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_report_member_asscess_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!--  Inherit hidden report -->
+		<report 
+	   		id="product.report_product_label" 
+	   		model="product.product" 
+	   		name="product.product.label" 
+	   		string="Products Labels" 
+	   		xml="product/report/product_label.xml" 
+	   		xsl="product/report/product_label.xsl"
+	   		menu="False"/>
+	   		
+		<report 
+			auto="False" 
+			id="stock.report_product_history" 
+			model="product.product" 
+			name="stock.product.history" 
+			string="Stock Level Forecast"
+			menu="False"/>
+			
+		<!-- Reprot list Product -->
+		<record id="fin_list_product_report" model="ir.actions.report.xml">
+	        <field name="name">fin_list_product_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">product.product</field>
+	        <field name="report_name">fin_list_product_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/report_list_product.py</field>
+	        <field name="report_rml">odoo_general/report/report_list_product.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_list_product_report" 
+			model="product.product" 
+			name="fin_list_product_report" 
+			string="List Product" 
+			rml="odoo_general/report/report_list_product.ods"
+			groups="base.group_sale_manager"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['product.product']" name="models"/>
+	        <field name="name">List Product</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_list_product_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	    <!-- Reprot Transaction Average -->
+		<record id="fin_transaction_average_report" model="ir.actions.report.xml">
+	        <field name="name">fin_transaction_average_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">report.transaction.average</field>
+	        <field name="report_name">fin_transaction_average_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/transaction_average.py</field>
+	        <field name="report_rml">odoo_general/report/transaction_average.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_transaction_average_report" 
+			model="report.transaction.average" 
+			name="fin_transaction_average_report" 
+			string="Print Transaction Average" 
+			rml="odoo_general/report/transaction_average.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['report.transaction.average']" name="models"/>
+	        <field name="name">Print Transaction Average</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_transaction_average_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+		</ir_set>	    
+
+	    <!-- Reprot list Members -->
+		<record id="fin_list_members_report" model="ir.actions.report.xml">
+	        <field name="name">fin_list_members_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">res.partner</field>
+	        <field name="report_name">fin_list_members_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/report_list_members.py</field>
+	        <field name="report_rml">odoo_general/report/report_list_members.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_list_members_report" 
+			model="res.partner" 
+			name="fin_list_members_report" 
+			string="List Members" 
+			rml="odoo_general/report/report_list_members.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['res.partner']" name="models"/>
+	        <field name="name">List Members</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_list_members_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	     <!-- Reprot Dialed Session -->
+		<record id="fin_dialed_session_report" model="ir.actions.report.xml">
+	        <field name="name">fin_dialed_session_report</field>
+	        <field name="type">ir.actions.report.xml</field>
+	        <field name="model">dialed.session</field>
+	        <field name="report_name">fin_dialed_session_report</field>
+	        <field name="report_type">aeroo</field>
+	        <field name="in_format">oo-ods</field>
+	        <field name="out_format" model="report.mimetypes" search="[('code','=','oo-xls'),('compatible_types','=','oo-ods')]"/>
+	        <field name="parser_loc">odoo_general/report/report_dialed_session.py</field>
+	        <field name="report_rml">odoo_general/report/report_dialed_session.ods</field>
+	        <field name="parser_state">loc</field>
+	        <field name="tml_source">file</field>
+	        <field name="attachment_use" eval="0"/>
+    	</record>
+    	
+		<report 
+			auto="True" 
+			menu="True" 
+			id="fin_dialed_session_report" 
+			model="dialed.session" 
+			name="fin_dialed_session_report" 
+			string="Dialed Session" 
+			rml="odoo_general/report/report_dialed_session.ods"/>
+			
+		<ir_set>
+	        <field eval="'action'" name="key"/>
+	        <field eval="'client_print_multi'" name="key2"/>
+	        <field eval="['dialed.session']" name="models"/>
+	        <field name="name">Dialed Session</field>
+	        <field eval="'ir.actions.report.xml,'+str(fin_dialed_session_report)" name="value"/>
+	        <field eval="True" name="isobject"/>
+	        <field eval="True" name="replace"/>
+	    </ir_set>
+	    
+	</data>
+</openerp>

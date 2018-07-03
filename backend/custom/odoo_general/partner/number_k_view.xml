@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_number_k_graph" model="ir.ui.view">
+         <field name="name">number.k.graph</field>
+         <field name="model">number.k.report</field>
+         <field name="arch" type="xml">
+             <graph string="Number K" type="pie" stacked="True">
+                 <field name="partner_id" type="row"/>
+                 <!-- <field name="date" interval="month" type="col"/> -->
+                 <field name="amount_exchange" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+    <record id="view_number_k_search" model="ir.ui.view">
+        <field name="name">number.k.search</field>
+        <field name="model">number.k.report</field>
+        <field name="arch" type="xml">
+            <search string="Number K">
+                <field name="month"/>
+                <field name="year"/>
+                <filter string="Current Month" name="filter_current_month" domain="[('date','&lt;=', (context_today()+relativedelta(day=31)).strftime('%Y-%m-%d')),('date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>
+                <separator/>
+                <group expand="1" string="Group By">
+                    <filter string="Members" name="group_member" context="{'group_by':'partner_id'}"/>
+                    <separator/>
+                    <filter string="Number K buy in day" name="group_day" context="{'group_by':'date:day'}"/>
+                    <filter string="Month" name="group_month" context="{'group_by':'month'}"/>
+                    <filter string="Year" name="group_year" context="{'group_by':'date:year'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_number_k_report" model="ir.actions.act_window">
+        <field name="name">Number K</field>
+        <field name="res_model">number.k.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="context">{'search_default_filter_current_month':1}</field>
+        <field name="search_view_id" ref="view_number_k_search"/>
+        <field name="view_id" ref="view_number_k_graph"/>
+	</record>
+
+	
+    <menuitem id="menu_number_k" name="Number K" parent="base.menu_reporting" sequence="11" groups="base.group_sale_manager"/>
+    <menuitem action="action_number_k_report" id="menu_number_k_report" parent="menu_number_k" sequence="1"/>
+
+</data>
+</openerp>

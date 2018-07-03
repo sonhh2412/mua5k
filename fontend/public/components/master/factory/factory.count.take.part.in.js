@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .factory('Hook', ['$resource', function($resource) {return {getCount : $resource('/api/hook/get-count', null, {'getCount': { method:'PUT'}}), getList : $resource('/api/hook/get-list', null, {'getList': { method:'PUT'}}), } }])

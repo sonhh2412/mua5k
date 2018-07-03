@@ -1,0 +1,363 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * base_setup
+# 
+# Translators:
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-21 14:07+0000\n"
+"PO-Revision-Date: 2016-02-23 04:22+0000\n"
+"Last-Translator: fanha99 <fanha99@hotmail.com>\n"
+"Language-Team: Vietnamese (http://www.transifex.com/odoo/odoo-8/language/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "(reload fonts)"
+msgstr "(Tải lại phông chữ)"
+
+#. module: base_setup
+#: field:base.config.settings,module_portal:0
+msgid "Activate the customer portal"
+msgstr "Kích hoạt cổng giao dịch khách hàng (customer portal)"
+
+#. module: base_setup
+#: field:base.config.settings,module_share:0
+msgid "Allow documents sharing"
+msgstr "Cho phép chia sẻ tài liệu"
+
+#. module: base_setup
+#: field:base.config.settings,module_google_calendar:0
+msgid "Allow the users to synchronize their calendar with Google Calendar"
+msgstr "Cho phép người sử dụng đồng bộ hóa lịch của họ với lịch của Google"
+
+#. module: base_setup
+#: field:base.config.settings,module_base_import:0
+msgid "Allow users to import data from CSV files"
+msgstr "Cho phép người dùng nhập dữ liệu (import) từ một tập tin dịnh dạng CSV"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: base_setup
+#: field:base.config.settings,module_google_drive:0
+msgid "Attach Google documents to any record"
+msgstr "Đính kèm tài liệu Google cho bất kỳ hồ sơ nào"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Authentication"
+msgstr "Chứng thực"
+
+#. module: base_setup
+#: field:sale.config.settings,module_crm:0
+msgid "CRM"
+msgstr "CRM"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Client"
+msgstr "Máy khách"
+
+#. module: base_setup
+#: model:ir.actions.act_window,name:base_setup.action_sale_config
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Configure Sales"
+msgstr "Cấu hình bán hàng"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Configure outgoing email servers"
+msgstr "Cấu hình máy chủ gửi mail đi"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Configure your company data"
+msgstr "Cấu hình dữ liệu công ty của bạn"
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Contacts"
+msgstr "Liên hệ"
+
+#. module: base_setup
+#: field:base.config.settings,create_uid:0
+#: field:base.setup.terminology,create_uid:0
+#: field:sale.config.settings,create_uid:0
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: base_setup
+#: field:base.config.settings,create_date:0
+#: field:base.setup.terminology,create_date:0
+#: field:sale.config.settings,create_date:0
+msgid "Created on"
+msgstr "Được tạo lúc"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Customer Features"
+msgstr "Các tính năng của khách hàng"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Donor"
+msgstr "Nhà tài trợ"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Email"
+msgstr "Thư điện tử"
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Emails Integration"
+msgstr "Tích hợp các email"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+#: model:ir.actions.act_window,name:base_setup.action_general_configuration
+#: model:ir.ui.menu,name:base_setup.menu_general_configuration
+msgid "General Settings"
+msgstr "Cài đặt tổng quát"
+
+#. module: base_setup
+#: help:sale.config.settings,module_mass_mailing:0
+msgid "Get access to statistics with your mass mailing, manage campaigns."
+msgstr "Hãy truy cập vào thống kê để gửi thư hàng loạt, quản lý chiến dịch."
+
+#. module: base_setup
+#: field:sale.config.settings,module_web_linkedin:0
+msgid "Get contacts automatically from linkedIn"
+msgstr "Nhận danh bạ tự động từ linkedIn"
+
+#. module: base_setup
+#: help:base.config.settings,module_portal:0
+msgid "Give your customers access to their documents."
+msgstr "Cho phép khách hàng của bạn truy cập vào các tài liệu liên quan đến họ thông qua portal, ví dụ: báo giá, hoá đơn, v.v."
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Google Calendar"
+msgstr "Lịch Google"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Google Drive"
+msgstr "Thiết bị Google"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Guest"
+msgstr "Khách"
+
+#. module: base_setup
+#: field:base.setup.terminology,partner:0
+msgid "How do you call a Customer"
+msgstr "Làm thế nào để bạn gọi một khách hàng"
+
+#. module: base_setup
+#: field:base.config.settings,id:0 field:base.setup.terminology,id:0
+#: field:sale.config.settings,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Import / Export"
+msgstr "Nhập / Xuất"
+
+#. module: base_setup
+#: field:base.config.settings,write_uid:0
+#: field:base.setup.terminology,write_uid:0
+#: field:sale.config.settings,write_uid:0
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: base_setup
+#: field:base.config.settings,write_date:0
+#: field:base.setup.terminology,write_date:0
+#: field:sale.config.settings,write_date:0
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: base_setup
+#: field:sale.config.settings,module_mass_mailing:0
+msgid "Manage mass mailing campaigns"
+msgstr "Quản lý các chiến dịch gửi mail hàng loạt (mass mailing)"
+
+#. module: base_setup
+#: field:base.config.settings,module_multi_company:0
+msgid "Manage multiple companies"
+msgstr "Quản lý nhiều công ty"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Member"
+msgstr "Thành viên"
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Odoo allows to automatically create leads (or others documents)\n"
+"                            from incoming emails. You can automatically synchronize emails with Odoo\n"
+"                            using regular POP/IMAP accounts, using a direct email integration script for your\n"
+"                            email server, or by manually pushing emails to Odoo using specific\n"
+"                            plugins for your preferred email application."
+msgstr "Odoo cho phép tự động tao ra các chỉ dẫn( hoặc các tài liệu khác)\n"
+"                            từ thư điện tử đến. Bạn có thể tự động đồng bộ thư điện tử với Odoo\n"
+"                            sử dựng tài khoản POP/IMAP thường xuyên, sử dụng một kịch bản tích hợp trực tiếp thư điện tử  của bạn\n"
+"                            từ máy chủ thư điện tử, hoặc gửi thư điện tử riêng bằng tay từ Odoo \n"
+"                            bổ sung cho ứng dụng thư điện tử yêu thích của bạn."
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Once installed, you can configure your API credentials for \"Google calendar\""
+msgstr "Sau khi cài đặt, bạn có thể cấu hình tích hợp với lịch Google qua API của Google."
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Options"
+msgstr "Tùy chọn"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Patient"
+msgstr "Người bệnh"
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "Portal access"
+msgstr "Truy cập cổng thông tin"
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Quotations and Sales Orders"
+msgstr "Báo giá và đơn đặt hàng"
+
+#. module: base_setup
+#: field:base.config.settings,font:0
+msgid "Report Font"
+msgstr "Phông chữ trong báo cáo"
+
+#. module: base_setup
+#: field:sale.config.settings,module_sale:0
+msgid "SALE"
+msgstr "SALE"
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Sale Features"
+msgstr "Các tính năng bán hàng"
+
+#. module: base_setup
+#: help:base.config.settings,font:0
+msgid "Set the font into the report header, it will be used as default font in the RML reports of the user company"
+msgstr "Thiết lập phông chữ vào các tiêu đề báo cáo, nó sẽ được sử dụng như phông chữ mặc định trong các báo cáo RML của công ty sử dụng"
+
+#. module: base_setup
+#: help:base.config.settings,module_share:0
+msgid "Share or embbed any screen of Odoo."
+msgstr "Chia sẻ hoặc thêm vào bất màn hình nào của Odoo."
+
+#. module: base_setup
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "Social Network Integration"
+msgstr "Tích hợp mạng xã hội"
+
+#. module: base_setup
+#: view:base.setup.terminology:base_setup.base_setup_terminology_form
+msgid "Specify Your Terminology"
+msgstr "Xác định các thuật ngữ của bạn"
+
+#. module: base_setup
+#: selection:base.setup.terminology,partner:0
+msgid "Tenant"
+msgstr "Người thuê"
+
+#. module: base_setup
+#: help:base.config.settings,module_google_calendar:0
+msgid "This installs the module google_calendar."
+msgstr "Để có điều này cần cài module google_calendar."
+
+#. module: base_setup
+#: help:base.config.settings,module_google_drive:0
+msgid "This installs the module google_docs."
+msgstr "Để có điều này cần cài module google_docs."
+
+#. module: base_setup
+#: model:ir.actions.act_window,name:base_setup.action_partner_terminology_config_form
+msgid "Use another word to say \"Customer\""
+msgstr "Sử dụng một từ khác để nói \"khách hàng \""
+
+#. module: base_setup
+#: field:base.config.settings,module_auth_oauth:0
+msgid "Use external authentication providers, sign in with google, facebook, ..."
+msgstr "Sử dụng các nhà cung cấp dịch vụ xác thực bên ngoài, ví dụ: đăng nhập bằng Google, Facebook, v.v."
+
+#. module: base_setup
+#: help:sale.config.settings,module_web_linkedin:0
+msgid "When you create a new contact (person or company), you will be able to load all the data from LinkedIn (photos, address, etc)."
+msgstr "Khi bạn tạo mới một đối tác (cá nhân hoặc công ty), bạn sẽ có thể nạp toàn bộ dữ liệu từ LinkedIn (hình, địa chỉ, v.v.)."
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "When you send a document to a customer\n"
+"                                    (quotation, invoice), your customer will be\n"
+"                                    able to signup to get all his documents,\n"
+"                                    read your company news, check his projects,\n"
+"                                    etc."
+msgstr "Khi bạn gửi một tài liệu (báo giá, hoá đơn, v.v.) cho một khách hàng, khách hàng của bạn sẽ có thể đăng ký vào hệ thống của bạn và truy cập đến tất cả các dữ liệu liên quan đến anh ta, đọc tin tức công ty bạn, kiểm tra dự án liên quan đến anh ta, v.v."
+
+#. module: base_setup
+#: help:base.config.settings,module_multi_company:0
+msgid "Work in multi-company environments, with appropriate security access between companies.\n"
+"-This installs the module multi_company."
+msgstr "Làm việc trong môi trường đa công ty, với các quyền truy cập bảo mật phù hợp giữa các công ty."
+"-Để có được điều này cần cài đặt module multi_company."
+
+#. module: base_setup
+#: view:base.setup.terminology:base_setup.base_setup_terminology_form
+msgid "You can use this wizard to change the terminologies for customers in the whole application."
+msgstr "Bạn có thể sử dụng đồ thuật này để đổi thuật ngữ 'khách hàng' trong toàn bộ ứng dụng thành một thuật ngữ khác."
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+msgid "You will find more options in your company details: address for the header and footer, overdue payments texts, etc."
+msgstr "Bạn sẽ tìm thấy nhiều tùy chọn hơn trong thiết lập chi tiết cho công ty: địa chỉ cho header và footer, nội dung cho email nhắc nợ, v.v."
+
+#. module: base_setup
+#: view:base.config.settings:base_setup.view_general_configuration
+#: view:sale.config.settings:base_setup.view_sale_config_settings
+msgid "or"
+msgstr "hoặc"
+
+#. module: base_setup
+#: view:base.setup.terminology:base_setup.base_setup_terminology_form
+msgid "res_config_contents"
+msgstr "res_config_contents"

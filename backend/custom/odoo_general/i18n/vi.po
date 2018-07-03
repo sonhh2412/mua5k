@@ -1,0 +1,3311 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* odoo_general
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-23 10:38+0000\n"
+"PO-Revision-Date: 2017-02-23 10:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_general
+#: field:number.k.report,nbr:0
+msgid "# of Lines"
+msgstr "Số lượng dòng"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+#: view:import.data:odoo_general.view_import_product_form
+msgid "/home/excel.xls"
+msgstr "/home/excel.xls"
+
+#. module: odoo_general
+#: model:category.convert,code:odoo_general.category_convert_10k_default
+#: model:category.convert,name:odoo_general.category_convert_10k_default
+msgid "10k"
+msgstr "10k"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1900"
+msgstr "1900"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1901"
+msgstr "1901"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1902"
+msgstr "1902"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1903"
+msgstr "1903"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1904"
+msgstr "1904"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1905"
+msgstr "1905"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1906"
+msgstr "1906"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1907"
+msgstr "1907"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1908"
+msgstr "1908"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1909"
+msgstr "1909"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1910"
+msgstr "1910"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1911"
+msgstr "1911"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1912"
+msgstr "1912"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1913"
+msgstr "1913"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1914"
+msgstr "1914"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1915"
+msgstr "1915"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1916"
+msgstr "1916"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1917"
+msgstr "1917"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1918"
+msgstr "1918"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1919"
+msgstr "1919"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1920"
+msgstr "1920"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1921"
+msgstr "1921"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1922"
+msgstr "1922"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1923"
+msgstr "1923"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1924"
+msgstr "1924"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1925"
+msgstr "1925"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1926"
+msgstr "1926"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1927"
+msgstr "1927"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1928"
+msgstr "1928"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1929"
+msgstr "1929"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1930"
+msgstr "1930"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1931"
+msgstr "1931"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1932"
+msgstr "1932"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1933"
+msgstr "1933"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1934"
+msgstr "1934"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1935"
+msgstr "1935"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1936"
+msgstr "1936"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1937"
+msgstr "1937"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1938"
+msgstr "1938"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1939"
+msgstr "1939"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1940"
+msgstr "1940"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1941"
+msgstr "1941"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1942"
+msgstr "1942"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1943"
+msgstr "1943"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1944"
+msgstr "1944"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1945"
+msgstr "1945"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1946"
+msgstr "1946"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1947"
+msgstr "1947"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1948"
+msgstr "1948"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1949"
+msgstr "1949"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1950"
+msgstr "1950"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1951"
+msgstr "1951"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1952"
+msgstr "1952"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1953"
+msgstr "1953"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1954"
+msgstr "1954"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1955"
+msgstr "1955"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1956"
+msgstr "1956"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1957"
+msgstr "1957"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1958"
+msgstr "1958"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1959"
+msgstr "1959"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1960"
+msgstr "1960"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1961"
+msgstr "1961"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1962"
+msgstr "1962"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1963"
+msgstr "1963"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1964"
+msgstr "1964"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1965"
+msgstr "1965"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1966"
+msgstr "1966"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1967"
+msgstr "1967"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1968"
+msgstr "1968"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1969"
+msgstr "1969"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1970"
+msgstr "1970"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1971"
+msgstr "1971"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1972"
+msgstr "1972"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1973"
+msgstr "1973"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1974"
+msgstr "1974"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1975"
+msgstr "1975"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1976"
+msgstr "1976"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1977"
+msgstr "1977"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1978"
+msgstr "1978"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1979"
+msgstr "1979"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1980"
+msgstr "1980"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1981"
+msgstr "1981"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1982"
+msgstr "1982"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1983"
+msgstr "1983"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1984"
+msgstr "1984"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1985"
+msgstr "1985"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1986"
+msgstr "1986"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1987"
+msgstr "1987"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1988"
+msgstr "1988"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1989"
+msgstr "1989"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1990"
+msgstr "1990"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1991"
+msgstr "1991"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1992"
+msgstr "1992"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1993"
+msgstr "1993"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1994"
+msgstr "1994"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1995"
+msgstr "1995"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1996"
+msgstr "1996"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1997"
+msgstr "1997"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1998"
+msgstr "1998"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "1999"
+msgstr "1999"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2000"
+msgstr "2000"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2001"
+msgstr "2001"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2002"
+msgstr "2002"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2003"
+msgstr "2003"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2004"
+msgstr "2004"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2005"
+msgstr "2005"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2006"
+msgstr "2006"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2007"
+msgstr "2007"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2008"
+msgstr "2008"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2009"
+msgstr "2009"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2010"
+msgstr "2010"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2011"
+msgstr "2011"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2012"
+msgstr "2012"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2013"
+msgstr "2013"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2014"
+msgstr "2014"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2015"
+msgstr "2015"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2016"
+msgstr "2016"
+
+#. module: odoo_general
+#: selection:report.members,year:0
+msgid "2017"
+msgstr "2017"
+
+#. module: odoo_general
+#: model:category.convert,code:odoo_general.category_convert_3k_default
+#: model:category.convert,name:odoo_general.category_convert_3k_default
+msgid "3k"
+msgstr "3k"
+
+#. module: odoo_general
+#: model:category.convert,code:odoo_general.category_convert_5k_default
+#: model:category.convert,name:odoo_general.category_convert_5k_default
+msgid "5k"
+msgstr "5k"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,help:odoo_general.product_public_category_custom_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"	            Click to define a new category.\n"
+"	          </p><p>\n"
+"	            Categories are used to browse your products through the\n"
+"	            touchscreen interface.\n"
+"	          </p><p>\n"
+"	            If you put a photo on the category, the layout of the\n"
+"	            touchscreen interface will automatically. We suggest not to put\n"
+"	            a photo on categories for small (1024x768) screens.\n"
+"	          </p>\n"
+"	        "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"	            Bấm để định nghĩa một nhóm mới.\n"
+"	          </p><p>\n"
+"	            Các nhóm được sử dụng để duyệt qua lại các sản phẩm bằng\n"
+"	            giao diện màn hình cảm ứng.\n"
+"	          </p><p>\n"
+"	            If you put a photo on the category, the layout of the\n"
+"	            touchscreen interface will automatically. We suggest not to put\n"
+"	            a photo on categories for small (1024x768) screens.\n"
+"	          </p>\n"
+"	        "
+
+#. module: odoo_general
+#: model:ir.actions.act_window,help:odoo_general.action_partner_for_sale_form
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to add a contact in your address book.\n"
+"              </p><p>\n"
+"                Odoo helps you easily track all activities related to\n"
+"                a customer; discussions, history of business opportunities,\n"
+"                documents, etc.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to add a contact in your address book.\n"
+"              </p><p>\n"
+"                Odoo helps you easily track all activities related to\n"
+"                a customer; discussions, history of business opportunities,\n"
+"                documents, etc.\n"
+"              </p>\n"
+"            "
+
+#. module: odoo_general
+#: selection:sale.report.quantity,type:0
+msgid "About"
+msgstr "About"
+
+#. module: odoo_general
+#: view:product.template:odoo_general.product_product_image_form_view
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: odoo_general
+#: field:give.k,is_active:0
+#: field:give.k.history,is_active:0
+#: view:product.session:odoo_general.view_product_session_filter
+#: field:product.session,active:0
+msgid "Active"
+msgstr "Hoạt động"
+
+#. module: odoo_general
+#: field:credit.card.member.detail,amount:0
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: odoo_general
+#: field:category.convert,amount:0
+msgid "Amount Converted"
+msgstr "Số tiền quy đổi"
+
+#. module: odoo_general
+#: sql_constraint:category.convert:0
+msgid "Amount Converted must be greater than to 0!"
+msgstr "Số tiền quy đổi phải lớn hơn 0!"
+
+#. module: odoo_general
+#: view:product.session.popup:odoo_general.product_session_delete_popup_form_view
+#: view:product.session.popup:odoo_general.product_session_popup_form_view
+msgid "Approval"
+msgstr "Áp dụng"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "April"
+msgstr "Tháng Tư"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Are you sure your supplier will sell for you ? If yes please confim. If not please discard."
+msgstr "Are you sure your supplier will sell for you ? If yes please confim. If not please discard."
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "August"
+msgstr "Tháng Tám"
+
+#. module: odoo_general
+#: view:product.product:odoo_general.product_search_form_view_10k_inherit
+msgid "Available in the website"
+msgstr "Khả dụng trên Website"
+
+#. module: odoo_general
+#: field:buy.credit.k.detail,avg_k_user:0
+msgid "Average K/Number User"
+msgstr "Average K/Number User"
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,avg_trans:0
+msgid "Average Transaction"
+msgstr "Average Transaction"
+
+#. module: odoo_general
+#: field:product.public.category,bg_color:0
+msgid "Background Color"
+msgstr "Màu nền"
+
+#. module: odoo_general
+#: field:res.partner.history.exchange,balance:0
+msgid "Balance(K)"
+msgstr "Còn lại (K)"
+
+#. module: odoo_general
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_form
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_search
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_tree
+#: field:buy.credit.k.detail,parent_id:0
+#: model:ir.actions.act_window,name:odoo_general.action_buy_credit_k
+#: model:ir.model,name:odoo_general.model_buy_credit_k
+#: model:ir.model,name:odoo_general.model_buy_credit_k_detail
+#: model:ir.ui.menu,name:odoo_general.menu_buy_credit_k
+msgid "Buy Credit K"
+msgstr "Buy Credit K"
+
+#. module: odoo_general
+#: field:buy.credit.k,detail_ids:0
+msgid "By Credit K"
+msgstr "By Credit K"
+
+#. module: odoo_general
+#: view:product.session.popup:odoo_general.product_session_delete_popup_form_view
+#: view:product.session.popup:odoo_general.product_session_popup_form_view
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+#: view:wizard.select.products:odoo_general.view_wizard_select_products_form
+#: view:wizard.select.res.partner:odoo_general.view_wizard_select_partner_form
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "Cancel Delivered"
+msgstr "Hủy giao hàng"
+
+#. module: odoo_general
+#: view:stock.picking:odoo_general.view_picking_form_custom
+msgid "Cancel Transfer"
+msgstr "Hủy bỏ dịch chuyển"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/category_convert.py:48
+#, python-format
+msgid "Cannot Delete."
+msgstr "Không thể xóa."
+
+#. module: odoo_general
+#: field:product.public.category.image,category_id:0
+#: view:product.report:odoo_general.view_product_report_search
+#: field:product.report,category_id:0
+msgid "Category"
+msgstr "Danh mục"
+
+#. module: odoo_general
+#: view:category.convert:odoo_general.category_convert_form_view
+#: view:category.convert:odoo_general.category_convert_tree_view
+#: model:ir.actions.act_window,name:odoo_general.action_category_convert_tree_view
+#: model:ir.model,name:odoo_general.model_category_convert
+#: model:ir.ui.menu,name:odoo_general.category_convert_menu
+#: field:sale.report.k.detail,category_id:0
+#: field:sale.report.quantity.detail,category_id:0
+msgid "Category Convert"
+msgstr "Danh mục quy đổi"
+
+#. module: odoo_general
+#: field:category.convert,code:0
+#: view:product.session:odoo_general.product_session_form_view
+#: field:product.session,name:0
+#: field:product.session.code,name:0
+#: field:product.session.create,name:0
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+msgid "Code"
+msgstr "Mã"
+
+#. module: odoo_general
+#: field:product.session.order,number:0
+#: help:product.session.order,number:0
+msgid "Code Numbers"
+msgstr "Số lượng mã"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_quotation_tree_inherit_2
+msgid "Code Win"
+msgstr "Code Win"
+
+#. module: odoo_general
+#: sql_constraint:product.session.code:0
+msgid "Code create by Data. You can not create code!"
+msgstr "Mã số được tạo bởi Master Data. Bạn không thể tạo mã số !"
+
+#. module: odoo_general
+#: sql_constraint:product.session.code:0
+msgid "Code must be unique!"
+msgstr "Mã bắt buộc là duy nhất!"
+
+#. module: odoo_general
+#: field:list.of.transaction.detail,codes:0
+#: view:product.session.order:odoo_general.product_session_order_form_view
+#: field:product.session.order,code_ids:0
+#: field:res.partner.history.exchange,codes:0
+#: field:sale.order,number_win:0
+msgid "Codes"
+msgstr "Mã số"
+
+#. module: odoo_general
+#: selection:res.partner,gender:0
+msgid "Confidentiality"
+msgstr "Bảo mật"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Confirm Order"
+msgstr "Xác nhận đơn hàng"
+
+#. module: odoo_general
+#: field:product.product,config_ids:0
+msgid "Convert"
+msgstr "Chuyển đổi"
+
+#. module: odoo_general
+#: field:import.data,read_count:0
+msgid "Count of list status"
+msgstr "Count of list status"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.customer_general_search_view
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: odoo_general
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_search
+#: field:buy.credit.k,date:0
+#: field:credit.card.member,date:0
+#: field:dialed.session,date:0
+#: field:product.session.create,date:0
+#: field:product.template,created_date:0
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_search
+#: field:report.member.asscess,date:0
+#: view:report.members:odoo_general.view_report_members_search
+#: field:report.members,date:0
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_search
+#: field:report.transaction.average,date:0
+msgid "Create Date"
+msgstr "Ngày tạo"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_order_form_general_inherit
+msgid "Create Invoice"
+msgstr "Tạo hóa đơn"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_session_create_tree_view
+#: model:ir.ui.menu,name:odoo_general.product_session_create_menu
+#: view:product.session.create:odoo_general.product_session_create_form_view
+#: view:product.template:odoo_general.product_product_image_form_view
+msgid "Create Session"
+msgstr "Tạo phiên"
+
+#. module: odoo_general
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_search
+#: field:dialed.session,user_id:0
+#: view:list.of.transaction:odoo_general.view_list_of_transaction_search
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_search
+#: field:list.of.winner.report,user_id:0
+#: field:product.session.create,user_id:0
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_search
+#: view:report.members:odoo_general.view_report_members_search
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_search
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_search
+#: field:sale.report.custom,user_id:0
+#: view:sale.report.k:odoo_general.view_sale_report_k_filter
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_filter
+msgid "Create User"
+msgstr "Người tạo"
+
+#. module: odoo_general
+#: field:import.data,create_date:0
+msgid "Create date"
+msgstr "Ngày tạo"
+
+#. module: odoo_general
+#: view:dialed.session:odoo_general.view_dialed_session_search
+msgid "Create user"
+msgstr "Create user"
+
+#. module: odoo_general
+#: field:buy.credit.k,create_uid:0
+#: field:buy.credit.k.detail,create_uid:0
+#: field:category.convert,create_uid:0
+#: field:credit.card.member,create_uid:0
+#: field:credit.card.member.detail,create_uid:0
+#: field:credit.card.reason,create_uid:0
+#: field:dialed.session,create_uid:0
+#: field:dialed.session.detail,create_uid:0
+#: field:give.k,create_uid:0
+#: field:give.k.history,create_uid:0
+#: field:import.data,create_uid:0
+#: field:import.data.status,create_uid:0
+#: field:list.of.transaction,create_uid:0
+#: field:list.of.transaction.detail,create_uid:0
+#: field:list.of.winner.report,create_uid:0
+#: field:list.of.winner.report.detail,create_uid:0
+#: field:product.public.category.image,create_uid:0
+#: field:product.session,create_uid:0
+#: field:product.session.code,create_uid:0
+#: field:product.session.create,create_uid:0
+#: field:product.session.order,create_uid:0
+#: field:product.session.popup,create_uid:0
+#: field:report.member.asscess,create_uid:0
+#: field:report.member.asscess.detail,create_uid:0
+#: field:report.members,create_uid:0
+#: field:report.members.detail,create_uid:0
+#: field:report.transaction.average,create_uid:0
+#: field:report.transaction.average.detail,create_uid:0
+#: field:res.partner.history.exchange,create_uid:0
+#: field:res.partner.history.login,create_uid:0
+#: field:sale.report.custom,create_uid:0
+#: field:sale.report.custom.detail,create_uid:0
+#: field:sale.report.k,create_uid:0
+#: field:sale.report.k.detail,create_uid:0
+#: field:sale.report.quantity,create_uid:0
+#: field:sale.report.quantity.detail,create_uid:0
+#: field:wizard.select.products,create_uid:0
+#: field:wizard.select.res.partner,create_uid:0
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: odoo_general
+#: field:buy.credit.k,create_date:0
+#: field:buy.credit.k.detail,create_date:0
+#: field:category.convert,create_date:0
+#: field:credit.card.member,create_date:0
+#: field:credit.card.member.detail,create_date:0
+#: field:credit.card.reason,create_date:0
+#: field:dialed.session,create_date:0
+#: field:dialed.session.detail,create_date:0
+#: field:give.k,create_date:0
+#: field:give.k.history,create_date:0
+#: field:import.data.status,create_date:0
+#: field:list.of.transaction,create_date:0
+#: field:list.of.transaction.detail,create_date:0
+#: field:list.of.winner.report,create_date:0
+#: field:list.of.winner.report.detail,create_date:0
+#: field:product.public.category.image,create_date:0
+#: field:product.session,create_date:0
+#: field:product.session.code,create_date:0
+#: field:product.session.create,create_date:0
+#: field:product.session.order,create_date:0
+#: field:product.session.popup,create_date:0
+#: field:report.member.asscess,create_date:0
+#: field:report.member.asscess.detail,create_date:0
+#: field:report.members,create_date:0
+#: field:report.members.detail,create_date:0
+#: field:report.transaction.average,create_date:0
+#: field:report.transaction.average.detail,create_date:0
+#: field:res.partner.history.exchange,create_date:0
+#: field:res.partner.history.login,create_date:0
+#: field:sale.report.custom,create_date:0
+#: field:sale.report.custom.detail,create_date:0
+#: field:sale.report.k,create_date:0
+#: field:sale.report.k.detail,create_date:0
+#: field:sale.report.quantity,create_date:0
+#: field:sale.report.quantity.detail,create_date:0
+#: field:wizard.select.products,create_date:0
+#: field:wizard.select.res.partner,create_date:0
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: odoo_general
+#: field:buy.credit.k,user_id:0
+#: field:credit.card.member,user_id:0
+#: field:list.of.transaction,user_id:0
+#: field:report.member.asscess,user_id:0
+#: field:report.members,user_id:0
+#: field:report.transaction.average,user_id:0
+#: field:sale.report.k,user_id:0
+#: field:sale.report.quantity,user_id:0
+msgid "Creator"
+msgstr "Người tạo"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.act_credit_card_member
+#: model:ir.model,name:odoo_general.model_credit_card_member
+#: model:ir.ui.menu,name:odoo_general.menu_credit_card_member
+msgid "Credit Card"
+msgstr "Nạp tiền"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_credit_card_member_detail
+msgid "Credit Card Detail"
+msgstr "Chi tiết nạp tiền"
+
+#. module: odoo_general
+#: view:number.k.report:odoo_general.view_number_k_search
+msgid "Current Month"
+msgstr "Current Month"
+
+#. module: odoo_general
+#: field:import.data,current_row:0
+msgid "Current row in file"
+msgstr "Số dòng hiện tại"
+
+#. module: odoo_general
+#: view:account.invoice:odoo_general.view_invoice_form_inherit_2
+#: field:list.of.winner.report,partner_ids:0
+#: field:report.member.asscess.detail,partner_id:0
+#: field:report.transaction.average.detail,partner_id:0
+#: field:sale.report.custom,partner_ids:0
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: odoo_general
+#: field:credit.card.member.detail,partner_id:0
+#: field:report.member.asscess,partner_ids:0
+#: field:report.transaction.average,partner_ids:0
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: odoo_general
+#: field:product.session.order,date:0
+#: field:report.member.asscess.detail,date_asscess:0
+msgid "Date"
+msgstr "Ngày"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_filter
+msgid "Date Import"
+msgstr "Date Import"
+
+#. module: odoo_general
+#: field:product.session.order,date_order:0
+#: help:product.session.order,date_order:0
+#: field:product.session.order,month_order:0
+#: help:product.session.order,month_order:0
+msgid "Date Order"
+msgstr "Ngày đặt hàng"
+
+#. module: odoo_general
+#: field:sale.order,time_sale:0
+msgid "Date Order/Website"
+msgstr "Ngày đặt hàng/Website"
+
+#. module: odoo_general
+#: code:addons/odoo_general/sale/list_of_winner.py:32
+#: code:addons/odoo_general/sale/list_of_winner.py:45
+#: code:addons/odoo_general/sale/list_of_winner.py:57
+#, python-format
+msgid "Date Start can't larger than Date End !"
+msgstr "Date Start can't larger than Date End !"
+
+#. module: odoo_general
+#: field:number.k.report,date:0
+msgid "Date Tracsaction"
+msgstr "Date Tracsaction"
+
+#. module: odoo_general
+#: field:list.of.transaction.detail,date_transaction:0
+#: field:res.partner.history.exchange,date_exchange:0
+msgid "Date Transaction"
+msgstr "Ngày giao dịch"
+
+#. module: odoo_general
+#: help:category.convert,message_last_post:0
+#: help:credit.card.member,message_last_post:0
+#: help:product.session,message_last_post:0
+#: help:product.session.create,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Ngày gần nhất của thông điệp được ghi nhận trên bản ghi này."
+
+#. module: odoo_general
+#: selection:report.member.asscess,type:0
+msgid "Day"
+msgstr "Ngày"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "December"
+msgstr "Tháng Mười hai"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_session_delete_popup
+msgid "Delete Product Session Popup"
+msgstr "Delete Product Session Popup"
+
+#. module: odoo_general
+#: view:product.template:odoo_general.product_product_image_form_view
+msgid "Delete Session"
+msgstr "Xóa phiên"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "Delivered"
+msgstr "Đã giao hàng"
+
+#. module: odoo_general
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_form
+#: view:dialed.session:odoo_general.view_dialed_session_form
+#: view:list.of.transaction:odoo_general.view_list_of_transaction_form
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_form
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_form
+#: view:report.members:odoo_general.view_report_members_form
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_form
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_form
+#: view:sale.report.k:odoo_general.view_sale_report_k_form
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_list_of_transaction_detail
+#: field:list.of.transaction,detail_ids:0
+msgid "Detail List of Transaction"
+msgstr "Chi tiết giao dịch"
+
+#. module: odoo_general
+#: view:credit.card.member:odoo_general.view_credit_card_member_form
+#: field:credit.card.member,detail_ids:0
+#: field:dialed.session,detail_ids:0
+msgid "Details"
+msgstr "Các chi tiết"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.product_session_form_view
+#: selection:product.session,state_func:0
+msgid "Dial"
+msgstr "Quay số"
+
+#. module: odoo_general
+#: field:product.template,dial_immediately:0
+msgid "Dial Immediately"
+msgstr "Quay ngay"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+#: field:sale.order,is_dial:0
+msgid "Dial Sale Order"
+msgstr "Quay số đơn hàng bán"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_dialed_session_detail
+msgid "Dial Session Report Detail"
+msgstr "Dial Session Report Detail"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+#: field:product.session,is_dial:0
+msgid "Dialed"
+msgstr "Đã quay số"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.act_dial_session
+#: model:ir.actions.report.xml,name:odoo_general.fin_dialed_session_report
+#: model:ir.model,name:odoo_general.model_dialed_session
+#: model:ir.ui.menu,name:odoo_general.menu_dialed_sesison
+msgid "Dialed Session"
+msgstr "Dialed Session"
+
+#. module: odoo_general
+#: selection:buy.credit.k,state:0
+#: selection:credit.card.member,state:0
+#: selection:dialed.session,state:0
+#: selection:import.data,state:0
+#: selection:list.of.transaction,state:0
+#: selection:list.of.winner.report,state:0
+#: view:product.session.create:odoo_general.product_session_create_search_view
+#: selection:product.session.create,state:0
+#: selection:report.member.asscess,state:0
+#: selection:report.members,state:0
+#: selection:report.transaction.average,state:0
+#: view:sale.order:odoo_general.view_order_form_general_inherit
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+#: selection:sale.report.custom,state:0
+#: selection:sale.report.k,state:0
+#: selection:sale.report.quantity,state:0
+msgid "Done"
+msgstr "Hoàn tất"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_product_form
+msgid "Download Template Import Product"
+msgstr "Download Template Import Product"
+
+#. module: odoo_general
+#: selection:buy.credit.k,state:0
+#: selection:credit.card.member,state:0
+#: selection:dialed.session,state:0
+#: selection:list.of.transaction,state:0
+#: selection:list.of.winner.report,state:0
+#: view:product.session.create:odoo_general.product_session_create_search_view
+#: selection:product.session.create,state:0
+#: selection:report.member.asscess,state:0
+#: selection:report.members,state:0
+#: selection:report.transaction.average,state:0
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+#: selection:sale.report.custom,state:0
+#: selection:sale.report.k,state:0
+#: selection:sale.report.quantity,state:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: odoo_general
+#: field:give.k,date_end:0
+#: field:give.k.history,date_end:0
+#: field:product.session,date_stop:0
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "End Month"
+msgstr "Tháng kết thúc"
+
+#. module: odoo_general
+#: field:dialed.session.detail,date_end:0
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: odoo_general
+#: selection:sale.report.quantity,type:0
+msgid "Equal"
+msgstr "Kết quả"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/buy_credit_k.py:35
+#: code:addons/odoo_general/partner/buy_credit_k.py:45
+#: code:addons/odoo_general/partner/buy_credit_k.py:53
+#: code:addons/odoo_general/partner/give_k.py:66
+#: code:addons/odoo_general/partner/give_k.py:68
+#: code:addons/odoo_general/partner/give_k.py:70
+#: code:addons/odoo_general/partner/give_k.py:87
+#: code:addons/odoo_general/partner/give_k.py:93
+#: code:addons/odoo_general/partner/give_k.py:95
+#: code:addons/odoo_general/partner/report_member_asscess.py:35
+#: code:addons/odoo_general/partner/report_member_asscess.py:45
+#: code:addons/odoo_general/partner/report_member_asscess.py:53
+#: code:addons/odoo_general/partner/report_transaction_average.py:36
+#: code:addons/odoo_general/partner/report_transaction_average.py:46
+#: code:addons/odoo_general/partner/report_transaction_average.py:54
+#: code:addons/odoo_general/product/dialed_session.py:33
+#: code:addons/odoo_general/product/dialed_session.py:43
+#: code:addons/odoo_general/product/dialed_session.py:51
+#: code:addons/odoo_general/purchase/list_of_transaction.py:46
+#: code:addons/odoo_general/purchase/list_of_transaction.py:48
+#: code:addons/odoo_general/purchase/list_of_transaction.py:58
+#: code:addons/odoo_general/purchase/list_of_transaction.py:60
+#: code:addons/odoo_general/sale/list_of_winner.py:43
+#: code:addons/odoo_general/sale/list_of_winner.py:45
+#: code:addons/odoo_general/sale/list_of_winner.py:55
+#: code:addons/odoo_general/sale/list_of_winner.py:57
+#: code:addons/odoo_general/sale/sale_report.py:47
+#: code:addons/odoo_general/sale/sale_report.py:49
+#: code:addons/odoo_general/sale/sale_report.py:59
+#: code:addons/odoo_general/sale/sale_report.py:61
+#: code:addons/odoo_general/sale/sale_report_k.py:45
+#: code:addons/odoo_general/sale/sale_report_k.py:47
+#: code:addons/odoo_general/sale/sale_report_k.py:57
+#: code:addons/odoo_general/sale/sale_report_k.py:59
+#: code:addons/odoo_general/sale/sale_report_quantity.py:48
+#: code:addons/odoo_general/sale/sale_report_quantity.py:50
+#: code:addons/odoo_general/sale/sale_report_quantity.py:60
+#: code:addons/odoo_general/sale/sale_report_quantity.py:62
+#: selection:import.data,state:0
+#, python-format
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: odoo_general
+#: field:res.partner.history.exchange,amount_exchange:0
+msgid "Exchange(K)"
+msgstr "Giao dịch(K)"
+
+#. module: odoo_general
+#: view:product.report:odoo_general.view_product_report_search
+msgid "Extended Filters..."
+msgstr "Extended Filters..."
+
+#. module: odoo_general
+#: view:import.data.status:odoo_general.view_import_data_status_search
+#: selection:import.data.status,status:0
+msgid "Fail"
+msgstr "Fail"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "February"
+msgstr "Tháng Hai"
+
+#. module: odoo_general
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "Nữ"
+
+#. module: odoo_general
+#: field:import.data,file_name:0
+msgid "File name"
+msgstr "File name"
+
+#. module: odoo_general
+#: field:import.data,file_import:0
+msgid "File select"
+msgstr "Lựa chọn file"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "Filter By State Order"
+msgstr "Filter By State Order"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "Final Result"
+msgstr "Final Result"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+#: field:product.session,partner_id:0
+msgid "Final Winner"
+msgstr "Người trúng thưởng"
+
+#. module: odoo_general
+#: field:product.session,number_win:0
+msgid "Final result"
+msgstr "Số trúng thưởng"
+
+#. module: odoo_general
+#: field:category.convert,message_follower_ids:0
+#: field:credit.card.member,message_follower_ids:0
+#: field:product.session,message_follower_ids:0
+#: field:product.session.create,message_follower_ids:0
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: odoo_general
+#: field:buy.credit.k,from_date:0
+#: field:dialed.session,from_date:0
+#: field:list.of.transaction,from_date:0
+#: field:list.of.winner.report,date_start:0
+#: field:report.member.asscess,from_date:0
+#: field:report.transaction.average,from_date:0
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_search
+#: field:sale.report.custom,from_date:0
+#: view:sale.report.k:odoo_general.view_sale_report_k_filter
+#: field:sale.report.k,from_date:0
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_filter
+#: field:sale.report.quantity,from_date:0
+msgid "From Date"
+msgstr "Ngày bắt đầu"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/buy_credit_k.py:35
+#: code:addons/odoo_general/partner/buy_credit_k.py:45
+#: code:addons/odoo_general/partner/buy_credit_k.py:53
+#: code:addons/odoo_general/partner/give_k.py:95
+#: code:addons/odoo_general/partner/report_member_asscess.py:35
+#: code:addons/odoo_general/partner/report_member_asscess.py:45
+#: code:addons/odoo_general/partner/report_member_asscess.py:53
+#: code:addons/odoo_general/partner/report_transaction_average.py:36
+#: code:addons/odoo_general/partner/report_transaction_average.py:46
+#: code:addons/odoo_general/partner/report_transaction_average.py:54
+#: code:addons/odoo_general/product/dialed_session.py:33
+#: code:addons/odoo_general/product/dialed_session.py:43
+#: code:addons/odoo_general/product/dialed_session.py:51
+#: code:addons/odoo_general/purchase/list_of_transaction.py:35
+#: code:addons/odoo_general/purchase/list_of_transaction.py:48
+#: code:addons/odoo_general/purchase/list_of_transaction.py:60
+#: code:addons/odoo_general/sale/sale_report.py:36
+#: code:addons/odoo_general/sale/sale_report.py:49
+#: code:addons/odoo_general/sale/sale_report.py:61
+#: code:addons/odoo_general/sale/sale_report_k.py:34
+#: code:addons/odoo_general/sale/sale_report_k.py:47
+#: code:addons/odoo_general/sale/sale_report_k.py:59
+#: code:addons/odoo_general/sale/sale_report_quantity.py:37
+#: code:addons/odoo_general/sale/sale_report_quantity.py:50
+#: code:addons/odoo_general/sale/sale_report_quantity.py:62
+#, python-format
+msgid "From Date can't larger than To Date !"
+msgstr "From Date can't larger than To Date !"
+
+#. module: odoo_general
+#: field:sale.report.quantity,from_number:0
+msgid "From Number"
+msgstr "Số bắt đầu"
+
+#. module: odoo_general
+#: field:res.partner,gender:0
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/give_k.py:30
+#: model:ir.actions.act_window,name:odoo_general.action_give_k
+#: model:ir.actions.server,name:odoo_general.active_give_k_server
+#: model:ir.ui.menu,name:base.system_give_k
+#, python-format
+msgid "Give K"
+msgstr "Tặng K"
+
+#. module: odoo_general
+#: field:give.k.history,ref_id:0
+msgid "Give K Reference"
+msgstr "Tham chiếu"
+
+#. module: odoo_general
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_search
+#: view:import.data:odoo_general.view_import_data_filter
+#: view:list.of.transaction:odoo_general.view_list_of_transaction_search
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_search
+#: view:number.k.report:odoo_general.view_number_k_search
+#: view:product.report:odoo_general.view_product_report_search
+#: view:product.session:odoo_general.view_product_session_filter
+#: view:product.session.create:odoo_general.product_session_create_search_view
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_search
+#: view:report.members:odoo_general.view_report_members_search
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_search
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_search
+#: view:sale.report.k:odoo_general.view_sale_report_k_filter
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_filter
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: odoo_general
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_search_view
+msgid "Group By..."
+msgstr "Nhóm theo..."
+
+#. module: odoo_general
+#: view:dialed.session:odoo_general.view_dialed_session_search
+msgid "Group by"
+msgstr "Group by"
+
+#. module: odoo_general
+#: view:product.product:odoo_general.product_search_form_view_10k_inherit
+msgid "Group by..."
+msgstr "Nhóm theo..."
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.partner_view_buttons_session
+#: field:res.partner,history_exchange_ids:0
+msgid "History Exchange"
+msgstr "Lịch sửa giao dịch"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_res_partner_history_exchange
+msgid "History Exchange of Partner"
+msgstr "Lịch sử giao dịch của khách hàng"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.partner_view_buttons_session
+#: field:res.partner,login_history:0
+msgid "History Login"
+msgstr "Lịch sử đăng nhập"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_res_partner_history_login_tree_view
+#: model:ir.ui.menu,name:odoo_general.res_partner_history_login_menu
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_form_view
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_tree_view
+msgid "History Login of Members"
+msgstr "Lịch sử đăng nhập của khách hàng"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_res_partner_history_login
+msgid "History Login of Partner"
+msgstr "Lịch sử đăng nhập của khách hàng"
+
+#. module: odoo_general
+#: view:give.k:odoo_general.view_give_k_form
+msgid "History changed"
+msgstr "Lịch sử thay đổi"
+
+#. module: odoo_general
+#: help:category.convert,message_summary:0
+#: help:credit.card.member,message_summary:0
+#: help:product.session,message_summary:0
+#: help:product.session.create,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Giữ tóm tắt tán gẫu (số tin nhắn, ...). Bản tóm tắt này có trực tiếp trong định dạng html để được chèn vào trong kiểu xem Kanban."
+
+#. module: odoo_general
+#: view:product.public.category:odoo_general.product_public_category_form_view_sync
+#: field:product.public.category,hot_products:0
+msgid "Hot Products"
+msgstr "Sản phẩm Hot"
+
+#. module: odoo_general
+#: field:product.public.category.image,link_href:0
+msgid "Href Link"
+msgstr "Href Link"
+
+#. module: odoo_general
+#: field:res.partner,avantar_link:0
+msgid "Hình ảnh cá nhân"
+msgstr "Hình ảnh cá nhân"
+
+#. module: odoo_general
+#: field:buy.credit.k,id:0
+#: field:buy.credit.k.detail,id:0
+#: field:category.convert,id:0
+#: field:credit.card.member,id:0
+#: field:credit.card.member.detail,id:0
+#: field:credit.card.reason,id:0
+#: field:dialed.session,id:0
+#: field:dialed.session.detail,id:0
+#: field:give.k,id:0
+#: field:give.k.history,id:0
+#: field:import.data,id:0
+#: field:import.data.status,id:0
+#: field:list.of.transaction,id:0
+#: field:list.of.transaction.detail,id:0
+#: field:list.of.transaction.detail,member_id:0
+#: field:list.of.winner.report,id:0
+#: field:list.of.winner.report.detail,code:0
+#: field:list.of.winner.report.detail,id:0
+#: field:number.k.report,id:0
+#: field:product.public.category.image,id:0
+#: field:product.report,id:0
+#: field:product.session,id:0
+#: field:product.session.code,id:0
+#: field:product.session.create,id:0
+#: field:product.session.order,id:0
+#: field:product.session.popup,id:0
+#: field:report.member.asscess,id:0
+#: field:report.member.asscess.detail,id:0
+#: field:report.members,id:0
+#: field:report.members.detail,id:0
+#: field:report.transaction.average,id:0
+#: field:report.transaction.average.detail,id:0
+#: field:res.partner,identity:0
+#: field:res.partner.history.exchange,id:0
+#: field:res.partner.history.login,id:0
+#: field:sale.report.custom,id:0
+#: field:sale.report.custom.detail,id:0
+#: field:sale.report.k,id:0
+#: field:sale.report.k.detail,id:0
+#: field:sale.report.quantity,id:0
+#: field:sale.report.quantity.detail,id:0
+#: field:wizard.select.products,id:0
+#: field:wizard.select.res.partner,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: odoo_general
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_search_view
+#: field:res.partner.history.login,ip:0
+msgid "IP Address"
+msgstr "IP Address"
+
+#. module: odoo_general
+#: field:product.public.category,icon:0
+msgid "Icon Link"
+msgstr "Icon Link"
+
+#. module: odoo_general
+#: field:import.data.status,id_data:0
+msgid "Id Data"
+msgstr "Id Data"
+
+#. module: odoo_general
+#: help:category.convert,message_unread:0
+#: help:credit.card.member,message_unread:0
+#: help:product.session,message_unread:0
+#: help:product.session.create,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Nếu được chọn, khi có tin nhắn mới bạn sẽ dễ dàng nhận thấy."
+
+#. module: odoo_general
+#: help:product.session,active:0
+msgid "If the active field is set to False, it will allow you to hide the product session without removing it."
+msgstr "Nếu thiếp lập là False, Phiên sản phẩm sẽ được ẩn đi mà không bị xóa."
+
+#. module: odoo_general
+#: field:product.public.category,image_ids:0
+#: field:product.public.category.image,name:0
+msgid "Image Link"
+msgstr "Image Link"
+
+#. module: odoo_general
+#: view:product.public.category:odoo_general.product_public_category_form_view_sync
+msgid "Images"
+msgstr "Ảnh"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_filter
+#: model:ir.model,name:odoo_general.model_import_data
+msgid "Import Data"
+msgstr "Import Data"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_import_data_status
+msgid "Import Data Statis"
+msgstr "Import Data Statis"
+
+#. module: odoo_general
+#: field:import.data.status,import_id:0
+msgid "Import ID"
+msgstr "Import ID"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_import_product
+#: model:ir.ui.menu,name:odoo_general.import_product_menu
+msgid "Import Product"
+msgstr "Import Product"
+
+#. module: odoo_general
+#: selection:product.product,type_with_session:0
+#: selection:product.report,type_with_session:0
+#: selection:product.template,type_with_session:0
+msgid "In Sessions"
+msgstr "Đang lên phiên"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.customer_general_search_view
+#: field:res.partner,income_monthly:0
+msgid "Income/Monthly"
+msgstr "Thu nhập/Tháng"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/give_k.py:41
+#, python-format
+msgid "Input number K"
+msgstr "Nhập số K"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/credit_card.py:65
+#, python-format
+msgid "Invalid Action"
+msgstr "Invalid Action"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/partner.py:94
+#, python-format
+msgid "Invalid Action!"
+msgstr "Hành động không hợp lệ!"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_account_invoice
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: odoo_general
+#: field:purchase.order,is_purchaser:0
+msgid "Is Purchaser"
+msgstr "Is Purchaser"
+
+#. module: odoo_general
+#: field:category.convert,icsc_unique:0
+msgid "Is Unique"
+msgstr "Là duy nhất"
+
+#. module: odoo_general
+#: field:category.convert,message_is_follower:0
+#: field:credit.card.member,message_is_follower:0
+#: field:product.session,message_is_follower:0
+#: field:product.session.create,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Là một người theo dõi"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "January"
+msgstr "Tháng Một"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "July"
+msgstr "Tháng Bảy"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "June"
+msgstr "Tháng Sáu"
+
+#. module: odoo_general
+#: field:number.k.report,amount_exchange:0
+msgid "K Exchange"
+msgstr "K Exchange"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/session_product.py:212
+#, python-format
+msgid "Không được xóa phiên vì đã đồng bộ dữ liệu lên website."
+msgstr "Không được xóa phiên vì đã đồng bộ dữ liệu lên website."
+
+#. module: odoo_general
+#: field:product.session,dial_realtime:0
+msgid "Kết quả XSKT"
+msgstr "Kết quả XSKT"
+
+#. module: odoo_general
+#: selection:sale.report.quantity,type:0
+msgid "Larger"
+msgstr "Lớn hơn"
+
+#. module: odoo_general
+#: field:category.convert,message_last_post:0
+#: field:credit.card.member,message_last_post:0
+#: field:product.session,message_last_post:0
+#: field:product.session.create,message_last_post:0
+msgid "Last Message Date"
+msgstr "Ngày thông điệp gần nhất"
+
+#. module: odoo_general
+#: field:buy.credit.k,write_uid:0
+#: field:buy.credit.k.detail,write_uid:0
+#: field:category.convert,write_uid:0
+#: field:credit.card.member,write_uid:0
+#: field:credit.card.member.detail,write_uid:0
+#: field:credit.card.reason,write_uid:0
+#: field:dialed.session,write_uid:0
+#: field:dialed.session.detail,write_uid:0
+#: field:give.k,write_uid:0
+#: field:give.k.history,write_uid:0
+#: field:import.data,write_uid:0
+#: field:import.data.status,write_uid:0
+#: field:list.of.transaction,write_uid:0
+#: field:list.of.transaction.detail,write_uid:0
+#: field:list.of.winner.report,write_uid:0
+#: field:list.of.winner.report.detail,write_uid:0
+#: field:product.public.category.image,write_uid:0
+#: field:product.session,write_uid:0
+#: field:product.session.code,write_uid:0
+#: field:product.session.create,write_uid:0
+#: field:product.session.order,write_uid:0
+#: field:product.session.popup,write_uid:0
+#: field:report.member.asscess,write_uid:0
+#: field:report.member.asscess.detail,write_uid:0
+#: field:report.members,write_uid:0
+#: field:report.members.detail,write_uid:0
+#: field:report.transaction.average,write_uid:0
+#: field:report.transaction.average.detail,write_uid:0
+#: field:res.partner.history.exchange,write_uid:0
+#: field:res.partner.history.login,write_uid:0
+#: field:sale.report.custom,write_uid:0
+#: field:sale.report.custom.detail,write_uid:0
+#: field:sale.report.k,write_uid:0
+#: field:sale.report.k.detail,write_uid:0
+#: field:sale.report.quantity,write_uid:0
+#: field:sale.report.quantity.detail,write_uid:0
+#: field:wizard.select.products,write_uid:0
+#: field:wizard.select.res.partner,write_uid:0
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: odoo_general
+#: field:buy.credit.k,write_date:0
+#: field:buy.credit.k.detail,write_date:0
+#: field:category.convert,write_date:0
+#: field:credit.card.member,write_date:0
+#: field:credit.card.member.detail,write_date:0
+#: field:credit.card.reason,write_date:0
+#: field:dialed.session,write_date:0
+#: field:dialed.session.detail,write_date:0
+#: field:give.k,write_date:0
+#: field:give.k.history,write_date:0
+#: field:import.data,write_date:0
+#: field:import.data.status,write_date:0
+#: field:list.of.transaction,write_date:0
+#: field:list.of.transaction.detail,write_date:0
+#: field:list.of.winner.report,write_date:0
+#: field:list.of.winner.report.detail,write_date:0
+#: field:product.public.category.image,write_date:0
+#: field:product.session,write_date:0
+#: field:product.session.code,write_date:0
+#: field:product.session.create,write_date:0
+#: field:product.session.order,write_date:0
+#: field:product.session.popup,write_date:0
+#: field:report.member.asscess,write_date:0
+#: field:report.member.asscess.detail,write_date:0
+#: field:report.members,write_date:0
+#: field:report.members.detail,write_date:0
+#: field:report.transaction.average,write_date:0
+#: field:report.transaction.average.detail,write_date:0
+#: field:res.partner.history.exchange,write_date:0
+#: field:res.partner.history.login,write_date:0
+#: field:sale.report.custom,write_date:0
+#: field:sale.report.custom.detail,write_date:0
+#: field:sale.report.k,write_date:0
+#: field:sale.report.k.detail,write_date:0
+#: field:sale.report.quantity,write_date:0
+#: field:sale.report.quantity.detail,write_date:0
+#: field:wizard.select.products,write_date:0
+#: field:wizard.select.res.partner,write_date:0
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_give_k_history
+msgid "Lich Su Thay Doi Tang K"
+msgstr "Lich Su Thay Doi Tang K"
+
+#. module: odoo_general
+#: field:product.template,limited:0
+msgid "Limit"
+msgstr "Giới hạn"
+
+#. module: odoo_general
+#: field:sale.report.k,detail_ids:0
+#: field:sale.report.quantity,detail_ids:0
+msgid "List Detail Report"
+msgstr "Danh sách chi tiết báo cáo"
+
+#. module: odoo_general
+#: field:list.of.transaction.detail,list_id:0
+msgid "List Id"
+msgstr "Danh sách ID"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_list_members_report
+msgid "List Members"
+msgstr "List Members"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_list_product_report
+msgid "List Product"
+msgstr "List Product"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.act_list_of_transaction
+#: model:ir.model,name:odoo_general.model_list_of_transaction
+#: model:ir.ui.menu,name:odoo_general.action_list_of_transaction
+msgid "List of Transaction"
+msgstr "Danh sách giao dịch"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_list_of_transaction_report
+#: view:list.of.transaction:odoo_general.view_list_of_transaction_search
+msgid "List of Transactions"
+msgstr "Danh sách giao dịch"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_list_of_winner_report
+#: model:ir.actions.report.xml,name:odoo_general.fin_list_of_winner_report
+#: model:ir.model,name:odoo_general.model_list_of_winner_report
+#: model:ir.ui.menu,name:odoo_general.menu_list_of_winner_report
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_form
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_search
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_tree
+#: field:list.of.winner.report.detail,parent_id:0
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_tree
+msgid "List of Winners"
+msgstr "Danh sách người trúng thưởng"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_list_of_winner_report_detail
+#: field:list.of.winner.report,detail_ids:0
+msgid "List of Winners Detail"
+msgstr "Danh sách chi tiết người trúng thưởng"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+#: view:import.data:odoo_general.view_import_product_form
+msgid "Load Data"
+msgstr "Load Data"
+
+#. module: odoo_general
+#: field:res.partner.history.login,date:0
+msgid "Login Date"
+msgstr "Login Date"
+
+#. module: odoo_general
+#: field:give.k,log_ids:0
+msgid "Logs Changed"
+msgstr "Lịch sử thay đổi"
+
+#. module: odoo_general
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "Nam"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "March"
+msgstr "Tháng Ba"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "May"
+msgstr "Tháng Năm"
+
+#. module: odoo_general
+#: view:account.invoice:odoo_general.view_invoice_form_inherit_2
+#: view:account.voucher:odoo_general.view_sale_receipt_form_inherit_2
+#: view:account.voucher:odoo_general.view_vendor_receipt_form_inherit_2
+#: code:addons/odoo_general/account/account_invoice.py:56
+#: field:number.k.report,partner_id:0
+#: field:res.partner.history.login,partner_id:0
+#, python-format
+msgid "Member"
+msgstr "Khách hàng"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_partner_for_sale_form
+#: model:ir.ui.menu,name:odoo_general.menu_report_purchase_members
+#: view:number.k.report:odoo_general.view_number_k_search
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_search_view
+#: field:wizard.select.res.partner,member_ids:0
+msgid "Members"
+msgstr "Khách hàng"
+
+#. module: odoo_general
+#: field:report.members.detail,member_register:0
+msgid "Members Register"
+msgstr "Members Register"
+
+#. module: odoo_general
+#: field:import.data.status,message:0
+msgid "Message"
+msgstr "Thông điệp"
+
+#. module: odoo_general
+#: field:category.convert,message_ids:0
+#: field:credit.card.member,message_ids:0
+#: field:product.session,message_ids:0
+#: field:product.session.create,message_ids:0
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: odoo_general
+#: help:category.convert,message_ids:0
+#: help:credit.card.member,message_ids:0
+#: help:product.session,message_ids:0
+#: help:product.session.create,message_ids:0
+msgid "Messages and communication history"
+msgstr "Lịch sử trao đổi"
+
+#. module: odoo_general
+#: field:list.of.transaction.detail,milisecond:0
+msgid "Milisecond"
+msgstr "Phần nghìn giây"
+
+#. module: odoo_general
+#: field:res.partner.history.exchange,millisecond:0
+msgid "Millisecond"
+msgstr "Phần nghìn giây"
+
+#. module: odoo_general
+#: field:import.data,model_name:0
+msgid "Model Name"
+msgstr "Tên đối tượng"
+
+#. module: odoo_general
+#: view:number.k.report:odoo_general.view_number_k_search
+#: field:number.k.report,month:0
+#: selection:report.member.asscess,type:0
+#: field:report.members,month:0
+msgid "Month"
+msgstr "Tháng"
+
+#. module: odoo_general
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_search_view
+msgid "Month Login"
+msgstr "Month Login"
+
+#. module: odoo_general
+#: code:addons/odoo_general/sale/list_of_winner.py:43
+#: code:addons/odoo_general/sale/list_of_winner.py:55
+#, python-format
+msgid "Must have Date Start and Date End for Report !"
+msgstr "Must have Date Start and Date End for Report !"
+
+#. module: odoo_general
+#: code:addons/odoo_general/purchase/list_of_transaction.py:46
+#: code:addons/odoo_general/purchase/list_of_transaction.py:58
+#: code:addons/odoo_general/sale/sale_report.py:47
+#: code:addons/odoo_general/sale/sale_report.py:59
+#: code:addons/odoo_general/sale/sale_report_k.py:45
+#: code:addons/odoo_general/sale/sale_report_k.py:57
+#: code:addons/odoo_general/sale/sale_report_quantity.py:48
+#: code:addons/odoo_general/sale/sale_report_quantity.py:60
+#, python-format
+msgid "Must have From Date and To Date for Report !"
+msgstr "Must have From Date and To Date for Report !"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/give_k.py:68
+#: code:addons/odoo_general/partner/give_k.py:93
+#, python-format
+msgid "Must have Start Date and End Date and Number K !"
+msgstr "Phải có Ngày bắt đầu, Ngày kết thúc và Số K !"
+
+#. module: odoo_general
+#: field:sale.report.custom.detail,no:0
+msgid "NO."
+msgstr "STT"
+
+#. module: odoo_general
+#: field:buy.credit.k,name:0
+#: field:category.convert,name:0
+#: field:credit.card.member,name:0
+#: field:dialed.session,name:0
+#: field:give.k,name:0
+#: field:give.k.history,name:0
+#: field:import.data,name:0
+#: field:list.of.transaction,name:0
+#: field:list.of.winner.report,name:0
+#: field:product.report,name_template:0
+#: field:report.member.asscess,name:0
+#: field:report.members,name:0
+#: field:report.transaction.average,name:0
+#: field:sale.report.custom,name:0
+#: field:sale.report.custom.detail,name:0
+#: field:sale.report.k,name:0
+#: field:sale.report.quantity,name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: odoo_general
+#: field:product.session.popup,name:0
+msgid "Name Session"
+msgstr "Name Session"
+
+#. module: odoo_general
+#: sql_constraint:category.convert:0
+msgid "Name must be unique!"
+msgstr "Tên phải là duy nhất!"
+
+#. module: odoo_general
+#: selection:import.data,state:0
+msgid "New"
+msgstr "Mới"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "New Mail"
+msgstr "Thư mới"
+
+#. module: odoo_general
+#: field:product.session.popup,next_code:0
+msgid "Next Code"
+msgstr "Mã tiếp theo"
+
+#. module: odoo_general
+#: field:list.of.transaction.detail,member_nickname:0
+#: field:res.partner,login:0
+msgid "Nick name"
+msgstr "Tên đăng nhập"
+
+#. module: odoo_general
+#: constraint:res.partner:0
+msgid "Nick name must be unique!"
+msgstr "Tên đăng nhập phải là duy nhất!"
+
+#. module: odoo_general
+#: field:credit.card.member.detail,stt:0
+msgid "No"
+msgstr "Không"
+
+#. module: odoo_general
+#: field:product.session.order,no:0
+msgid "No."
+msgstr "STT"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Note: Because each PO wil reseved for each customer so if supplier cannot provide product after confirm please contact to manager to cancel this PO and set draft it to order from another supplier on this PO"
+msgstr "Note: Because each PO wil reseved for each customer so if supplier cannot provide product after confirm please contact to manager to cancel this PO and set draft it to order from another supplier on this PO"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "November"
+msgstr "Tháng Mười một"
+
+#. module: odoo_general
+#: field:sale.report.quantity,number_code:0
+msgid "Number Code"
+msgstr "Số mã số"
+
+#. module: odoo_general
+#: field:sale.report.k.detail,number_code:0
+#: field:sale.report.quantity.detail,number_code:0
+msgid "Number Code Sold"
+msgstr "Số mã số đã bán"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_number_k_report
+#: model:ir.model,name:odoo_general.model_number_k_report
+#: model:ir.ui.menu,name:odoo_general.menu_number_k
+#: model:ir.ui.menu,name:odoo_general.menu_number_k_report
+#: field:list.of.transaction.detail,amount_exchange:0
+#: view:number.k.report:odoo_general.view_number_k_graph
+#: view:number.k.report:odoo_general.view_number_k_search
+msgid "Number K"
+msgstr "Number K"
+
+#. module: odoo_general
+#: field:give.k,number_k:0
+#: field:give.k.history,number_k:0
+msgid "Number K Give"
+msgstr "Số K Tặng"
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,amount_k_add:0
+msgid "Number K Transaction (+)"
+msgstr "Number K Transaction (+)"
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,amount_k_subt:0
+msgid "Number K Transaction (-)"
+msgstr "Number K Transaction (-)"
+
+#. module: odoo_general
+#: view:number.k.report:odoo_general.view_number_k_search
+msgid "Number K buy in day"
+msgstr "Number K buy in day"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/give_k.py:42
+#: code:addons/odoo_general/partner/give_k.py:66
+#: code:addons/odoo_general/partner/give_k.py:87
+#, python-format
+msgid "Number K must be > 0 !"
+msgstr "Số K phải > 0 !"
+
+#. module: odoo_general
+#: field:product.session.create,number_session:0
+#: field:product.session.popup,number_session:0
+msgid "Number Session"
+msgstr "Số phiên"
+
+#. module: odoo_general
+#: code:addons/odoo_general/wizard/product_session_popup.py:53
+#, python-format
+msgid "Number Session must be greater than to 0."
+msgstr "Number Session must be greater than to 0."
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,number_add:0
+msgid "Number Transaction (+)"
+msgstr "Number Transaction (+)"
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,number_subt:0
+msgid "Number Transaction (-)"
+msgstr "Number Transaction (-)"
+
+#. module: odoo_general
+#: field:buy.credit.k.detail,number_user:0
+msgid "Number User"
+msgstr "Number User"
+
+#. module: odoo_general
+#: field:list.of.winner.report.detail,number_win:0
+msgid "Number Win"
+msgstr "Số trúng thưởng"
+
+#. module: odoo_general
+#: field:report.member.asscess.detail,number_asscess:0
+msgid "Number of Asscess"
+msgstr "Number of Asscess"
+
+#. module: odoo_general
+#: field:import.data,model_id:0
+msgid "Object"
+msgstr "Đối tượng"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+msgid "Object import"
+msgstr "Object import"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "October"
+msgstr "Tháng Mười"
+
+#. module: odoo_general
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+msgid "Order Date"
+msgstr "Order Date"
+
+#. module: odoo_general
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+msgid "Order Month"
+msgstr "Order Month"
+
+#. module: odoo_general
+#: field:product.session.order,name:0
+msgid "Order Reference"
+msgstr "Số tham chiếu đơn chào hàng"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "Ordered"
+msgstr "Ordered"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.product_session_form_view
+#: field:product.session,order_ids:0
+#: view:res.partner:odoo_general.partner_view_buttons_session
+msgid "Orders"
+msgstr "Đơn hàng"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_res_partner
+#: view:product.session:odoo_general.view_product_session_filter
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+#: field:product.session.order,partner_id:0
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: odoo_general
+#: field:res.partner.history.exchange,partner_id:0
+msgid "Partner Id"
+msgstr "Partner Id"
+
+#. module: odoo_general
+#: field:product.session,partner_order_id:0
+msgid "Partner Order"
+msgstr "Partner Order"
+
+#. module: odoo_general
+#: field:res.partner,password:0
+#: field:res.partner,password_temp:0
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: odoo_general
+#: code:addons/odoo_general/wizard/product_session_popup.py:55
+#, python-format
+msgid "Please add this product to Products in Category Convert and input public price."
+msgstr "Vui lòng thêm sản phẩm vào danh sách sản phẩm trong danh mục chuyển đổi và nhập đơn giá."
+
+#. module: odoo_general
+#: field:product.template,point_price:0
+msgid "Point Price"
+msgstr "Giá điểm"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_order_form_general_inherit
+msgid "Print"
+msgstr "In"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_buy_credit_k_report
+msgid "Print Buy Credit K"
+msgstr "Print Buy Credit K"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Print RFQ"
+msgstr "Print RFQ"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_report_member_asscess_report
+msgid "Print Total Asscess"
+msgstr "Print Total Asscess"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_transaction_average_report
+msgid "Print Transaction Average"
+msgstr "Print Transaction Average"
+
+#. module: odoo_general
+#: selection:import.data,state:0
+msgid "Processing"
+msgstr "Processing"
+
+#. module: odoo_general
+#: view:category.convert:odoo_general.category_convert_form_view
+#: field:dialed.session.detail,product_id:0
+#: model:ir.model,name:odoo_general.model_product_product
+#: field:list.of.transaction,product_ids:0
+#: field:list.of.transaction.detail,product_id:0
+#: field:list.of.winner.report.detail,product_id:0
+#: view:product.session:odoo_general.view_product_session_filter
+#: field:product.session,product_id:0
+#: field:product.session,product_tmpl_id:0
+#: field:product.session.order,product_id:0
+#: field:product.session.popup,product_id:0
+#: field:res.partner.history.exchange,product_id:0
+#: field:sale.report.k.detail,product_id:0
+#: field:sale.report.quantity.detail,product_id:0
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_session_tree_view
+#: model:ir.model,name:odoo_general.model_product_session
+#: model:ir.ui.menu,name:odoo_general.product_session_menu
+#: view:product.session:odoo_general.product_session_form_view
+#: view:product.session:odoo_general.product_session_tree_view
+#: view:product.session.create:odoo_general.product_session_create_form_view
+#: field:sale.order,product_session_id:0
+msgid "Product Session"
+msgstr "Phiên sản phẩm"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_session_code_tree_view
+#: model:ir.model,name:odoo_general.model_product_session_code
+#: view:product.session.code:odoo_general.product_session_code_form_view
+#: view:product.session.code:odoo_general.product_session_code_tree_view
+msgid "Product Session Code"
+msgstr "Mã phiên"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_product_session_create
+#: view:product.session.create:odoo_general.product_session_create_search_view
+#: view:product.session.create:odoo_general.product_session_create_tree_view
+msgid "Product Session Create"
+msgstr "Tạo phiên"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "Product Session Effective"
+msgstr "Phiên sản phẩm có hiệu lực"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "Product Session Inactive"
+msgstr "Phiên sản phẩm hết hiệu lực"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_session_order_tree_view
+#: model:ir.model,name:odoo_general.model_product_session_order
+#: model:ir.ui.menu,name:odoo_general.menu_action_product_session_order_tree_view
+#: view:product.session.order:odoo_general.product_session_order_form_view
+#: view:product.session.order:odoo_general.product_session_order_tree_view
+msgid "Product Session Order"
+msgstr "Phiên bán hàng"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_session_popup
+#: model:ir.model,name:odoo_general.model_product_session_popup
+#: view:product.session.popup:odoo_general.product_session_delete_popup_form_view
+#: view:product.session.popup:odoo_general.product_session_popup_form_view
+msgid "Product Session Popup"
+msgstr "Product Session Popup"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_product_report
+msgid "Product Statistics"
+msgstr "Product Statistics"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: odoo_general
+#: view:category.convert:odoo_general.category_convert_form_view
+#: field:category.convert,product_ids:0
+#: model:ir.ui.menu,name:odoo_general.menu_product_reporting
+#: view:product.report:odoo_general.view_product_report_graph
+#: view:product.report:odoo_general.view_product_report_search
+#: view:product.session.create:odoo_general.product_session_create_form_view
+#: field:product.session.create,product_ids:0
+#: field:sale.report.k,product_ids:0
+#: field:wizard.select.products,product_ids:0
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_report_all
+#: model:ir.ui.menu,name:odoo_general.menu_product_report_all
+msgid "Products Analysis"
+msgstr "Products Analysis"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_product_public_category
+msgid "Public Category"
+msgstr "Nhóm công cộng"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_product_public_category_custom
+#: model:ir.actions.act_window,name:odoo_general.product_public_category_custom_action
+#: model:ir.ui.menu,name:odoo_general.menu_product_public_category_general
+#: view:product.public.category:odoo_general.product_public_category_general_tree_view
+msgid "Public Product Categories"
+msgstr "Nhóm công cộng"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn hàng"
+
+#. module: odoo_general
+#: field:product.product,code_number:0
+#: field:product.template,code_number:0
+msgid "Quantity of Code"
+msgstr "Số lượng mã"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Re-Print RFQ"
+msgstr "Re-Print RFQ"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Re-Send RFQ by Email"
+msgstr "Gửi lại mail báo giá"
+
+#. module: odoo_general
+#: field:credit.card.member.detail,reason:0
+#: field:credit.card.reason,name:0
+#: model:ir.actions.act_window,name:odoo_general.act_credit_card_reason
+#: model:ir.ui.menu,name:odoo_general.menu_credit_card_reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: odoo_general
+#: field:credit.card.member.detail,ref_id:0
+#: field:wizard.select.products,convert_id:0
+#: field:wizard.select.res.partner,active_id:0
+msgid "Ref id"
+msgstr "Ref id"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.customer_general_search_view
+#: field:res.partner,register_date:0
+msgid "Register Date"
+msgstr "Ngày đăng ký"
+
+#. module: odoo_general
+#: field:sale.report.k.detail,report_id:0
+#: field:sale.report.quantity.detail,report_id:0
+msgid "Report Id"
+msgstr "Report Id"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_report_member_asscess
+#: field:report.member.asscess.detail,parent_id:0
+#: field:report.transaction.average.detail,parent_id:0
+msgid "Report Member Asscess"
+msgstr "Report Member Asscess"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_report_member_asscess_detail
+#: field:report.member.asscess,detail_ids:0
+#: field:report.transaction.average,detail_ids:0
+msgid "Report Member Asscess Detail"
+msgstr "Report Member Asscess Detail"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_report_members_detail
+#: field:report.members,detail_ids:0
+msgid "Report Member Detail"
+msgstr "Report Member Detail"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_report_members
+#: model:ir.actions.report.xml,name:odoo_general.fin_report_members_report
+#: model:ir.model,name:odoo_general.model_report_members
+#: model:ir.ui.menu,name:odoo_general.menu_report_members
+#: view:report.members:odoo_general.view_report_members_form
+#: view:report.members:odoo_general.view_report_members_search
+#: view:report.members:odoo_general.view_report_members_tree
+#: field:report.members.detail,parent_id:0
+msgid "Report Members"
+msgstr "Report Members"
+
+#. module: odoo_general
+#: field:dialed.session.detail,report_id:0
+msgid "Report ref"
+msgstr "Report ref"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+#: model:ir.actions.act_window,name:odoo_general.action_import_data_status
+msgid "Result of Import Data"
+msgstr "Result of Import Data"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_product_form
+msgid "Result of Import Product"
+msgstr "Result of Import Product"
+
+#. module: odoo_general
+#: view:stock.picking:odoo_general.view_picking_form_custom
+msgid "Reverse Transfer"
+msgstr "Trả hàng"
+
+#. module: odoo_general
+#: field:import.data.status,row_number:0
+msgid "Row"
+msgstr "Hàng"
+
+#. module: odoo_general
+#: field:list.of.winner.report.detail,so_id:0
+msgid "SO Win"
+msgstr "Đơn hàng trúng thưởng"
+
+#. module: odoo_general
+#: field:product.session,sale_id:0
+msgid "Sale Order"
+msgstr "Đơn hàng"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_sale_report_custom
+#: model:ir.actions.report.xml,name:odoo_general.fin_sale_report_custom
+#: model:ir.model,name:odoo_general.model_sale_report_custom
+#: model:ir.ui.menu,name:odoo_general.menu_sale_report_custom
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_form
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_search
+#: field:sale.report.custom.detail,parent_id:0
+msgid "Sale Report"
+msgstr "Sale Report"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_sale_k_report
+msgid "Sale Report (K)"
+msgstr "Sale Report (K)"
+
+#. module: odoo_general
+#: model:ir.actions.report.xml,name:odoo_general.fin_sale_quantity_report
+msgid "Sale Report (Quantity)"
+msgstr "Sale Report (Quantity)"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_report_custom_detail
+msgid "Sale Report Detail"
+msgstr "Sale Report Detail"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_report_k_detail
+msgid "Sale Report Detail K"
+msgstr "Sale Report Detail K"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_report_quantity_detail
+msgid "Sale Report Detail Quantity"
+msgstr "Sale Report Detail Quantity"
+
+#. module: odoo_general
+#: field:sale.report.custom,detail_ids:0
+msgid "Sale Report Details"
+msgstr "Sale Report Details"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_report_k
+msgid "Sale Report K"
+msgstr "Sale Report K"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_report_quantity
+msgid "Sale Report Quantity"
+msgstr "Sale Report Quantity"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn hàng"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Chi tiết đơn hàng"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.act_sale_report_k
+#: model:ir.ui.menu,name:odoo_general.action_sale_report_k
+msgid "Sales Report (K)"
+msgstr "Sales Report (K)"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.act_sale_report_quantity
+#: model:ir.ui.menu,name:odoo_general.action_sale_report_quantity
+msgid "Sales Report (Quantity)"
+msgstr "Sales Report (Quantity)"
+
+#. module: odoo_general
+#: view:buy.credit.k:odoo_general.view_buy_credit_k_form
+#: view:dialed.session:odoo_general.view_dialed_session_form
+#: view:list.of.transaction:odoo_general.view_list_of_transaction_form
+#: view:list.of.winner.report:odoo_general.view_list_of_winner_report_form
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_form
+#: view:report.members:odoo_general.view_report_members_form
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_form
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_form
+#: view:sale.report.k:odoo_general.view_sale_report_k_form
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_form
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: odoo_general
+#: view:dialed.session:odoo_general.view_dialed_session_search
+msgid "Search Dialed Session"
+msgstr "Search Dialed Session"
+
+#. module: odoo_general
+#: view:res.partner.history.login:odoo_general.res_partner_history_login_search_view
+msgid "Search History Login of Members"
+msgstr "Tìm lịch sử đăng nhập của khách hàng"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "Search Product Session"
+msgstr "Tìm phiên sản phẩm"
+
+#. module: odoo_general
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+msgid "Search Product Session Order"
+msgstr "Tìm kiếm phiên bán hàng"
+
+#. module: odoo_general
+#: view:wizard.select.products:odoo_general.view_wizard_select_products_form
+#: view:wizard.select.res.partner:odoo_general.view_wizard_select_partner_form
+msgid "Select"
+msgstr "Lựa chọn"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.act_wizard_select_partner_view
+#: model:ir.model,name:odoo_general.model_wizard_select_res_partner
+msgid "Select Customers"
+msgstr "Select Customers"
+
+#. module: odoo_general
+#: view:credit.card.member:odoo_general.view_credit_card_member_form
+msgid "Select customers"
+msgstr "Select customers"
+
+#. module: odoo_general
+#: code:addons/odoo_general/purchase/list_of_transaction.py:34
+#: code:addons/odoo_general/sale/list_of_winner.py:31
+#: code:addons/odoo_general/sale/sale_report.py:35
+#: code:addons/odoo_general/sale/sale_report_k.py:33
+#: code:addons/odoo_general/sale/sale_report_quantity.py:36
+#, python-format
+msgid "Select date"
+msgstr "Chọn ngày"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+#: view:import.data:odoo_general.view_import_product_form
+msgid "Select file"
+msgstr "Lựa chọn file"
+
+#. module: odoo_general
+#: view:category.convert:odoo_general.category_convert_form_view
+#: model:ir.actions.act_window,name:odoo_general.act_wizard_select_products_view
+#: model:ir.model,name:odoo_general.model_wizard_select_products
+msgid "Selection Products"
+msgstr "Chọn sản phẩm"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Send PO by Email"
+msgstr "Gửi mail đơn hàng"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "Send RFQ by Email"
+msgstr "Gửi mail báo giá"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_order_form_general_inherit
+msgid "Send by Email"
+msgstr "Gửi qua Email"
+
+#. module: odoo_general
+#: selection:report.members,month:0
+msgid "September"
+msgstr "Tháng Chín"
+
+#. module: odoo_general
+#: field:product.public.category.image,sequence:0
+#: field:product.session.code,sequence:0
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+#: field:product.session.create,sessions_created:0
+#: view:product.session.order:odoo_general.view_product_session_order_filter
+#: field:product.session.order,session_id:0
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "Session"
+msgstr "Phiên"
+
+#. module: odoo_general
+#: code:addons/odoo_general/wizard/product_session_popup.py:77
+#, python-format
+msgid "Session %s not found in system. Please check again!"
+msgstr "Phiên %s không tìm thấy trong hệ thống. Vui lòng kiểm tra lại!"
+
+#. module: odoo_general
+#: field:product.session,create_id:0
+msgid "Session Create ID"
+msgstr "Session Create ID"
+
+#. module: odoo_general
+#: field:product.product,session_active_ids:0
+#: field:product.product,session_ids:0
+#: view:product.template:odoo_general.product_product_image_form_view
+#: field:product.template,session_ids:0
+msgid "Session Sale List"
+msgstr "Danh sách phiên bán hàng"
+
+#. module: odoo_general
+#: view:product.product:odoo_general.product_search_form_view_10k_inherit
+msgid "Session Type"
+msgstr "Session Type"
+
+#. module: odoo_general
+#: field:dialed.session.detail,session_code:0
+msgid "Session code"
+msgstr "Session code"
+
+#. module: odoo_general
+#: view:product.session.create:odoo_general.product_session_create_form_view
+msgid "Session has been created list"
+msgstr "Danh sách phiên đã tạo"
+
+#. module: odoo_general
+#: field:product.session,address_id:0
+msgid "Shipping Address"
+msgstr "Shipping Address"
+
+#. module: odoo_general
+#: field:res.partner,show_pass:0
+msgid "Show Password"
+msgstr "Hiện mật khẩu"
+
+#. module: odoo_general
+#: field:res.partner,signature:0
+msgid "Signature"
+msgstr "Chữ ký"
+
+#. module: odoo_general
+#: selection:sale.report.quantity,type:0
+msgid "Smaller"
+msgstr "Nhỏ hơn"
+
+#. module: odoo_general
+#: selection:product.session,state_func:0
+msgid "Sold"
+msgstr "Đã bán"
+
+#. module: odoo_general
+#: field:give.k,date_start:0
+#: field:give.k.history,date_start:0
+#: field:product.session,date_start:0
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/give_k.py:52
+#: code:addons/odoo_general/partner/give_k.py:70
+#, python-format
+msgid "Start Date can't larger than End Date !"
+msgstr "Ngày bắt đầu không được lớn hơn Ngày kết thúc !"
+
+#. module: odoo_general
+#: view:product.session:odoo_general.view_product_session_filter
+msgid "Start Month"
+msgstr "Tháng bắt đầu"
+
+#. module: odoo_general
+#: field:dialed.session.detail,date_start:0
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: odoo_general
+#: field:credit.card.member,state:0
+#: view:import.data:odoo_general.view_import_data_filter
+#: field:import.data,state:0
+#: field:list.of.transaction,state:0
+#: field:list.of.winner.report,state:0
+#: view:product.session:odoo_general.view_product_session_filter
+#: field:product.session,state_func:0
+#: help:product.session,state_func:0
+#: field:sale.report.custom,state:0
+#: field:sale.report.k,state:0
+#: field:sale.report.quantity,state:0
+msgid "State"
+msgstr "Bang"
+
+#. module: odoo_general
+#: view:sale.order:odoo_general.view_sales_order_filter_inherit
+msgid "State Order"
+msgstr "State Order"
+
+#. module: odoo_general
+#: field:buy.credit.k,state:0
+#: field:dialed.session,state:0
+#: view:import.data.status:odoo_general.view_import_data_status_search
+#: field:import.data.status,status:0
+#: view:product.session.create:odoo_general.product_session_create_search_view
+#: field:product.session.create,state:0
+#: field:report.member.asscess,state:0
+#: field:report.members,state:0
+#: field:report.transaction.average,state:0
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+#: view:import.data:odoo_general.view_import_product_form
+msgid "Status Import"
+msgstr "Trạng thái Import"
+
+#. module: odoo_general
+#: field:import.data,status_ids:0
+msgid "Status import"
+msgstr "Trạng thái Import"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_form
+#: view:import.data:odoo_general.view_import_product_form
+#: view:import.data.status:odoo_general.view_import_data_status_search
+msgid "Status of Import"
+msgstr "Status of Import"
+
+#. module: odoo_general
+#: view:import.data.status:odoo_general.view_import_data_status_search
+#: selection:import.data.status,status:0
+msgid "Success"
+msgstr "Success"
+
+#. module: odoo_general
+#: field:category.convert,message_summary:0
+#: field:credit.card.member,message_summary:0
+#: field:product.session,message_summary:0
+#: field:product.session.create,message_summary:0
+msgid "Summary"
+msgstr "Tóm tắt"
+
+#. module: odoo_general
+#: code:addons/odoo_general/account/account_invoice.py:58
+#, python-format
+msgid "Supplier"
+msgstr "Nhà cung cấp"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/product.py:162
+#: code:addons/odoo_general/product/product.py:168
+#, python-format
+msgid "Sản phẩm Không lưu kho phải chọn 1 nhà cung cấp!"
+msgstr "Sản phẩm Không lưu kho phải chọn 1 nhà cung cấp!"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/product.py:67
+#: code:addons/odoo_general/product/product.py:172
+#, python-format
+msgid "Sản phẩm Không được thay đổi giá niêm yết khi tab Danh sách phiên bán hàng đã có dữ liệu!"
+msgstr "Sản phẩm Không được thay đổi giá niêm yết khi tab Danh sách phiên bán hàng đã có dữ liệu!"
+
+#. module: odoo_general
+#: field:product.session,number_code:0
+msgid "Số mã"
+msgstr "Số mã"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/session_product.py:62
+#, python-format
+msgid "Số phiên phải lớn hơn 0"
+msgstr "Số phiên phải lớn hơn 0"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/session_product.py:111
+#: code:addons/odoo_general/wizard/product_session_popup.py:59
+#, python-format
+msgid "Thread create Session for this product is running. Please try again!"
+msgstr "Thread create Session for this product is running. Please try again!"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/credit_card.py:39
+#, python-format
+msgid "Thông báo"
+msgstr "Thông báo"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/product.py:67
+#: code:addons/odoo_general/product/product.py:162
+#: code:addons/odoo_general/product/product.py:168
+#: code:addons/odoo_general/product/product.py:172
+#: code:addons/odoo_general/product/product.py:177
+#: code:addons/odoo_general/product/session_product.py:55
+#: code:addons/odoo_general/product/session_product.py:62
+#: code:addons/odoo_general/product/session_product.py:211
+#, python-format
+msgid "Thông báo!"
+msgstr "Thông báo!"
+
+#. module: odoo_general
+#: field:list.of.winner.report.detail,date_order:0
+msgid "Time"
+msgstr "Thời gian"
+
+#. module: odoo_general
+#: field:buy.credit.k,to_date:0
+#: field:dialed.session,to_date:0
+#: field:list.of.transaction,to_date:0
+#: field:list.of.winner.report,date_end:0
+#: field:report.member.asscess,to_date:0
+#: field:report.transaction.average,to_date:0
+#: view:sale.report.custom:odoo_general.view_sale_report_custom_search
+#: field:sale.report.custom,to_date:0
+#: view:sale.report.k:odoo_general.view_sale_report_k_filter
+#: field:sale.report.k,to_date:0
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_filter
+#: field:sale.report.quantity,to_date:0
+msgid "To Date"
+msgstr "To Date"
+
+#. module: odoo_general
+#: field:sale.report.quantity,to_number:0
+msgid "To Number"
+msgstr "To Number"
+
+#. module: odoo_general
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_form
+msgid "Total"
+msgstr "Tổng"
+
+#. module: odoo_general
+#: field:res.partner,total_amount:0
+msgid "Total Amount"
+msgstr "Tổng số tiền"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_report_member_asscess
+#: model:ir.ui.menu,name:odoo_general.menu_report_member_asscess
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_form
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_search
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_tree
+msgid "Total Asscess"
+msgstr "Total Asscess"
+
+#. module: odoo_general
+#: field:buy.credit.k.detail,total_k:0
+msgid "Total K"
+msgstr "Total K"
+
+#. module: odoo_general
+#: field:sale.report.custom.detail,total_k_balance:0
+msgid "Total K Balance"
+msgstr "Total K Balance"
+
+#. module: odoo_general
+#: field:sale.report.custom.detail,total_k_purchase:0
+msgid "Total K Purchase"
+msgstr "Total K Purchase"
+
+#. module: odoo_general
+#: field:sale.report.custom.detail,total_k_recharge:0
+msgid "Total K Recharge"
+msgstr "Total K Recharge"
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,total_amount_k:0
+msgid "Total K Transaction"
+msgstr "Total K Transaction"
+
+#. module: odoo_general
+#: field:report.members.detail,total_member:0
+msgid "Total Members"
+msgstr "Total Members"
+
+#. module: odoo_general
+#: field:product.product,total_session:0
+#: field:product.report,total_session:0
+#: field:product.template,total_session:0
+msgid "Total Session"
+msgstr "Tổng số phiên"
+
+#. module: odoo_general
+#: field:product.product,total_session_dial:0
+#: field:product.report,total_session_dial:0
+#: field:product.template,total_session_dial:0
+msgid "Total Session Dial"
+msgstr "Tổng số phiên đã quay số"
+
+#. module: odoo_general
+#: field:res.partner,total_session_order:0
+msgid "Total Session Order"
+msgstr "Tổng số phiên đang bán"
+
+#. module: odoo_general
+#: field:product.product,total_session_sale:0
+#: field:product.report,total_session_sale:0
+#: field:product.template,total_session_sale:0
+msgid "Total Session on Sale"
+msgstr "Tổng số phiên đang bán"
+
+#. module: odoo_general
+#: field:report.transaction.average.detail,total_trans:0
+msgid "Total Transaction"
+msgstr "Total Transaction"
+
+#. module: odoo_general
+#: field:import.data,total_row:0
+msgid "Total record import"
+msgstr "Tổng dòng import"
+
+#. module: odoo_general
+#: field:import.data,success_row:0
+msgid "Total success record"
+msgstr "Tổng dòng import thành công"
+
+#. module: odoo_general
+#: model:ir.actions.act_window,name:odoo_general.action_report_transaction_average
+#: model:ir.model,name:odoo_general.model_report_transaction_average
+#: model:ir.ui.menu,name:odoo_general.menu_report_transaction_average
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_form
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_search
+#: view:report.transaction.average:odoo_general.view_report_transaction_average_tree
+msgid "Transaction Average"
+msgstr "Transaction Average"
+
+#. module: odoo_general
+#: model:ir.model,name:odoo_general.model_report_transaction_average_detail
+msgid "Transaction Average Detail"
+msgstr "Transaction Average Detail"
+
+#. module: odoo_general
+#: field:credit.card.member.detail,type:0
+#: field:product.product,type_with_session:0
+#: view:product.report:odoo_general.view_product_report_search
+#: field:product.report,type_with_session:0
+#: field:product.template,type_with_session:0
+#: view:report.member.asscess:odoo_general.view_report_member_asscess_search
+#: field:report.member.asscess,type:0
+#: view:sale.report.quantity:odoo_general.view_sale_report_quantity_filter
+#: field:sale.report.quantity,type:0
+msgid "Type"
+msgstr "Loại"
+
+#. module: odoo_general
+#: field:res.partner.history.exchange,type_exchange:0
+msgid "Type Exchange"
+msgstr "Loại giao dịch"
+
+#. module: odoo_general
+#: field:category.convert,message_unread:0
+#: field:credit.card.member,message_unread:0
+#: field:product.session,message_unread:0
+#: field:product.session.create,message_unread:0
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: odoo_general
+#: selection:product.session,state_func:0
+msgid "Unsold"
+msgstr "Chưa bán"
+
+#. module: odoo_general
+#: selection:product.product,type_with_session:0
+#: selection:product.report,type_with_session:0
+#: selection:product.template,type_with_session:0
+msgid "Up Sessions"
+msgstr "Lên phiên"
+
+#. module: odoo_general
+#: view:credit.card.member:odoo_general.view_credit_card_member_form
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: odoo_general
+#: selection:credit.card.member,state:0
+msgid "Update members"
+msgstr "Cập nhật khách hàng"
+
+#. module: odoo_general
+#: field:list.of.transaction,member_ids:0
+#: field:list.of.winner.report.detail,partner_id:0
+#: field:sale.report.custom.detail,partner_id:0
+msgid "User"
+msgstr "Người dùng"
+
+#. module: odoo_general
+#: view:import.data:odoo_general.view_import_data_filter
+msgid "User Import"
+msgstr "User Import"
+
+#. module: odoo_general
+#: field:product.session.order,number_date:0
+#: help:product.session.order,number_date:0
+msgid "Value Dial"
+msgstr "Giá trị quay"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/session_product.py:55
+#, python-format
+msgid "Vui lòng chọn sản phẩm trước khi tạo phiên."
+msgstr "Vui lòng chọn sản phẩm trước khi tạo phiên."
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/credit_card.py:39
+#, python-format
+msgid "Vui lòng nhập ít nhất 1 dòng dữ liệu ở danh sách chi tiết nạp tiền!"
+msgstr "Vui lòng nhập ít nhất 1 dòng dữ liệu ở danh sách chi tiết nạp tiền!"
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/category_convert.py:48
+#: code:addons/odoo_general/product/session_product.py:83
+#: code:addons/odoo_general/product/session_product.py:111
+#: code:addons/odoo_general/wizard/product_session_popup.py:53
+#: code:addons/odoo_general/wizard/product_session_popup.py:55
+#: code:addons/odoo_general/wizard/product_session_popup.py:59
+#: code:addons/odoo_general/wizard/product_session_popup.py:77
+#, python-format
+msgid "Warning!"
+msgstr "Cảnh báo!"
+
+#. module: odoo_general
+#: field:category.convert,website_message_ids:0
+#: field:credit.card.member,website_message_ids:0
+#: field:product.session,website_message_ids:0
+#: field:product.session.create,website_message_ids:0
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: odoo_general
+#: help:category.convert,website_message_ids:0
+#: help:credit.card.member,website_message_ids:0
+#: help:product.session,website_message_ids:0
+#: help:product.session.create,website_message_ids:0
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: odoo_general
+#: selection:report.member.asscess,type:0
+msgid "Week"
+msgstr "Tuần"
+
+#. module: odoo_general
+#: field:product.session.order,is_win:0
+msgid "Win"
+msgstr "Trúng thưởng"
+
+#. module: odoo_general
+#: view:number.k.report:odoo_general.view_number_k_search
+#: field:number.k.report,year:0
+#: field:report.members,year:0
+msgid "Year"
+msgstr "Năm"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/credit_card.py:65
+#, python-format
+msgid "You can not delete Credit Card with state id Done !"
+msgstr "You can not delete Credit Card with state id Done !"
+
+#. module: odoo_general
+#: code:addons/odoo_general/partner/partner.py:95
+#, python-format
+msgid "You can not delete Partner have Website ID. Please deactive it."
+msgstr "Bạn không thể xóa khách hàng có Website ID. Vui lòng thiết lập không hoạt động."
+
+#. module: odoo_general
+#: code:addons/odoo_general/product/session_product.py:84
+#, python-format
+msgid "You can not remove the Create Session when status other Drafts"
+msgstr "Bạn không thể xóa Trình tạo phiên có trạng thái khác Nháp."
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.customer_general_search_view
+msgid "['|','|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('identity','ilike',self),('login','ilike',self)]"
+msgstr "['|','|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('identity','ilike',self),('login','ilike',self)]"
+
+#. module: odoo_general
+#: view:product.session.popup:odoo_general.product_session_delete_popup_form_view
+#: view:product.session.popup:odoo_general.product_session_popup_form_view
+#: view:wizard.select.products:odoo_general.view_wizard_select_products_form
+#: view:wizard.select.res.partner:odoo_general.view_wizard_select_partner_form
+msgid "or"
+msgstr "hoặc"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "purchase.group_cancel_po"
+msgstr "purchase.group_cancel_po"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_2_stock_picking_inherit
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "purchase.group_purchase_user"
+msgstr "purchase.group_purchase_user"
+
+#. module: odoo_general
+#: view:stock.picking:odoo_general.view_picking_form_custom
+msgid "stock.group_allow_reverse_transfer"
+msgstr "stock.group_allow_reverse_transfer"
+
+#. module: odoo_general
+#: view:stock.move:odoo_general.view_move_form_custom
+#: view:stock.picking:odoo_general.view_picking_form_custom
+msgid "stock.group_cancel_stock"
+msgstr "stock.group_cancel_stock"
+
+#. module: odoo_general
+#: view:product.product:odoo_general.product_normal_form_view_10k_inherit
+msgid "{'invisible': [('id', '=', False)], 'required': [('id', '!=', False)]}"
+msgstr "{'invisible': [('id', '=', False)], 'required': [('id', '!=', False)]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False),('invoiced','=', True)]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False),('invoiced','=', True)]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','approved'))]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','approved'))]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))],'invisible':[('related_usage','!=','customer')],'required': [('related_usage','=', 'customer')]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))],'invisible':[('related_usage','!=','customer')],'required': [('related_usage','=', 'customer')]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False),('state','in',('confirmed','done','approved'))]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False),('state','in',('done','approved'))]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False),('state','in',('done','approved'))]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False),('state','not in',('draft','sent'))]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False),('state','not in',('draft','sent'))]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': ['|',('is_purchaser','=',False)],'invisible': [('origin','=',False)]}"
+msgstr "{'readonly': ['|',('is_purchaser','=',False)],'invisible': [('origin','=',False)]}"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.partner_view_buttons_session
+msgid "{'readonly': ['|',('use_parent_address','=',True),'&',('customer','=',True),('create_date','!=',False)]}"
+msgstr "{'readonly': ['|',('use_parent_address','=',True),'&',('customer','=',True),('create_date','!=',False)]}"
+
+#. module: odoo_general
+#: view:purchase.order:odoo_general.purchase_order_form_custom
+msgid "{'readonly': [('is_purchaser','=',False)]}"
+msgstr "{'readonly': [('is_purchaser','=',False)]}"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.partner_view_buttons_session
+msgid "{'readonly':[('customer','=',True),('create_date','!=',False)]}"
+msgstr "{'readonly':[('customer','=',True),('create_date','!=',False)]}"
+
+#. module: odoo_general
+#: view:res.partner:odoo_general.partner_view_buttons_session
+msgid "{'required': [('user_ids','!=', [])], 'readonly':[('customer','=',True),('create_date','!=',False)]}"
+msgstr "{'required': [('user_ids','!=', [])], 'readonly':[('customer','=',True),('create_date','!=',False)]}"
+
+#. module: odoo_general
+#: help:res.partner,avantar_link:0
+msgid "Đường link hình ảnh cá nhân của khách hàng upload từ website."
+msgstr "Đường link hình ảnh cá nhân của khách hàng upload từ website."
+

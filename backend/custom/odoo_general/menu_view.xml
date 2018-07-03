@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <menuitem action="product.product_category_action" id="product.menu_products_category" parent="product.prod_config_main" sequence="30" groups="base.group_no_one"/>
+		
+		<menuitem action="product.attribute_action" id="product.menu_attribute_action" parent="product.prod_config_main" sequence="9" groups="base.group_hidden_menu"/>
+		
+		<menuitem action="product.variants_action" id="product.menu_variants_action" parent="product.prod_config_main" sequence="10" groups="base.group_hidden_menu"/>
+        <menuitem id="sales_team.menu_sales_team_act" action="sales_team.crm_case_section_salesteams_act" sequence="1" parent="base.menu_sales" groups="base.group_hidden_menu"/>
+        
+        <menuitem id="base.menu_reporting_dashboard" name="Dashboards" parent="base.menu_reporting" sequence="0" groups="base.group_hidden_menu"/>
+        
+        <menuitem name="Opportunities Analysis" id="crm.menu_report_crm_opportunities_tree" parent="base.next_id_64" action="crm.action_report_crm_opportunity" sequence="5" groups="base.group_hidden_menu"/>
+        <menuitem name="Leads" id="crm.menu_crm_leads" parent="base.menu_sales" sequence="3" action="crm.crm_case_category_act_leads_all" groups="base.group_hidden_menu"/>
+        <menuitem id="sale.menu_sale_quotations" action="sale.action_quotations" parent="base.menu_sales" sequence="5" groups="base.group_hidden_menu"/>
+        <menuitem id="account.menu_account_supplier" name="Suppliers" parent="account.menu_finance_payables" action="base.action_partner_supplier_form" sequence="100" groups="account.group_account_manager"/>
+        
+        <record id="crm.menu_report_crm_leads_tree" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<record id="crm.menu_report_crm_phonecalls_tree" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>	
+		
+		<record id="crm.menu_crm_opportunities" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+ 		
+ 		<record id="crm.menu_crm_case_phone" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<record id="mail.mail_feeds_main" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_master')])]"/>
+		</record>
+		
+		<record id="account.menu_finance_bank_and_cash" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<record id="account.menu_finance_entries" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<record id="account.menu_finance_charts" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<record id="account.menu_finance_periodical_processing" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<record id="account.menu_finance_reports" model="ir.ui.menu">
+		    <field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+		<!-- Menu Sale/Tool -->
+		<record model="ir.ui.menu" id="crm.root_menu">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+        </record>
+
+		<!-- Menu Sale/Tool/Deduplicate Contacts -->
+        <record model="ir.ui.menu" id="crm.partner_merge_automatic_menu">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_system'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Contacts Segmentation -->
+        <record model="ir.ui.menu" id="crm.menu_crm_segmentation-act">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Unit of Measure Categories -->
+        <record model="ir.ui.menu" id="product.menu_product_uom_categ_form_action">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Address Book -->
+        <record model="ir.ui.menu" id="base.menu_config_address_book">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_system'),ref('base.group_partner_manager'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Address Book/Localization -->
+        <record model="ir.ui.menu" id="base.menu_localisation">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Address Book/Localization/Countries -->
+        <record model="ir.ui.menu" id="base.menu_country_partner">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Address Book/Localization/Fed. States -->
+        <record model="ir.ui.menu" id="base.menu_country_state_partner">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+
+        <!-- Menu Sale/Configuration/Address Book/Titles -->
+        <record model="ir.ui.menu" id="base.menu_partner_title_partner">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+        </record>
+
+        <!-- Menu Sale/Configuration/Address Book/Partner Tags -->
+        <record model="ir.ui.menu" id="base.menu_partner_category_form">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+        </record>
+        
+       <!-- Menu Sale/Configuration/Phone Calls -->
+       <record model="ir.ui.menu" id="crm.menu_crm_config_phonecall">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+       </record>
+        
+        <!-- Menu Sale/Configuration/Phone Calls/Categories -->
+        <record model="ir.ui.menu" id="crm.menu_crm_case_phonecall-act">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Product Categories & Attributes -->
+        <record model="ir.ui.menu" id="product.prod_config_main">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Product Categories & Attributes/Product Categories -->
+        <record model="ir.ui.menu" id="product.menu_product_category_action_form">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Product Categories & Attributes/Products by Category -->
+        <record model="ir.ui.menu" id="product.menu_products_category">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Leads & Opportunities -->
+        <record model="ir.ui.menu" id="base.menu_crm_config_lead">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+        </record>
+
+        <!-- Menu Sale/Configuration/Leads & Opportunities/Stages -->
+        <record model="ir.ui.menu" id="crm.menu_crm_lead_stage_act">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Leads & Opportunities/Sales Tags -->
+        <record model="ir.ui.menu" id="crm.menu_crm_lead_categ">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Leads & Opportunities/Source -->
+        <record model="ir.ui.menu" id="crm.menu_crm_tracking_source">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Leads & Opportunities/Campaigns -->
+        <record model="ir.ui.menu" id="crm.menu_crm_tracking_campaign_act">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Sale/Configuration/Leads & Opportunities/Payment Modes -->
+        <record model="ir.ui.menu" id="crm.menu_crm_payment_mode_act">
+        	<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('base.group_sale_manager')])]"/>
+        </record>
+        
+        <!-- Menu Purchases/Invoice Control/On Draft Invoices -->
+        <record model="ir.ui.menu" id="purchase.menu_procurement_management_pending_invoice">
+        	<field name="groups_id" eval="[(6,0,[ref('purchase.group_purchase_user')])]"/>
+        </record>
+        
+        <!-- Menu Purchases/Purchase/Configuration/Address Book/Partner Tags -->
+        <record model="ir.ui.menu" id="purchase.menu_partner_categories_in_form">
+        	<field name="groups_id" eval="[(6,0,[ref('purchase.group_purchase_manager')])]"/>
+        </record>
+		
+		<!-- Menu Purchases/Purchase/Configuration/Products -->
+        <record model="ir.ui.menu" id="purchase.menu_product_in_config_purchase">
+        	<field name="groups_id" eval="[(6,0,[ref('purchase.group_purchase_manager')])]"/>
+        </record>
+        
+		<!-- Menu Reporting/Accounting -->
+		<record model="ir.ui.menu" id="account.menu_finance_reporting">
+             <field name="groups_id" eval="[(6,0,[ref('base.group_master')])]"/>
+        </record>
+		
+		<!-- Menu Warehouse -->
+		<record model="ir.ui.menu" id="stock.menu_stock_root">
+			<field name="groups_id" eval="[(6,0,[ref('stock.group_stock_manager'),ref('stock.group_stock_user'),ref('base.group_sale_salesman')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Quants -->
+		<record model="ir.ui.menu" id="stock.menu_quants">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Schedulers -->
+		<record model="ir.ui.menu" id="stock.menu_stock_sched">
+			<field name="groups_id" eval="[(6,0,[ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Schedulers/Run Schedulers -->
+		<record model="ir.ui.menu" id="stock.menu_stock_proc_schedulers">
+			<field name="groups_id" eval="[(6,0,[ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Schedulers/Procurements -->
+		<record model="ir.ui.menu" id="stock.menu_stock_procurement_action">
+			<field name="groups_id" eval="[(6,0,[ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Schedulers/Compute Stock Minium Rules Only -->
+		<record model="ir.ui.menu" id="stock.menu_procurement_compute">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Products/Products by Category -->
+		<record model="ir.ui.menu" id="stock.menu_product_by_category_stock_form">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Configuration -->
+		<record model="ir.ui.menu" id="stock.menu_stock_configuration">
+			<field name="groups_id" eval="[(6,0,[ref('stock.group_stock_user'),ref('stock.group_stock_manager')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Configuration/Procurement Rules -->
+		<record model="ir.ui.menu" id="stock.menu_procurement_rules">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('stock.group_stock_manager')])]"/>
+		</record>
+		
+		<!-- Menu Warehouse/Configuration/Products -->
+		<record model="ir.ui.menu" id="stock.menu_product_in_config_stock">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_no_one'),ref('stock.group_stock_manager'),ref('stock.group_stock_user')])]"/>
+		</record>
+		
+		<!-- Menu Report/Purchase -->
+		<record model="ir.ui.menu" id="base.next_id_73">
+			<field name="groups_id" eval="[(6,0,[ref('purchase.group_purchase_manager')])]"/>
+		</record>
+		
+		<!-- Menu Report/Warehouse -->
+		<record model="ir.ui.menu" id="stock.next_id_61">
+			<field name="groups_id" eval="[(6,0,[ref('base.group_hidden_menu')])]"/>
+		</record>
+		
+	</data>
+</openerp>

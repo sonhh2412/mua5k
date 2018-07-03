@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_list_of_winner_report_form" model="ir.ui.view">
+			<field name="name">view.list.of.winner.report.form</field>
+			<field name="model">list.of.winner.report</field>
+			<field name="arch" type="xml">
+				<form string="List of Winners">
+					<header>
+						<button name="act_search" string="Search" type="object" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="date_start" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(date_start,date_end)"/>
+								<field name="partner_ids" widget="many2many_tags" attrs="{'readonly': [('state','=','done')]}"/>
+							</group>
+							<group>
+								<field name="date_end" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(date_start,date_end)"/>
+								<field name="user_id"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readobly="1">
+								<tree editable="bottom" create="false">
+									<field name="code"/>
+									<field name="partner_id"/>
+									<field name="so_id"/>
+									<field name="number_win"/>
+									<field name="product_id"/>
+									<field name="date_order"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_list_of_winner_report_tree" model="ir.ui.view">
+			<field name="name">view.list.of.winner.report.tree</field>
+			<field name="model">list.of.winner.report</field>
+			<field name="arch" type="xml">
+				<tree string="List of Winners">
+					<field name="date_start"/>
+					<field name="date_end"/>
+					<field name="partner_ids" widget="many2many_tags"/>
+					<field name="user_id"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_list_of_winner_report_search" model="ir.ui.view">
+			<field name="name">view.list.of.winner.report.search</field>
+			<field name="model">list.of.winner.report</field>
+			<field name="arch" type="xml">
+				<search string="List of Winners">
+					<field name="user_id"/>
+					<group expand="0" string="Group By">
+                        <filter string="Create User" domain="[]" context="{'group_by':'user_id'}"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_list_of_winner_report" model="ir.actions.act_window">
+	        <field name="name">List of Winners</field>
+	        <field name="res_model">list.of.winner.report</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_list_of_winner_report_search"/>
+	    </record>
+    
+		<menuitem action="action_list_of_winner_report" id="menu_list_of_winner_report" parent="base.next_id_64" sequence="11"/>
+		
+	</data>
+</openerp>

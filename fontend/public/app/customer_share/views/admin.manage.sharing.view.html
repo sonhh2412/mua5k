@@ -1,0 +1,83 @@
+<div class="manage-page bg-while">
+    <div class="container m-t-15">
+        <div class="row">
+            <manage-left></manage-left>
+            <div class="col-md-10 p-0">
+                <div class="manage-right floating-box">
+                    <div class="col-md-12">
+                        <h3 class="title-page">Quản lý chia sẻ của khách hàng</h3>
+                    </div>
+                    <hr/>
+                    <div class="manage-form col-md-12">
+                        <div class="addnew-bottom">
+                            <md-button class="btn-addnew btn" ng-click="ViewFormOpen()">Thêm bài viết mới</md-button>
+                        </div>
+                        <form class="frm-updateprofile p-15" ng-show="isAddSharing" novalidate name="frmAddSharing" rc-submit="submit()">
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.name) }"><label>Tiêu đề</label><input type="text" placeholder="Tên bài viết" class="form-control" name="name" ng-model="sharing.name" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.name)">Vui lòng nhập tên bài viết</span></div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.image_main) }"><label>Link hình chia sẻ đại diện</label><input type="text" class="form-control" placeholder="Nhập hình ảnh kích thước 270 x 340" name="image_main" ng-model="sharing.image_main" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.image_main)">Vui lòng nhập hình ảnh chia sẻ đại diện</span></div>
+                            <div class="form-group input-image-sharing" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.image1) }"><label>Link hình chia sẻ 1</label><input type="text" class="form-control" placeholder="Nhập hình ảnh" name="image1" ng-model="sharing.images[0]" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.image1)">Vui lòng nhập hình ảnh</span></div>
+                            <div class="form-group input-image-sharing" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.image2) }"><label>Link hình chia sẻ 2</label><input type="text" class="form-control" placeholder="Nhập hình ảnh" name="image2" ng-model="sharing.images[1]" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.image2)">Vui lòng nhập hình ảnh</span></div>
+                            <div class="form-group input-image-sharing" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.image3) }"><label>Link hình chia sẻ 3</label><input type="text" class="form-control" placeholder="Nhập hình ảnh" name="image3" ng-model="sharing.images[2]" required autocomplete="off" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.image3)">Vui lòng nhập hình ảnh</span></div><a ng-click="AddElementImage()" class="btn-close btn add-element-image">Thêm hình ảnh</a>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.content) }"><label>Nội dung bài viết</label>
+                                <text-angular ng-model="sharing.content" name="content" placeholder="Nội dung bài viết" class="form-content-editor"></text-angular>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.slProduct) }"><label>Sản phẩm</label><select class="form-control" ng-options="product._id as product._id.name + ' - ' + product._id.id for product in list_products" name="slProduct" ng-model="productSelect" ng-change="changeProduct(productSelect)" required /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.slProduct)">Vui lòng chọn sản phẩm</span></div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.slSession) }"><label>Phiên số</label><select class="form-control" ng-options="session as session.session_number + ' - ' + session.session_id for session in list_sessions" name="slSession" ng-model="sessionSelect" ng-change="changeSession(productSelect, sessionSelect)" required /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.slSession)">Vui lòng chọn phiên</span></div>
+                            <div class="form-group" ng-class="{'has-error' : rc.frmAddSharing.needsAttention(frmAddSharing.user_name) }"><label>Khách hàng</label><input type="text" class="form-control" placeholder="Nhập khách hàng" name="user_name" ng-model="user.fullname" required autocomplete="off" disabled="true" /><span class="note-input-float">*</span><span class="red" ng-show="rc.frmAddSharing.needsAttention(frmAddSharing.user_name)">Vui lòng nhập khách hàng</span></div>
+                            <div class="form-group red" ng-show="isErrorExits"><span>Đã tồn tại bài viết của sản phẩm và phiên này</span></div>
+                            <div class="form-group">
+                                <md-button type="submit" class="btn p-0 m-0 btn-submit">Thêm bài viết mới</md-button><a ng-click="CloseFormOpen()" class="btn-close btn">Hủy</a></div>
+                        </form>
+                    </div>
+                    <hr/>
+                    <div class="list-sharing floating-box">
+                        <div id="div_postlist" class="ng-share-goods ng-scope">
+                            <div class="ng-share-wrapper">
+                                <div class="ng-share-detail clearfix" ng-repeat="item in list_sharing.results">
+                                    <div class="ng-share-pic"><b><a href="/ho-so/{{postUserItem._id}}.html" target="_blank" type="showCard" uweb="{{item.user._id}}"><img src="{{postUserItem ? postUserItem.avatar : '/assets/images/themes/10K MARKET3-27.png'}}" width="85" height="85"/></a></b>
+                                        <div class="name-line clearfix">
+                                            <a href="#" class="u-name" target="_blank">
+                                                <hash-user class="hash-custom" user=item.user[0]._id></hash-user>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <sharing-user-post user="item.user[0]._id" collection="postUserItem"></sharing-user-post>
+                                    <div class="ng-share-con">
+                                        <div class="u-data">
+                                            <div class="u-show col-md-11 p-0"><a href="/quan-ly-khach-hang-chia-se/{{item.slug}}-{{item._id}}.html">{{item.name}}</a><span class="u-time">Đăng lúc {{item.publish | date:'dd-MM-yyyy HH:mm:ss'}}</span></div><a class="pull-right btn p-l-r-15 m-0 p-0" ng-click="RemoveSharing(item._id);">Xóa</a></div>
+                                        <div class="share-info">
+                                            <p><a href="/quan-ly-khach-hang-chia-se/{{item.slug}}-{{item._id}}.html">{{item.content | htmlToPlaintext | limitTo:200}}{{item.content.length > 200 ? '...' : ''}}</a></p>
+                                        </div>
+                                        <div class="pic-list-wrap">
+                                            <div class="my-list">
+                                                <ul class="pic-list clearfix" id="ul_0">
+                                                    <li indexj="0" indexi="0" id="0_0"><span><img ng-src="{{domain_image_product + item.images[0]}}"/></span>
+                                                        <div class="pic-hover" style="display: none;" id="div0"></div>
+                                                    </li>
+                                                    <li ndexj="1" indexi="0" id="0_1"><span><img src="{{domain_image_product + item.images[1]}}"/></span>
+                                                        <div class="pic-hover" style="display: none;" id="div1"></div>
+                                                    </li>
+                                                    <li indexj="2" indexi="0" id="0_2"><span><img src="{{domain_image_product + item.images[2]}}"/></span>
+                                                        <div class="pic-hover" style="display: none;" id="div2"></div>
+                                                    </li>
+                                                </ul>
+                                                <div class="talk-wrap"><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" class="xianmu"><i></i>Like(<em>{{item.like.length}}</em>)</a><a href="/khach-hang-chia-se/{{item.slug}}-{{item._id}}.html" target="_blank" class="pinglun"><i></i>Comment(<em>{{item.comment.length}}</em>)</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="row m-0 row-pagination">
+                                <div class="col-md-12 p-0">
+                                    <bgf-pagination collection="list_sharing" current="page" total="total_page" gotopage="goto" url="urlSharingList" auto-presets="false" link-group-size="1" reload-page="reloadPage"></bgf-pagination>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="product_product_image_form_view" model="ir.ui.view">
+            <field name="name">product.template.form.image</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">            	
+            	<page string="Sales" position="after">
+            		<page string="Images">
+            			 <field name="image_ids" >
+	             		 	<tree editable="bottom">
+	             		 		  <field name="sequence"/>
+	                           	  <field name="name" placeholder="Kích thước 400 x 400"/>
+	                              <field name="link_href" placeholder="Kích thước 800 x 800"/>
+	                              <field name="file_import" widget="binary" nolabel="1" filename="file_name" required="1"/>
+	                              <field name="file_name" invisible="1"/>
+	                              <!-- <field name="is_main"/> -->
+	             		 	</tree>
+	             		 </field>
+            			
+            		</page>
+            		
+            	</page>
+            		
+            </field>
+        </record>
+        
+        <!-- <record id="view_product_brand_form_image" model="ir.ui.view">
+            <field name="name">product.brand.form.image</field>
+            <field name="model">product.brand</field>
+             <field name="inherit_id" ref="product_brand.view_product_brand_form"/>
+            <field name="arch" type="xml">
+            	  <xpath expr="//sheet" postion="inside">	        	 
+                  	  <group>
+                  		<field name="src_image"/>
+                      </group> 
+	              </xpath>
+            </field>
+        </record> -->
+		
+	
+    </data>
+</openerp>   

@@ -1,0 +1,126 @@
+<div class="profile-page bg-while m-t-15">
+    <div class="container">
+        <div class="row">
+            <div class="profile-left mywallet-left col-md-2 p-l-0">
+                <account-menu-left></account-menu-left>
+            </div>
+            <div class="mywallet-content col-md-10 p-0">
+                <div class="mywallet-content-1 border">
+                    <div class="head-title">
+                        <h3 class="title">VÍ CỦA TÔI</h3>
+                    </div>
+                    <div class="col-md-12 account-balance center">
+                        <p>SỐ DƯ TÀI KHOẢN</p>
+                        <p class="bold red cls-price">{{ValueK | priceVND}} K</p>
+                        <total-k iduser="session._id" collection="ValueK"></total-k>
+                        <!-- <p class="links"><a href="dang-ky-mua-k.html">NẠP K</a><a href="/chuyen-k.html">CHUYỂN K</a></p> -->
+                        <p class="links"><a href="dang-ky-mua-k.html">NẠP K</a></p>
+                    </div>
+                    <div class="md-tab-list mywallet-list-tab">
+                        <md-content class="p-0 floating-box">
+                            <md-tabs md-dynamic-height md-border-bottom>
+                                <md-tab label="TÀI KHOẢN CỦA BẠN">
+                                    <md-content>
+                                        <div class="my-account-tab">
+                                            <md-content class="p-0 floating-box">
+                                                <md-tabs md-dynamic-height md-border-bottom>
+                                                    <md-tab label="HỒ SƠ NẠP TIỀN">
+                                                        <md-content>
+                                                            <table class="list-all">
+                                                                <tr>
+                                                                    <th>Thời gian</th>
+                                                                    <th>Loại hình</th>
+                                                                    <th>Số tiền</th>
+                                                                    <th>Ghi chú</th>
+                                                                    <th>Trạng thái</th>
+                                                                </tr>
+                                                                <tr ng-repeat="hisitem in session.history_oder | orderBy : 'date_create':true">
+                                                                    <td class="list-time">{{hisitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                                                    <td class="list-type">{{hisitem.payment_method}}</td>
+                                                                    <td class="list-numprice">{{hisitem.total_amount}}</td>
+                                                                    <td class="list-note">{{hisitem.order_description}}</td>
+                                                                    <td class="list-state {{hisitem.state == true ? 'success' : 'notsuccess'}}">{{hisitem.state == true ? 'Đã thanh toán' : 'Chưa thanh toán'}}</td>
+                                                                </tr>
+                                                            </table>
+                                                            <div ng-if="session.history_oder.length <= 0">
+                                                                <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" /></p>
+                                                            </div>
+                                                        </md-content>
+                                                    </md-tab>
+                                                    <md-tab label="LỊCH SỬ MUA HÀNG">
+                                                        <md-content class="list-history-selled-user">
+                                                            <ul class="list-history-selled list-history-selled-customer">
+                                                                <li class="history-selled-item" ng-repeat="hisitem in listhistorysell"><span class="history-time">{{hisitem.time}}</span><span class="history-product"><a href="/san-pham/{{hisitem.product_slug}}.html">{{hisitem.product_name}}</a></span><span class="history-numcode">{{hisitem.code}} Mã</span><span class="history-link"><a href="/san-pham/{{hisitem.product_slug}}.html">Xem chi tiết</a></span><i class="single"><i class="single"></i></i>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="row m-0 row-pagination">
+                                                                <div class="col-md-12 p-0">
+                                                                    <bgf-pagination collection="listhistorysell" current="page" total="total_page" gotopage="goto" url="urlHistoryPage" auto-presets="false" link-group-size="1"></bgf-pagination>
+                                                                </div>
+                                                            </div>
+                                                            <div ng-if="MsgNull">
+                                                                <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" /></p>
+                                                            </div>
+                                                        </md-content>
+                                                    </md-tab>
+                                                    <md-tab label="CHUYỂN HỒ SƠ">
+                                                        <md-content>
+                                                            <table class="list-all">
+                                                                <tr>
+                                                                    <th>Thời gian</th>
+                                                                    <th>Tài khoản nhận/cho</th>
+                                                                    <th>Số K</th>
+                                                                    <th>Ghi chú</th>
+                                                                    <th>Loại chuyển</th>
+                                                                </tr>
+                                                                <tr ng-repeat="histitem in session.history_transfer">
+                                                                    <td class="list-time">{{histitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                                                    <td class="list-type">
+                                                                        <hash-user-email user=histitem.email></hash-user-email>
+                                                                    </td>
+                                                                    <td class="list-numprice">{{histitem.total_k}}</td>
+                                                                    <td class="list-note">{{histitem.transfer_description}}</td>
+                                                                    <td class="list-state {{histitem.transfer_type == 'receive' ? 'success' : 'notsuccess'}}">{{histitem.transfer_type == 'receive' ? 'Nhận K' : 'Cho K'}}</td>
+                                                                </tr>
+                                                            </table>
+                                                            <div ng-if="session.history_transfer.length <= 0">
+                                                                <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" /></p>
+                                                            </div>
+                                                        </md-content>
+                                                    </md-tab>
+                                                    <md-tab label="TopUp">
+                                                    	<md-content>
+                                                    		<table class="list-all">
+                                                    			<tr>
+                                                                    <th>Thời gian</th>
+                                                                    <th>Loại hình</th>
+                                                                    <th>Số tiền</th>
+                                                                    <th>Ghi chú</th>
+                                                                    <th>Trạng thái</th>
+                                                                </tr>
+                                                    			<tr ng-repeat="hisitem in session.history_topup | orderBy : 'date_create':true">
+                                                                    <td class="list-time">{{hisitem.date_create | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                                                    <td class="list-type">{{hisitem.payment_method}}</td>
+                                                                    <td class="list-numprice">{{hisitem.total_amount}}</td>
+                                                                    <td class="list-note">{{hisitem.order_description}}</td>
+                                                                    <td class="list-state {{hisitem.state == true ? 'success' : 'notsuccess'}}">{{hisitem.state == true ? 'Đã thanh toán' : 'Chưa thanh toán'}}</td>
+                                                                </tr>
+                                                            </table>
+                                                            <div ng-if="session.history_oder.length <= 0">
+                                                                <p style="text-align: center;padding: 30px 0;float: left;width: 100%;"><img src="/assets/images/themes/user-profile1-05.png" /></p>
+                                                            </div>
+                                                    	</md-content>
+                                                    </md-tab>
+                                                </md-tabs>
+                                            </md-content>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                            </md-tabs>
+                        </md-content>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

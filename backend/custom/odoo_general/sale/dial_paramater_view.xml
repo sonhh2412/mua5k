@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+        <record id="dial_parameter_default" model="dial.parameter">
+            <field name="name">Dial Parameter</field>
+            <field name="before" eval="0.25"/>
+            <field name="after" eval="0.25"/>
+        </record>
+	</data>
+    <data>
+            <record model="ir.ui.view" id="dial_parameter_tree_view">
+                <field name="name">dial.parameter.tree</field>
+                <field name="model">dial.parameter</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Dial Parameter" create="0" delete="0">
+                        <field name="before" widget="float_time" required="1"/>
+                        <field name="after" widget="float_time" required="1"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="dial_parameter_form_view">
+                <field name="name">dial.parameter.form</field>
+                <field name="model">dial.parameter</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Dial Parameter">
+                    	<group>
+                    		<group>
+                    			<field name="before" widget="float_time" required="1"/>
+                    			<field name="after" widget="float_time" required="1"/>
+                    		</group>
+                    	</group>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_dial_parameter_tree_view">
+                <field name="name">Dial Parameter</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">dial.parameter</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="dial_parameter_tree_view"/>
+            </record>
+			<menuitem id="dial_parameter_menu" name="Dial Parameter" parent="base.menu_base_config" sequence="30" action="action_dial_parameter_tree_view"/>
+    </data>
+</openerp>

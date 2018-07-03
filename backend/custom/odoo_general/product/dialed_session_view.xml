@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_dialed_session_search" model="ir.ui.view">
+			<field name="name">dialed.session.search</field>
+			<field name="model">dialed.session</field>
+			<field name="arch" type="xml">
+				<search string="Search Dialed Session">
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="date"/>
+					<field name="user_id"/>
+					<group string="Group by">
+						<filter string="Create user" name="group_user" domain="[]" context="{'group_by':'user_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="view_dialed_session_tree" model="ir.ui.view">
+			<field name="name">dialed.session.tree</field>
+			<field name="model">dialed.session</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="from_date"/>
+					<field name="to_date"/>
+					<field name="user_id"/>
+					<field name="date"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_dialed_session_form" model="ir.ui.view">
+			<field name="name">dialed.session.form</field>
+			<field name="model">dialed.session</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="act_search" type="object" string="Search" class="oe_highlight" states="draft"/>
+						<field name="state" widget="statusbar" invisible="1"/>
+					</header>
+					<sheet>
+						<div>
+							<label for="name" class="oe_edit_only"/>
+		                    <h1>
+		                        <field name="name" requried="1" class="oe_inline"/>
+		                    </h1>
+		            	</div>
+						<group>
+							<group>
+								<field name="from_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="date"/>
+							</group>
+							<group>
+								<field name="to_date" attrs="{'readonly': [('state','=','done')]}" on_change="onchange_date(from_date, to_date)"/>
+								<field name="user_id"/>
+							</group>
+						</group>
+						<group string="Detail">
+							<field name="detail_ids" nolabel="1" readonly="1">
+								<tree editable="bottom" create="false">
+									<field name="session_code"/>
+									<field name="date_start"/>
+									<field name="date_end"/>
+									<field name="product_id"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="act_dial_session" model="ir.actions.act_window">
+	        <field name="name">Dialed Session</field>
+	        <field name="res_model">dialed.session</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="search_view_id" ref="view_dialed_session_search"/>
+	    </record>
+    	
+		<menuitem action="act_dial_session" id="menu_dialed_sesison" parent="odoo_general.menu_product_reporting" sequence="2" groups="base.group_sale_manager"/>
+		
+	</data>
+</openerp>

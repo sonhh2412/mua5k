@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .factory('Order', ['$resource', function($resource) {return {listorderbyuser : $resource('/api/order/listorderbyuser/:id', null, {'listorderbyuser': { method:'PUT'}}), getStatebyId : $resource('/api/order/getStatebyId/:id', null, {'getStatebyId': { method:'PUT'}}) } }])

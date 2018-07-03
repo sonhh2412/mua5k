@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+
+        <record model="res.groups" id="base.group_hidden_menu">
+            <field name="name">Hidden Menu</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <!-- <field name="users" eval="[(4, ref('base.user_root'))]"/> -->
+        </record>
+        
+         <record id="base.group_master" model="res.groups">
+            <field name="name">Master</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+	    <record id="purchase.group_cancel_po" model="res.groups">
+	        <field name="name">Cancel RFQ, PO</field>
+	        <field name="category_id" ref="base.module_category_purchase_management"/>
+	        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	        <field name="comment">This group allow user can Cancel RFQ and PO, because when user cancel it will be affected to SO related.</field>
+	    </record>
+	    
+	    <record id="stock.group_cancel_stock" model="res.groups">
+	        <field name="name">Cancel Stock picking and Stock move</field>
+	        <field name="category_id" ref="base.module_category_warehouse_management"/>
+	        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	        <field name="comment">This group allow user can Cancel Stock picking and Stock move, because when user cancel it will be affected to SO related.</field>
+	    </record>
+	    
+	    <record id="stock.group_allow_reverse_transfer" model="res.groups">
+	        <field name="name">Allow Reverse Transfer</field>
+	        <field name="category_id" ref="base.module_category_warehouse_management"/>
+	        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	        <field name="comment">This group allow user can Allow Reverse Transfer, because suppliers and customers automatically handle Reverse Transfer together.</field>
+	    </record>
+	    
+	</data>
+</openerp>
+

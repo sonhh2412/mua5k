@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+		<record id="inherited_view_general_configuration" model="ir.ui.view">
+	        <field name="name">inherited_view_general_configuration</field>
+	        <field name="model">base.config.settings</field>
+	        <field name="type">form</field>
+	        <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+	        <field name="arch" type="xml">
+	            <xpath expr="//field[@name='module_auth_oauth']/.." position="after">
+                     <group string="Google Firebase Push Notification" name="firebase">
+	                    <field name="fcm_api_key" />
+	                    <field name="fcm_project_id" />
+	                    <label string=""/>
+	                    <a href="https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm&amp;cntapp=OdooNotifications&amp;cntpkg=com.odoo.mobile" target="new">
+	                        Generate API and Sender ID
+	                    </a>
+	                 </group>
+	
+                </xpath>
+	        </field>
+	    </record>
+    
+	</data>
+</openerp>

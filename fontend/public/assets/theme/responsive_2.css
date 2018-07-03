@@ -1,0 +1,195 @@
+body {
+    font-size: 16px;
+}
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-5 {
+    width: 20%;
+    float: left;
+}
+.nav-apps {
+    display: none;
+}
+.app-menu-icon,
+.watting-result-apps {
+    display: none;
+}
+.live-product-apps {
+    border: 1px solid #f60;
+    float: left;
+    box-shadow: 0px 0px 16px 0px rgba(83, 174, 71, 0.3) inset;
+}
+@media (min-width: 768px) {
+    .col-sm-5 {
+        width: 20%;
+        float: left;
+    }
+}
+}
+@media (min-width: 992px) {
+    .col-md-5 {
+        /*width: 20%; Tung comment - bị đụng css với giao diện desktop*/
+        
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (max-width: 1024px) {
+    .hot-event{
+        display: none;
+    }
+    .home-page .slick-banner {
+        display: block;
+        width: 100%;
+        float: left;
+        min-width: inherit;
+    }
+    .profile-page-app {
+        width: 100%;
+        float: left;
+    }
+    .help-page{
+        margin-top: 0 !important;
+    }
+    .help-page .content-show{
+        padding: 10px 0 60px;
+    }
+    .counter-participate-left,
+    .menu-top-header,
+    #top .header,
+    .possition-search-top,
+    .featured-item {
+        display: none;
+    }
+    #top {
+        padding-top: 0;
+    }
+    .loaded[height="301"] {
+        height: auto;
+        overflow: hidden;
+    }
+    .app-menu-icon .col-xs-3 {
+        text-align: center;
+        width: 20%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .logo-container {
+        text-align: center;
+        padding: 0;
+        background: #f60 url(../images/themes/apps/logo.png) no-repeat center;
+        height: 50px;
+    }
+    .sp {
+        background: url(../images/themes/apps/apps_sanpham.png) no-repeat center;
+        height: 44px;
+        width: 44px;
+    }
+    .cs {
+        background: url(../images/themes/apps/apps_chiase.png) no-repeat center;
+        height: 44px;
+        width: 44px;
+    }
+    .tb {
+        background: url(../images/themes/apps/apps_thongbao.png) no-repeat center;
+        height: 44px;
+        width: 44px;
+    }
+    .nt {
+        background: url(../images/themes/apps/apps_naptien.png) no-repeat center;
+        height: 44px;
+        width: 44px;
+    }
+    .hd {
+        background: url(../images/themes/apps/apps_huongdan.png) no-repeat center;
+        height: 44px;
+        width: 44px;
+    }
+    .logo-container a img {
+        display: none;
+    }
+    .foorder-default {} .nav-apps,
+    .watting-result-apps {
+        display: block;
+    }
+    .app-menu-icon {
+        display: block;
+        margin-top: 13px;
+    }
+    a.btn-navbar span {
+        font-size: 9px;
+    }
+    a.btn {
+        padding: 6px 9px;
+        color: #333;
+    }
+    .prodcut-wiget .product-shop a.md-button {
+        padding: 0px 9px;
+    }
+    .navbar-apps {
+        background: #fff;
+        border-top: 1px solid #efefef;
+    }
+    .live-product-apps .product-timer {
+        background-color: #f60;
+        border-radius: 5px;
+        padding: 4px 0px 4px 4px;
+        color: #FFF;
+        height: 27px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .giaodichgannhat {
+        display: none;
+    }
+    .prodcut-wiget .product-bar .p-0 > span + span {
+        font-size: 9px;
+    }
+    .bottom-space {
+        height: 50px;
+    }
+    .groups-k label{
+    	margin: 3px;
+    }
+    .profile-content-3, .profile-content-4{
+    	margin-bottom: 30px;
+    }
+    .profile-page .profile-content form{
+        padding-left: 10px !important;
+    }
+    .frm-buyk ul.list-content{
+        padding-left: 0px;
+    }
+
+    .profile-content-3, .profile-content-4{
+        margin-bottom: 60px;
+    }
+
+    .nap-sms-view {
+        width: 100%;
+        float: left;
+    }
+
+    .nap-sms-view ~ p {
+        width: 100%;
+        float: left;
+    }
+}
+@media (max-width: 991px) {
+    .menu-left-fixed {
+        display: none;
+    }
+}
+@media (max-width: 1199px) {}

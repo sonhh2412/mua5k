@@ -1,0 +1,1 @@
+'use strict'; angular.module('shopnxApp') .controller('AppPageCtrl', function($scope) {})
